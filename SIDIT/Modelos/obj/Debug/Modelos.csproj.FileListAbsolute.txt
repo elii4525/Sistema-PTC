@@ -1,0 +1,28 @@
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\bin\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\bin\Debug\Modelos.dll
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\bin\Debug\Modelos.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.dll
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.pdb
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\bin\Debug\Modelos.dll
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\bin\Debug\Modelos.pdb
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.dll
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\bin\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\obj\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\bin\Debug\System.Drawing.Common.dll
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\bin\Debug\System.Drawing.Common.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\bin\Debug\System.Drawing.Common.xml
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.Up2Date

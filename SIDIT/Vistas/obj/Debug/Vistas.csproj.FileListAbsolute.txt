@@ -1,0 +1,195 @@
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.exe
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.exe
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.pdb
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.exe
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.pdb
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Modelos.dll
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Modelos.pdb
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.exe
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.pdb
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.exe
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Modelos.dll
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\bin\Debug\Modelos.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.exe
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudDIT.resources
+C:\Users\perez\OneDrive\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmConsumoDIT.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmConsumoDIT.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\Estudiante\Desktop\Sistema de Inventario para Departamento de Infraestructura Tecnologica\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudDIT.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmConsumoDIT.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudDIT.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe
+C:\Users\Estudiante\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.dll
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.pdb
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmConsumoDIT.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudDIT.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe
+C:\Users\danie\OneDrive\Desktop\PTC\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmConsumoDIT.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudDIT.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Fonts\Epilogue-BlackItalic.ttf
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\System.Drawing.Common.dll
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\System.Drawing.Common.pdb
+C:\Users\Estudiante\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\System.Drawing.Common.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Fonts\Epilogue-BlackItalic.ttf
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.exe
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\System.Drawing.Common.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Modelos.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\System.Drawing.Common.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\System.Drawing.Common.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidaJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmBienvenidoDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmConsumoDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmGestionUsuario.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioAggMaterial.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioActualizarEliminar.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmInventarioJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLogin.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginCorrecto.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmLoginError.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmMenuJefatura.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudDIT.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Fonts\Epilogue-Bold.ttf
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Fonts\Epilogue-Black.ttf
+C:\Users\danie\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\Fonts\Epilogue-ExtraBold.ttf

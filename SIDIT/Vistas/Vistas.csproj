@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20226AC0-85FB-444E-8F52-F97F2D901AF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vistas</RootNamespace>
+    <AssemblyName>Vistas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.9.0.8\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\frmBienvenidaJefatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBienvenidaJefatura.Designer.cs">
+      <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBienvenidoDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBienvenidoDIT.Designer.cs">
+      <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmConsumoDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsumoDIT.Designer.cs">
+      <DependentUpon>frmConsumoDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmGestionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmGestionUsuario.Designer.cs">
+      <DependentUpon>frmGestionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioAggMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioAggMaterial.Designer.cs">
+      <DependentUpon>frmInventarioAggMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioDIT.Designer.cs">
+      <DependentUpon>frmInventarioDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioActualizarEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioActualizarEliminar.Designer.cs">
+      <DependentUpon>frmInventarioActualizarEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioJefatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInventarioJefatura.Designer.cs">
+      <DependentUpon>frmInventarioJefatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLoginCorrecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLoginCorrecto.Designer.cs">
+      <DependentUpon>frmLoginCorrecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLoginError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLoginError.Designer.cs">
+      <DependentUpon>frmLoginError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenuDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenuDIT.Designer.cs">
+      <DependentUpon>frmMenuDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenuJefatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
+      <DependentUpon>frmMenuJefatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSolicitudDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSolicitudDIT.Designer.cs">
+      <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperBarraNegra\BarraNegra.cs" />
+    <Compile Include="Helper\FuenteHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
+      <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBienvenidoDIT.resx">
+      <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsumoDIT.resx">
+      <DependentUpon>frmConsumoDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmGestionUsuario.resx">
+      <DependentUpon>frmGestionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInventarioAggMaterial.resx">
+      <DependentUpon>frmInventarioAggMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
+      <DependentUpon>frmInventarioDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInventarioActualizarEliminar.resx">
+      <DependentUpon>frmInventarioActualizarEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInventarioJefatura.resx">
+      <DependentUpon>frmInventarioJefatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLoginCorrecto.resx">
+      <DependentUpon>frmLoginCorrecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLoginError.resx">
+      <DependentUpon>frmLoginError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMenuDIT.resx">
+      <DependentUpon>frmMenuDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
+      <DependentUpon>frmMenuJefatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
+      <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Fonts\Epilogue-Black.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\Epilogue-BlackItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\Epilogue-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\Epilogue-ExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{c1522b11-5e09-495a-aaa0-786afb6c621e}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop - 47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stacking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Group Woman Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-error-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stacking %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group Message %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Line 63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_filters_funnel_list_navigation_sort_sorting_icon_123212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_filters_funnel_list_navigation_sort_sorting_icon_123212 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_filters_funnel_list_navigation_sort_sorting_icon_123212 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downarrow_121316.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sort-down-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Group Woman Man1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
