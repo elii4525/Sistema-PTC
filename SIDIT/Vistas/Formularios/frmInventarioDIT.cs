@@ -14,31 +14,14 @@ namespace Vistas.Formularios
 {
     public partial class frmInventarioDIT : Form
     {
+
+        private Button botonSeleccionado;
+        private Panel bordeInferior;
         public frmInventarioDIT()
         {
             InitializeComponent();
         }
 
-        //Panel p = new Panel();
-        //private Panel pnlInventarioCategoria;
-
-        private void btnMouseEnter(object sender, EventArgs e)
-        {
-            //Button btn = sender as Button;
-            //pnlInventarioCategoria.Controls.Add(p);
-
-        }
-
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            if (!pnlMenuDesplegable.Visible)
-            {
-                pnlMenuDesplegable.Visible = true;
-            }
-            else
-            {
-                pnlMenuDesplegable.Visible = false;
-            }
-        }
+ 
     }
 }

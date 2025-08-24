@@ -141,8 +141,6 @@ namespace Vistas.Formularios
             MostrarFormInvenDEnPanel();
         }
 
-
-
         private void pbSolicitudD_Click(object sender, EventArgs e)
         {
             MostrarFormSoliDEnPanel();
