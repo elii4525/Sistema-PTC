@@ -227,3 +227,5 @@ C:\Users\perez\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-in
 C:\Users\perez\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\perez\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.exe
 C:\Users\perez\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.pdb
+C:\Users\perez\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\perez\OneDrive\Desktop\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\SIDIT\Vistas\obj\Debug\Vistas.frmListaInventario.resources
