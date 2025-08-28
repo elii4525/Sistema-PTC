@@ -29,97 +29,114 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pnlMenuPlegable = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.timerMenuPleg = new System.Windows.Forms.Timer(this.components);
-            this.pnlMenuPlegable.SuspendLayout();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.userControlControlesP1 = new Vistas.ControlesPersonalizados.UserControlControlesP();
+            this.txtPersonad = new Vistas.ControlesPersonalizados.UserControlControlesP();
+            this.userControlControlesP2 = new Vistas.ControlesPersonalizados.UserControlControlesP();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlMenuPlegable
-            // 
-            this.pnlMenuPlegable.Controls.Add(this.iconButton3);
-            this.pnlMenuPlegable.Controls.Add(this.iconButton2);
-            this.pnlMenuPlegable.Controls.Add(this.iconButton1);
-            this.pnlMenuPlegable.Location = new System.Drawing.Point(43, 95);
-            this.pnlMenuPlegable.MaximumSize = new System.Drawing.Size(185, 127);
-            this.pnlMenuPlegable.MinimumSize = new System.Drawing.Size(185, 39);
-            this.pnlMenuPlegable.Name = "pnlMenuPlegable";
-            this.pnlMenuPlegable.Size = new System.Drawing.Size(185, 39);
-            this.pnlMenuPlegable.TabIndex = 3;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.Silver;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Black;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(0, 83);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(185, 47);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "iconButton3";
-            this.iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.Silver;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(0, 39);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(185, 47);
-            this.iconButton2.TabIndex = 2;
-            this.iconButton2.Text = "iconButton2";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.RosyBrown;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(185, 40);
-            this.iconButton1.TabIndex = 1;
-            this.iconButton1.Text = "Filtrar por";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // timerMenuPleg
             // 
             this.timerMenuPleg.Interval = 1;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1242, 645);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.userControlControlesP2);
+            this.panel1.Controls.Add(this.userControlControlesP1);
+            this.panel1.Controls.Add(this.txtPersonad);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1239, 315);
+            this.panel1.TabIndex = 0;
+            // 
+            // userControlControlesP1
+            // 
+            this.userControlControlesP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.userControlControlesP1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.userControlControlesP1.BorderSize = 2;
+            this.userControlControlesP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlControlesP1.ForeColor = System.Drawing.Color.DimGray;
+            this.userControlControlesP1.Location = new System.Drawing.Point(526, 62);
+            this.userControlControlesP1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlControlesP1.Multiline = false;
+            this.userControlControlesP1.Name = "userControlControlesP1";
+            this.userControlControlesP1.Padding = new System.Windows.Forms.Padding(7);
+            this.userControlControlesP1.PasswordChar = false;
+            this.userControlControlesP1.Size = new System.Drawing.Size(356, 35);
+            this.userControlControlesP1.TabIndex = 1;
+            this.userControlControlesP1.Texts = "";
+            this.userControlControlesP1.UnderlineStyle = true;
+            // 
+            // txtPersonad
+            // 
+            this.txtPersonad.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPersonad.BorderColor = System.Drawing.Color.Red;
+            this.txtPersonad.BorderSize = 2;
+            this.txtPersonad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonad.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPersonad.Location = new System.Drawing.Point(738, 193);
+            this.txtPersonad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPersonad.Multiline = false;
+            this.txtPersonad.Name = "txtPersonad";
+            this.txtPersonad.Padding = new System.Windows.Forms.Padding(7);
+            this.txtPersonad.PasswordChar = false;
+            this.txtPersonad.Size = new System.Drawing.Size(250, 35);
+            this.txtPersonad.TabIndex = 2;
+            this.txtPersonad.Texts = "";
+            this.txtPersonad.UnderlineStyle = false;
+            // 
+            // userControlControlesP2
+            // 
+            this.userControlControlesP2.BackColor = System.Drawing.SystemColors.Window;
+            this.userControlControlesP2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.userControlControlesP2.BorderSize = 2;
+            this.userControlControlesP2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlControlesP2.ForeColor = System.Drawing.Color.DimGray;
+            this.userControlControlesP2.Location = new System.Drawing.Point(102, 144);
+            this.userControlControlesP2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.userControlControlesP2.Multiline = true;
+            this.userControlControlesP2.Name = "userControlControlesP2";
+            this.userControlControlesP2.Padding = new System.Windows.Forms.Padding(7);
+            this.userControlControlesP2.PasswordChar = false;
+            this.userControlControlesP2.Size = new System.Drawing.Size(450, 99);
+            this.userControlControlesP2.TabIndex = 1;
+            this.userControlControlesP2.Texts = "";
+            this.userControlControlesP2.UnderlineStyle = false;
+            // 
             // frmListaInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pnlMenuPlegable);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "frmListaInventario";
-            this.Size = new System.Drawing.Size(733, 524);
-            this.pnlMenuPlegable.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1242, 645);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlMenuPlegable;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Timer timerMenuPleg;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private ControlesPersonalizados.UserControlControlesP txtPersonad;
+        private ControlesPersonalizados.UserControlControlesP userControlControlesP1;
+        private ControlesPersonalizados.UserControlControlesP userControlControlesP2;
     }
 }

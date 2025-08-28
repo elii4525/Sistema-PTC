@@ -56,6 +56,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlesPersonalizados\UserControlControlesP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesPersonalizados\UserControlControlesP.Designer.cs">
+      <DependentUpon>UserControlControlesP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmBienvenidaJefatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     <Compile Include="Helper\FuenteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlesPersonalizados\UserControlControlesP.resx">
+      <DependentUpon>UserControlControlesP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
       <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
     </EmbeddedResource>

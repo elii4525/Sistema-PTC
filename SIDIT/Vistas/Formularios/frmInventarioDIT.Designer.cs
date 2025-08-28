@@ -149,6 +149,7 @@
             this.MaximizeBox = false;
             this.Name = "frmInventarioDIT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmInventarioDIT_Load);
             this.tlpFrmInventario.ResumeLayout(false);
             this.pnlContenedorPestañas.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -70,6 +70,7 @@ namespace Vistas.Formularios
             icbtnVerMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
             icbtnVerMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
 
+            MostrarUserControl(new frmListaInventario());
 
         }
 
@@ -90,11 +91,17 @@ namespace Vistas.Formularios
             icbtnActualizarYEliminarMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
         }
 
-        private void MostrarListaInven()
+        private void MostrarUserControl(UserControl frm)
         {
-            pnlContenedorUC.Controls.Clear();
-            UserControl frmLista = new UserControl();
-            frmLista.Dock = DockStyle.Fill;
+                pnlContenedorUC.Controls.Clear();
+                frm.Dock = DockStyle.Fill;
+                pnlContenedorUC.Controls.Add(frm);
+                frm.Show();
+        }
+
+        private void frmInventarioDIT_Load(object sender, EventArgs e)
+        {
+            MostrarUserControl(new frmListaInventario());
         }
     }
 
