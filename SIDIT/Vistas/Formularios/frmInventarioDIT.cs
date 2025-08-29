@@ -17,17 +17,31 @@ namespace Vistas.Formularios
     {
         //IconButton porque ese es el control que utilice en el formulario
         private IconButton botonSeleccionado;
-        private Panel bordeInferior;
+        private Panel bordeInferiorbtn1;
+        private Panel bordeInferiorbtn2;
+        private Panel bordeInferiorbtn3;
         public frmInventarioDIT()
         {
             InitializeComponent();
 
             
-            bordeInferior = new Panel();
-            bordeInferior.Size = new Size(270, 2);
-            pnlContenedorPestañas.Controls.Add(bordeInferior);
+            bordeInferiorbtn1 = new Panel();
+            bordeInferiorbtn1.Size = new Size(168, 2);
+            pnlContenedorPestañas.Controls.Add(bordeInferiorbtn1);
 
-            //Aqui llamo  al metodo para que al abrirse el boton se ver material sea el primero que se muestre
+            bordeInferiorbtn2 = new Panel();
+            bordeInferiorbtn2.Size = new Size(188, 2);
+            pnlContenedorPestañas.Controls.Add(bordeInferiorbtn2);
+
+            bordeInferiorbtn3 = new Panel();
+            bordeInferiorbtn3.Size = new Size(202, 2);
+            pnlContenedorPestañas.Controls.Add(bordeInferiorbtn3);
+
+
+            IconButton btn1 = new IconButton();
+            btn1.
+
+            //Aqui llamo  al metodo para que al abrirse el boton de ver material sea el primero que se muestre
             BotonActivado(icbtnVerMaterial);
         }
 
@@ -40,11 +54,12 @@ namespace Vistas.Formularios
                 botonSeleccionado.ForeColor = Color.FromArgb(255, 246, 224);
                 botonSeleccionado.IconColor = Color.FromArgb(255, 246, 224);
 
-                bordeInferior.BackColor = Color.FromArgb(255, 246, 224);
+                
+                bordeInferiorbtn1.BackColor = Color.FromArgb(255, 246, 224);
                 //En este le damos la ubicacion de botonSeleccionado
-                bordeInferior.Location = new Point(botonSeleccionado.Location.X, 73);
-                bordeInferior.Visible = true;
-                bordeInferior.BringToFront();
+                bordeInferiorbtn1.Location = new Point(botonSeleccionado.Location.X, 73);
+                bordeInferiorbtn1.Visible = true;
+                bordeInferiorbtn1.BringToFront();
             }
         }
 
