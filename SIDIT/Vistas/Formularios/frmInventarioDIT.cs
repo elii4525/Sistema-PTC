@@ -13,33 +13,28 @@ using FontAwesome.Sharp;
 
 namespace Vistas.Formularios
 {
+
+    /// <summary>
+    /// Se debe solucionar error de panel border, pasa que cuando los controles se acomodan, el panel al ser fijo se esconde ya que otro lo cubre.
+    /// Se debe solucionar que cada que se toca un boton (de pestñas) al "reinicio" se puede ver el color blanquesito que muestra el size del boton.
+    /// </summary>
     public partial class frmInventarioDIT : Form
     {
         //IconButton porque ese es el control que utilice en el formulario
         private IconButton botonSeleccionado;
-        private Panel bordeInferiorbtn1;
-        private Panel bordeInferiorbtn2;
-        private Panel bordeInferiorbtn3;
+        private Panel bordeInferior;
         public frmInventarioDIT()
         {
             InitializeComponent();
 
             
-            bordeInferiorbtn1 = new Panel();
-            bordeInferiorbtn1.Size = new Size(168, 2);
-            pnlContenedorPestañas.Controls.Add(bordeInferiorbtn1);
-
-            bordeInferiorbtn2 = new Panel();
-            bordeInferiorbtn2.Size = new Size(188, 2);
-            pnlContenedorPestañas.Controls.Add(bordeInferiorbtn2);
-
-            bordeInferiorbtn3 = new Panel();
-            bordeInferiorbtn3.Size = new Size(202, 2);
-            pnlContenedorPestañas.Controls.Add(bordeInferiorbtn3);
+            bordeInferior = new Panel();
+            bordeInferior.Size = new Size(209, 2);
+            //pnlContenedorPestañas.Controls.Add(bordeInferior);
+            bordeInferior.BringToFront();
+            botonSeleccionado.Controls.Add(bordeInferior);
 
 
-            IconButton btn1 = new IconButton();
-            btn1.
 
             //Aqui llamo  al metodo para que al abrirse el boton de ver material sea el primero que se muestre
             BotonActivado(icbtnVerMaterial);
@@ -50,18 +45,25 @@ namespace Vistas.Formularios
             if (boton != null)
             {
                 DesactivarBoton();
-                botonSeleccionado = (IconButton)boton;
-                botonSeleccionado.ForeColor = Color.FromArgb(255, 246, 224);
-                botonSeleccionado.IconColor = Color.FromArgb(255, 246, 224);
+
+                //Aqui se debe arreglar el error de parapadeos y en si ambos errores.
+
+                //botonSeleccionado = (IconButton)boton;
+                //botonSeleccionado.ForeColor = Color.FromArgb(255, 246, 224);
+                //botonSeleccionado.IconColor = Color.FromArgb(255, 246, 224);
+
+                //bordeInferior.BackColor = Color.FromArgb(255, 246, 224);
+                //En este le damos la ubicacion de botonSeleccionado
+                //bordeInferior.Location = new Point(botonSeleccionado.Location.X, 73);
+                //bordeInferior.Visible = true;
+                bordeInferior.BringToFront();
+            }
+               
+        }
+                
 
                 
-                bordeInferiorbtn1.BackColor = Color.FromArgb(255, 246, 224);
-                //En este le damos la ubicacion de botonSeleccionado
-                bordeInferiorbtn1.Location = new Point(botonSeleccionado.Location.X, 73);
-                bordeInferiorbtn1.Visible = true;
-                bordeInferiorbtn1.BringToFront();
-            }
-        }
+              
 
         private void DesactivarBoton()
         {
@@ -72,8 +74,6 @@ namespace Vistas.Formularios
                 botonSeleccionado.IconColor = Color.White;
             }
         }
-
-
 
         private void icbtnVerMaterial_Click(object sender, EventArgs e)
         {
