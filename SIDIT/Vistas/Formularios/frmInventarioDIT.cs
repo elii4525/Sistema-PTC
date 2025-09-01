@@ -14,76 +14,56 @@ using FontAwesome.Sharp;
 namespace Vistas.Formularios
 {
 
-    /// <summary>
-    /// Se debe solucionar error de panel border, pasa que cuando los controles se acomodan, el panel al ser fijo se esconde ya que otro lo cubre.
-    /// Se debe solucionar que cada que se toca un boton (de pestñas) al "reinicio" se puede ver el color blanquesito que muestra el size del boton.
-    /// </summary>
     public partial class frmInventarioDIT : Form
     {
         //IconButton porque ese es el control que utilice en el formulario
         private IconButton botonSeleccionado;
-        private Panel bordeInferior;
+        
         public frmInventarioDIT()
         {
             InitializeComponent();
 
-            
-            bordeInferior = new Panel();
-            bordeInferior.Size = new Size(209, 2);
-            //pnlContenedorPestañas.Controls.Add(bordeInferior);
-            bordeInferior.BringToFront();
-            botonSeleccionado.Controls.Add(bordeInferior);
-
-
-
-            //Aqui llamo  al metodo para que al abrirse el boton de ver material sea el primero que se muestre
-            BotonActivado(icbtnVerMaterial);
         }
 
         private void BotonActivado(object boton)
         {
-            if (boton != null)
+            if (boton != null)  //Verifica que el objeto que se pasó no sea null evitando errores.
             {
                 DesactivarBoton();
 
-                //Aqui se debe arreglar el error de parapadeos y en si ambos errores.
-
-                //botonSeleccionado = (IconButton)boton;
-                //botonSeleccionado.ForeColor = Color.FromArgb(255, 246, 224);
-                //botonSeleccionado.IconColor = Color.FromArgb(255, 246, 224);
-
-                //bordeInferior.BackColor = Color.FromArgb(255, 246, 224);
-                //En este le damos la ubicacion de botonSeleccionado
-                //bordeInferior.Location = new Point(botonSeleccionado.Location.X, 73);
-                //bordeInferior.Visible = true;
-                bordeInferior.BringToFront();
+                botonSeleccionado = (IconButton)boton;
+                botonSeleccionado.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                botonSeleccionado.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                //El boton seleccionado es el que disparó el evento, este tiene un paint predeterminado, so lo que hago es forzarlo a que
+                //se repinte, o sea el evento Paint que yo hice en codigo se ejecute.
+                //El invalidate lo marca como invalido haciendo que se llame de nuevo al evento paint (no es que Invalidate lo repinta
+                //directamente).
+                botonSeleccionado.Invalidate();
             }
                
         }
-                
-
-                
-              
 
         private void DesactivarBoton()
         {
-            //Con este if estamos diciendo = Si hay un boton seleccionado haz esto ->
+            //Verifica que si haya un boton activo
             if (botonSeleccionado != null)
             {
-                botonSeleccionado.ForeColor = Color.White;
-                botonSeleccionado.IconColor = Color.White;
+                //Aqui nuevamente invalido para que se ejecute de nuevo el evento paint. 
+                //Esto borra la linea del boton anterior
+                botonSeleccionado.Invalidate(); 
+                //Esto basicamente indica que no hay ningun boton seleccionado.
+                botonSeleccionado = null;
             }
         }
 
+
+        //Llamar metodo botonSeleccionado
         private void icbtnVerMaterial_Click(object sender, EventArgs e)
         {
             //Sender es la referencia al objeto que dispara el evento. 
             //O sea, en este caso el metodo afecta al objeto que disparó este evento, o sea el btn.
             //Hacer esto ayuda a no hacer un metodo por btn.
             BotonActivado(sender);
-
-            icbtnVerMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            icbtnVerMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
 
             MostrarUserControl(new frmListaInventario());
 
@@ -93,21 +73,19 @@ namespace Vistas.Formularios
         {
             BotonActivado(sender);
 
-            icbtnAggMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            icbtnAggMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
         }
 
         private void icbtnActualizarYEliminarMaterial_Click(object sender, EventArgs e)
         {
             BotonActivado(sender);
 
-            //Permiten que cuando pase el mouse y haga click no se vea el recuadro de color q sale.
-            icbtnActualizarYEliminarMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            icbtnActualizarYEliminarMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
         }
 
+
+        //Mostrar UControl
         private void MostrarUserControl(UserControl frm)
         {
+            //Este metodo ayudara  a no crear un metodo por cada frmUserControl que se quiera mostrar
                 pnlContenedorUC.Controls.Clear();
                 frm.Dock = DockStyle.Fill;
                 pnlContenedorUC.Controls.Add(frm);
@@ -117,6 +95,64 @@ namespace Vistas.Formularios
         private void frmInventarioDIT_Load(object sender, EventArgs e)
         {
             MostrarUserControl(new frmListaInventario());
+            BotonActivado(icbtnVerMaterial);
+            icbtnActualizarYEliminarMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            icbtnActualizarYEliminarMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
+
+            icbtnAggMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            icbtnAggMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
+
+            icbtnVerMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            icbtnVerMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
+        }
+
+
+        //Estos son los metodos donde pinto la linea a los botones.
+        private void icbtnVerMaterial_Paint(object sender, PaintEventArgs e)
+        {
+            if(botonSeleccionado == sender)
+            {
+                DibujarLinea_Paint(sender, e);
+            }
+            
+        }
+
+        private void icbtnAggMaterial_Paint(object sender, PaintEventArgs e)
+        {
+            if (botonSeleccionado == sender)
+            {
+                DibujarLinea_Paint(sender, e);
+            }
+        }
+
+        private void icbtnActualizarYEliminarMaterial_Paint(object sender, PaintEventArgs e)
+        {
+            if (botonSeleccionado == sender)
+            {
+                DibujarLinea_Paint(sender, e);
+            }
+        }
+
+
+
+        // Metodo para no dibujar en cada boton
+        private void DibujarLinea_Paint(object sender, PaintEventArgs e)
+        {
+            //El 'PaintEventArgs e' me da acceso al objeto Graphics
+
+            //Aqui convierto el sender en un IconButton
+            //Permite que si el que llamó al evento no es un IconButton se evitan errores y no hace nada.
+            IconButton botonLinea = sender as IconButton;
+            if (botonLinea == null) return;
+            
+
+            //Using permite liberar los recursos del sistema cuando Pen se termina de usar (necesario).
+            using (Pen lapiz = new Pen(Color.White, 3))
+            {
+                //Graphics es como el lienzo donde se dibuja la linea, lo que esta entre parentesis son las coordenadas de incio y fin de 
+                //la linea. (pen, x1, y1, x2, y2) Basicamente son los dos puntos entre los que se diuja la linea.
+                e.Graphics.DrawLine(lapiz, 0, botonLinea.Height - 7, botonLinea.Width - 1, botonLinea.Height - 7);
+            }
         }
     }
 

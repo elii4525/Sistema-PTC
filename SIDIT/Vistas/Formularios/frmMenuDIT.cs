@@ -20,7 +20,9 @@ namespace Vistas.Formularios
         private void frmMenuDIT_Load(object sender, EventArgs e)
         {
             MostrarFormInvenDEnPanel();
-            
+            pnlBarraSuperior.BringToFront();
+            pnlBarraLateral.BringToFront();
+            pbLogoITEC.BringToFront();
         }
 
 
@@ -150,6 +152,54 @@ namespace Vistas.Formularios
         private void icbtnConsumoD_Click(object sender, EventArgs e)
         {
             MostrarFormConsumoDEnPanel();
+        }
+
+
+
+        private void pnlBarraSuperior_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen lapiz = new Pen(Color.White, 2))
+            {
+                e.Graphics.DrawLine(lapiz, 0, pnlBarraSuperior.Height - 3, pnlBarraSuperior.Width - 1, pnlBarraSuperior.Height - 3);
+            }
+        }
+
+        private void pnlBarraSuperior_Resize(object sender, EventArgs e)
+        {
+            //Permite que el la linea se repinte de nuevo.
+            pnlBarraSuperior.Invalidate();
+        }
+
+        private void pnlBarraLateral_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen lapiz = new Pen(Color.White, 2))
+            {
+                e.Graphics.DrawLine(lapiz, pnlBarraLateral.Width -1, 0, pnlBarraLateral.Width -1, pnlBarraLateral.Height - 1);
+            }
+        }
+
+        private void pnlBarraLateral_Resize(object sender, EventArgs e)
+        {
+            pnlBarraLateral.Invalidate();
+        }
+
+        //private void pnlLogo_Paint(object sender, PaintEventArgs e)
+        //{
+           
+        //}
+
+        private void pbLogoITEC_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen lapiz = new Pen(Color.White, 2))
+            {
+                e.Graphics.DrawLine(lapiz, pbLogoITEC.Width - 1, 0, pbLogoITEC.Width - 1, pbLogoITEC.Height - 1);
+                e.Graphics.DrawLine(lapiz, 0, pbLogoITEC.Height - 1, pbLogoITEC.Width - 1, pbLogoITEC.Height - 1);
+            }
+        }
+
+        private void pbLogoITEC_Resize(object sender, EventArgs e)
+        {
+            pbLogoITEC.Invalidate();
         }
     }
 }

@@ -146,10 +146,16 @@
     <Compile Include="Formularios\frmSolicitudDIT.Designer.cs">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmListaInventario.cs">
+    <Compile Include="UserControls\frmAggMaterial.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmListaInventario.Designer.cs">
+    <Compile Include="UserControls\frmAggMaterial.Designer.cs">
+      <DependentUpon>frmAggMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\frmListaInventario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\frmListaInventario.Designer.cs">
       <DependentUpon>frmListaInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperBarraNegra\BarraNegra.cs" />
@@ -201,7 +207,10 @@
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListaInventario.resx">
+    <EmbeddedResource Include="UserControls\frmAggMaterial.resx">
+      <DependentUpon>frmAggMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\frmListaInventario.resx">
       <DependentUpon>frmListaInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

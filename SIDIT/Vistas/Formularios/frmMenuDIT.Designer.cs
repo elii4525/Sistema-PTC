@@ -29,55 +29,57 @@
         private void InitializeComponent()
         {
             this.tlpMenuDIT = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlBarraLateral = new System.Windows.Forms.Panel();
             this.icbtnConsumoD = new FontAwesome.Sharp.IconButton();
             this.icbtnSolicitudesD = new FontAwesome.Sharp.IconButton();
             this.icbtnInventarioD = new FontAwesome.Sharp.IconButton();
-            this.pbLogoITEC = new System.Windows.Forms.PictureBox();
             this.pnlContenedorDIT = new System.Windows.Forms.Panel();
             this.pnlBarraSuperior = new System.Windows.Forms.Panel();
-            this.lblTituloConsumoD = new System.Windows.Forms.Label();
             this.lblTituloSolicitudD = new System.Windows.Forms.Label();
+            this.lblTituloConsumoD = new System.Windows.Forms.Label();
             this.lblTituloInventarioD = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pbLogoITEC = new System.Windows.Forms.PictureBox();
             this.tlpMenuDIT.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
+            this.pnlBarraLateral.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMenuDIT
             // 
             this.tlpMenuDIT.BackColor = System.Drawing.Color.Black;
             this.tlpMenuDIT.ColumnCount = 2;
-            this.tlpMenuDIT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.43511F));
-            this.tlpMenuDIT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 88.5649F));
-            this.tlpMenuDIT.Controls.Add(this.panel1, 0, 1);
+            this.tlpMenuDIT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.23442F));
+            this.tlpMenuDIT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.76558F));
+            this.tlpMenuDIT.Controls.Add(this.pnlBarraLateral, 0, 1);
             this.tlpMenuDIT.Controls.Add(this.pnlContenedorDIT, 1, 1);
             this.tlpMenuDIT.Controls.Add(this.pnlBarraSuperior, 1, 0);
-            this.tlpMenuDIT.Controls.Add(this.panel2, 0, 0);
+            this.tlpMenuDIT.Controls.Add(this.pnlLogo, 0, 0);
             this.tlpMenuDIT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMenuDIT.Location = new System.Drawing.Point(0, 0);
-            this.tlpMenuDIT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpMenuDIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tlpMenuDIT.Name = "tlpMenuDIT";
             this.tlpMenuDIT.RowCount = 2;
-            this.tlpMenuDIT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.79374F));
-            this.tlpMenuDIT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.20626F));
-            this.tlpMenuDIT.Size = new System.Drawing.Size(1312, 571);
+            this.tlpMenuDIT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.6643F));
+            this.tlpMenuDIT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.3357F));
+            this.tlpMenuDIT.Size = new System.Drawing.Size(1749, 751);
             this.tlpMenuDIT.TabIndex = 0;
             // 
-            // panel1
+            // pnlBarraLateral
             // 
-            this.panel1.Controls.Add(this.icbtnConsumoD);
-            this.panel1.Controls.Add(this.icbtnSolicitudesD);
-            this.panel1.Controls.Add(this.icbtnInventarioD);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(2, 86);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(146, 483);
-            this.panel1.TabIndex = 0;
+            this.pnlBarraLateral.Controls.Add(this.icbtnConsumoD);
+            this.pnlBarraLateral.Controls.Add(this.icbtnSolicitudesD);
+            this.pnlBarraLateral.Controls.Add(this.icbtnInventarioD);
+            this.pnlBarraLateral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBarraLateral.Location = new System.Drawing.Point(3, 89);
+            this.pnlBarraLateral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBarraLateral.Name = "pnlBarraLateral";
+            this.pnlBarraLateral.Size = new System.Drawing.Size(173, 660);
+            this.pnlBarraLateral.TabIndex = 0;
+            this.pnlBarraLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraLateral_Paint);
+            this.pnlBarraLateral.Resize += new System.EventHandler(this.pnlBarraLateral_Resize);
             // 
             // icbtnConsumoD
             // 
@@ -91,11 +93,11 @@
             this.icbtnConsumoD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtnConsumoD.IconSize = 64;
             this.icbtnConsumoD.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.icbtnConsumoD.Location = new System.Drawing.Point(9, 337);
-            this.icbtnConsumoD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbtnConsumoD.Location = new System.Drawing.Point(12, 369);
+            this.icbtnConsumoD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icbtnConsumoD.Name = "icbtnConsumoD";
-            this.icbtnConsumoD.Padding = new System.Windows.Forms.Padding(0, 16, 0, 12);
-            this.icbtnConsumoD.Size = new System.Drawing.Size(105, 106);
+            this.icbtnConsumoD.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnConsumoD.Size = new System.Drawing.Size(140, 130);
             this.icbtnConsumoD.TabIndex = 13;
             this.icbtnConsumoD.Text = "Consumo";
             this.icbtnConsumoD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -114,11 +116,11 @@
             this.icbtnSolicitudesD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtnSolicitudesD.IconSize = 64;
             this.icbtnSolicitudesD.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.icbtnSolicitudesD.Location = new System.Drawing.Point(9, 185);
-            this.icbtnSolicitudesD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbtnSolicitudesD.Location = new System.Drawing.Point(12, 205);
+            this.icbtnSolicitudesD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icbtnSolicitudesD.Name = "icbtnSolicitudesD";
-            this.icbtnSolicitudesD.Padding = new System.Windows.Forms.Padding(0, 16, 0, 12);
-            this.icbtnSolicitudesD.Size = new System.Drawing.Size(105, 106);
+            this.icbtnSolicitudesD.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnSolicitudesD.Size = new System.Drawing.Size(140, 130);
             this.icbtnSolicitudesD.TabIndex = 10;
             this.icbtnSolicitudesD.Text = "Solicitudes";
             this.icbtnSolicitudesD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -136,38 +138,26 @@
             this.icbtnInventarioD.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtnInventarioD.IconSize = 64;
             this.icbtnInventarioD.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.icbtnInventarioD.Location = new System.Drawing.Point(9, 34);
-            this.icbtnInventarioD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbtnInventarioD.Location = new System.Drawing.Point(12, 42);
+            this.icbtnInventarioD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icbtnInventarioD.Name = "icbtnInventarioD";
-            this.icbtnInventarioD.Padding = new System.Windows.Forms.Padding(0, 16, 0, 12);
-            this.icbtnInventarioD.Size = new System.Drawing.Size(105, 106);
+            this.icbtnInventarioD.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnInventarioD.Size = new System.Drawing.Size(140, 130);
             this.icbtnInventarioD.TabIndex = 9;
             this.icbtnInventarioD.Text = "Inventario";
             this.icbtnInventarioD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.icbtnInventarioD.UseVisualStyleBackColor = false;
             this.icbtnInventarioD.Click += new System.EventHandler(this.icbtnInventarioD_Click);
             // 
-            // pbLogoITEC
-            // 
-            this.pbLogoITEC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLogoITEC.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pbLogoITEC.Location = new System.Drawing.Point(0, 0);
-            this.pbLogoITEC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbLogoITEC.Name = "pbLogoITEC";
-            this.pbLogoITEC.Size = new System.Drawing.Size(144, 78);
-            this.pbLogoITEC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoITEC.TabIndex = 1;
-            this.pbLogoITEC.TabStop = false;
-            // 
             // pnlContenedorDIT
             // 
             this.pnlContenedorDIT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlContenedorDIT.Location = new System.Drawing.Point(152, 86);
-            this.pnlContenedorDIT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenedorDIT.Location = new System.Drawing.Point(182, 89);
+            this.pnlContenedorDIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContenedorDIT.Name = "pnlContenedorDIT";
-            this.pnlContenedorDIT.Size = new System.Drawing.Size(1158, 483);
+            this.pnlContenedorDIT.Size = new System.Drawing.Size(1564, 660);
             this.pnlContenedorDIT.TabIndex = 2;
             // 
             // pnlBarraSuperior
@@ -175,86 +165,95 @@
             this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoD);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudD);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoD);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioD);
-            this.pnlBarraSuperior.Location = new System.Drawing.Point(152, 2);
-            this.pnlBarraSuperior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlBarraSuperior.Location = new System.Drawing.Point(182, 2);
+            this.pnlBarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlBarraSuperior.Name = "pnlBarraSuperior";
-            this.pnlBarraSuperior.Size = new System.Drawing.Size(1158, 80);
+            this.pnlBarraSuperior.Size = new System.Drawing.Size(1564, 83);
             this.pnlBarraSuperior.TabIndex = 3;
-            // 
-            // lblTituloConsumoD
-            // 
-            this.lblTituloConsumoD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTituloConsumoD.AutoSize = true;
-            this.lblTituloConsumoD.BackColor = System.Drawing.Color.Black;
-            this.lblTituloConsumoD.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloConsumoD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloConsumoD.Location = new System.Drawing.Point(525, 20);
-            this.lblTituloConsumoD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTituloConsumoD.Name = "lblTituloConsumoD";
-            this.lblTituloConsumoD.Size = new System.Drawing.Size(164, 38);
-            this.lblTituloConsumoD.TabIndex = 2;
-            this.lblTituloConsumoD.Text = "Consumo";
+            this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
+            this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
             // 
             // lblTituloSolicitudD
             // 
-            this.lblTituloSolicitudD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTituloSolicitudD.AutoSize = true;
-            this.lblTituloSolicitudD.BackColor = System.Drawing.Color.Black;
-            this.lblTituloSolicitudD.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSolicitudD.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloSolicitudD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloSolicitudD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloSolicitudD.Location = new System.Drawing.Point(508, 20);
-            this.lblTituloSolicitudD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTituloSolicitudD.Location = new System.Drawing.Point(688, 20);
             this.lblTituloSolicitudD.Name = "lblTituloSolicitudD";
-            this.lblTituloSolicitudD.Size = new System.Drawing.Size(182, 38);
-            this.lblTituloSolicitudD.TabIndex = 1;
+            this.lblTituloSolicitudD.Size = new System.Drawing.Size(210, 44);
+            this.lblTituloSolicitudD.TabIndex = 2;
             this.lblTituloSolicitudD.Text = "Solicitudes";
+            // 
+            // lblTituloConsumoD
+            // 
+            this.lblTituloConsumoD.AutoSize = true;
+            this.lblTituloConsumoD.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloConsumoD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloConsumoD.ForeColor = System.Drawing.Color.White;
+            this.lblTituloConsumoD.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloConsumoD.Name = "lblTituloConsumoD";
+            this.lblTituloConsumoD.Size = new System.Drawing.Size(191, 44);
+            this.lblTituloConsumoD.TabIndex = 1;
+            this.lblTituloConsumoD.Text = "Consumo";
             // 
             // lblTituloInventarioD
             // 
-            this.lblTituloInventarioD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTituloInventarioD.AutoSize = true;
-            this.lblTituloInventarioD.BackColor = System.Drawing.Color.Black;
-            this.lblTituloInventarioD.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloInventarioD.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloInventarioD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloInventarioD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloInventarioD.Location = new System.Drawing.Point(508, 20);
-            this.lblTituloInventarioD.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTituloInventarioD.Location = new System.Drawing.Point(707, 20);
             this.lblTituloInventarioD.Name = "lblTituloInventarioD";
-            this.lblTituloInventarioD.Size = new System.Drawing.Size(171, 38);
+            this.lblTituloInventarioD.Size = new System.Drawing.Size(198, 44);
             this.lblTituloInventarioD.TabIndex = 0;
             this.lblTituloInventarioD.Text = "Inventario";
             // 
-            // panel2
+            // pnlLogo
             // 
-            this.panel2.Controls.Add(this.pbLogoITEC);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 78);
-            this.panel2.TabIndex = 4;
+            this.pnlLogo.Controls.Add(this.pbLogoITEC);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogo.Location = new System.Drawing.Point(4, 4);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(171, 79);
+            this.pnlLogo.TabIndex = 4;
+            // 
+            // pbLogoITEC
+            // 
+            this.pbLogoITEC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLogoITEC.Image = global::Vistas.Properties.Resources.Group_4;
+            this.pbLogoITEC.Location = new System.Drawing.Point(0, 0);
+            this.pbLogoITEC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogoITEC.Name = "pbLogoITEC";
+            this.pbLogoITEC.Size = new System.Drawing.Size(171, 79);
+            this.pbLogoITEC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoITEC.TabIndex = 1;
+            this.pbLogoITEC.TabStop = false;
+            this.pbLogoITEC.Paint += new System.Windows.Forms.PaintEventHandler(this.pbLogoITEC_Paint);
+            this.pbLogoITEC.Resize += new System.EventHandler(this.pbLogoITEC_Resize);
             // 
             // frmMenuDIT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 571);
+            this.ClientSize = new System.Drawing.Size(1749, 751);
             this.Controls.Add(this.tlpMenuDIT);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(1129, 495);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1699, 798);
             this.Name = "frmMenuDIT";
             this.Text = "frmMenuDIT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuDIT_Load);
             this.tlpMenuDIT.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
+            this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraSuperior.ResumeLayout(false);
             this.pnlBarraSuperior.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,16 +261,16 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tlpMenuDIT;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlBarraLateral;
         private FontAwesome.Sharp.IconButton icbtnInventarioD;
         private FontAwesome.Sharp.IconButton icbtnSolicitudesD;
         private FontAwesome.Sharp.IconButton icbtnConsumoD;
         private System.Windows.Forms.PictureBox pbLogoITEC;
         private System.Windows.Forms.Panel pnlContenedorDIT;
         private System.Windows.Forms.Panel pnlBarraSuperior;
-        private System.Windows.Forms.Label lblTituloConsumoD;
+        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblTituloSolicitudD;
+        private System.Windows.Forms.Label lblTituloConsumoD;
         private System.Windows.Forms.Label lblTituloInventarioD;
-        private System.Windows.Forms.Panel panel2;
     }
 }
