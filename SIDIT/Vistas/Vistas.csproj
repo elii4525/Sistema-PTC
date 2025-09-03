@@ -38,6 +38,7 @@
     <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Drawing.Common.9.0.8\lib\net462\System.Drawing.Common.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -127,6 +128,12 @@
     <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmSalidaMaterialDIT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSalidaMaterialDIT.Designer.cs">
+      <DependentUpon>frmSalidaMaterialDIT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSolicitudDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSalidaMaterialDIT.resx">
+      <DependentUpon>frmSalidaMaterialDIT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>

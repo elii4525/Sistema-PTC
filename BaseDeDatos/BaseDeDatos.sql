@@ -3,101 +3,104 @@ go
 use BasePTC;
 go
 
-
--- Tables 
-create table Rol (
-idRol int identity (1,1) primary key,
-tipoRol varchar (50) not null,
-descripcionRol varchar (500) not null);
+create table rol (
+idrol int identity (1,1) primary key,
+tiporol varchar (50) not null,
+descripcionrol varchar (500) not null);
 go
 
-create table Usuario (
-idUsuario int identity (1,1) primary key,
+create table usuario (
+idusuario int identity (1,1) primary key,
 nombre varchar (50) not null,
-fechaNacimiento date not null,
+fechanacimiento date not null,
 contraseña varchar(30),
 telefono varchar (20),
 correo varchar (75) unique,
-id_Rol int,
-constraint fk_rol Foreign key (id_Rol) references Rol(idRol));
+id_rol int,
+constraint fk_rol foreign key (id_rol) references rol(idrol));
 go
 
-
-create table Categoria (
-idCategoria int identity (1,1) primary key,
-nombreCategoria varchar (70), 
-descripcionCategoria varchar (300));
+create table categoria (
+idcategoria int identity (1,1) primary key,
+nombrecategoria varchar (70), 
+descripcioncategoria varchar (300));
 go
 
-
-create table Marca (
-idMarca int identity (1,1) primary key,
-nombreMarca varchar (70) not null);
+create table marca (
+idmarca int identity (1,1) primary key,
+nombremarca varchar (70) not null);
 go
 
-create table Material (
-idMaterial int identity (1,1) primary key,
-nombreMaterial varchar (100) not null,
+create table material (
+idmaterial int identity (1,1) primary key,
+nombrematerial varchar (100) not null,
 cantidad int not null,
-fechaIngreso date,
-descripcionMaterial varchar (500),
+fechaingreso date,
+descripcionmaterial varchar (500),
 modelo varchar (100) unique,
-id_Categoria int,
-id_Marca int,
-constraint fk_Categoria Foreign key(id_Categoria) references Categoria(idCategoria),
-constraint fk_Marca Foreign key(id_Marca) references Marca(idMarca));
+id_categoria int,
+id_marca int,
+constraint fk_categoria foreign key(id_categoria) references categoria(idcategoria),
+constraint fk_marca foreign key(id_marca) references marca(idmarca));
 go
 
-create table Solicitud (
-idSolicitud int identity (1,1) primary key,
+create table solicitud (
+idsolicitud int identity (1,1) primary key,
 motivo varchar (1000) not null,
-cantidadProducto int not null,
+cantidadproducto int not null,
 fecha date not null,
 estado varchar (50) not null,
-id_Usuario int,
-id_Material int,
-constraint fk_Material Foreign key (id_Material) references Material(idMaterial),
-constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
+id_usuario int,
+id_material int,
+constraint fk_material foreign key (id_material) references material(idmaterial),
+constraint fk_usuario foreign key (id_usuario) references usuario(idusuario));
 go
 
-create table HistorialSolicitud (
-idHistorialSolicitud int identity (1,1) primary key,
-estadoSolicitud varchar (50),
-fechaRespuesta date,
-id_Solicitud int not null,
-constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud));
+create table historialsolicitud (
+idhistorialsolicitud int identity (1,1) primary key,
+estadosolicitud varchar (50),
+fecharespuesta date,
+id_solicitud int not null,
+constraint fk_solicitud foreign key (id_solicitud) references solicitud(idsolicitud));
 go
 
--- Inserts into
-insert into Usuario 
-values ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
+-- tabla salida_de_material
+create table salida_de_material (
+idsalidamaterial int identity(1,1) primary key,
+id_material int not null,
+cantidadconsumida int not null,
+fechaconsumo date not null,
+id_usuario int not null,
+motivosalida varchar(1000),
+constraint fk_salida_material foreign key (id_material) references material(idmaterial),
+constraint fk_salida_usuario foreign key (id_usuario) references usuario(idusuario)
+);
+go
+-- 1) Insertar roles
+insert into rol values 
+('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
+('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+
+-- 2) Insertar usuarios (requiere que rol ya exista)
+insert into usuario values 
+('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
 ('Orlando Josue Pineda Rivas', '2003/8/21', 'X933esD4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
 ('Michael Steve Murcia Martinez', '2002/5/01', 'AsQQ09211','+503 3385 2265', 'michaelsteve.dit@gmail.com', 2),
 ('Cristopher Levi Rogger Marin', '2000/11/07', 'Yqm330pX1','+503 4528 0751','cristlevi.dit@gmail.com',2),
-('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2)
+('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2);
 
-insert into Rol values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
-('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+-- 3) Insertar categorías
+insert into categoria values 
+('Computación','objetos de computacion'),
+('Perífericos','Aparato auxiliar e independiente conectado a la unidad central de una computadora u otro dispositivo electrónico.'),
+('Limpieza','onjetos de limpieza'),
+('Redes','conexion de redes'),
+('Almacenamiento','almacenamiento del sistema'),
+('Papeleria','objetos de papeleria');
 
-insert into Material 
-values ('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para oficina', 'LAP-001', 1, 1),
-('Monitor Hp', 25, '2022-07-22', 'Teclado inalámbrico compacto', 'TECL-002',  2, 7),
-('Teclado alambrico', 5,  '2023-01-08', 'Aire comprimido para limpieza de computadoras', 'AIRE-003',3, 9),
-('Aire comprimido', 20, '2020-11-30', 'Router inalámbrico de alto rendimiento', 'ROUT-004',  4, 3),
-('Router 1200Mbps', 12, '2024-05-10', 'Impresora multifuncional con sistema de tinta continua', 'IMPR-005',  1, 10),
-('Tinta negra para impresora', 15, '2023-09-05', 'Botellas de tinta negra para impresora EcoTank', 'TINTA-006',  1, 10),
-('Switch RB260GS', 18, '2022-02-12', 'Switch de red 5 puertos Gigabit', 'SWITCH-007', 4, 6),
-('Cinta Scotch', 30, '2024-12-01', 'Memoria USB 64GB', 'USB-008',  5, 7),
-('Cámara IP NXT-CAM', 50, '2021-08-19', 'Cinta adhesiva transparente de oficina', 'CINTA-009',  6, 8),
-('Laptop core i5', 7,  '2023-06-14', 'Proyector portátil para presentaciones', 'PROY-010',  1, 7),
-('Limpiador en spray', 40, '2020-02-20', 'Paquete de hojas tamaño carta', 'PAPEL-011', 6, 5),
-('USB 1TB', 9,  '2022-04-25', 'Limpiador multiusos para superficies electrónicas', 'LIMP-012',  3, 11),
-('Disco duro externo de 2TB', 5,  '2023-11-30', 'Disco duro externo de 2TB USB 3.0', 'DD-013',  5, 2),
-('Cable RJ45', 16, '2024-03-05', 'Cámara de seguridad IP para interiores', 'CAM-014', 4, 3),
-('Plumones Artline', 8,  '2021-06-18', 'Computadora de escritorio básica', 'PC-015', 1, 1); 
-
-insert into Marca 
-values ('Ardone'),
+-- 4) Insertar marcas
+insert into marca values 
+('Ardone'),
 ('Dell'),
 ('Nexxt Solutions'),
 ('Hp'),
@@ -111,18 +114,28 @@ values ('Ardone'),
 ('Lenovo'),
 ('Logitech'),
 ('Canon'),
-('Bic')
+('Bic');
 
-insert into Categoria 
-values ('Computación','objetos de computacion'),
-('Perífericos','Aparato auxiliar e independiente conectado a la unidad central de una computadora u otro dispositivo electrónico.'),
-('Limpieza','onjetos de limpieza'),
-('Redes','conexion de redes'),
-('Almacenamiento','almacenamiento del sistema'),
-('Papeleria','objetos de papeleria')
+-- 5) Insertar materiales (requiere categoría y marca)
+insert into material values 
+('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para oficina', 'LAP-001', 1, 1),
+('Monitor Hp', 25, '2022-07-22', 'Teclado inalámbrico compacto', 'TECL-002',  2, 7),
+('Teclado alambrico', 5,  '2023-01-08', 'Aire comprimido para limpieza de computadoras', 'AIRE-003',3, 9),
+('Aire comprimido', 20, '2020-11-30', 'Router inalámbrico de alto rendimiento', 'ROUT-004',  4, 3),
+('Router 1200Mbps', 12, '2024-05-10', 'Impresora multifuncional con sistema de tinta continua', 'IMPR-005',  1, 10),
+('Tinta negra para impresora', 15, '2023-09-05', 'Botellas de tinta negra para impresora EcoTank', 'TINTA-006',  1, 10),
+('Switch RB260GS', 18, '2022-02-12', 'Switch de red 5 puertos Gigabit', 'SWITCH-007', 4, 6),
+('Cinta Scotch', 30, '2024-12-01', 'Memoria USB 64GB', 'USB-008',  5, 7),
+('Laptop core i5', 7,  '2023-06-14', 'Proyector portátil para presentaciones', 'PROY-010',  1, 7),
+('Limpiador en spray', 40, '2020-02-20', 'Paquete de hojas tamaño carta', 'PAPEL-011', 6, 5),
+('USB 1TB', 9,  '2022-04-25', 'Limpiador multiusos para superficies electrónicas', 'LIMP-012',  3, 11),
+('Disco duro externo de 2TB', 5,  '2023-11-30', 'Disco duro externo de 2TB USB 3.0', 'DD-013',  5, 2),
+('Cable RJ45', 16, '2024-03-05', 'Cámara de seguridad IP para interiores', 'CAM-014', 4, 3),
+('Plumones Artline', 8,  '2021-06-18', 'Computadora de escritorio básica', 'PC-015', 1, 1); 
 
-insert into Solicitud 
-values ('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'Enviada',2, 4),
+-- 6) Insertar solicitudes (requiere usuario y material)
+insert into solicitud values
+('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'Enviada',2, 4),
 ('Necesito 10 tintas Epson negras para reponer', 10, '2025-02-02', 'Enviada', 3, 6),
 ('Me hacen falta 5 teclados iTouch para las nuevas PCs', 5, '2025-07-21', 'Enviada', 3, 3),
 ('Se necesitan 3 routers Nexxt para la red', 3, '2025-07-22', 'Enviada', 1, 5),
@@ -136,9 +149,10 @@ values ('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07
 ('Se solicitan 2 Teclados alambricos para reponer', 2, '2025-04-11', 'Enviada', 4, 3),
 ('Se necesitan 7 Cinta Scotch', 7, '2025-06-27', 'Enviada', 4, 8),
 ('Necesito 5 USB 1TB', 5, '2025-03-03', 'Enviada', 3,12),
-('Se solicitan 1 Cámara IP NXT-CAM para reponer', 1, '2025-03-28', 'Enviada', 5,9)
+('Se solicitan 1 Cámara IP NXT-CAM para reponer', 1, '2025-03-28', 'Enviada', 5,9);
 
-insert into HistorialSolicitud values
+-- 7) Insertar historial de solicitudes (requiere solicitud)
+insert into historialsolicitud values
 ('Rechazado','2025-07-23', 1),
 ('Rechazado', '2025-02-05', 2),
 ('Aceptado', '2025-07-25', 3),
@@ -153,20 +167,37 @@ insert into HistorialSolicitud values
 ('Rechazado', '2025-04-18', 12),
 ('Rechazado', '2025-01-21', 13),
 ('Aceptado', '2025-06-29', 14),
-('Aceptado', '2025-03-06', 15)
+('Aceptado', '2025-03-06', 15);
 
--- Select
-Select *from Usuario
-Select *from Rol
-Select *from Categoria
-Select *from Solicitud
-Select *from Marca
-Select *from Material
-Select *from HistorialSolicitud
+-- 8) Insertar salida de material (requiere usuario y material)
+insert into salida_de_material values
+(4, 2, '2025-07-26', 2, 'Se entregaron 2 latas de aire comprimido para limpieza'),
+(6, 1, '2025-07-27', 3, 'Consumo de una tinta negra Epson en impresora de oficina'),
+(2, 1, '2025-07-28', 4, 'Se entregó un monitor HP para nueva estación de trabajo'),
+(7, 2, '2025-07-29', 5, 'Se ocuparon 2 switches RB260GS en red de laboratorio'),
+(10, 5, '2025-07-30', 1, 'Se entregaron 5 paquetes de papel tamaño carta para oficina'),
+(1, 1, '2025-08-01', 3, 'Uso de 1 laptop Ryzen 7 para área administrativa'),
+(3, 2, '2025-08-02', 4, 'Se entregaron 2 teclados alámbricos para PCs nuevas'),
+(12, 1, '2025-08-03', 5, 'Uso de un disco duro externo 2TB para respaldo de datos'),
+(14, 1, '2025-08-04', 2, 'Entrega de computadora de escritorio básica a recepción'),
+(5, 1, '2025-08-05', 1, 'Se instaló 1 router Nexxt en laboratorio 1'),
+(8, 3, '2025-08-06', 4, 'Se entregaron 3 cintas Scotch a oficina de diseño'),
+(11, 2, '2025-08-07', 3, 'Uso de 2 USB 1TB para almacenamiento temporal'),
+(9, 1, '2025-08-08', 2, 'Se entregó 1 laptop Core i5 a nuevo empleado'),
+(13, 4, '2025-08-09', 5, 'Se ocuparon 4 cables RJ45 en área de redes'),
+(15, 2, '2025-08-10', 1, 'Se entregaron 2 plumones Artline a oficina de reuniones');
+
+
+select * from usuario
+select * from rol
+select * from categoria
+select * from solicitud
+select * from marca
+select * from material
+select * from historialsolicitud
 go
 
 
---Creacion de consultas para el sistema en c#
 
 
 

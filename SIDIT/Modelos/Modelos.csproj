@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Conexion\ConexionDB.cs" />
     <Compile Include="Entidades\Categoria.cs" />
+    <Compile Include="Entidades\Consumo.cs" />
     <Compile Include="Entidades\HistorialSolicitud.cs" />
     <Compile Include="Entidades\Marca.cs" />
     <Compile Include="Entidades\Material.cs" />
