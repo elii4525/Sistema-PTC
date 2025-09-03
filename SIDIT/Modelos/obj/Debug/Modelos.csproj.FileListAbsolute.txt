@@ -36,3 +36,13 @@ C:\Users\ADMIN\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.cspr
 C:\Users\ADMIN\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.Up2Date
 C:\Users\ADMIN\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.dll
 C:\Users\ADMIN\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\Modelos.dll
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\System.Drawing.Common.dll
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\System.Drawing.Common.pdb
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\System.Drawing.Common.xml
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.Up2Date
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.dll
+C:\Users\Admin\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.pdb

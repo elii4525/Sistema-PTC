@@ -4,84 +4,91 @@ use BasePTC;
 go
 
 create table rol (
-idrol int identity (1,1) primary key,
-tiporol varchar (50) not null,
-descripcionrol varchar (500) not null);
+    idrol int identity(1,1) primary key,
+    tiporol varchar(50) not null,
+    descripcionrol varchar(500) not null
+);
 go
 
 create table usuario (
-idusuario int identity (1,1) primary key,
-nombre varchar (50) not null,
-fechanacimiento date not null,
-contraseña varchar(30),
-telefono varchar (20),
-correo varchar (75) unique,
-id_rol int,
-constraint fk_rol foreign key (id_rol) references rol(idrol));
+    idusuario int identity(1,1) primary key,
+    nombre varchar(50) not null,
+    fechanacimiento date not null,
+    contraseña varchar(30),
+    telefono varchar(20),
+    correo varchar(75) unique,
+    id_rol int,
+    constraint fk_rol foreign key (id_rol) references rol(idrol)
+);
 go
 
 create table categoria (
-idcategoria int identity (1,1) primary key,
-nombrecategoria varchar (70), 
-descripcioncategoria varchar (300));
+    idcategoria int identity(1,1) primary key,
+    nombrecategoria varchar(70), 
+    descripcioncategoria varchar(300)
+);
 go
 
 create table marca (
-idmarca int identity (1,1) primary key,
-nombremarca varchar (70) not null);
+    idmarca int identity(1,1) primary key,
+    nombremarca varchar(70) not null
+);
 go
 
 create table material (
-idmaterial int identity (1,1) primary key,
-nombrematerial varchar (100) not null,
-cantidad int not null,
-fechaingreso date,
-descripcionmaterial varchar (500),
-modelo varchar (100) unique,
-id_categoria int,
-id_marca int,
-constraint fk_categoria foreign key(id_categoria) references categoria(idcategoria),
-constraint fk_marca foreign key(id_marca) references marca(idmarca));
+    idmaterial int identity(1,1) primary key,
+    nombrematerial varchar(100) not null,
+    cantidad int not null,
+    fechaingreso date,
+    descripcionmaterial varchar(500),
+    modelo varchar(100) unique,
+    id_categoria int,
+    id_marca int,
+    constraint fk_categoria foreign key(id_categoria) references categoria(idcategoria),
+    constraint fk_marca foreign key(id_marca) references marca(idmarca)
+);
 go
 
 create table solicitud (
-idsolicitud int identity (1,1) primary key,
-motivo varchar (1000) not null,
-cantidadproducto int not null,
-fecha date not null,
-estado varchar (50) not null,
-id_usuario int,
-id_material int,
-constraint fk_material foreign key (id_material) references material(idmaterial),
-constraint fk_usuario foreign key (id_usuario) references usuario(idusuario));
+    idsolicitud int identity(1,1) primary key,
+    motivo varchar(1000) not null,
+    cantidadproducto int not null,
+    fecha date not null,
+    estado varchar(50) not null,
+    id_usuario int,
+    id_material int,
+    constraint fk_material foreign key (id_material) references material(idmaterial),
+    constraint fk_usuario foreign key (id_usuario) references usuario(idusuario)
+);
 go
 
 create table historialsolicitud (
-idhistorialsolicitud int identity (1,1) primary key,
-estadosolicitud varchar (50),
-fecharespuesta date,
-id_solicitud int not null,
-constraint fk_solicitud foreign key (id_solicitud) references solicitud(idsolicitud));
-go
-
--- tabla salida_de_material
-create table salida_de_material (
-idsalidamaterial int identity(1,1) primary key,
-id_material int not null,
-cantidadconsumida int not null,
-fechaconsumo date not null,
-id_usuario int not null,
-motivosalida varchar(1000),
-constraint fk_salida_material foreign key (id_material) references material(idmaterial),
-constraint fk_salida_usuario foreign key (id_usuario) references usuario(idusuario)
+    idhistorialsolicitud int identity(1,1) primary key,
+    estadosolicitud varchar(50),
+    fecharespuesta date,
+    id_solicitud int not null,
+    constraint fk_solicitud foreign key (id_solicitud) references solicitud(idsolicitud)
 );
 go
--- 1) Insertar roles
+
+create table salida_de_material (
+    idsalidamaterial int identity(1,1) primary key,
+    id_material int not null,
+    cantidadconsumida int not null,
+    fechaconsumo date not null,
+    id_usuario int not null,
+    motivosalida varchar(1000),
+    constraint fk_salida_material foreign key (id_material) references material(idmaterial),
+    constraint fk_salida_usuario foreign key (id_usuario) references usuario(idusuario)
+);
+go
+
+-- insertar roles
 insert into rol values 
 ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
 ('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
 
--- 2) Insertar usuarios (requiere que rol ya exista)
+-- insertar usuarios
 insert into usuario values 
 ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
 ('Orlando Josue Pineda Rivas', '2003/8/21', 'X933esD4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
@@ -89,7 +96,7 @@ insert into usuario values
 ('Cristopher Levi Rogger Marin', '2000/11/07', 'Yqm330pX1','+503 4528 0751','cristlevi.dit@gmail.com',2),
 ('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2);
 
--- 3) Insertar categorías
+-- insertar categorías
 insert into categoria values 
 ('Computación','objetos de computacion'),
 ('Perífericos','Aparato auxiliar e independiente conectado a la unidad central de una computadora u otro dispositivo electrónico.'),
@@ -98,7 +105,7 @@ insert into categoria values
 ('Almacenamiento','almacenamiento del sistema'),
 ('Papeleria','objetos de papeleria');
 
--- 4) Insertar marcas
+-- insertar marcas
 insert into marca values 
 ('Ardone'),
 ('Dell'),
@@ -116,7 +123,7 @@ insert into marca values
 ('Canon'),
 ('Bic');
 
--- 5) Insertar materiales (requiere categoría y marca)
+-- insertar materiales
 insert into material values 
 ('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para oficina', 'LAP-001', 1, 1),
 ('Monitor Hp', 25, '2022-07-22', 'Teclado inalámbrico compacto', 'TECL-002',  2, 7),
@@ -133,7 +140,7 @@ insert into material values
 ('Cable RJ45', 16, '2024-03-05', 'Cámara de seguridad IP para interiores', 'CAM-014', 4, 3),
 ('Plumones Artline', 8,  '2021-06-18', 'Computadora de escritorio básica', 'PC-015', 1, 1); 
 
--- 6) Insertar solicitudes (requiere usuario y material)
+-- insertar solicitudes
 insert into solicitud values
 ('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'Enviada',2, 4),
 ('Necesito 10 tintas Epson negras para reponer', 10, '2025-02-02', 'Enviada', 3, 6),
@@ -151,7 +158,7 @@ insert into solicitud values
 ('Necesito 5 USB 1TB', 5, '2025-03-03', 'Enviada', 3,12),
 ('Se solicitan 1 Cámara IP NXT-CAM para reponer', 1, '2025-03-28', 'Enviada', 5,9);
 
--- 7) Insertar historial de solicitudes (requiere solicitud)
+-- insertar historial de solicitudes
 insert into historialsolicitud values
 ('Rechazado','2025-07-23', 1),
 ('Rechazado', '2025-02-05', 2),
@@ -169,7 +176,7 @@ insert into historialsolicitud values
 ('Aceptado', '2025-06-29', 14),
 ('Aceptado', '2025-03-06', 15);
 
--- 8) Insertar salida de material (requiere usuario y material)
+-- insertar salida de material
 insert into salida_de_material values
 (4, 2, '2025-07-26', 2, 'Se entregaron 2 latas de aire comprimido para limpieza'),
 (6, 1, '2025-07-27', 3, 'Consumo de una tinta negra Epson en impresora de oficina'),
@@ -186,18 +193,54 @@ insert into salida_de_material values
 (9, 1, '2025-08-08', 2, 'Se entregó 1 laptop Core i5 a nuevo empleado'),
 (13, 4, '2025-08-09', 5, 'Se ocuparon 4 cables RJ45 en área de redes'),
 (15, 2, '2025-08-10', 1, 'Se entregaron 2 plumones Artline a oficina de reuniones');
-
-
-select * from usuario
-select * from rol
-select * from categoria
-select * from solicitud
-select * from marca
-select * from material
-select * from historialsolicitud
 go
 
+-- crear procedimiento almacenado para obtener catálogo completo
+create procedure sp_obtener_catalogo_materiales
+as
+begin
+    select idmaterial, nombrematerial, cantidad, fechaingreso, descripcionmaterial, modelo from material;
+end
+go
 
+-- crear procedimiento almacenado para obtener inventario filtrado
+create procedure sp_obtener_datos_inventario
+    @textoBusqueda varchar(100) = null
+as
+begin
+    if @textoBusqueda is null or @textoBusqueda = ''
+    begin
+        select nombrematerial, cantidad from material;
+    end
+    else
+    begin
+        select nombrematerial, cantidad from material
+        where nombrematerial like '%' + @textoBusqueda + '%'
+        or modelo like '%' + @textoBusqueda + '%';
+    end
+end
+go
 
-
-
+-- crear procedimiento almacenado para obtener consumo por mes
+create procedure sp_obtener_datos_consumo
+    @fechaInicio date,
+    @fechaFin date
+as
+begin
+    select  
+        datename(month, fechaconsumo) + '-' + cast(year(fechaconsumo) as varchar) as mes,
+        sum(cantidadconsumida) as totalconsumido
+    from salida_de_material
+    where fechaconsumo between @fechaInicio and @fechaFin
+    group by year(fechaconsumo), month(fechaconsumo), datename(month, fechaconsumo)
+    order by year(fechaconsumo), month(fechaconsumo);
+end
+go
+select * from usuario 
+select * from rol 
+select * from categoria 
+select * from solicitud 
+select * from marca 
+select * from material 
+select * from historialsolicitud 
+go

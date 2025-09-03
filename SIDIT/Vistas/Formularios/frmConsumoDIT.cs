@@ -23,7 +23,9 @@ namespace Vistas.Formularios
             // Carga los datos iniciales del catálogo, inventario y consumo
             CargarCatalogo();
             CargarGraficoInventario();
-            CargarGraficoConsumo();
+            // Llama al método para cargar el gráfico de consumo
+            // Al cargar, establece un rango de fechas por defecto que incluye los datos de prueba
+            CargarGraficoConsumo(new DateTime(2025, 1, 1), new DateTime(2025, 12, 31));
         }
 
         // Método para cargar el catálogo de materiales en el DataGridView
@@ -38,7 +40,7 @@ namespace Vistas.Formularios
                     // Asigna la tabla de datos como la fuente para el DataGridView
                     dataGridViewCatalogo.DataSource = dt;
                     // Oculta la columna del ID del material para el usuario
-                    dataGridViewCatalogo.Columns["idMaterial"].Visible = false;
+                    dataGridViewCatalogo.Columns["idmaterial"].Visible = false;
                 }
                 else
                 {
@@ -70,7 +72,7 @@ namespace Vistas.Formularios
                     // Llena el gráfico con los datos de la tabla
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        chartInventario.Series["Inventario"].Points.AddXY(dt.Rows[i]["nombreMaterial"], dt.Rows[i]["cantidad"]);
+                        chartInventario.Series["Inventario"].Points.AddXY(dt.Rows[i]["nombrematerial"], dt.Rows[i]["cantidad"]);
                     }
                 }
                 else
@@ -99,6 +101,7 @@ namespace Vistas.Formularios
                     // Crea una nueva serie para el gráfico
                     chartConsumo.Series.Add("Consumo");
                     chartConsumo.Series["Consumo"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                    chartConsumo.Series["Consumo"].Color = Color.Blue; // Puedes personalizar el color
 
                     // Llena el gráfico con los datos de la tabla
                     for (int i = 0; i < dt.Rows.Count; i++)
