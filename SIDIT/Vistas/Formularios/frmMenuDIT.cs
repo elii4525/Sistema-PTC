@@ -19,13 +19,42 @@ namespace Vistas.Formularios
 
         private void frmMenuDIT_Load(object sender, EventArgs e)
         {
-            MostrarFormInvenDEnPanel();
-            pbInventarioD2.Show();
+            pnlBarraSuperior.BringToFront();
+            pnlBarraLateral.BringToFront();
+            pbLogoITEC.BringToFront();
+
         }
 
 
+        private void ColoresSolicitud()
+        {
+            icbtnSolicitudesD.BackColor = Color.White;
+            icbtnSolicitudesD.IconColor = Color.Black;
+            icbtnSolicitudesD.ForeColor = Color.Black;
 
-        private void MostrarFormInvenDEnPanel()
+            //Tmb dejo indicado q el titulo debe ser false
+            lblTituloSolicitudD.Visible = false;
+        }
+
+        private void ColoresConsumo()
+        {
+            icbtnConsumoD.BackColor = Color.White;
+            icbtnConsumoD.IconColor = Color.Black;
+            icbtnConsumoD.ForeColor = Color.Black;
+            lblTituloConsumoD.Visible = false;
+        }
+
+        private void ColoresInventario()
+        {
+            icbtnInventarioD.BackColor = Color.White;
+            icbtnInventarioD.IconColor = Color.Black;
+            icbtnInventarioD.ForeColor = Color.Black;
+
+            lblTituloInventarioD.Visible = false;
+        }
+
+        //Los he puesto publicos para poder utilizarlos en el Bienvenidos.
+        public void MostrarFormInvenDEnPanel()
         {
             pnlContenedorDIT.Controls.Clear(); //Limpia lo que haya antes
 
@@ -45,27 +74,20 @@ namespace Vistas.Formularios
             inventarioD.Show(); //Ya se muestra el formulario
 
             //Cambia los colores para el panel activo
-            pnlInventarioD.BackColor = Color.FromArgb(18, 18, 18);
-            pbInventarioD2.Visible = true;
-            lblInventarioD.ForeColor = Color.White;
+            icbtnInventarioD.BackColor = Color.FromArgb(18, 18, 18);
+            icbtnInventarioD.IconColor = Color.White;
+            icbtnInventarioD.ForeColor = Color.White;
+            
             lblTituloInventarioD.Visible = true;
 
             //Restaura los colores de solicitud
-            pnlSolicitudD.BackColor = Color.White;
-            lblSolicitudD.ForeColor = Color.Black;
-            pbSolicitudD2.Visible = false;
-            pbSolicitudD.Visible = true;
-            lblTituloSolicitudD.Visible = false;
+            ColoresSolicitud();
             //Consumo
-            pnlConsumoD.BackColor = Color.White;
-            lblConsumoD.ForeColor = Color.Black;
-            pbConsumoD.Visible = true;
-            pbConsumoD2.Visible = false;
-            lblTituloConsumoD.Visible = false;
+            ColoresConsumo();
             
         }
 
-        private void MostrarFormSoliDEnPanel()
+        public void MostrarFormSoliDEnPanel()
         {
             //Limpiar lo q haya antes
             pnlContenedorDIT.Controls.Clear();
@@ -82,29 +104,20 @@ namespace Vistas.Formularios
             solicitudD.Show();
 
             //Indica panel activo
-            pnlSolicitudD.BackColor = Color.FromArgb(18, 18, 18);
-            pbSolicitudD.Visible = false;
-            pbSolicitudD2.Visible = true;
-            lblSolicitudD.ForeColor = Color.White;
+            icbtnSolicitudesD.BackColor = Color.FromArgb(18, 18, 18);
+            icbtnSolicitudesD.IconColor = Color.White;
+            icbtnSolicitudesD.ForeColor = Color.White;
             lblTituloSolicitudD.Visible = true;
 
 
             //Restablecer colores de paneles
             //Inventario
-            pnlInventarioD.BackColor = Color.White;
-            pbInventarioD.Visible = true;
-            pbInventarioD2.Visible = false;
-            lblInventarioD.ForeColor = Color.Black;
-            lblTituloInventarioD.Visible = false;
+            ColoresInventario();
             //Consumo
-            pnlConsumoD.BackColor = Color.White;
-            lblConsumoD.ForeColor = Color.Black;
-            pbConsumoD.Visible = true;
-            pbConsumoD2.Visible = false;
-            lblTituloConsumoD.Visible = false;
+            ColoresConsumo();
         }
 
-        private void MostrarFormConsumoDEnPanel()
+        public void MostrarFormConsumoDEnPanel()
         {
             pnlContenedorDIT.Controls.Clear();
             frmConsumoDIT consumoD = new frmConsumoDIT();
@@ -115,62 +128,75 @@ namespace Vistas.Formularios
             consumoD.Show();
 
             //Indicar panel activo
-            pnlConsumoD.BackColor = Color.FromArgb(18, 18, 18);
-            lblConsumoD.ForeColor = Color.White;
-            pbConsumoD.Visible = false;
-            pbConsumoD2.Visible = true;
+            icbtnConsumoD.BackColor = Color.FromArgb(18, 18, 18);
+            icbtnConsumoD.IconColor = Color.White;
+            icbtnConsumoD.ForeColor = Color.White;
             lblTituloConsumoD.Visible = true;
 
             //Restablecer colores de paneles 
             //Inventario
-            pnlInventarioD.BackColor = Color.White;
-            pbInventarioD.Visible = true;
-            pbInventarioD2.Visible = false;
-            lblInventarioD.ForeColor = Color.Black;
-            lblTituloInventarioD.Visible = false;
+            ColoresInventario();
             //Solicitud
-            pnlSolicitudD.BackColor = Color.White;
-            lblSolicitudD.ForeColor = Color.Black;
-            pbSolicitudD2.Visible = false;
-            pbSolicitudD.Visible = true;
-            lblTituloSolicitudD.Visible = false;
+            ColoresSolicitud();
         }
 
-        private void pbInventarioD2_Click(object sender, EventArgs e)
+        private void icbtnInventarioD_Click(object sender, EventArgs e)
         {
             MostrarFormInvenDEnPanel();
         }
 
-
-
-        private void pbSolicitudD_Click(object sender, EventArgs e)
+        private void icbtnSolicitudesD_Click(object sender, EventArgs e)
         {
             MostrarFormSoliDEnPanel();
         }
 
-        private void pbInventarioD_Click(object sender, EventArgs e)
-        {
-            MostrarFormInvenDEnPanel();
-        }
-
-        private void pbConsumoD_Click(object sender, EventArgs e)
+        private void icbtnConsumoD_Click(object sender, EventArgs e)
         {
             MostrarFormConsumoDEnPanel();
         }
 
-        private void lblInventarioD_Click(object sender, EventArgs e)
+
+
+        private void pnlBarraSuperior_Paint(object sender, PaintEventArgs e)
         {
-            MostrarFormInvenDEnPanel();
+            using (Pen lapiz = new Pen(Color.White, 2))
+            {
+                e.Graphics.DrawLine(lapiz, 0, pnlBarraSuperior.Height - 3, pnlBarraSuperior.Width - 1, pnlBarraSuperior.Height - 3);
+            }
         }
 
-        private void lblSolicitudD_Click(object sender, EventArgs e)
+        private void pnlBarraSuperior_Resize(object sender, EventArgs e)
         {
-            MostrarFormSoliDEnPanel();
+            //Permite que el la linea se repinte de nuevo.
+            pnlBarraSuperior.Invalidate();
         }
 
-        private void lblConsumoD_Click(object sender, EventArgs e)
+        private void pnlBarraLateral_Paint(object sender, PaintEventArgs e)
         {
-            MostrarFormConsumoDEnPanel();
+            using (Pen lapiz = new Pen(Color.White, 2))
+            {
+                e.Graphics.DrawLine(lapiz, pnlBarraLateral.Width -1, 0, pnlBarraLateral.Width -1, pnlBarraLateral.Height - 1);
+            }
+        }
+
+        private void pnlBarraLateral_Resize(object sender, EventArgs e)
+        {
+            pnlBarraLateral.Invalidate();
+        }
+
+
+        private void pbLogoITEC_Paint(object sender, PaintEventArgs e)
+        {
+            using (Pen lapiz = new Pen(Color.White, 2))
+            {
+                e.Graphics.DrawLine(lapiz, pbLogoITEC.Width - 1, 0, pbLogoITEC.Width - 1, pbLogoITEC.Height - 1);
+                e.Graphics.DrawLine(lapiz, 0, pbLogoITEC.Height - 1, pbLogoITEC.Width - 1, pbLogoITEC.Height - 1);
+            }
+        }
+
+        private void pbLogoITEC_Resize(object sender, EventArgs e)
+        {
+            pbLogoITEC.Invalidate();
         }
     }
 }
