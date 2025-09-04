@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,37 @@ namespace Vistas
         public frmListaInventario()
         {
             InitializeComponent();
+            
         }
 
+        private void frmListaInventario_Load(object sender, EventArgs e)
+        {
+            MostrarMateriales();
+        }
+
+        private void MostrarMateriales()
+        {
+            dgvMaterialesD.DataSource = null;
+            dgvMaterialesD.DataSource = Material.CargarMateriales();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvMaterialesD.DataSource = null;
+                dgvMaterialesD.DataSource = Material.Buscar(txtBuscar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Clear();
+            MostrarMateriales();
+        }
     }
 }

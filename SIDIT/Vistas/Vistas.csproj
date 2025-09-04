@@ -56,12 +56,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControlesPersonalizados\UserControlControlesP.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlesPersonalizados\UserControlControlesP.Designer.cs">
-      <DependentUpon>UserControlControlesP.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmBienvenidaJefatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +140,24 @@
     <Compile Include="Formularios\frmSolicitudDIT.Designer.cs">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmConsumoJefatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmConsumoJefatura.Designer.cs">
+      <DependentUpon>frmConsumoJefatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSolJefatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSolJefatura.Designer.cs">
+      <DependentUpon>frmSolJefatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\frmEliminarMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\frmEliminarMaterial.Designer.cs">
+      <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\frmAggMaterial.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,9 +174,6 @@
     <Compile Include="Helper\FuenteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ControlesPersonalizados\UserControlControlesP.resx">
-      <DependentUpon>UserControlControlesP.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
       <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\frmEliminarMaterial.resx">
+      <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\frmAggMaterial.resx">
       <DependentUpon>frmAggMaterial.cs</DependentUpon>
@@ -329,6 +341,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add User Group Woman Man1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ControlesPersonalizados\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -18,7 +18,11 @@ namespace Vistas.Formularios
     {
         //IconButton porque ese es el control que utilice en el formulario
         private IconButton botonSeleccionado;
-        
+        private frmListaInventario frmLista = null;
+        private frmEliminarMaterial frmEliminar = null;
+        private frmAggMaterial frmAgg = null;
+
+
         public frmInventarioDIT()
         {
             InitializeComponent();
@@ -60,41 +64,78 @@ namespace Vistas.Formularios
         //Llamar metodo botonSeleccionado
         private void icbtnVerMaterial_Click(object sender, EventArgs e)
         {
+
             //Sender es la referencia al objeto que dispara el evento. 
             //O sea, en este caso el metodo afecta al objeto que disparó este evento, o sea el btn.
             //Hacer esto ayuda a no hacer un metodo por btn.
             BotonActivado(sender);
-
-            MostrarUserControl(new frmListaInventario());
-
+            MostrarUCLista();
+           
         }
 
         private void icbtnAggMaterial_Click(object sender, EventArgs e)
         {
-            BotonActivado(sender);
-
+            MostrarUCAgg();
+                BotonActivado(sender);
         }
 
         private void icbtnActualizarYEliminarMaterial_Click(object sender, EventArgs e)
         {
+ 
             BotonActivado(sender);
-
+            MostrarUCEliminar();
+   
         }
 
 
-        //Mostrar UControl
-        private void MostrarUserControl(UserControl frm)
+        private void MostrarUCLista()
         {
-            //Este metodo ayudara  a no crear un metodo por cada frmUserControl que se quiera mostrar
+            if (frmLista == null)
+            {
+                frmLista = new frmListaInventario();
+                frmLista.Dock = DockStyle.Fill;
+
+            }
                 pnlContenedorUC.Controls.Clear();
-                frm.Dock = DockStyle.Fill;
-                pnlContenedorUC.Controls.Add(frm);
-                frm.Show();
+                frmLista.Dock = DockStyle.Fill;
+                pnlContenedorUC.Controls.Add(frmLista);
+                frmLista.Show();
         }
+           
+
+        private void MostrarUCAgg()
+        {
+           if(frmAgg == null)
+            {
+                frmAgg = new frmAggMaterial();
+                frmAgg.Dock = DockStyle.Fill;
+            }
+            
+            pnlContenedorUC.Controls.Clear();
+            frmAgg.Dock = DockStyle.Fill;
+            pnlContenedorUC.Controls.Add(frmAgg);
+            frmAgg.Show();
+        }
+        private void MostrarUCEliminar()
+        {
+            if (frmEliminar == null)
+            {
+                frmEliminar = new frmEliminarMaterial();
+                frmEliminar.Dock = DockStyle.Fill;
+            }
+            
+            pnlContenedorUC.Controls.Clear();
+            pnlContenedorUC.Controls.Add(frmEliminar);
+            frmEliminar.Show();
+        }
+
+
+        
 
         private void frmInventarioDIT_Load(object sender, EventArgs e)
         {
-            MostrarUserControl(new frmListaInventario());
+
+            
             BotonActivado(icbtnVerMaterial);
             icbtnActualizarYEliminarMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
             icbtnActualizarYEliminarMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;

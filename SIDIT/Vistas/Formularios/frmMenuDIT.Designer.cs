@@ -178,11 +178,12 @@
             // 
             // lblTituloSolicitudD
             // 
+            this.lblTituloSolicitudD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTituloSolicitudD.AutoSize = true;
             this.lblTituloSolicitudD.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloSolicitudD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloSolicitudD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloSolicitudD.Location = new System.Drawing.Point(688, 20);
+            this.lblTituloSolicitudD.Location = new System.Drawing.Point(695, 20);
             this.lblTituloSolicitudD.Name = "lblTituloSolicitudD";
             this.lblTituloSolicitudD.Size = new System.Drawing.Size(210, 44);
             this.lblTituloSolicitudD.TabIndex = 2;
@@ -190,6 +191,7 @@
             // 
             // lblTituloConsumoD
             // 
+            this.lblTituloConsumoD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTituloConsumoD.AutoSize = true;
             this.lblTituloConsumoD.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloConsumoD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -202,6 +204,7 @@
             // 
             // lblTituloInventarioD
             // 
+            this.lblTituloInventarioD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTituloInventarioD.AutoSize = true;
             this.lblTituloInventarioD.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloInventarioD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,9 +227,11 @@
             // 
             // pbLogoITEC
             // 
-            this.pbLogoITEC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbLogoITEC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLogoITEC.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pbLogoITEC.Location = new System.Drawing.Point(0, 0);
+            this.pbLogoITEC.Location = new System.Drawing.Point(0, -2);
             this.pbLogoITEC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbLogoITEC.Name = "pbLogoITEC";
             this.pbLogoITEC.Size = new System.Drawing.Size(171, 79);

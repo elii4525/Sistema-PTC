@@ -28,280 +28,303 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pnlInventarioJefatura = new System.Windows.Forms.Panel();
-            this.lblInventarioJefatura = new System.Windows.Forms.Label();
-            this.pbInventarioJefatura = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.pnlInventarioJefatura.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInventarioJefatura)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.tlpMenuDIT = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlBarraLateral = new System.Windows.Forms.Panel();
+            this.icbtnConsumoJ = new FontAwesome.Sharp.IconButton();
+            this.icbtnSolicitudesJ = new FontAwesome.Sharp.IconButton();
+            this.icbtnInventarioJ = new FontAwesome.Sharp.IconButton();
+            this.pnlContenedorJ = new System.Windows.Forms.Panel();
+            this.pnlBarraSuperior = new System.Windows.Forms.Panel();
+            this.lblTituloSolicitudJ = new System.Windows.Forms.Label();
+            this.lblTituloConsumoJ = new System.Windows.Forms.Label();
+            this.lblTituloInventarioJ = new System.Windows.Forms.Label();
+            this.pbLogoITEC = new System.Windows.Forms.PictureBox();
+            this.icbtnUsuario = new FontAwesome.Sharp.IconButton();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.lblTituloUsuarios = new System.Windows.Forms.Label();
+            this.tlpMenuDIT.SuspendLayout();
+            this.pnlBarraLateral.SuspendLayout();
+            this.pnlBarraSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
+            this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // tlpMenuDIT
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.pnlInventarioJefatura);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(158, 611);
-            this.panel1.TabIndex = 0;
+            this.tlpMenuDIT.BackColor = System.Drawing.Color.Black;
+            this.tlpMenuDIT.ColumnCount = 2;
+            this.tlpMenuDIT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.23442F));
+            this.tlpMenuDIT.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.76558F));
+            this.tlpMenuDIT.Controls.Add(this.pnlBarraLateral, 0, 1);
+            this.tlpMenuDIT.Controls.Add(this.pnlContenedorJ, 1, 1);
+            this.tlpMenuDIT.Controls.Add(this.pnlBarraSuperior, 1, 0);
+            this.tlpMenuDIT.Controls.Add(this.pnlLogo, 0, 0);
+            this.tlpMenuDIT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMenuDIT.Location = new System.Drawing.Point(0, 0);
+            this.tlpMenuDIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tlpMenuDIT.Name = "tlpMenuDIT";
+            this.tlpMenuDIT.RowCount = 2;
+            this.tlpMenuDIT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.6643F));
+            this.tlpMenuDIT.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.3357F));
+            this.tlpMenuDIT.Size = new System.Drawing.Size(1749, 751);
+            this.tlpMenuDIT.TabIndex = 1;
             // 
-            // panel7
+            // pnlBarraLateral
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.label1);
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Location = new System.Drawing.Point(26, 525);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(105, 106);
-            this.panel7.TabIndex = 8;
+            this.pnlBarraLateral.Controls.Add(this.icbtnUsuario);
+            this.pnlBarraLateral.Controls.Add(this.icbtnConsumoJ);
+            this.pnlBarraLateral.Controls.Add(this.icbtnSolicitudesJ);
+            this.pnlBarraLateral.Controls.Add(this.icbtnInventarioJ);
+            this.pnlBarraLateral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBarraLateral.Location = new System.Drawing.Point(3, 89);
+            this.pnlBarraLateral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBarraLateral.Name = "pnlBarraLateral";
+            this.pnlBarraLateral.Size = new System.Drawing.Size(173, 660);
+            this.pnlBarraLateral.TabIndex = 0;
+            this.pnlBarraLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraLateral_Paint);
+            this.pnlBarraLateral.Resize += new System.EventHandler(this.pnlBarraLateral_Resize);
             // 
-            // label1
+            // icbtnConsumoJ
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Inventario";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.icbtnConsumoJ.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.icbtnConsumoJ.BackColor = System.Drawing.Color.White;
+            this.icbtnConsumoJ.FlatAppearance.BorderSize = 0;
+            this.icbtnConsumoJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnConsumoJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnConsumoJ.ForeColor = System.Drawing.Color.Black;
+            this.icbtnConsumoJ.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
+            this.icbtnConsumoJ.IconColor = System.Drawing.Color.Black;
+            this.icbtnConsumoJ.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnConsumoJ.IconSize = 64;
+            this.icbtnConsumoJ.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.icbtnConsumoJ.Location = new System.Drawing.Point(12, 358);
+            this.icbtnConsumoJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnConsumoJ.Name = "icbtnConsumoJ";
+            this.icbtnConsumoJ.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnConsumoJ.Size = new System.Drawing.Size(140, 130);
+            this.icbtnConsumoJ.TabIndex = 13;
+            this.icbtnConsumoJ.Text = "Consumo";
+            this.icbtnConsumoJ.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.icbtnConsumoJ.UseVisualStyleBackColor = false;
+            this.icbtnConsumoJ.Click += new System.EventHandler(this.icbtnConsumoJ_Click);
             // 
-            // pictureBox2
+            // icbtnSolicitudesJ
             // 
-            this.pictureBox2.Image = global::Vistas.Properties.Resources.Add_User_Group_Woman_Man;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 8);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.icbtnSolicitudesJ.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.icbtnSolicitudesJ.BackColor = System.Drawing.Color.White;
+            this.icbtnSolicitudesJ.FlatAppearance.BorderSize = 0;
+            this.icbtnSolicitudesJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnSolicitudesJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnSolicitudesJ.ForeColor = System.Drawing.Color.Black;
+            this.icbtnSolicitudesJ.IconChar = FontAwesome.Sharp.IconChar.Envelope;
+            this.icbtnSolicitudesJ.IconColor = System.Drawing.Color.Black;
+            this.icbtnSolicitudesJ.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSolicitudesJ.IconSize = 64;
+            this.icbtnSolicitudesJ.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.icbtnSolicitudesJ.Location = new System.Drawing.Point(12, 201);
+            this.icbtnSolicitudesJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnSolicitudesJ.Name = "icbtnSolicitudesJ";
+            this.icbtnSolicitudesJ.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnSolicitudesJ.Size = new System.Drawing.Size(140, 130);
+            this.icbtnSolicitudesJ.TabIndex = 10;
+            this.icbtnSolicitudesJ.Text = "Solicitudes";
+            this.icbtnSolicitudesJ.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.icbtnSolicitudesJ.UseVisualStyleBackColor = false;
+            this.icbtnSolicitudesJ.Click += new System.EventHandler(this.icbtnSolicitudesJ_Click);
             // 
-            // panel4
+            // icbtnInventarioJ
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Location = new System.Drawing.Point(26, 393);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(105, 106);
-            this.panel4.TabIndex = 6;
+            this.icbtnInventarioJ.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.icbtnInventarioJ.BackColor = System.Drawing.Color.White;
+            this.icbtnInventarioJ.FlatAppearance.BorderSize = 0;
+            this.icbtnInventarioJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnInventarioJ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnInventarioJ.IconChar = FontAwesome.Sharp.IconChar.BoxesStacked;
+            this.icbtnInventarioJ.IconColor = System.Drawing.Color.Black;
+            this.icbtnInventarioJ.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnInventarioJ.IconSize = 64;
+            this.icbtnInventarioJ.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.icbtnInventarioJ.Location = new System.Drawing.Point(12, 42);
+            this.icbtnInventarioJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnInventarioJ.Name = "icbtnInventarioJ";
+            this.icbtnInventarioJ.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnInventarioJ.Size = new System.Drawing.Size(140, 130);
+            this.icbtnInventarioJ.TabIndex = 9;
+            this.icbtnInventarioJ.Text = "Inventario";
+            this.icbtnInventarioJ.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.icbtnInventarioJ.UseVisualStyleBackColor = false;
+            this.icbtnInventarioJ.Click += new System.EventHandler(this.icbtnInventarioJ_Click);
             // 
-            // label4
+            // pnlContenedorJ
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 76);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Consumo";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlContenedorJ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContenedorJ.Location = new System.Drawing.Point(182, 89);
+            this.pnlContenedorJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlContenedorJ.Name = "pnlContenedorJ";
+            this.pnlContenedorJ.Size = new System.Drawing.Size(1564, 660);
+            this.pnlContenedorJ.TabIndex = 2;
             // 
-            // pictureBox6
+            // pnlBarraSuperior
             // 
-            this.pictureBox6.Image = global::Vistas.Properties.Resources.Vector;
-            this.pictureBox6.Location = new System.Drawing.Point(24, 20);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(57, 47);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloUsuarios);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioJ);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudJ);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoJ);
+            this.pnlBarraSuperior.Location = new System.Drawing.Point(182, 2);
+            this.pnlBarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBarraSuperior.Name = "pnlBarraSuperior";
+            this.pnlBarraSuperior.Size = new System.Drawing.Size(1564, 83);
+            this.pnlBarraSuperior.TabIndex = 3;
+            this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
+            this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
             // 
-            // pnlInventarioJefatura
+            // lblTituloSolicitudJ
             // 
-            this.pnlInventarioJefatura.BackColor = System.Drawing.Color.White;
-            this.pnlInventarioJefatura.Controls.Add(this.lblInventarioJefatura);
-            this.pnlInventarioJefatura.Controls.Add(this.pbInventarioJefatura);
-            this.pnlInventarioJefatura.Location = new System.Drawing.Point(26, 132);
-            this.pnlInventarioJefatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlInventarioJefatura.Name = "pnlInventarioJefatura";
-            this.pnlInventarioJefatura.Size = new System.Drawing.Size(105, 106);
-            this.pnlInventarioJefatura.TabIndex = 7;
+            this.lblTituloSolicitudJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloSolicitudJ.AutoSize = true;
+            this.lblTituloSolicitudJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloSolicitudJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSolicitudJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloSolicitudJ.Location = new System.Drawing.Point(695, 20);
+            this.lblTituloSolicitudJ.Name = "lblTituloSolicitudJ";
+            this.lblTituloSolicitudJ.Size = new System.Drawing.Size(229, 47);
+            this.lblTituloSolicitudJ.TabIndex = 2;
+            this.lblTituloSolicitudJ.Text = "Solicitudes";
+            this.lblTituloSolicitudJ.Visible = false;
             // 
-            // lblInventarioJefatura
+            // lblTituloConsumoJ
             // 
-            this.lblInventarioJefatura.AutoSize = true;
-            this.lblInventarioJefatura.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventarioJefatura.Location = new System.Drawing.Point(14, 76);
-            this.lblInventarioJefatura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInventarioJefatura.Name = "lblInventarioJefatura";
-            this.lblInventarioJefatura.Size = new System.Drawing.Size(81, 19);
-            this.lblInventarioJefatura.TabIndex = 1;
-            this.lblInventarioJefatura.Text = "Inventario";
-            this.lblInventarioJefatura.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTituloConsumoJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloConsumoJ.AutoSize = true;
+            this.lblTituloConsumoJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloConsumoJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloConsumoJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloConsumoJ.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloConsumoJ.Name = "lblTituloConsumoJ";
+            this.lblTituloConsumoJ.Size = new System.Drawing.Size(207, 47);
+            this.lblTituloConsumoJ.TabIndex = 1;
+            this.lblTituloConsumoJ.Text = "Consumo";
+            this.lblTituloConsumoJ.Visible = false;
             // 
-            // pbInventarioJefatura
+            // lblTituloInventarioJ
             // 
-            this.pbInventarioJefatura.Image = global::Vistas.Properties.Resources.Stacking;
-            this.pbInventarioJefatura.Location = new System.Drawing.Point(24, 20);
-            this.pbInventarioJefatura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pbInventarioJefatura.Name = "pbInventarioJefatura";
-            this.pbInventarioJefatura.Size = new System.Drawing.Size(57, 47);
-            this.pbInventarioJefatura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbInventarioJefatura.TabIndex = 0;
-            this.pbInventarioJefatura.TabStop = false;
+            this.lblTituloInventarioJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloInventarioJ.AutoSize = true;
+            this.lblTituloInventarioJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloInventarioJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloInventarioJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloInventarioJ.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloInventarioJ.Name = "lblTituloInventarioJ";
+            this.lblTituloInventarioJ.Size = new System.Drawing.Size(214, 47);
+            this.lblTituloInventarioJ.TabIndex = 0;
+            this.lblTituloInventarioJ.Text = "Inventario";
+            this.lblTituloInventarioJ.Visible = false;
             // 
-            // panel6
+            // pbLogoITEC
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(26, 262);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(105, 106);
-            this.panel6.TabIndex = 5;
+            this.pbLogoITEC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLogoITEC.Image = global::Vistas.Properties.Resources.Group_4;
+            this.pbLogoITEC.Location = new System.Drawing.Point(3, 0);
+            this.pbLogoITEC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogoITEC.Name = "pbLogoITEC";
+            this.pbLogoITEC.Size = new System.Drawing.Size(171, 79);
+            this.pbLogoITEC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogoITEC.TabIndex = 1;
+            this.pbLogoITEC.TabStop = false;
+            this.pbLogoITEC.Paint += new System.Windows.Forms.PaintEventHandler(this.pbLogoITEC_Paint);
+            this.pbLogoITEC.Resize += new System.EventHandler(this.pbLogoITEC_Resize);
             // 
-            // label3
+            // icbtnUsuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 76);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 19);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Solicitudes";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.icbtnUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.icbtnUsuario.BackColor = System.Drawing.Color.White;
+            this.icbtnUsuario.FlatAppearance.BorderSize = 0;
+            this.icbtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnUsuario.ForeColor = System.Drawing.Color.Black;
+            this.icbtnUsuario.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.icbtnUsuario.IconColor = System.Drawing.Color.Black;
+            this.icbtnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnUsuario.IconSize = 64;
+            this.icbtnUsuario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.icbtnUsuario.Location = new System.Drawing.Point(12, 512);
+            this.icbtnUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnUsuario.Name = "icbtnUsuario";
+            this.icbtnUsuario.Padding = new System.Windows.Forms.Padding(0, 20, 0, 15);
+            this.icbtnUsuario.Size = new System.Drawing.Size(140, 130);
+            this.icbtnUsuario.TabIndex = 14;
+            this.icbtnUsuario.Text = "Usuarios";
+            this.icbtnUsuario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.icbtnUsuario.UseVisualStyleBackColor = false;
+            this.icbtnUsuario.Click += new System.EventHandler(this.icbtnUsuario_Click);
             // 
-            // pictureBox5
+            // pnlLogo
             // 
-            this.pictureBox5.Image = global::Vistas.Properties.Resources.Group_Message;
-            this.pictureBox5.Location = new System.Drawing.Point(24, 20);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(57, 47);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
+            this.pnlLogo.Controls.Add(this.pbLogoITEC);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogo.Location = new System.Drawing.Point(3, 3);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(173, 81);
+            this.pnlLogo.TabIndex = 4;
             // 
-            // pictureBox1
+            // lblTituloUsuarios
             // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(158, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(767, 81);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(158, 81);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(767, 530);
-            this.pnlContenedor.TabIndex = 2;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(767, 82);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.lblTituloUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTituloUsuarios.AutoSize = true;
+            this.lblTituloUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloUsuarios.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloUsuarios.ForeColor = System.Drawing.Color.White;
+            this.lblTituloUsuarios.Location = new System.Drawing.Point(707, 33);
+            this.lblTituloUsuarios.Name = "lblTituloUsuarios";
+            this.lblTituloUsuarios.Size = new System.Drawing.Size(181, 47);
+            this.lblTituloUsuarios.TabIndex = 3;
+            this.lblTituloUsuarios.Text = "Usuarios";
+            this.lblTituloUsuarios.Visible = false;
             // 
             // frmMenuJefatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 611);
-            this.Controls.Add(this.pnlContenedor);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClientSize = new System.Drawing.Size(1749, 751);
+            this.Controls.Add(this.tlpMenuDIT);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1699, 798);
             this.Name = "frmMenuJefatura";
             this.Text = "frmMenuJefatura";
-            this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.pnlInventarioJefatura.ResumeLayout(false);
-            this.pnlInventarioJefatura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbInventarioJefatura)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMenuJefatura_Load);
+            this.tlpMenuDIT.ResumeLayout(false);
+            this.pnlBarraLateral.ResumeLayout(false);
+            this.pnlBarraSuperior.ResumeLayout(false);
+            this.pnlBarraSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
+            this.pnlLogo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel pnlContenedor;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel pnlInventarioJefatura;
-        private System.Windows.Forms.Label lblInventarioJefatura;
-        private System.Windows.Forms.PictureBox pbInventarioJefatura;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpMenuDIT;
+        private System.Windows.Forms.Panel pnlBarraLateral;
+        private FontAwesome.Sharp.IconButton icbtnConsumoJ;
+        private FontAwesome.Sharp.IconButton icbtnSolicitudesJ;
+        private FontAwesome.Sharp.IconButton icbtnInventarioJ;
+        private System.Windows.Forms.Panel pnlContenedorJ;
+        private System.Windows.Forms.Panel pnlBarraSuperior;
+        private System.Windows.Forms.Label lblTituloSolicitudJ;
+        private System.Windows.Forms.Label lblTituloConsumoJ;
+        private System.Windows.Forms.Label lblTituloInventarioJ;
+        private System.Windows.Forms.PictureBox pbLogoITEC;
+        private FontAwesome.Sharp.IconButton icbtnUsuario;
+        private System.Windows.Forms.Panel pnlLogo;
+        private System.Windows.Forms.Label lblTituloUsuarios;
     }
 }

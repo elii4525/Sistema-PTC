@@ -19,10 +19,10 @@ namespace Vistas.Formularios
 
         private void frmMenuDIT_Load(object sender, EventArgs e)
         {
-            MostrarFormInvenDEnPanel();
             pnlBarraSuperior.BringToFront();
             pnlBarraLateral.BringToFront();
             pbLogoITEC.BringToFront();
+
         }
 
 
@@ -53,7 +53,8 @@ namespace Vistas.Formularios
             lblTituloInventarioD.Visible = false;
         }
 
-        private void MostrarFormInvenDEnPanel()
+        //Los he puesto publicos para poder utilizarlos en el Bienvenidos.
+        public void MostrarFormInvenDEnPanel()
         {
             pnlContenedorDIT.Controls.Clear(); //Limpia lo que haya antes
 
@@ -86,7 +87,7 @@ namespace Vistas.Formularios
             
         }
 
-        private void MostrarFormSoliDEnPanel()
+        public void MostrarFormSoliDEnPanel()
         {
             //Limpiar lo q haya antes
             pnlContenedorDIT.Controls.Clear();
@@ -116,7 +117,7 @@ namespace Vistas.Formularios
             ColoresConsumo();
         }
 
-        private void MostrarFormConsumoDEnPanel()
+        public void MostrarFormConsumoDEnPanel()
         {
             pnlContenedorDIT.Controls.Clear();
             frmConsumoDIT consumoD = new frmConsumoDIT();
@@ -183,10 +184,6 @@ namespace Vistas.Formularios
             pnlBarraLateral.Invalidate();
         }
 
-        //private void pnlLogo_Paint(object sender, PaintEventArgs e)
-        //{
-           
-        //}
 
         private void pbLogoITEC_Paint(object sender, PaintEventArgs e)
         {

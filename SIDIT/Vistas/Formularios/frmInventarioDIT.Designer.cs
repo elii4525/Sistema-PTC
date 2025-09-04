@@ -30,10 +30,10 @@
         {
             this.tlpFrmInventario = new System.Windows.Forms.TableLayoutPanel();
             this.pnlContenedorPestañas = new System.Windows.Forms.Panel();
+            this.pnlContenedorUC = new System.Windows.Forms.Panel();
             this.icbtnActualizarYEliminarMaterial = new FontAwesome.Sharp.IconButton();
             this.icbtnAggMaterial = new FontAwesome.Sharp.IconButton();
             this.icbtnVerMaterial = new FontAwesome.Sharp.IconButton();
-            this.pnlContenedorUC = new System.Windows.Forms.Panel();
             this.tlpFrmInventario.SuspendLayout();
             this.pnlContenedorPestañas.SuspendLayout();
             this.SuspendLayout();
@@ -65,8 +65,18 @@
             this.pnlContenedorPestañas.Location = new System.Drawing.Point(3, 2);
             this.pnlContenedorPestañas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContenedorPestañas.Name = "pnlContenedorPestañas";
-            this.pnlContenedorPestañas.Size = new System.Drawing.Size(1242, 61);
+            this.pnlContenedorPestañas.Size = new System.Drawing.Size(1242, 62);
             this.pnlContenedorPestañas.TabIndex = 0;
+            // 
+            // pnlContenedorUC
+            // 
+            this.pnlContenedorUC.BackColor = System.Drawing.Color.Black;
+            this.pnlContenedorUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedorUC.Location = new System.Drawing.Point(0, 66);
+            this.pnlContenedorUC.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContenedorUC.Name = "pnlContenedorUC";
+            this.pnlContenedorUC.Size = new System.Drawing.Size(1248, 637);
+            this.pnlContenedorUC.TabIndex = 1;
             // 
             // icbtnActualizarYEliminarMaterial
             // 
@@ -81,13 +91,13 @@
             this.icbtnActualizarYEliminarMaterial.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtnActualizarYEliminarMaterial.IconSize = 33;
             this.icbtnActualizarYEliminarMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtnActualizarYEliminarMaterial.Location = new System.Drawing.Point(467, 0);
+            this.icbtnActualizarYEliminarMaterial.Location = new System.Drawing.Point(405, 0);
             this.icbtnActualizarYEliminarMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icbtnActualizarYEliminarMaterial.Name = "icbtnActualizarYEliminarMaterial";
-            this.icbtnActualizarYEliminarMaterial.Padding = new System.Windows.Forms.Padding(0, 0, 11, 0);
-            this.icbtnActualizarYEliminarMaterial.Size = new System.Drawing.Size(254, 61);
+            this.icbtnActualizarYEliminarMaterial.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
+            this.icbtnActualizarYEliminarMaterial.Size = new System.Drawing.Size(162, 62);
             this.icbtnActualizarYEliminarMaterial.TabIndex = 6;
-            this.icbtnActualizarYEliminarMaterial.Text = "Actualizar y eliminar";
+            this.icbtnActualizarYEliminarMaterial.Text = "Eliminar";
             this.icbtnActualizarYEliminarMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.icbtnActualizarYEliminarMaterial.UseVisualStyleBackColor = false;
             this.icbtnActualizarYEliminarMaterial.Click += new System.EventHandler(this.icbtnActualizarYEliminarMaterial_Click);
@@ -109,10 +119,10 @@
             this.icbtnAggMaterial.Location = new System.Drawing.Point(223, 0);
             this.icbtnAggMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icbtnAggMaterial.Name = "icbtnAggMaterial";
-            this.icbtnAggMaterial.Padding = new System.Windows.Forms.Padding(11, 0, 15, 0);
-            this.icbtnAggMaterial.Size = new System.Drawing.Size(244, 61);
+            this.icbtnAggMaterial.Padding = new System.Windows.Forms.Padding(11, 0, 25, 0);
+            this.icbtnAggMaterial.Size = new System.Drawing.Size(182, 62);
             this.icbtnAggMaterial.TabIndex = 6;
-            this.icbtnAggMaterial.Text = "Agregar material";
+            this.icbtnAggMaterial.Text = "Agregar";
             this.icbtnAggMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.icbtnAggMaterial.UseVisualStyleBackColor = false;
             this.icbtnAggMaterial.Click += new System.EventHandler(this.icbtnAggMaterial_Click);
@@ -135,23 +145,13 @@
             this.icbtnVerMaterial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.icbtnVerMaterial.Name = "icbtnVerMaterial";
             this.icbtnVerMaterial.Padding = new System.Windows.Forms.Padding(11, 0, 15, 0);
-            this.icbtnVerMaterial.Size = new System.Drawing.Size(223, 61);
+            this.icbtnVerMaterial.Size = new System.Drawing.Size(223, 62);
             this.icbtnVerMaterial.TabIndex = 5;
             this.icbtnVerMaterial.Text = "Ver materiales";
             this.icbtnVerMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.icbtnVerMaterial.UseVisualStyleBackColor = false;
             this.icbtnVerMaterial.Click += new System.EventHandler(this.icbtnVerMaterial_Click);
             this.icbtnVerMaterial.Paint += new System.Windows.Forms.PaintEventHandler(this.icbtnVerMaterial_Paint);
-            // 
-            // pnlContenedorUC
-            // 
-            this.pnlContenedorUC.BackColor = System.Drawing.Color.Silver;
-            this.pnlContenedorUC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedorUC.Location = new System.Drawing.Point(4, 69);
-            this.pnlContenedorUC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlContenedorUC.Name = "pnlContenedorUC";
-            this.pnlContenedorUC.Size = new System.Drawing.Size(1240, 630);
-            this.pnlContenedorUC.TabIndex = 1;
             // 
             // frmInventarioDIT
             // 
@@ -162,7 +162,7 @@
             this.ClientSize = new System.Drawing.Size(1248, 703);
             this.Controls.Add(this.tlpFrmInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmInventarioDIT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
