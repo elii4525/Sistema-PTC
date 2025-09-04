@@ -1,133 +1,136 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Modelos.Entidades;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Vistas.Formularios
 {
-    // Esta es una clase parcial del formulario.
     public partial class frmConsumoDIT : Form
     {
         private Consumo consumo = new Consumo();
 
-        // Constructor del formulario. Aquí se inicializan todos los componentes.
         public frmConsumoDIT()
         {
             InitializeComponent();
         }
 
-        // Evento que se ejecuta cuando se carga el formulario
         private void frmConsumoDIT_Load(object sender, EventArgs e)
         {
-            // Carga los datos iniciales del catálogo, inventario y consumo
-            CargarCatalogo();
-            CargarGraficoInventario();
-            // Llama al método para cargar el gráfico de consumo
-            // Al cargar, establece un rango de fechas por defecto que incluye los datos de prueba
-            CargarGraficoConsumo(new DateTime(2025, 1, 1), new DateTime(2025, 12, 31));
+            CargarTodo();
         }
 
-        // Método para cargar el catálogo de materiales en el DataGridView
+        private void CargarTodo()
+        {
+            try
+            {
+                CargarCatalogo();
+                CargarGraficoInventario();
+                CargarGraficoConsumo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar: " + ex.Message);
+            }
+        }
+
         private void CargarCatalogo()
         {
             try
             {
-                // Obtiene la tabla de datos del catálogo. Si no hay datos, devuelve una tabla vacía.
-                DataTable dt = consumo.ObtenerCatalogoMateriales();
-                if (dt != null && dt.Rows.Count > 0)
-                {
-                    // Asigna la tabla de datos como la fuente para el DataGridView
-                    dataGridViewCatalogo.DataSource = dt;
-                    // Oculta la columna del ID del material para el usuario
-                    dataGridViewCatalogo.Columns["idmaterial"].Visible = false;
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron materiales en el catálogo.");
-                }
+                DataTable dt = consumo.ObtenerCatalogoCompleto();
+                dataGridViewCatalogo.DataSource = dt;
+                dataGridViewCatalogo.AutoResizeColumns();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar el catálogo: " + ex.Message);
+                MessageBox.Show("Error en catálogo: " + ex.Message);
             }
         }
 
-        // Método para cargar el gráfico de inventario
-        private void CargarGraficoInventario(string filtro = null)
+        private void CargarGraficoInventario()
         {
             try
             {
-                // Limpia los datos existentes en el gráfico para evitar superposición
                 chartInventario.Series.Clear();
-
-                // Obtiene los datos del inventario. Si no hay datos, devuelve una tabla vacía.
-                DataTable dt = consumo.ObtenerDatosInventario(filtro);
+                DataTable dt = consumo.ObtenerInventarioCompleto();
+                
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    // Crea una nueva serie para el gráfico
-                    chartInventario.Series.Add("Inventario");
-                    chartInventario.Series["Inventario"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+                    // Crear una serie para el inventario
+                    Series serie = chartInventario.Series.Add("Inventario");
+                    serie.ChartType = SeriesChartType.Column;
+                    
+                    // Configurar para mostrar TODOS los nombres
+                    chartInventario.ChartAreas[0].AxisX.Interval = 1;
+                    chartInventario.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
+                    chartInventario.ChartAreas[0].AxisX.LabelStyle.Format = "";
 
-                    // Llena el gráfico con los datos de la tabla
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    // Llenar con datos - MOSTRAR NOMBRES INDIVIDUALES
+                    foreach (DataRow row in dt.Rows)
                     {
-                        chartInventario.Series["Inventario"].Points.AddXY(dt.Rows[i]["nombrematerial"], dt.Rows[i]["cantidad"]);
+                        string material = row["nombrematerial"].ToString();
+                        int cantidad = Convert.ToInt32(row["cantidad"]);
+                        
+                        // Agregar punto con el nombre del material
+                        serie.Points.AddXY(material, cantidad);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron datos para el inventario con el filtro aplicado.");
+
+                    chartInventario.Titles.Clear();
+                    chartInventario.Titles.Add("Inventario - Todos los Materiales");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar el gráfico de inventario: " + ex.Message);
+                MessageBox.Show("Error en inventario: " + ex.Message);
             }
         }
 
-        // Método para cargar el gráfico de consumo mensual
-        private void CargarGraficoConsumo(DateTime? fechaInicio = null, DateTime? fechaFin = null)
+        private void CargarGraficoConsumo()
         {
             try
             {
-                // Limpia los datos existentes en el gráfico para evitar superposición
                 chartConsumo.Series.Clear();
-
-                // Obtiene los datos de consumo. Si no hay datos, devuelve una tabla vacía.
-                DataTable dt = consumo.ObtenerDatosConsumo(fechaInicio ?? DateTime.MinValue, fechaFin ?? DateTime.MaxValue);
+                DataTable dt = consumo.ObtenerConsumoMaterial(); // <- CONSUMO POR MATERIAL (como antes)
+                
                 if (dt != null && dt.Rows.Count > 0)
                 {
-                    // Crea una nueva serie para el gráfico
-                    chartConsumo.Series.Add("Consumo");
-                    chartConsumo.Series["Consumo"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-                    chartConsumo.Series["Consumo"].Color = Color.Blue; // Puedes personalizar el color
+                    Series serie = chartConsumo.Series.Add("Consumo");
+                    serie.ChartType = SeriesChartType.Bar;
+                    serie.Color = Color.Red;
 
-                    // Llena el gráfico con los datos de la tabla
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    // Configurar para mostrar nombres
+                    chartConsumo.ChartAreas[0].AxisX.Interval = 1;
+                    chartConsumo.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
+
+                    foreach (DataRow row in dt.Rows)
                     {
-                        chartConsumo.Series["Consumo"].Points.AddXY(dt.Rows[i]["mes"], dt.Rows[i]["totalconsumido"]);
+                        string material = row["nombrematerial"].ToString();
+                        int consumoValor = Convert.ToInt32(row["total_consumido"]);
+                        
+                        serie.Points.AddXY(material, consumoValor);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron datos de consumo en el rango de fechas seleccionado.");
+
+                    chartConsumo.Titles.Clear();
+                    chartConsumo.Titles.Add("Consumo por Material");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar el gráfico de consumo: " + ex.Message);
+                MessageBox.Show("Error en consumo: " + ex.Message);
             }
         }
 
-        // Evento que se ejecuta al hacer clic en el botón de búsqueda
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            // Obtiene el texto del cuadro de búsqueda y carga los gráficos y el catálogo
-            string filtro = txtBuscar.Text;
-            CargarCatalogo();
-            CargarGraficoInventario(filtro);
-            CargarGraficoConsumo(dtpInicio.Value, dtpFin.Value);
+            CargarTodo();
+        }
+
+        // Método para el botón que irá a otro formulario
+        private void btnIrAOtroForm_Click(object sender, EventArgs e)
+        {
+            // Código para abrir otro formulario
         }
     }
 }

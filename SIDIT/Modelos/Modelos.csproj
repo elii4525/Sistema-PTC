@@ -52,6 +52,7 @@
     <Compile Include="Entidades\Material.cs" />
     <Compile Include="Entidades\NombreMaterial.cs" />
     <Compile Include="Entidades\Rol.cs" />
+    <Compile Include="Entidades\SalidaMaterial.cs" />
     <Compile Include="Entidades\Solicitud.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

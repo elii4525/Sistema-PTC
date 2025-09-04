@@ -1,8 +1,12 @@
-create database BasePTC
+-- crear la base de datos si no existe
+create database BasePTC;
 go
+
+-- usar la base de datos
 use BasePTC;
 go
 
+-- crear tablas en orden
 create table rol (
     idrol int identity(1,1) primary key,
     tiporol varchar(50) not null,
@@ -85,162 +89,265 @@ go
 
 -- insertar roles
 insert into rol values 
-('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
-('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+('jefatura', 'este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
+('departamento it', 'este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+go
 
 -- insertar usuarios
 insert into usuario values 
-('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
-('Orlando Josue Pineda Rivas', '2003/8/21', 'X933esD4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
-('Michael Steve Murcia Martinez', '2002/5/01', 'AsQQ09211','+503 3385 2265', 'michaelsteve.dit@gmail.com', 2),
-('Cristopher Levi Rogger Marin', '2000/11/07', 'Yqm330pX1','+503 4528 0751','cristlevi.dit@gmail.com',2),
-('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2);
+('fatima ester medina gonzales', '2002/4/3',  'cesa23a5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
+('orlando josue pineda rivas', '2003/8/21', 'x933esd4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
+('michael steve murcia martinez', '2002/5/01', 'asqq09211','+503 3385 2265', 'michaelsteve.dit@gmail.com', 2),
+('cristopher levi rogger marin', '2000/11/07', 'yqm330px1','+503 4528 0751','cristlevi.dit@gmail.com',2),
+('mariana verenice villalobos duran','2001/05/28','ump931zxa','+503 7106 4809', 'marianavere.dit@gmail.com',2);
+go
 
 -- insertar categorías
 insert into categoria values 
-('Computación','objetos de computacion'),
-('Perífericos','Aparato auxiliar e independiente conectado a la unidad central de una computadora u otro dispositivo electrónico.'),
-('Limpieza','onjetos de limpieza'),
-('Redes','conexion de redes'),
-('Almacenamiento','almacenamiento del sistema'),
-('Papeleria','objetos de papeleria');
+('computación','objetos de computacion'),
+('periféricos','aparato auxiliar e independiente conectado a la unidad central de una computadora u otro dispositivo electrónico.'),
+('limpieza','objetos de limpieza'),
+('redes','conexion de redes'),
+('almacenamiento','almacenamiento del sistema'),
+('papeleria','objetos de papeleria');
+go
 
 -- insertar marcas
 insert into marca values 
-('Ardone'),
-('Dell'),
-('Nexxt Solutions'),
-('Hp'),
-('Office depot'),
-('Mikrotik'),
-('iTouch'),
-('3M'),
-('Sabo'),
-('Epson'),
-('Abro'),
-('Lenovo'),
-('Logitech'),
-('Canon'),
-('Bic');
+('ardone'),
+('dell'),
+('nexxt solutions'),
+('hp'),
+('office depot'),
+('mikrotik'),
+('itouch'),
+('3m'),
+('sabo'),
+('epson'),
+('abro'),
+('lenovo'),
+('logitech'),
+('canon'),
+('bic');
+go
 
 -- insertar materiales
 insert into material values 
-('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para oficina', 'LAP-001', 1, 1),
-('Monitor Hp', 25, '2022-07-22', 'Teclado inalámbrico compacto', 'TECL-002',  2, 7),
-('Teclado alambrico', 5,  '2023-01-08', 'Aire comprimido para limpieza de computadoras', 'AIRE-003',3, 9),
-('Aire comprimido', 20, '2020-11-30', 'Router inalámbrico de alto rendimiento', 'ROUT-004',  4, 3),
-('Router 1200Mbps', 12, '2024-05-10', 'Impresora multifuncional con sistema de tinta continua', 'IMPR-005',  1, 10),
-('Tinta negra para impresora', 15, '2023-09-05', 'Botellas de tinta negra para impresora EcoTank', 'TINTA-006',  1, 10),
-('Switch RB260GS', 18, '2022-02-12', 'Switch de red 5 puertos Gigabit', 'SWITCH-007', 4, 6),
-('Cinta Scotch', 30, '2024-12-01', 'Memoria USB 64GB', 'USB-008',  5, 7),
-('Laptop core i5', 7,  '2023-06-14', 'Proyector portátil para presentaciones', 'PROY-010',  1, 7),
-('Limpiador en spray', 40, '2020-02-20', 'Paquete de hojas tamaño carta', 'PAPEL-011', 6, 5),
-('USB 1TB', 9,  '2022-04-25', 'Limpiador multiusos para superficies electrónicas', 'LIMP-012',  3, 11),
-('Disco duro externo de 2TB', 5,  '2023-11-30', 'Disco duro externo de 2TB USB 3.0', 'DD-013',  5, 2),
-('Cable RJ45', 16, '2024-03-05', 'Cámara de seguridad IP para interiores', 'CAM-014', 4, 3),
-('Plumones Artline', 8,  '2021-06-18', 'Computadora de escritorio básica', 'PC-015', 1, 1); 
+('tinta negra para impresora', 15, '2023-09-05', 'botellas de tinta negra para impresora ecotank', 'tinta-006', 1, 10),
+('impresora multifuncional', 5, '2024-05-10', 'impresora multifuncional con sistema de tinta continua', 'impr-005', 1, 10),
+('plumones artline', 8, '2021-06-18', 'plumones para pizarra', 'plum-015', 6, 15),
+('cinta scotch', 30, '2024-12-01', 'cinta adhesiva', 'cinta-008', 6, 8),
+('aire comprimido', 20, '2020-11-30', 'latas de aire comprimido para limpieza', 'aire-003', 3, 9),
+('limpiador en spray', 40, '2020-02-20', 'limpiador para equipos electrónicos', 'spray-012', 3, 11),
+('papel bond', 100, '2022-07-22', 'papel tamaño carta', 'papel-011', 6, 5),
+('proyector portátil', 3, '2023-06-14', 'proyector para presentaciones', 'proy-010', 2, 7),
+('cámara de seguridad ip', 2, '2024-03-05', 'cámara para vigilancia', 'cam-014', 2, 3),
+('laptop ryzen 7', 10, '2021-03-15', 'laptop de alto rendimiento', 'lap-001', 1, 1),
+('monitor hp', 25, '2022-07-22', 'monitor led', 'mon-002', 2, 4),
+('teclado alambrico', 5, '2023-01-08', 'teclado usb', 'tecl-003', 2, 7);
+go
 
 -- insertar solicitudes
 insert into solicitud values
-('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'Enviada',2, 4),
-('Necesito 10 tintas Epson negras para reponer', 10, '2025-02-02', 'Enviada', 3, 6),
-('Me hacen falta 5 teclados iTouch para las nuevas PCs', 5, '2025-07-21', 'Enviada', 3, 3),
-('Se necesitan 3 routers Nexxt para la red', 3, '2025-07-22', 'Enviada', 1, 5),
-('Se necesitan envíen 7 paquetes de papel tamaño carta', 7, '2025-06-23', 'Enviada', 3, 1),
-('Ya solo quedan 2 latas de aire comprimido Sabo para limpieza', 2, '2025-01-12', 'Enviada', 2, 4),
-('Se necesitan 2 Monitores HP', 2, '2025-02-12', 'Enviada', 4,2),
-('Necesito 1 tinta negra para impresora', 1, '2025-03-19', 'Enviada', 5,6),
-('Solicito 3 Switch RB260GS para conectar a la red',3,'2025-01-21','Enviada', 4,7),
-('Me hacen falta 4 Disco duro externo de 2TB',4,'2025-06-17','Enviada', 3,13),
-('Quedan pocas unidades de Laptop core i5 necesito 2',2,'2025-04-01','Enviada', 4,10),
-('Se solicitan 2 Teclados alambricos para reponer', 2, '2025-04-11', 'Enviada', 4, 3),
-('Se necesitan 7 Cinta Scotch', 7, '2025-06-27', 'Enviada', 4, 8),
-('Necesito 5 USB 1TB', 5, '2025-03-03', 'Enviada', 3,12),
-('Se solicitan 1 Cámara IP NXT-CAM para reponer', 1, '2025-03-28', 'Enviada', 5,9);
+('quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'enviada',2, 5),
+('necesito 10 tintas epson negras para reponer', 10, '2025-02-02', 'enviada', 3, 1),
+('me hacen falta 5 teclados itouch para las nuevas pcs', 5, '2025-07-21', 'enviada', 3, 12),
+('se necesitan 3 routers nexxt para la red', 3, '2025-07-22', 'enviada', 1, 9),
+('se necesitan envíen 7 paquetes de papel tamaño carta', 7, '2025-06-23', 'enviada', 3, 7),
+('ya solo quedan 2 latas de aire comprimido sabo para limpieza', 2, '2025-01-12', 'enviada', 2, 5),
+('se necesitan 2 monitores hp', 2, '2025-02-12', 'enviada', 4, 11),
+('necesito 1 tinta negra para impresora', 1, '2025-03-19', 'enviada', 5, 1),
+('solicito 3 switch rb260gs para conectar a la red',3,'2025-01-21','enviada', 4, 9),
+('me hacen falta 4 disco duro externo de 2tb',4,'2025-06-17','enviada', 3, 10),
+('quedan pocas unidades de laptop core i5 necesito 2',2,'2025-04-01','enviada', 4, 10),
+('se solicitan 2 teclados alambricos para reponer', 2, '2025-04-11', 'enviada', 4, 12),
+('se necesitan 7 cinta scotch', 7, '2025-06-27', 'enviada', 4, 4),
+('necesito 5 usb 1tb', 5, '2025-03-03', 'enviada', 3, 8),
+('se solicitan 1 cámara ip nxt-cam para reponer', 1, '2025-03-28', 'enviada', 5, 9);
+go
 
 -- insertar historial de solicitudes
 insert into historialsolicitud values
-('Rechazado','2025-07-23', 1),
-('Rechazado', '2025-02-05', 2),
-('Aceptado', '2025-07-25', 3),
-('Aceptado', '2025-07-26', 4),
-('Aceptado', '2025-06-25', 5),
-('Aceptado', '2025-01-15', 6),
-('Rechazado', '2025-02-15', 7),
-('Aceptado','2025-03-21', 8),
-('Aceptado', '2025-01-23', 9),
-('Rechazado', '2025-06-19', 10),
-('Rechazado', '2025-04-06', 11),
-('Rechazado', '2025-04-18', 12),
-('Rechazado', '2025-01-21', 13),
-('Aceptado', '2025-06-29', 14),
-('Aceptado', '2025-03-06', 15);
+('rechazado','2025-07-23', 1),
+('rechazado', '2025-02-05', 2),
+('aceptado', '2025-07-25', 3),
+('aceptado', '2025-07-26', 4),
+('aceptado', '2025-06-25', 5),
+('aceptado', '2025-01-15', 6),
+('rechazado', '2025-02-15', 7),
+('aceptado','2025-03-21', 8),
+('aceptado', '2025-01-23', 9),
+('rechazado', '2025-06-19', 10),
+('rechazado', '2025-04-06', 11),
+('rechazado', '2025-04-18', 12),
+('rechazado', '2025-01-21', 13),
+('aceptado', '2025-06-29', 14),
+('aceptado', '2025-03-06', 15);
+go
 
--- insertar salida de material
+-- insertar salida de material (datos para el gráfico de consumo)
 insert into salida_de_material values
-(4, 2, '2025-07-26', 2, 'Se entregaron 2 latas de aire comprimido para limpieza'),
-(6, 1, '2025-07-27', 3, 'Consumo de una tinta negra Epson en impresora de oficina'),
-(2, 1, '2025-07-28', 4, 'Se entregó un monitor HP para nueva estación de trabajo'),
-(7, 2, '2025-07-29', 5, 'Se ocuparon 2 switches RB260GS en red de laboratorio'),
-(10, 5, '2025-07-30', 1, 'Se entregaron 5 paquetes de papel tamaño carta para oficina'),
-(1, 1, '2025-08-01', 3, 'Uso de 1 laptop Ryzen 7 para área administrativa'),
-(3, 2, '2025-08-02', 4, 'Se entregaron 2 teclados alámbricos para PCs nuevas'),
-(12, 1, '2025-08-03', 5, 'Uso de un disco duro externo 2TB para respaldo de datos'),
-(14, 1, '2025-08-04', 2, 'Entrega de computadora de escritorio básica a recepción'),
-(5, 1, '2025-08-05', 1, 'Se instaló 1 router Nexxt en laboratorio 1'),
-(8, 3, '2025-08-06', 4, 'Se entregaron 3 cintas Scotch a oficina de diseño'),
-(11, 2, '2025-08-07', 3, 'Uso de 2 USB 1TB para almacenamiento temporal'),
-(9, 1, '2025-08-08', 2, 'Se entregó 1 laptop Core i5 a nuevo empleado'),
-(13, 4, '2025-08-09', 5, 'Se ocuparon 4 cables RJ45 en área de redes'),
-(15, 2, '2025-08-10', 1, 'Se entregaron 2 plumones Artline a oficina de reuniones');
+(1, 2, '2025-07-26', 2, 'consumo de tinta para impresora'),
+(2, 1, '2025-07-27', 3, 'uso de impresora'),
+(3, 3, '2025-07-28', 4, 'consumo de plumones'),
+(4, 5, '2025-07-29', 5, 'uso de cinta scotch'),
+(5, 4, '2025-07-30', 1, 'limpieza con aire comprimido'),
+(6, 2, '2025-08-01', 3, 'limpieza con spray'),
+(7, 10, '2025-08-02', 4, 'consumo de papel'),
+(8, 1, '2025-08-03', 5, 'uso de proyector'),
+(9, 1, '2025-08-04', 2, 'instalación de cámara'),
+(1, 3, '2025-08-05', 1, 'consumo adicional de tinta'),
+(4, 2, '2025-08-06', 4, 'uso adicional de cinta');
 go
 
--- crear procedimiento almacenado para obtener catálogo completo
-create procedure sp_obtener_catalogo_materiales
+-- ==========================================================
+-- PROCEDIMIENTOS ALMACENADOS PARA LAS GRÁFICAS
+-- ==========================================================
+
+-- Procedimiento para Chart Inventario (Categorías específicas)
+create procedure sp_obtener_inventario_categorias
 as
 begin
-    select idmaterial, nombrematerial, cantidad, fechaingreso, descripcionmaterial, modelo from material;
+    select 
+        m.nombrematerial,
+        m.cantidad,
+        c.nombrecategoria
+    from material m
+    inner join categoria c on m.id_categoria = c.idcategoria
+    where c.nombrecategoria in ('computación', 'periféricos', 'limpieza', 'papeleria')
+    order by c.nombrecategoria, m.nombrematerial;
 end
 go
 
--- crear procedimiento almacenado para obtener inventario filtrado
-create procedure sp_obtener_datos_inventario
-    @textoBusqueda varchar(100) = null
+-- Procedimiento para Chart Consumo (salida_de_material)
+create procedure sp_obtener_consumo_material
 as
 begin
-    if @textoBusqueda is null or @textoBusqueda = ''
-    begin
-        select nombrematerial, cantidad from material;
-    end
-    else
-    begin
-        select nombrematerial, cantidad from material
-        where nombrematerial like '%' + @textoBusqueda + '%'
-        or modelo like '%' + @textoBusqueda + '%';
-    end
+    select 
+        m.nombrematerial,
+        sum(s.cantidadconsumida) as total_consumido
+    from salida_de_material s
+    inner join material m on s.id_material = m.idmaterial
+    group by m.nombrematerial
+    order by total_consumido desc;
 end
 go
 
--- crear procedimiento almacenado para obtener consumo por mes
-create procedure sp_obtener_datos_consumo
-    @fechaInicio date,
-    @fechaFin date
+-- Procedimiento para DataGridView Catálogo
+create procedure sp_obtener_catalogo_completo
 as
 begin
-    select  
-        datename(month, fechaconsumo) + '-' + cast(year(fechaconsumo) as varchar) as mes,
-        sum(cantidadconsumida) as totalconsumido
-    from salida_de_material
-    where fechaconsumo between @fechaInicio and @fechaFin
-    group by year(fechaconsumo), month(fechaconsumo), datename(month, fechaconsumo)
-    order by year(fechaconsumo), month(fechaconsumo);
+    select 
+        m.nombrematerial,
+        m.cantidad,
+        m.descripcionmaterial,
+        m.modelo,
+        c.nombrecategoria,
+        ma.nombremarca
+    from material m
+    inner join categoria c on m.id_categoria = c.idcategoria
+    inner join marca ma on m.id_marca = ma.idmarca
+    order by c.nombrecategoria, m.nombrematerial;
 end
 go
-select * from usuario 
-select * from rol 
-select * from categoria 
-select * from solicitud 
-select * from marca 
-select * from material 
-select * from historialsolicitud 
+
+-- ==========================================================
+-- SELECTS PARA VERIFICAR TODOS LOS DATOS
+-- ==========================================================
+
+select * from rol;
+select * from usuario;
+select * from categoria;
+select * from marca;
+select * from material;
+select * from solicitud;
+select * from historialsolicitud;
+select * from salida_de_material;
 go
+
+-- ==========================================================
+-- VERIFICACIÓN DE PROCEDIMIENTOS
+-- ==========================================================
+
+-- Verificar que los procedimientos se crearon
+select name, type_desc 
+from sys.procedures 
+where name in ('sp_obtener_inventario_categorias', 'sp_obtener_consumo_material', 'sp_obtener_catalogo_completo');
+go
+
+-- Probar el procedimiento de inventario
+exec sp_obtener_inventario_categorias;
+go
+
+-- Probar el procedimiento de consumo
+exec sp_obtener_consumo_material;
+go
+
+-- Probar el procedimiento de catálogo
+exec sp_obtener_catalogo_completo;
+go
+
+-- Procedimiento para obtener materiales para ComboBox
+CREATE PROCEDURE sp_obtener_materiales_combo
+AS
+BEGIN
+    SELECT 
+        m.idmaterial,
+        m.nombrematerial,
+        ma.nombremarca,
+        m.cantidad
+    FROM material m
+    INNER JOIN marca ma ON m.id_marca = ma.idmarca
+    ORDER BY m.nombrematerial;
+END
+GO
+
+-- Procedimiento para registrar salida de material
+CREATE PROCEDURE sp_registrar_salida_material
+    @id_material INT,
+    @cantidad_consumida INT,
+    @fecha_consumo DATE,
+    @id_usuario INT,
+    @motivo_salida VARCHAR(1000)
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+        
+        -- Insertar en salida_de_material
+        INSERT INTO salida_de_material (id_material, cantidadconsumida, fechaconsumo, id_usuario, motivosalida)
+        VALUES (@id_material, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+        
+        -- Actualizar el inventario (restar cantidad)
+        UPDATE material 
+        SET cantidad = cantidad - @cantidad_consumida
+        WHERE idmaterial = @id_material;
+        
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH
+END
+GO
+
+-- Procedimiento para mostrar historial de salidas
+CREATE PROCEDURE sp_obtener_historial_salidas
+AS
+BEGIN
+    SELECT 
+        s.idsalidamaterial,
+        m.nombrematerial,
+        ma.nombremarca,
+        s.cantidadconsumida,
+        s.fechaconsumo,
+        s.motivosalida,
+        u.nombre as usuario_registra
+    FROM salida_de_material s
+    INNER JOIN material m ON s.id_material = m.idmaterial
+    INNER JOIN marca ma ON m.id_marca = ma.idmarca
+    INNER JOIN usuario u ON s.id_usuario = u.idusuario
+    ORDER BY s.fechaconsumo DESC;
+END
+GO

@@ -19,7 +19,7 @@ namespace Vistas
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
             //Application.Run(new frmBienvenidaJefatura());
-            Application.Run(new frmConsumoDIT());
+            Application.Run(new frmSalidaMaterialDIT());
         }
     }
 }

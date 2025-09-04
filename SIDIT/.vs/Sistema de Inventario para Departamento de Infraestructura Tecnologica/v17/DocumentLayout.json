@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\modelos\\entidades\\salidamaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\salidamaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +27,8 @@
       "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\consumo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\helperbarranegra\\barranegra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -72,14 +84,15 @@
               "RelativeDocumentMoniker": "Vistas\\Program.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Program.cs",
               "RelativeToolTip": "Vistas\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T14:20:50.282Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "FuenteHelper.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Helper\\FuenteHelper.cs",
               "RelativeDocumentMoniker": "Vistas\\Helper\\FuenteHelper.cs",
@@ -92,33 +105,74 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmSalidaMaterialDIT.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T00:49:26.254Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmSalidaMaterialDIT.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T01:35:38.947Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalidaMaterial.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\SalidaMaterial.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\SalidaMaterial.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\SalidaMaterial.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\SalidaMaterial.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwIAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T01:43:20.406Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmConsumoDIT.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
               "RelativeToolTip": "Vistas\\Formularios\\frmConsumoDIT.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAowIUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T00:28:48.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Consumo.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Consumo.cs",
               "RelativeDocumentMoniker": "Modelos\\Entidades\\Consumo.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Consumo.cs",
               "RelativeToolTip": "Modelos\\Entidades\\Consumo.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAA9wFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAiwMAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T00:29:58.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "frmConsumoDIT.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.cs",
@@ -130,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "BarraNegra.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\HelperBarraNegra\\BarraNegra.cs",
               "RelativeDocumentMoniker": "Vistas\\HelperBarraNegra\\BarraNegra.cs",
@@ -142,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "frmSalidaMaterialDIT.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
@@ -150,22 +204,24 @@
               "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T00:28:48.178Z"
+              "WhenOpened": "2025-09-03T00:28:48.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "frmSalidaMaterialDIT.resx",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-09-03T00:28:48.145Z"
+              "WhenOpened": "2025-09-03T00:28:48.145Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "frmConsumoDIT.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
@@ -178,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "frmConsumoDIT.resx",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.resx",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.resx",
@@ -190,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "frmBienvenidaJefatura.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmBienvenidaJefatura.cs",
@@ -202,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "frmBienvenidaJefatura.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmBienvenidaJefatura.cs",
@@ -213,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "frmLogin.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLogin.cs",
