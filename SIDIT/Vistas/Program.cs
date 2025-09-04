@@ -18,8 +18,12 @@ namespace Vistas
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
+<<<<<<< HEAD
             //Application.Run(new frmBienvenidaJefatura());
             Application.Run(new frmSalidaMaterialDIT());
+=======
+            Application.Run(new frmMenuDIT());
+>>>>>>> 93caa384b70863a1d8f6817cf56269b4824c3795
         }
     }
 }

@@ -53,6 +53,7 @@ create table material (
 );
 go
 
+
 create table solicitud (
     idsolicitud int identity(1,1) primary key,
     motivo varchar(1000) not null,
@@ -64,6 +65,7 @@ create table solicitud (
     constraint fk_material foreign key (id_material) references material(idmaterial),
     constraint fk_usuario foreign key (id_usuario) references usuario(idusuario)
 );
+
 go
 
 create table historialsolicitud (
@@ -75,6 +77,7 @@ create table historialsolicitud (
 );
 go
 
+
 create table salida_de_material (
     idsalidamaterial int identity(1,1) primary key,
     id_material int not null,
@@ -85,6 +88,8 @@ create table salida_de_material (
     constraint fk_salida_material foreign key (id_material) references material(idmaterial),
     constraint fk_salida_usuario foreign key (id_usuario) references usuario(idusuario)
 );
+
+
 go
 
 -- insertar roles
@@ -101,6 +106,7 @@ insert into usuario values
 ('cristopher levi rogger marin', '2000/11/07', 'yqm330px1','+503 4528 0751','cristlevi.dit@gmail.com',2),
 ('mariana verenice villalobos duran','2001/05/28','ump931zxa','+503 7106 4809', 'marianavere.dit@gmail.com',2);
 go
+
 
 -- insertar categorías
 insert into categoria values 
@@ -351,3 +357,34 @@ BEGIN
     ORDER BY s.fechaconsumo DESC;
 END
 GO
+
+
+Create View selectMateriales as 
+select 
+m.nombreMaterial as [Nombre del Material], 
+m.cantidad as Cantidad, 
+m.fechaIngreso as [Fecha de Ingreso], 
+m.descripcionMaterial as [Descripción], 
+m.modelo as [Modelo], 
+c.nombreCategoria as [Categoría], 
+mar.nombreMarca as [Marca] from Material m
+Inner Join
+Categoria c on c.idCategoria = m.id_Categoria
+Inner Join 
+Marca mar on mar.idMarca = m.id_Marca;
+
+select *from selectMateriales;
+
+---No está ejecutada, solo copie la vista para añadir el where y subir el comando a c#
+select 
+m.nombreMaterial as [Nombre del Material], 
+m.cantidad as Cantidad, 
+m.fechaIngreso as [Fecha de Ingreso], 
+m.descripcionMaterial as [Descripción], 
+m.modelo as [Modelo], 
+c.nombreCategoria as [Categoría], 
+mar.nombreMarca as [Marca] from Material m
+Inner Join
+Categoria c on c.idCategoria = m.id_Categoria
+Inner Join 
+Marca mar on mar.idMarca = m.id_Marca Where m.nombreMaterial like '%{@}%';

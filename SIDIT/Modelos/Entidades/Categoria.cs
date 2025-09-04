@@ -20,7 +20,50 @@ namespace Modelos.Entidades
         public string NombreCategoria { get => nombreCategoria; set => nombreCategoria = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
 
-       
+        public static DataTable CargarCategorias()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string comando = "Select idcategoria as Id, nombrecategoria as Nombre from categoria";
+            SqlDataAdapter add = new SqlDataAdapter(comando, con);
+            DataTable dt = new DataTable();
+            add.Fill(dt);
+            return dt;
+        }
+
+
+        public bool InsertarCategorias()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string comando = "insert into categoria (nombrecategoria) values (@nombrecategoria);";
+            SqlCommand cmd = new SqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@nombrecategoria", nombreCategoria);
+
+            if (cmd.ExecuteNonQuery() > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool EliminarCategorias(int id)
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string comando = "delete from categoria where idcategoria = @id";
+            SqlCommand cmd = new SqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@id", id);
+            if (cmd.ExecuteNonQuery() > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
     }
 }
