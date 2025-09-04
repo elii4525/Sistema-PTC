@@ -50,53 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\frmBienvenidaJefatura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmBienvenidaJefatura.Designer.cs">
-      <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmBienvenidoDIT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmBienvenidoDIT.Designer.cs">
-      <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmConsumoDIT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmConsumoDIT.Designer.cs">
       <DependentUpon>frmConsumoDIT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmGestionUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmGestionUsuario.Designer.cs">
-      <DependentUpon>frmGestionUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioAggMaterial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioAggMaterial.Designer.cs">
-      <DependentUpon>frmInventarioAggMaterial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioDIT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioDIT.Designer.cs">
-      <DependentUpon>frmInventarioDIT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioActualizarEliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioActualizarEliminar.Designer.cs">
-      <DependentUpon>frmInventarioActualizarEliminar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioJefatura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmInventarioJefatura.Designer.cs">
-      <DependentUpon>frmInventarioJefatura.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
@@ -116,18 +74,6 @@
     <Compile Include="Formularios\frmLoginError.Designer.cs">
       <DependentUpon>frmLoginError.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmMenuDIT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmMenuDIT.Designer.cs">
-      <DependentUpon>frmMenuDIT.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmMenuJefatura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
-      <DependentUpon>frmMenuJefatura.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmSalidaMaterialDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,29 +90,8 @@
     <Compile Include="Helper\FuenteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
-      <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmBienvenidoDIT.resx">
-      <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsumoDIT.resx">
       <DependentUpon>frmConsumoDIT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmGestionUsuario.resx">
-      <DependentUpon>frmGestionUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInventarioAggMaterial.resx">
-      <DependentUpon>frmInventarioAggMaterial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
-      <DependentUpon>frmInventarioDIT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInventarioActualizarEliminar.resx">
-      <DependentUpon>frmInventarioActualizarEliminar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInventarioJefatura.resx">
-      <DependentUpon>frmInventarioJefatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -176,12 +101,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLoginError.resx">
       <DependentUpon>frmLoginError.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmMenuDIT.resx">
-      <DependentUpon>frmMenuDIT.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
-      <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSalidaMaterialDIT.resx">
       <DependentUpon>frmSalidaMaterialDIT.cs</DependentUpon>

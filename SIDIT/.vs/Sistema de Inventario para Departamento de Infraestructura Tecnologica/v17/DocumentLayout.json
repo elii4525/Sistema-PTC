@@ -1,69 +1,101 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\",
+  "WorkspaceRootPath": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\modelos\\entidades\\salidamaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\salidamaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\modelos\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\vistas\\formularios\\frmlogincorrecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlogincorrecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\modelos\\entidades\\consumo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\consumo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\admin\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\helperbarranegra\\barranegra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\helperbarranegra\\barranegra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmsalidamaterialdit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmsalidamaterialdit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmbienvenidajefatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmbienvenidajefatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\formularios\\frmbienvenidajefatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmbienvenidajefatura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmsolicituddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsolicituddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\helper\\fuentehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\vistas\\formularios\\frmloginerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmloginerror.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\modelos\\entidades\\salidamaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\salidamaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\modelos\\entidades\\solicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\solicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\modelos\\entidades\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\modelos\\entidades\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\perez\\onedrive\\desktop\\sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---ptc\\sidit\\modelos\\entidades\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\modelos\\entidades\\consumo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\consumo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\helperbarranegra\\barranegra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\helperbarranegra\\barranegra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmsalidamaterialdit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmsalidamaterialdit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsalidamaterialdit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\formularios\\frmconsumodit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmconsumodit.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\vistas\\helper\\fuentehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\helper\\fuentehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -74,29 +106,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Program.cs",
               "RelativeDocumentMoniker": "Vistas\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Program.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Program.cs",
               "RelativeToolTip": "Vistas\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T14:20:50.282Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "FuenteHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Helper\\FuenteHelper.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Helper\\FuenteHelper.cs",
               "RelativeDocumentMoniker": "Vistas\\Helper\\FuenteHelper.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Helper\\FuenteHelper.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Helper\\FuenteHelper.cs",
               "RelativeToolTip": "Vistas\\Helper\\FuenteHelper.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAYwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -107,9 +138,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "frmSalidaMaterialDIT.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-04T00:49:26.254Z",
@@ -120,11 +151,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "frmSalidaMaterialDIT.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
               "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowHoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-04T01:35:38.947Z",
               "IsPinned": true,
@@ -132,11 +163,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "SalidaMaterial.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\SalidaMaterial.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\SalidaMaterial.cs",
               "RelativeDocumentMoniker": "Modelos\\Entidades\\SalidaMaterial.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\SalidaMaterial.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\SalidaMaterial.cs",
               "RelativeToolTip": "Modelos\\Entidades\\SalidaMaterial.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwIAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -146,37 +177,73 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmConsumoDIT.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmConsumoDIT.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAQwEQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Categoria.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Categoria.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Categoria.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T00:28:48.296Z",
+              "WhenOpened": "2025-09-04T06:55:51.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmLoginCorrecto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLoginCorrecto.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLoginCorrecto.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLoginCorrecto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmLoginCorrecto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:53:17.794Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T20:07:58.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Consumo.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Consumo.cs",
-              "RelativeDocumentMoniker": "Modelos\\Entidades\\Consumo.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Consumo.cs",
-              "RelativeToolTip": "Modelos\\Entidades\\Consumo.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAiwMAAAAABAAAAAAAAAA==",
+              "Title": "frmLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmLogin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T00:29:58.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T06:52:15.27Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "frmSolicitudDIT.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSolicitudDIT.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSolicitudDIT.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSolicitudDIT.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmSolicitudDIT.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:16:36.711Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmConsumoDIT.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs [Dise\u00F1o]",
               "RelativeToolTip": "Vistas\\Formularios\\frmConsumoDIT.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-03T00:30:19.014Z",
@@ -184,11 +251,113 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
+              "Title": "frmLoginError.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLoginError.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLoginError.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmLoginError.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmLoginError.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:53:03.588Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Solicitud.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Solicitud.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Solicitud.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Solicitud.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Solicitud.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:44:13.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Usuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Usuario.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Usuario.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Usuario.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:44:08.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Marca.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Marca.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Marca.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Marca.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Marca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:44:06.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Material.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Material.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Material.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Material.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Material.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:44:03.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Rol.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Rol.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Rol.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Rol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T06:44:02.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Consumo.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Consumo.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Consumo.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Modelos\\Entidades\\Consumo.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Consumo.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwMAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T00:29:58.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmConsumoDIT.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmConsumoDIT.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T00:28:48.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "BarraNegra.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\HelperBarraNegra\\BarraNegra.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\HelperBarraNegra\\BarraNegra.cs",
               "RelativeDocumentMoniker": "Vistas\\HelperBarraNegra\\BarraNegra.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\HelperBarraNegra\\BarraNegra.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\HelperBarraNegra\\BarraNegra.cs",
               "RelativeToolTip": "Vistas\\HelperBarraNegra\\BarraNegra.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAYwB8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -196,11 +365,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "frmSalidaMaterialDIT.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
               "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -209,11 +378,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "frmSalidaMaterialDIT.resx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "RelativeToolTip": "Vistas\\Formularios\\frmSalidaMaterialDIT.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-09-03T00:28:48.145Z",
@@ -221,63 +390,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "frmConsumoDIT.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
               "RelativeToolTip": "Vistas\\Formularios\\frmConsumoDIT.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-03T00:28:47.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T00:28:47.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "frmConsumoDIT.resx",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.resx",
+              "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.resx",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmConsumoDIT.resx",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.resx",
+              "ToolTip": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmConsumoDIT.resx",
               "RelativeToolTip": "Vistas\\Formularios\\frmConsumoDIT.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-09-03T00:28:47.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "frmBienvenidaJefatura.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmBienvenidaJefatura.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmBienvenidaJefatura.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAnwFoAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T04:06:13.411Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmBienvenidaJefatura.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmBienvenidaJefatura.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\..\\..\\danie\\OneDrive\\Desktop\\Sistema-de-inventario-para-el-departamento-de-infraestructura-tecnologica---PTC\\SIDIT\\Vistas\\Formularios\\frmBienvenidaJefatura.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T04:05:59.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmLogin.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T20:07:58.112Z"
+              "WhenOpened": "2025-09-03T00:28:47.567Z"
             }
           ]
         }
