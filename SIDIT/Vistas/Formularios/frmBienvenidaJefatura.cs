@@ -19,88 +19,127 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
-        private void pbInventarioBJ_Click(object sender, EventArgs e)
-        {
-            this.Hide(); //Oculta el form actual
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();   //Crea una instancia del nuevo form
-            menuJefatura.Show();   //Se muestra el form nuevo
-        }
-
-        private void lblVerInventarioJefatura_Click(object sender, EventArgs e)
+        private void lblVer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura inven = new frmMenuJefatura();
+            inven.Show();
+            inven.MostrarFormInvenJEnPanel();
+
         }
 
-        private void pbUsuarioBJ_Click(object sender, EventArgs e)
+        private void icbtnInventario_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura inven = new frmMenuJefatura();
+            inven.Show();
+            inven.MostrarFormInvenJEnPanel();
         }
 
-        private void lblVerUsuarioJefatura_Click(object sender, EventArgs e)
+        private void lblVerSoli_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura inven = new frmMenuJefatura();
+            inven.Show();
+            inven.MostrarFormSoliJEnPanel();
         }
 
-        private void pbSolicitudesBJ_Click(object sender, EventArgs e)
+        private void icbtnSol_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura soli = new frmMenuJefatura();
+            soli.Show();
+            soli.MostrarFormSoliJEnPanel();
         }
 
-        private void lblVerSolicitudesJefatura_Click(object sender, EventArgs e)
+        private void lblVerConsumo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura consumo = new frmMenuJefatura();
+            consumo.Show();
+            consumo.MostrarFormConsumoJEnPanel();
         }
 
-        private void pbConsumoBJ_Click(object sender, EventArgs e)
+        private void icbtnConsumo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura consumo = new frmMenuJefatura();
+            consumo.Show();
+            consumo.MostrarFormConsumoJEnPanel();
         }
 
-        private void lblVerConsumoJefatura_Click(object sender, EventArgs e)
+        private void lblVerUsuarios_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuJefatura menuJefatura = new frmMenuJefatura();
-            menuJefatura.Show();
+            frmMenuJefatura usuario = new frmMenuJefatura();
+            usuario.Show();
+            usuario.MostrarFormUsuariosEnPanel();
+        }
+
+        private void icbtnUsuarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenuJefatura usuario = new frmMenuJefatura();
+            usuario.Show();
+            usuario.MostrarFormUsuariosEnPanel();
         }
 
 
-
-
-        protected override void OnHandleCreated(EventArgs e)
+        //Lineas
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            base.OnHandleCreated(e);
-
-            BarraNegra.TryApplyDarkTitleBar(this.Handle);
+            using (Pen lapiz = new Pen(Color.White, 3))
+            {
+                e.Graphics.DrawLine(lapiz, 0, 3, panel2.Width - 1, 3);
+            }
         }
 
-        private void frmBienvenidaJefatura_Load(object sender, EventArgs e)
+        private void panel2_Resize(object sender, EventArgs e)
         {
-            lblConsumoDes.Font = FuenteHelper.ObtenerFuente2(40);
-            lblInventarioDes.Font = FuenteHelper.ObtenerFuente2(9);
-            lblUsuariosDes.Font = FuenteHelper.ObtenerFuente2(5);
-            lblSolicitudesDes.Font = FuenteHelper.ObtenerFuente2(5);
-            lblInventarioJefatura.Font = FuenteHelper.ObtenerFuente2(13);
-            lblQueDesea.Font = FuenteHelper.ObtenerFuente2(45);  
-            lblVerConsumoJefatura.Font = FuenteHelper.ObtenerFuente2(15);
-            lblVerInventarioJefatura.Font = FuenteHelper.ObtenerFuente2(10);
-            lblVerUsuarioJefatura.Font = FuenteHelper.ObtenerFuente2(15);
-            lblVerSolicitudesJefatura.Font = FuenteHelper.ObtenerFuente2(15);
-            lblUsuarioJefatura.Font = FuenteHelper.ObtenerFuente2(15);
-            lblConsumoJefatura.Font = FuenteHelper.ObtenerFuente2(15);
-            lblConsumoJefatura.Font = FuenteHelper.ObtenerFuente2(15);
+            //Invalida como para repintar pero solo esa area especifica.
+            panel2.Invalidate(new Rectangle(0, 3, panel2.Width - 1, 3));
+        }
 
+
+        //Cambios de color de las label
+        private void lblVer_MouseHover(object sender, EventArgs e)
+        {
+            lblVer.ForeColor = Color.FromArgb(99, 89, 133);
+        }
+
+        private void lblVer_MouseLeave(object sender, EventArgs e)
+        {
+            lblVer.ForeColor = Color.White;
+        }
+
+        private void lblVerSoli_MouseHover(object sender, EventArgs e)
+        {
+            lblVerSoli.ForeColor = Color.FromArgb(99, 89, 133);
+        }
+
+        private void lblVerSoli_MouseLeave(object sender, EventArgs e)
+        {
+            lblVerSoli.ForeColor = Color.White;
+        }
+
+        private void lblVerConsumo_MouseHover(object sender, EventArgs e)
+        {
+            lblVerConsumo.ForeColor = Color.FromArgb(99, 89, 133);
+        }
+
+        private void lblVerConsumo_MouseLeave(object sender, EventArgs e)
+        {
+            lblVerConsumo.ForeColor = Color.White;
+        }
+
+        private void lblVerUsuarios_MouseHover(object sender, EventArgs e)
+        {
+            lblVerUsuarios.ForeColor = Color.FromArgb(99, 89, 133);
+        }
+
+        private void lblVerUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            lblVerUsuarios.ForeColor = Color.White;
         }
     }
 }

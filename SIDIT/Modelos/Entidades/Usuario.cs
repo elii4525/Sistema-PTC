@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Modelos.Conexion;
 
 namespace Modelos.Entidades
@@ -27,79 +29,170 @@ namespace Modelos.Entidades
         public string Correo { get => correo; set => correo = value; }
         public int IdRol { get => idRol; set => idRol = value; }
 
-        public string Login(string correo, string contraseña)
+        // Esta clase es para guardar los datos de la persona que inicio sesion y asi poder usarlos en el perfil
+        public static class SesionActual
         {
-            using (SqlConnection conexion = ConexionDB.Conectar())
-            {
-                string consulta = @"
-                SELECT R.tipoRol
-                FROM Usuario U
-                INNER JOIN Rol R ON U.id_Rol = R.idRol
-                WHERE U.correo = @correo AND U.contraseña = @contraseña";
-
-                using (SqlCommand cmd = new SqlCommand(consulta, conexion))
-                {
-                    cmd.Parameters.AddWithValue("@correo", correo);
-                    cmd.Parameters.AddWithValue("@contraseña", contraseña);
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            return reader["tipoRol"].ToString();
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
-                }
-            }
-        }
-
-        public static DataTable VerUsuarios()
-        {
-            SqlConnection conexion = ConexionDB.Conectar();
-            string consulta = @"select idUsuario as Codigo_Usuario, nombre as Nombre, fechaNacimiento as Fecha_de_nacimiento, telefono as Telefono, tipoRol as Rol, contraseña as Contraseña, correo as Correo_electronicofrom Usuario  Uinner join Rol R on R.idRol = U.id_Rol";
-            SqlDataAdapter add = new SqlDataAdapter(consulta, conexion);
-            DataTable tablaVirtual = new DataTable();
-            add.Fill(tablaVirtual);
-            return tablaVirtual;
+            public static int IdUsuario { get; set; }
+            public static string Nombre { get; set; }
+            public static string Correo { get; set; }
+            public static string Telefono { get; set; }
+            public static string Rol { get; set; }
+            public static DateTime FechaNacimiento { get; set; }
         }
 
         public static void EliminarUsuario(int idUsuario)
         {
             SqlConnection conexion = ConexionDB.Conectar();
-            SqlCommand cmd = new SqlCommand(@"delete from Usuario
-            where idUsuario = @idUsuario", conexion);
-        
+            SqlCommand cmd = new SqlCommand("delete Usuario where idUsuario = @idUsuario", conexion);
+
             cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
 
-            conexion.Open();
             cmd.ExecuteNonQuery();
+
             cmd.Dispose();
             conexion.Close();
         }
-        public void AgregaUsuariol()
+
+        // Este metodo genera una contraseña de tamaño o longitud de 6 caracteres
+        public static string GenerarContrasena(int longitud = 6)
         {
-            SqlConnection conexion = ConexionDB.Conectar();
-            SqlCommand cmd = new SqlCommand(@"insert into Usuario 
-            values (@idUsuario, @nombre, @fechaNacimiento, @contraseña, @telefono, @correo, @id_Rol)", conexion);
-            cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
-            cmd.Parameters.AddWithValue("@nombre", nombre);
-            cmd.Parameters.AddWithValue("@fechaNacimiento", fechaNacimiento);
-            cmd.Parameters.AddWithValue("@contraseña", contraseña);
-            cmd.Parameters.AddWithValue("@telefono", telefono);
-            cmd.Parameters.AddWithValue("@correo", correo);
-    
-            cmd.Parameters.AddWithValue("@id_Rol", idRol);
+            const string caracteres = "abcdefghijklmnopqrsTUVWXYZABCDEFGHIJK1234567890";
+            StringBuilder contrasena = new StringBuilder();
+            Random rnd = new Random();
 
-            conexion.Open();
-            cmd.ExecuteNonQuery();
+            for (int i = 0; i < longitud; i++)
+            {
+                contrasena.Append(caracteres[rnd.Next(caracteres.Length)]);
+            }
 
-            cmd.Dispose();
-            conexion.Dispose();
+            return contrasena.ToString();
         }
 
+        // Aqui se usa el metodo anterior para hacer la contraseña y para que luego se hashee
+        public bool RegistrarUsuario()
+        {
+            try
+            {
+                SqlConnection con = ConexionDB.Conectar();
+
+                string contrasenaGenerada = GenerarContrasena();
+
+                string contrasenaHasheada = BCrypt.Net.BCrypt.HashPassword(contrasenaGenerada);
+
+                string query = @"insert into Usuario (nombre, fechaNacimiento, contraseña, telefono, correo, id_Rol)
+                values (@Nombre, @Fechanacimiento, @Contraseña, @Telefono, @Correo, @RolId)";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Nombre", Nombre);
+                cmd.Parameters.AddWithValue("@Fechanacimiento", FechaNacimiento);
+                cmd.Parameters.AddWithValue("@Contraseña", contrasenaHasheada);
+                cmd.Parameters.AddWithValue("@Telefono", Telefono);
+                cmd.Parameters.AddWithValue("@Correo", Correo);
+                cmd.Parameters.AddWithValue("@RolId", IdRol);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show($"Usuario registrado con éxito.\nContraseña generada: {contrasenaGenerada}",
+                    "Registro exitoso"); // Aqui se genera el usuario y se muestra la contraseña creada a lo random
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+
+        public string VerificarLogin(string correo, string contraseña)
+        {
+            string hasEnBaseDeDatos = "";
+            string rol = null;
+
+            using (SqlConnection con = ConexionDB.Conectar())
+            {
+                string query = @"select U.contraseña, R.tipoRol 
+                         from Usuario U 
+                         inner join Rol R on R.idRol = U.id_Rol
+                         where U.correo = @Correo";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Correo", correo);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    hasEnBaseDeDatos = reader["contraseña"].ToString();
+
+                    if (BCrypt.Net.BCrypt.Verify(contraseña, hasEnBaseDeDatos))
+                    {
+                        rol = reader["tipoRol"].ToString();
+                    }
+                }
+            }
+
+            return rol; // devuelve el rol si el login estuvo bien, o null si fallo
+        }
+
+        public DataTable cargarRoles()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string query = @"select idRol, tipoRol from Rol";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable ObtenerDatosUsuario(string correo, string contraseña)
+        {
+            DataTable dt = new DataTable();
+
+            using (SqlConnection con = ConexionDB.Conectar())
+            {
+                string query = @"SELECT * 
+                         FROM VerUsuarios 
+                         WHERE correo = @correo AND contraseña = @contraseña";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@contraseña", contraseña);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+
+            return dt;
+        }
+
+        public static DataTable cargarUsuarios()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string query = @"select * from VerUsuarios";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable cargarUltimosUsuarios()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string query = @"select * from VerUltimosUsuarios";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataTable cargarUsuariosEliminar()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string query = @"select idUsuario as Codigo, nombre as Nombre from Usuario";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

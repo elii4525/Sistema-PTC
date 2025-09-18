@@ -28,249 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlIventarioCategoria = new System.Windows.Forms.Panel();
-            this.btnFiltrar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvPerifericos = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dgvComputacion = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgvAlmacenamiento = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dgvLimpieza = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dgvRedes = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dgvPapelería = new System.Windows.Forms.DataGridView();
-            this.pnlMenuDesplegable = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pnlIventarioCategoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerifericos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComputacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacenamiento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLimpieza)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRedes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPapelería)).BeginInit();
-            this.pnlMenuDesplegable.SuspendLayout();
+            this.tlpFrmInventario = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlContenedorPestañas = new System.Windows.Forms.Panel();
+            this.icbtnActualizarYEliminarMaterial = new FontAwesome.Sharp.IconButton();
+            this.icbtnAggMaterial = new FontAwesome.Sharp.IconButton();
+            this.icbtnVerMaterial = new FontAwesome.Sharp.IconButton();
+            this.pnlContenedorUC = new System.Windows.Forms.Panel();
+            this.tlpFrmInventario.SuspendLayout();
+            this.pnlContenedorPestañas.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlIventarioCategoria
+            // tlpFrmInventario
             // 
-            this.pnlIventarioCategoria.Controls.Add(this.btnFiltrar);
-            this.pnlIventarioCategoria.Controls.Add(this.label1);
-            this.pnlIventarioCategoria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlIventarioCategoria.Location = new System.Drawing.Point(0, 0);
-            this.pnlIventarioCategoria.Name = "pnlIventarioCategoria";
-            this.pnlIventarioCategoria.Size = new System.Drawing.Size(919, 73);
-            this.pnlIventarioCategoria.TabIndex = 0;
+            this.tlpFrmInventario.ColumnCount = 1;
+            this.tlpFrmInventario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpFrmInventario.Controls.Add(this.pnlContenedorPestañas, 0, 0);
+            this.tlpFrmInventario.Controls.Add(this.pnlContenedorUC, 0, 1);
+            this.tlpFrmInventario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpFrmInventario.Location = new System.Drawing.Point(0, 0);
+            this.tlpFrmInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpFrmInventario.Name = "tlpFrmInventario";
+            this.tlpFrmInventario.RowCount = 2;
+            this.tlpFrmInventario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.388335F));
+            this.tlpFrmInventario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.61166F));
+            this.tlpFrmInventario.Size = new System.Drawing.Size(936, 571);
+            this.tlpFrmInventario.TabIndex = 1;
             // 
-            // btnFiltrar
+            // pnlContenedorPestañas
             // 
-            this.btnFiltrar.BackColor = System.Drawing.Color.White;
-            this.btnFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiltrar.FlatAppearance.BorderSize = 0;
-            this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrar.Image = global::Vistas.Properties.Resources.icons8_sort_down_24;
-            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltrar.Location = new System.Drawing.Point(67, 43);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(104, 24);
-            this.btnFiltrar.TabIndex = 2;
-            this.btnFiltrar.Text = "Filtrar por";
-            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.UseVisualStyleBackColor = false;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            this.pnlContenedorPestañas.BackColor = System.Drawing.Color.Black;
+            this.pnlContenedorPestañas.Controls.Add(this.icbtnActualizarYEliminarMaterial);
+            this.pnlContenedorPestañas.Controls.Add(this.icbtnAggMaterial);
+            this.pnlContenedorPestañas.Controls.Add(this.icbtnVerMaterial);
+            this.pnlContenedorPestañas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedorPestañas.ForeColor = System.Drawing.Color.White;
+            this.pnlContenedorPestañas.Location = new System.Drawing.Point(2, 2);
+            this.pnlContenedorPestañas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlContenedorPestañas.Name = "pnlContenedorPestañas";
+            this.pnlContenedorPestañas.Size = new System.Drawing.Size(932, 49);
+            this.pnlContenedorPestañas.TabIndex = 0;
             // 
-            // label1
+            // icbtnActualizarYEliminarMaterial
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de materiales";
+            this.icbtnActualizarYEliminarMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizarYEliminarMaterial.Dock = System.Windows.Forms.DockStyle.Left;
+            this.icbtnActualizarYEliminarMaterial.FlatAppearance.BorderSize = 0;
+            this.icbtnActualizarYEliminarMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnActualizarYEliminarMaterial.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnActualizarYEliminarMaterial.ForeColor = System.Drawing.Color.White;
+            this.icbtnActualizarYEliminarMaterial.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
+            this.icbtnActualizarYEliminarMaterial.IconColor = System.Drawing.Color.White;
+            this.icbtnActualizarYEliminarMaterial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnActualizarYEliminarMaterial.IconSize = 33;
+            this.icbtnActualizarYEliminarMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtnActualizarYEliminarMaterial.Location = new System.Drawing.Point(316, 0);
+            this.icbtnActualizarYEliminarMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbtnActualizarYEliminarMaterial.Name = "icbtnActualizarYEliminarMaterial";
+            this.icbtnActualizarYEliminarMaterial.Padding = new System.Windows.Forms.Padding(0, 0, 19, 0);
+            this.icbtnActualizarYEliminarMaterial.Size = new System.Drawing.Size(122, 49);
+            this.icbtnActualizarYEliminarMaterial.TabIndex = 6;
+            this.icbtnActualizarYEliminarMaterial.Text = "Eliminar";
+            this.icbtnActualizarYEliminarMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnActualizarYEliminarMaterial.UseVisualStyleBackColor = false;
+            this.icbtnActualizarYEliminarMaterial.Click += new System.EventHandler(this.icbtnActualizarYEliminarMaterial_Click);
+            this.icbtnActualizarYEliminarMaterial.Paint += new System.Windows.Forms.PaintEventHandler(this.icbtnActualizarYEliminarMaterial_Paint);
             // 
-            // button1
+            // icbtnAggMaterial
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(708, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 52);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Agregar Material";
-            this.button1.UseVisualStyleBackColor = false;
+            this.icbtnAggMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnAggMaterial.Dock = System.Windows.Forms.DockStyle.Left;
+            this.icbtnAggMaterial.FlatAppearance.BorderSize = 0;
+            this.icbtnAggMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnAggMaterial.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnAggMaterial.ForeColor = System.Drawing.Color.White;
+            this.icbtnAggMaterial.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.icbtnAggMaterial.IconColor = System.Drawing.Color.White;
+            this.icbtnAggMaterial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnAggMaterial.IconSize = 33;
+            this.icbtnAggMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtnAggMaterial.Location = new System.Drawing.Point(180, 0);
+            this.icbtnAggMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbtnAggMaterial.Name = "icbtnAggMaterial";
+            this.icbtnAggMaterial.Padding = new System.Windows.Forms.Padding(8, 0, 19, 0);
+            this.icbtnAggMaterial.Size = new System.Drawing.Size(136, 49);
+            this.icbtnAggMaterial.TabIndex = 6;
+            this.icbtnAggMaterial.Text = "Agregar";
+            this.icbtnAggMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnAggMaterial.UseVisualStyleBackColor = false;
+            this.icbtnAggMaterial.Click += new System.EventHandler(this.icbtnAggMaterial_Click);
+            this.icbtnAggMaterial.Paint += new System.Windows.Forms.PaintEventHandler(this.icbtnAggMaterial_Paint);
             // 
-            // label2
+            // icbtnVerMaterial
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Periféricos --";
+            this.icbtnVerMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnVerMaterial.Dock = System.Windows.Forms.DockStyle.Left;
+            this.icbtnVerMaterial.FlatAppearance.BorderSize = 0;
+            this.icbtnVerMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnVerMaterial.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnVerMaterial.ForeColor = System.Drawing.Color.White;
+            this.icbtnVerMaterial.IconChar = FontAwesome.Sharp.IconChar.List;
+            this.icbtnVerMaterial.IconColor = System.Drawing.Color.White;
+            this.icbtnVerMaterial.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnVerMaterial.IconSize = 33;
+            this.icbtnVerMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtnVerMaterial.Location = new System.Drawing.Point(0, 0);
+            this.icbtnVerMaterial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.icbtnVerMaterial.Name = "icbtnVerMaterial";
+            this.icbtnVerMaterial.Padding = new System.Windows.Forms.Padding(8, 0, 11, 0);
+            this.icbtnVerMaterial.Size = new System.Drawing.Size(180, 49);
+            this.icbtnVerMaterial.TabIndex = 5;
+            this.icbtnVerMaterial.Text = "Ver materiales";
+            this.icbtnVerMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnVerMaterial.UseVisualStyleBackColor = false;
+            this.icbtnVerMaterial.Click += new System.EventHandler(this.icbtnVerMaterial_Click);
+            this.icbtnVerMaterial.Paint += new System.Windows.Forms.PaintEventHandler(this.icbtnVerMaterial_Paint);
             // 
-            // dgvPerifericos
+            // pnlContenedorUC
             // 
-            this.dgvPerifericos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerifericos.Location = new System.Drawing.Point(58, 174);
-            this.dgvPerifericos.Name = "dgvPerifericos";
-            this.dgvPerifericos.RowHeadersWidth = 51;
-            this.dgvPerifericos.Size = new System.Drawing.Size(750, 370);
-            this.dgvPerifericos.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(55, 597);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Computación --";
-            // 
-            // dgvComputacion
-            // 
-            this.dgvComputacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComputacion.Location = new System.Drawing.Point(58, 626);
-            this.dgvComputacion.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvComputacion.Name = "dgvComputacion";
-            this.dgvComputacion.RowHeadersWidth = 51;
-            this.dgvComputacion.RowTemplate.Height = 24;
-            this.dgvComputacion.Size = new System.Drawing.Size(748, 370);
-            this.dgvComputacion.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(55, 1059);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Almacenamiento --";
-            // 
-            // dgvAlmacenamiento
-            // 
-            this.dgvAlmacenamiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlmacenamiento.Location = new System.Drawing.Point(58, 1088);
-            this.dgvAlmacenamiento.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvAlmacenamiento.Name = "dgvAlmacenamiento";
-            this.dgvAlmacenamiento.RowHeadersWidth = 51;
-            this.dgvAlmacenamiento.RowTemplate.Height = 24;
-            this.dgvAlmacenamiento.Size = new System.Drawing.Size(748, 370);
-            this.dgvAlmacenamiento.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(55, 1524);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Limpieza --";
-            // 
-            // dgvLimpieza
-            // 
-            this.dgvLimpieza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLimpieza.Location = new System.Drawing.Point(58, 1556);
-            this.dgvLimpieza.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvLimpieza.Name = "dgvLimpieza";
-            this.dgvLimpieza.RowHeadersWidth = 51;
-            this.dgvLimpieza.RowTemplate.Height = 24;
-            this.dgvLimpieza.Size = new System.Drawing.Size(748, 370);
-            this.dgvLimpieza.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(55, 1993);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 18);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Redes --";
-            // 
-            // dgvRedes
-            // 
-            this.dgvRedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRedes.Location = new System.Drawing.Point(58, 2022);
-            this.dgvRedes.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvRedes.Name = "dgvRedes";
-            this.dgvRedes.RowHeadersWidth = 51;
-            this.dgvRedes.RowTemplate.Height = 24;
-            this.dgvRedes.Size = new System.Drawing.Size(748, 370);
-            this.dgvRedes.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(55, 2473);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 18);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Papelería --";
-            // 
-            // dgvPapelería
-            // 
-            this.dgvPapelería.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPapelería.Location = new System.Drawing.Point(58, 2502);
-            this.dgvPapelería.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvPapelería.Name = "dgvPapelería";
-            this.dgvPapelería.RowHeadersWidth = 51;
-            this.dgvPapelería.RowTemplate.Height = 24;
-            this.dgvPapelería.Size = new System.Drawing.Size(748, 370);
-            this.dgvPapelería.TabIndex = 14;
-            // 
-            // pnlMenuDesplegable
-            // 
-            this.pnlMenuDesplegable.BackColor = System.Drawing.Color.White;
-            this.pnlMenuDesplegable.Controls.Add(this.button4);
-            this.pnlMenuDesplegable.Controls.Add(this.button3);
-            this.pnlMenuDesplegable.Location = new System.Drawing.Point(67, 73);
-            this.pnlMenuDesplegable.Name = "pnlMenuDesplegable";
-            this.pnlMenuDesplegable.Size = new System.Drawing.Size(104, 46);
-            this.pnlMenuDesplegable.TabIndex = 3;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 22);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Categoría";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 22);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Sin Categoría";
-            this.button4.UseVisualStyleBackColor = true;
+            this.pnlContenedorUC.BackColor = System.Drawing.Color.Black;
+            this.pnlContenedorUC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedorUC.Location = new System.Drawing.Point(0, 53);
+            this.pnlContenedorUC.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContenedorUC.Name = "pnlContenedorUC";
+            this.pnlContenedorUC.Size = new System.Drawing.Size(936, 518);
+            this.pnlContenedorUC.TabIndex = 1;
             // 
             // frmInventarioDIT
             // 
@@ -279,58 +160,24 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(936, 571);
-            this.Controls.Add(this.pnlMenuDesplegable);
-            this.Controls.Add(this.dgvPapelería);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dgvRedes);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dgvLimpieza);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgvAlmacenamiento);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dgvComputacion);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvPerifericos);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pnlIventarioCategoria);
+            this.Controls.Add(this.tlpFrmInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmInventarioDIT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.pnlIventarioCategoria.ResumeLayout(false);
-            this.pnlIventarioCategoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerifericos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvComputacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacenamiento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLimpieza)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRedes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPapelería)).EndInit();
-            this.pnlMenuDesplegable.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frmInventarioDIT_Load);
+            this.tlpFrmInventario.ResumeLayout(false);
+            this.pnlContenedorPestañas.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlIventarioCategoria;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvPerifericos;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgvComputacion;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvAlmacenamiento;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dgvLimpieza;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgvRedes;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dgvPapelería;
-        private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.Panel pnlMenuDesplegable;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TableLayoutPanel tlpFrmInventario;
+        private System.Windows.Forms.Panel pnlContenedorPestañas;
+        private FontAwesome.Sharp.IconButton icbtnActualizarYEliminarMaterial;
+        private FontAwesome.Sharp.IconButton icbtnAggMaterial;
+        private FontAwesome.Sharp.IconButton icbtnVerMaterial;
+        private System.Windows.Forms.Panel pnlContenedorUC;
     }
 }

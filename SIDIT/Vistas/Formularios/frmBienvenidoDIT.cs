@@ -12,53 +12,105 @@ namespace Vistas.Formularios
 {
     public partial class frmBienvenidoDIT : Form
     {
+
         public frmBienvenidoDIT()
         {
             InitializeComponent();
         }
 
-        private void pbVerInventario_Click(object sender, EventArgs e)
+        private void lblVer_Click(object sender, EventArgs e)
         {
-            this.Hide(); //Oculta el form actual
-            frmMenuDIT menuDIT = new frmMenuDIT();   //Crea una instancia del nuevo form
-            menuDIT.Show();   //Se muestra el form nuevo
+                this.Hide();
+                frmMenuDIT menu = new frmMenuDIT();
+                menu.Show();
+                menu.MostrarFormInvenDEnPanel();
         }
 
-        private void lblVerInventarioDIT_Click(object sender, EventArgs e)
+        private void icbtnInventario_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            frmMenuDIT menu = new frmMenuDIT();
+            menu.Show();
+            menu.MostrarFormInvenDEnPanel();
+        }
+
+        private void lblVerSoli_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuDIT menuDIT = new frmMenuDIT();
-            menuDIT.Show();
+            frmMenuDIT sol = new frmMenuDIT();
+
+            sol.Show();
+            sol.MostrarFormSoliDEnPanel();
         }
 
-        private void pbVerSolicitudes_Click(object sender, EventArgs e)
+        private void icbtnSol_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmMenuDIT menuDIT = new frmMenuDIT();
-            menuDIT.Show();
+            frmMenuDIT sol = new frmMenuDIT();
+
+            sol.Show();
+            sol.MostrarFormSoliDEnPanel();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        //private void lblVerConsumo_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    frmMenuDIT consu = new frmMenuDIT();
+        //    consu.Show();
+        //    consu.MostrarFormConsumoDEnPanel();
+        //}
+
+        //private void icbtnConsumo_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    frmMenuDIT consu = new frmMenuDIT();
+        //    consu.Show();
+        //    consu.MostrarFormConsumoDEnPanel();
+        //}
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            this.Hide();
-            frmMenuDIT menuDIT = new frmMenuDIT();
-            menuDIT.Show();
+            using (Pen lapiz = new Pen(Color.White, 3))
+            {
+                e.Graphics.DrawLine(lapiz, 0, 3, panel2.Width - 1, 3);
+            }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void panel2_Resize(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMenuDIT menuDIT = new frmMenuDIT();
-            menuDIT.Show();
+            //Invalida como para repintar pero solo esa area especifica.
+            panel2.Invalidate(new Rectangle(0, 3 ,panel2.Width -1, 3));
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void lblVer_MouseHover(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMenuDIT menuDIT = new frmMenuDIT();
-            menuDIT.Show();
+            lblVer.ForeColor = Color.FromArgb(99, 89, 133);
         }
 
+        private void lblVer_MouseLeave(object sender, EventArgs e)
+        {
+            lblVer.ForeColor = Color.White;
+        }
 
+        private void lblVerSoli_MouseHover(object sender, EventArgs e)
+        {
+            lblVerSoli.ForeColor = Color.FromArgb(99, 89, 133);
+        }
+
+        private void lblVerSoli_MouseLeave(object sender, EventArgs e)
+        {
+            lblVerSoli.ForeColor = Color.White;
+        }
+
+        private void lblVerConsumo_MouseHover(object sender, EventArgs e)
+        {
+            lblVerConsumo.ForeColor = Color.FromArgb(99, 89, 133);
+        }
+
+        private void lblVerConsumo_MouseLeave(object sender, EventArgs e)
+        {
+            lblVerConsumo.ForeColor = Color.White;
+        }
     }
 }
