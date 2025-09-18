@@ -137,6 +137,7 @@ namespace Vistas.Formularios
 
             
             BotonActivado(icbtnVerMaterial);
+            MostrarUCLista();
             icbtnActualizarYEliminarMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
             icbtnActualizarYEliminarMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
 

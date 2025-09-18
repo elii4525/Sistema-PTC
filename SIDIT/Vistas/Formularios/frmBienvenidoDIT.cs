@@ -50,23 +50,24 @@ namespace Vistas.Formularios
             frmMenuDIT sol = new frmMenuDIT();
 
             sol.Show();
+            sol.MostrarFormSoliDEnPanel();
         }
 
-        private void lblVerConsumo_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmMenuDIT consu = new frmMenuDIT();
-            consu.Show();
-            consu.MostrarFormConsumoDEnPanel();
-        }
+        //private void lblVerConsumo_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    frmMenuDIT consu = new frmMenuDIT();
+        //    consu.Show();
+        //    consu.MostrarFormConsumoDEnPanel();
+        //}
 
-        private void icbtnConsumo_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmMenuDIT consu = new frmMenuDIT();
-            consu.Show();
-            consu.MostrarFormConsumoDEnPanel();
-        }
+        //private void icbtnConsumo_Click(object sender, EventArgs e)
+        //{
+        //    this.Hide();
+        //    frmMenuDIT consu = new frmMenuDIT();
+        //    consu.Show();
+        //    consu.MostrarFormConsumoDEnPanel();
+        //}
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

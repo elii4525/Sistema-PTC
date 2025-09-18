@@ -62,6 +62,9 @@ namespace Vistas
             MostrarMateriales();
             MostrarMarcas();
             MostrarCategorias();
+            EstilizarDataGrid(dgvCategorias) ;
+            EstilizarDataGrid(dgvMarcas);
+            EstilizarDataGrid(dgvMaterial);
         }
 
         private void btnEliminarMarcas_Click(object sender, EventArgs e)
@@ -107,5 +110,29 @@ namespace Vistas
             }
             MostrarCategorias();
         }
+
+            private void EstilizarDataGrid(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.BackgroundColor = Color.White;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToResizeColumns = true;
+            dgv.AllowUserToResizeRows = false;
+        }
     }
 }
+
+
+

@@ -31,17 +31,13 @@
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblIngreseDatos = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblError = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.txtCorreo = new Vistas.Controles.TextBox();
+            this.txtContra = new Vistas.Controles.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -84,33 +80,6 @@
             this.lblCorreo.TabIndex = 4;
             this.lblCorreo.Text = "Correo electronico:";
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.BackColor = System.Drawing.Color.Black;
-            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCorreo.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtCorreo.Location = new System.Drawing.Point(120, 560);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(424, 15);
-            this.txtCorreo.TabIndex = 5;
-            this.txtCorreo.Text = "ejemplo.dit@gmail.com";
-            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Line_3;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 574);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(424, 16);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
@@ -124,33 +93,6 @@
             this.lblContraseña.TabIndex = 7;
             this.lblContraseña.Text = "Contraseña:";
             // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.Black;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtContraseña.Location = new System.Drawing.Point(120, 684);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(424, 15);
-            this.txtContraseña.TabIndex = 8;
-            this.txtContraseña.Text = "X93eSaa33";
-            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Image = global::Vistas.Properties.Resources.Line_3;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 693);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(424, 16);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.Salmon;
@@ -158,7 +100,7 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.Location = new System.Drawing.Point(192, 767);
-            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(315, 70);
             this.btnIniciarSesion.TabIndex = 0;
@@ -171,7 +113,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_4;
             this.pictureBox3.Location = new System.Drawing.Point(16, 1164);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(157, 87);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -205,6 +147,48 @@
             this.lblError.Text = "      Error";
             this.lblError.Visible = false;
             // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.Color.Black;
+            this.txtCorreo.BorderColor = System.Drawing.Color.White;
+            this.txtCorreo.BorderSize = 2;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.White;
+            this.txtCorreo.Location = new System.Drawing.Point(120, 542);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.multiline = false;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
+            this.txtCorreo.PasswordChar = false;
+            this.txtCorreo.Size = new System.Drawing.Size(424, 35);
+            this.txtCorreo.TabIndex = 14;
+            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCorreo.Texts = "ejemplo.dit@gmail.com";
+            this.txtCorreo.UnderlinedStyle = true;
+            this.txtCorreo.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // txtContra
+            // 
+            this.txtContra.BackColor = System.Drawing.Color.Black;
+            this.txtContra.BorderColor = System.Drawing.Color.White;
+            this.txtContra.BorderSize = 2;
+            this.txtContra.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContra.ForeColor = System.Drawing.Color.White;
+            this.txtContra.Location = new System.Drawing.Point(120, 658);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContra.multiline = false;
+            this.txtContra.Name = "txtContra";
+            this.txtContra.Padding = new System.Windows.Forms.Padding(7);
+            this.txtContra.PasswordChar = false;
+            this.txtContra.Size = new System.Drawing.Size(424, 35);
+            this.txtContra.TabIndex = 15;
+            this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContra.Texts = "X93esAX99";
+            this.txtContra.UnderlinedStyle = true;
+            this.txtContra.Enter += new System.EventHandler(this.txtContra_Enter);
+            this.txtContra.Leave += new System.EventHandler(this.txtContra_Leave);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,26 +196,22 @@
             this.BackgroundImage = global::Vistas.Properties.Resources.Desktop___47;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1181, 703);
-            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblContraseña);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCorreo);
             this.Controls.Add(this.lblIngreseDatos);
             this.Controls.Add(this.lblBienvenido);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
@@ -244,14 +224,12 @@
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Label lblIngreseDatos;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblError;
+        private Controles.TextBox txtCorreo;
+        private Controles.TextBox txtContra;
     }
 }

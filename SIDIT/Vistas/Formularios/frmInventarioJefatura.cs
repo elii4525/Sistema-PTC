@@ -21,6 +21,7 @@ namespace Vistas.Formularios
         private void frmInventarioJefatura_Load(object sender, EventArgs e)
         {
             MostrarMateriales();
+            EstilizarDataGrid(dgvMaterialesJ);
         }
 
         private void MostrarMateriales()
@@ -46,6 +47,27 @@ namespace Vistas.Formularios
         {
             txtBuscar.Clear();
             MostrarMateriales();
+        }
+
+        private void EstilizarDataGrid(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.BackgroundColor = Color.White;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToResizeColumns = true;
+            dgv.AllowUserToResizeRows = false;
         }
     }
 }

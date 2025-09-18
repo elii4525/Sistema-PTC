@@ -36,31 +36,18 @@ namespace Vistas
             cbMarcas.SelectedIndex = -1;
         }
 
-        private void pnlAggCategorias_Paint(object sender, PaintEventArgs e)
-        {
-            using (Pen lapiz = new Pen(Color.White, 3))
-            {
-                e.Graphics.DrawLine(lapiz, 0, pnlAggCategorias.Height - 1, 0, 0);
-            }
-        }
 
         private void frmAggMaterial_Load(object sender, EventArgs e)
         {
-            pnlAggCategorias.BringToFront();
-            pnlAggMarcas.BringToFront();
+
             MostrarCategorias();
             MostrarMarcas();
             MostrarRegistro();
+            EstilizarDataGrid(dgvMaterialAgg);
+            
+            
         }
 
-        private void pnlAggMarcas_Paint(object sender, PaintEventArgs e)
-        {
-            using (Pen lapiz = new Pen(Color.White, 3))
-            {
-                e.Graphics.DrawLine(lapiz, 0, pnlAggMarcas.Height - 1, 0, 0);
-                e.Graphics.DrawLine(lapiz, 0, 3, pnlAggMarcas.Width - 1, 3);
-            }
-        }
 
         private void pnlAggCategorias_Resize(object sender, EventArgs e)
         {
@@ -76,13 +63,21 @@ namespace Vistas
         {
             try
             {
-                Marca m = new Marca();
-                m.NombreMarca = txtMarca.Text;
-                m.InsertarMarca();
-                MostrarMarcas();
-                txtMarca.Clear();
+                if (string.IsNullOrEmpty(txtMarca.Text))
+                {
+                    MessageBox.Show("No se puede agregar un campo vacío", "Error");
+                }
+                else
+                {
+                    Marca m = new Marca();
+                    m.NombreMarca = txtMarca.Text;
+                    m.InsertarMarca();
+                    MostrarMarcas();
+                    txtMarca.Clear();
 
-                MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
             }
             catch (Exception ex)
             {
@@ -95,13 +90,21 @@ namespace Vistas
         {
             try
             {
-                Categoria c = new Categoria();
-                c.NombreCategoria = txtCategoria.Text;
-                c.InsertarCategorias();
-                MostrarCategorias();
-                txtCategoria.Clear();
+                if(string.IsNullOrEmpty(txtCategoria.Text))
+                {
+                    MessageBox.Show("No se puede agregar un campo vacío", "Error");
+                }
+                else
+                {
+                    Categoria c = new Categoria();
+                    c.NombreCategoria = txtCategoria.Text;
+                    c.InsertarCategorias();
+                    MostrarCategorias();
+                    txtCategoria.Clear();
 
-                MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
             catch (Exception ex)
             {
@@ -113,18 +116,26 @@ namespace Vistas
         {
             try
             {
-                Material m = new Material();
-                m.NombreMaterial = txtNombre.Text;
-                m.IdMarca = Convert.ToInt32( cbMarcas.SelectedValue);
-                m.Modelo = txtModelo.Text;
-                m.IdCategoria = Convert.ToInt32(cbCategoria.SelectedValue);
-                m.Descripcion = txtDescripcion.Text;
-                m.FechaIngreso = dtpFechaIng.Value;
-                m.Cantidad = Convert.ToInt32(txtCantidad.Text);
-                m.InsertarMaterial();
-                MostrarRegistro();
+                if(string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(cbCategoria.Text) || string.IsNullOrEmpty(cbMarcas.Text) || string.IsNullOrEmpty(txtModelo.Text) || string.IsNullOrEmpty(dtpFechaIng.Text) || string.IsNullOrEmpty(txtCantidad.Text))
+                {
+                    MessageBox.Show("Solo el campo 'Descripción' puede estar vacío", "Error");
+                }
+                else
+                {
+                    Material m = new Material();
+                    m.NombreMaterial = txtNombre.Text;
+                    m.IdMarca = Convert.ToInt32(cbMarcas.SelectedValue);
+                    m.Modelo = txtModelo.Text;
+                    m.IdCategoria = Convert.ToInt32(cbCategoria.SelectedValue);
+                    m.Descripcion = txtDescripcion.Text;
+                    m.FechaIngreso = dtpFechaIng.Value;
+                    m.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    m.InsertarMaterial();
+                    MostrarRegistro();
+
+                    MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 
-                MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
             catch (Exception ex)
@@ -149,5 +160,27 @@ namespace Vistas
             dgvMaterialAgg.DataSource = Material.CargarUltimosRegistros();
         }
 
+        private void EstilizarDataGrid(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.BackgroundColor = Color.White;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToResizeColumns = true;
+            dgv.AllowUserToResizeRows = false;
+        }
+
+        
     }
 }

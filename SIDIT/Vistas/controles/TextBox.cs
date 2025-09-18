@@ -1,0 +1,255 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Vistas.Controles
+{
+    public partial class TextBox : UserControl
+    {
+
+        private Color borderColor = Color.White;
+        private int borderSize = 2;
+        private bool underlinedStyle = false;
+        private bool soloNumeros = false;
+        private bool soloLetras = false;
+
+        public TextBox()
+        {
+            InitializeComponent();
+            textBox1.KeyPress += TextBox1_KeyPress;
+            textBox1.KeyDown += TextBox1_KeyDown;
+        }
+
+        public new void Focus()
+        {
+            textBox1.Focus();
+        }
+
+        private void TextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Con esto se bloquea la funcion de cortar, pegar y copiar
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+            {
+                e.SuppressKeyPress = true; 
+            }
+        }
+
+        public bool SoloNumeros
+        {
+            get => soloNumeros;
+            set => soloNumeros = value;
+        }
+
+        public bool SoloLetras
+        {
+            get => soloLetras;
+            set => soloLetras = value;
+        }
+
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (SoloNumeros)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Solo se permiten números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            if (SoloLetras)
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Solo se permiten letras", "Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        public int MaxLength
+{
+    get => textBox1.MaxLength;
+    set => textBox1.MaxLength = value;
+}
+
+        public Color BorderColor
+        {
+            get
+            {
+                return borderColor;
+            }
+
+            set
+            {
+                borderColor = value;
+                this.Invalidate();
+            }
+        }
+
+        public int BorderSize
+        {
+            get
+            {
+                return borderSize;
+            }
+            set
+            {
+                borderSize = value;
+                this.Invalidate();
+            }
+        }
+
+        public bool ReadOnly
+        {
+            get { return textBox1.ReadOnly; }
+            set { textBox1.ReadOnly = value; }
+        }
+
+        public bool UnderlinedStyle
+        {
+            get
+            {
+                return underlinedStyle;
+            }
+            set
+            {
+                underlinedStyle = value;
+                this.Invalidate();
+            }
+        }
+
+        public bool PasswordChar
+        {
+            get
+            {
+                return textBox1.UseSystemPasswordChar;
+            }
+            set
+            {
+                textBox1.UseSystemPasswordChar = value;
+            }
+        }
+
+        public bool multiline
+        {
+            get
+            {
+                return textBox1.Multiline;
+            }
+            set
+            {
+                textBox1.Multiline = value;
+            }
+        }
+
+        public void Clear()
+        {
+            textBox1.Clear();
+        }
+
+        public override Color BackColor
+        {
+            get
+            {
+                return base.BackColor;
+            }
+
+            set
+            {
+                base.BackColor = value;
+                textBox1.BackColor = value;
+            }
+        }
+
+        public override Font Font 
+        {
+            get
+            {
+                return base.Font;
+            }
+            set
+            {
+                base.Font = value;
+                textBox1.Font = value;
+                if (this.DesignMode)
+                {
+                    UpdateControlHeight();
+                }
+            }
+        }
+
+        public string Texts
+        {
+            get
+            {
+                return textBox1.Text;
+            }
+            set
+            {
+                textBox1.Text = value;
+            }
+        }
+
+        public HorizontalAlignment TextAlign
+        {
+            get
+            {
+                return textBox1.TextAlign;
+            }
+            set
+            {
+                textBox1.TextAlign = value;
+            }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Graphics graph = e.Graphics;
+            using (Pen penBorder = new Pen(borderColor, borderSize))
+            {
+                penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
+                if (underlinedStyle)
+                {
+                    graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
+                }
+                else
+                {
+                    graph.DrawRectangle(penBorder, 0, 0, this.Width - 0.5F, this.Height - 0.5F);
+                }
+            }
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            UpdateControlHeight();  
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            UpdateControlHeight();
+        }
+
+        private void UpdateControlHeight()
+        {
+            if (textBox1.Multiline == false)
+            {
+                int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
+                textBox1.Multiline = true;
+                textBox1.Height = txtHeight;
+                this.Height = textBox1.Height + this.Padding.Top + this.Padding.Bottom;
+                textBox1.Multiline = false;
+            }
+        }
+    }       
+}

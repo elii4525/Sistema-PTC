@@ -112,19 +112,19 @@ namespace Vistas.Formularios
 
         public void MostrarFormUsuariosEnPanel()
         {
-            pnlContenedorJ.Controls.Clear();
-            frmGestionUsuario usuario = new frmGestionUsuario();
-            usuario.TopLevel = false;
-            usuario.FormBorderStyle = FormBorderStyle.None;
-            usuario.Dock = DockStyle.Fill;
-            pnlContenedorJ.Controls.Add(usuario);
-            usuario.Show();
+            //pnlContenedorJ.Controls.Clear();
+            //frmGestionUsuario usuario = new frmGestionUsuario();
+            //usuario.TopLevel = false;
+            //usuario.FormBorderStyle = FormBorderStyle.None;
+            //usuario.Dock = DockStyle.Fill;
+            //pnlContenedorJ.Controls.Add(usuario);
+            //usuario.Show();
 
-            //Indicar panel activo
-            icbtnUsuario.BackColor = Color.FromArgb(18, 18, 18);
-            icbtnUsuario.IconColor = Color.White;
-            icbtnUsuario.ForeColor = Color.White;
-            lblTituloUsuarios.Visible = true;
+            ////Indicar panel activo
+            //icbtnUsuario.BackColor = Color.FromArgb(18, 18, 18);
+            //icbtnUsuario.IconColor = Color.White;
+            //icbtnUsuario.ForeColor = Color.White;
+            //lblTituloUsuarios.Visible = true;
 
             //Restablecer colores de paneles 
             //Inventario
