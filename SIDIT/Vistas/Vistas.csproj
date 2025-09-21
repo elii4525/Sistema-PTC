@@ -238,6 +238,9 @@
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSolJefatura.resx">
+      <DependentUpon>frmSolJefatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +374,7 @@
     <Folder Include="ControlesPersonalizados\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Group 1.png" />
     <Content Include="Resources\Group 44.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
