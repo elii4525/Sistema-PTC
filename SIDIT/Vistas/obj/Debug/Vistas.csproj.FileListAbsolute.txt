@@ -366,3 +366,4 @@ C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.exe
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.controles.TextBoxRedondeado.resources

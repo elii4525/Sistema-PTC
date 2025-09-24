@@ -55,6 +55,6 @@ namespace Vistas.Formularios
             Solicitud sol = new Solicitud(nombreUsuarios, roles, fechas, motivos, materiales, cantidades, marcas);
             sol.CargarUltimasTresSolicitudes();
         }
-        
+
     }
 }

@@ -72,6 +72,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controles\ButtonRedondeado.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="controles\Configuracion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +104,12 @@
     </Compile>
     <Compile Include="controles\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controles\TextBoxRedondeado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controles\TextBoxRedondeado.Designer.cs">
+      <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmBienvenidaJefatura.cs">
       <SubType>Form</SubType>
@@ -210,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controles\TextBox.resx">
       <DependentUpon>TextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controles\TextBoxRedondeado.resx">
+      <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
       <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>

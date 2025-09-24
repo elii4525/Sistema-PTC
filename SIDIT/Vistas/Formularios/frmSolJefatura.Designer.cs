@@ -31,43 +31,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlSolicitud1 = new System.Windows.Forms.Panel();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblMaterial1 = new System.Windows.Forms.Label();
-            this.lblMaterial2 = new System.Windows.Forms.Label();
-            this.lblMaterial3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblCantidad1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblCantidad2 = new System.Windows.Forms.Label();
-            this.lblCantidad3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblMarca1 = new System.Windows.Forms.Label();
-            this.lblMarca2 = new System.Windows.Forms.Label();
-            this.lblmarca3 = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblFecha2 = new System.Windows.Forms.Label();
-            this.lblMarca6 = new System.Windows.Forms.Label();
-            this.lblMarca5 = new System.Windows.Forms.Label();
-            this.lblMarca4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblCantidad6 = new System.Windows.Forms.Label();
-            this.lblCantidad5 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblCantidad4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblMaterial6 = new System.Windows.Forms.Label();
-            this.lblMaterial5 = new System.Windows.Forms.Label();
-            this.lblMaterial4 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblMotivo2 = new System.Windows.Forms.Label();
-            this.lblRol2 = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.lblMarca9 = new System.Windows.Forms.Label();
@@ -78,7 +41,6 @@
             this.lblCantidad8 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lblCantidad7 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblMaterial9 = new System.Windows.Forms.Label();
             this.lblMaterial8 = new System.Windows.Forms.Label();
             this.lblMaterial7 = new System.Windows.Forms.Label();
@@ -86,15 +48,54 @@
             this.lblMotivo3 = new System.Windows.Forms.Label();
             this.lblRol3 = new System.Windows.Forms.Label();
             this.lblNombre3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblFecha2 = new System.Windows.Forms.Label();
+            this.lblMarca6 = new System.Windows.Forms.Label();
+            this.lblMarca5 = new System.Windows.Forms.Label();
+            this.lblMarca4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblCantidad6 = new System.Windows.Forms.Label();
+            this.lblCantidad5 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblCantidad4 = new System.Windows.Forms.Label();
+            this.lblMaterial6 = new System.Windows.Forms.Label();
+            this.lblMaterial5 = new System.Windows.Forms.Label();
+            this.lblMaterial4 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblMotivo2 = new System.Windows.Forms.Label();
+            this.lblRol2 = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.pnlSolicitud1 = new System.Windows.Forms.Panel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblmarca3 = new System.Windows.Forms.Label();
+            this.lblMarca2 = new System.Windows.Forms.Label();
+            this.lblMarca1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblCantidad3 = new System.Windows.Forms.Label();
+            this.lblCantidad2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblCantidad1 = new System.Windows.Forms.Label();
+            this.lblMaterial3 = new System.Windows.Forms.Label();
+            this.lblMaterial2 = new System.Windows.Forms.Label();
+            this.lblMaterial1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblRol = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnlSolicitud1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlSolicitud1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -130,375 +131,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1315, 1033);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Solicitudes recientes:";
-            // 
-            // pnlSolicitud1
-            // 
-            this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
-            this.pnlSolicitud1.Controls.Add(this.lblFecha);
-            this.pnlSolicitud1.Controls.Add(this.lblmarca3);
-            this.pnlSolicitud1.Controls.Add(this.lblMarca2);
-            this.pnlSolicitud1.Controls.Add(this.lblMarca1);
-            this.pnlSolicitud1.Controls.Add(this.label8);
-            this.pnlSolicitud1.Controls.Add(this.lblCantidad3);
-            this.pnlSolicitud1.Controls.Add(this.lblCantidad2);
-            this.pnlSolicitud1.Controls.Add(this.label5);
-            this.pnlSolicitud1.Controls.Add(this.lblCantidad1);
-            this.pnlSolicitud1.Controls.Add(this.pictureBox1);
-            this.pnlSolicitud1.Controls.Add(this.lblMaterial3);
-            this.pnlSolicitud1.Controls.Add(this.lblMaterial2);
-            this.pnlSolicitud1.Controls.Add(this.lblMaterial1);
-            this.pnlSolicitud1.Controls.Add(this.label3);
-            this.pnlSolicitud1.Controls.Add(this.lblDescripcion);
-            this.pnlSolicitud1.Controls.Add(this.lblRol);
-            this.pnlSolicitud1.Controls.Add(this.lblNombre);
-            this.pnlSolicitud1.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud1.Location = new System.Drawing.Point(33, 97);
-            this.pnlSolicitud1.Name = "pnlSolicitud1";
-            this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
-            this.pnlSolicitud1.TabIndex = 1;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(20, 23);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 16);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "label1";
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Location = new System.Drawing.Point(419, 23);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(44, 16);
-            this.lblRol.TabIndex = 1;
-            this.lblRol.Text = "label2";
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(20, 65);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(44, 16);
-            this.lblDescripcion.TabIndex = 2;
-            this.lblDescripcion.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Materiales solicitados:";
-            // 
-            // lblMaterial1
-            // 
-            this.lblMaterial1.AutoSize = true;
-            this.lblMaterial1.Location = new System.Drawing.Point(64, 148);
-            this.lblMaterial1.Name = "lblMaterial1";
-            this.lblMaterial1.Size = new System.Drawing.Size(44, 16);
-            this.lblMaterial1.TabIndex = 4;
-            this.lblMaterial1.Text = "label5";
-            // 
-            // lblMaterial2
-            // 
-            this.lblMaterial2.AutoSize = true;
-            this.lblMaterial2.Location = new System.Drawing.Point(64, 180);
-            this.lblMaterial2.Name = "lblMaterial2";
-            this.lblMaterial2.Size = new System.Drawing.Size(44, 16);
-            this.lblMaterial2.TabIndex = 5;
-            this.lblMaterial2.Text = "label6";
-            // 
-            // lblMaterial3
-            // 
-            this.lblMaterial3.AutoSize = true;
-            this.lblMaterial3.Location = new System.Drawing.Point(64, 214);
-            this.lblMaterial3.Name = "lblMaterial3";
-            this.lblMaterial3.Size = new System.Drawing.Size(44, 16);
-            this.lblMaterial3.TabIndex = 6;
-            this.lblMaterial3.Text = "label7";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblCantidad1
-            // 
-            this.lblCantidad1.AutoSize = true;
-            this.lblCantidad1.Location = new System.Drawing.Point(362, 148);
-            this.lblCantidad1.Name = "lblCantidad1";
-            this.lblCantidad1.Size = new System.Drawing.Size(44, 16);
-            this.lblCantidad1.TabIndex = 8;
-            this.lblCantidad1.Text = "label8";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(328, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Cantidad:";
-            // 
-            // lblCantidad2
-            // 
-            this.lblCantidad2.AutoSize = true;
-            this.lblCantidad2.Location = new System.Drawing.Point(362, 180);
-            this.lblCantidad2.Name = "lblCantidad2";
-            this.lblCantidad2.Size = new System.Drawing.Size(44, 16);
-            this.lblCantidad2.TabIndex = 10;
-            this.lblCantidad2.Text = "label9";
-            // 
-            // lblCantidad3
-            // 
-            this.lblCantidad3.AutoSize = true;
-            this.lblCantidad3.Location = new System.Drawing.Point(362, 214);
-            this.lblCantidad3.Name = "lblCantidad3";
-            this.lblCantidad3.Size = new System.Drawing.Size(51, 16);
-            this.lblCantidad3.TabIndex = 11;
-            this.lblCantidad3.Text = "label10";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(577, 115);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 16);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Marca:";
-            // 
-            // lblMarca1
-            // 
-            this.lblMarca1.AutoSize = true;
-            this.lblMarca1.Location = new System.Drawing.Point(603, 148);
-            this.lblMarca1.Name = "lblMarca1";
-            this.lblMarca1.Size = new System.Drawing.Size(51, 16);
-            this.lblMarca1.TabIndex = 13;
-            this.lblMarca1.Text = "label11";
-            // 
-            // lblMarca2
-            // 
-            this.lblMarca2.AutoSize = true;
-            this.lblMarca2.Location = new System.Drawing.Point(603, 180);
-            this.lblMarca2.Name = "lblMarca2";
-            this.lblMarca2.Size = new System.Drawing.Size(51, 16);
-            this.lblMarca2.TabIndex = 14;
-            this.lblMarca2.Text = "label12";
-            // 
-            // lblmarca3
-            // 
-            this.lblmarca3.AutoSize = true;
-            this.lblmarca3.Location = new System.Drawing.Point(603, 214);
-            this.lblmarca3.Name = "lblmarca3";
-            this.lblmarca3.Size = new System.Drawing.Size(51, 16);
-            this.lblmarca3.TabIndex = 15;
-            this.lblmarca3.Text = "label13";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(1127, 23);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(44, 16);
-            this.lblFecha.TabIndex = 16;
-            this.lblFecha.Text = "label3";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblFecha2);
-            this.panel2.Controls.Add(this.lblMarca6);
-            this.panel2.Controls.Add(this.lblMarca5);
-            this.panel2.Controls.Add(this.lblMarca4);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblCantidad6);
-            this.panel2.Controls.Add(this.lblCantidad5);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.lblCantidad4);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lblMaterial6);
-            this.panel2.Controls.Add(this.lblMaterial5);
-            this.panel2.Controls.Add(this.lblMaterial4);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.lblMotivo2);
-            this.panel2.Controls.Add(this.lblRol2);
-            this.panel2.Controls.Add(this.lblNombre2);
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(33, 380);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1252, 255);
-            this.panel2.TabIndex = 2;
-            // 
-            // lblFecha2
-            // 
-            this.lblFecha2.AutoSize = true;
-            this.lblFecha2.Location = new System.Drawing.Point(1127, 23);
-            this.lblFecha2.Name = "lblFecha2";
-            this.lblFecha2.Size = new System.Drawing.Size(44, 16);
-            this.lblFecha2.TabIndex = 16;
-            this.lblFecha2.Text = "label3";
-            // 
-            // lblMarca6
-            // 
-            this.lblMarca6.AutoSize = true;
-            this.lblMarca6.Location = new System.Drawing.Point(603, 214);
-            this.lblMarca6.Name = "lblMarca6";
-            this.lblMarca6.Size = new System.Drawing.Size(51, 16);
-            this.lblMarca6.TabIndex = 15;
-            this.lblMarca6.Text = "label13";
-            // 
-            // lblMarca5
-            // 
-            this.lblMarca5.AutoSize = true;
-            this.lblMarca5.Location = new System.Drawing.Point(603, 180);
-            this.lblMarca5.Name = "lblMarca5";
-            this.lblMarca5.Size = new System.Drawing.Size(51, 16);
-            this.lblMarca5.TabIndex = 14;
-            this.lblMarca5.Text = "label12";
-            // 
-            // lblMarca4
-            // 
-            this.lblMarca4.AutoSize = true;
-            this.lblMarca4.Location = new System.Drawing.Point(603, 148);
-            this.lblMarca4.Name = "lblMarca4";
-            this.lblMarca4.Size = new System.Drawing.Size(51, 16);
-            this.lblMarca4.TabIndex = 13;
-            this.lblMarca4.Text = "label11";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(577, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Marca:";
-            // 
-            // lblCantidad6
-            // 
-            this.lblCantidad6.AutoSize = true;
-            this.lblCantidad6.Location = new System.Drawing.Point(362, 214);
-            this.lblCantidad6.Name = "lblCantidad6";
-            this.lblCantidad6.Size = new System.Drawing.Size(51, 16);
-            this.lblCantidad6.TabIndex = 11;
-            this.lblCantidad6.Text = "label10";
-            // 
-            // lblCantidad5
-            // 
-            this.lblCantidad5.AutoSize = true;
-            this.lblCantidad5.Location = new System.Drawing.Point(362, 180);
-            this.lblCantidad5.Name = "lblCantidad5";
-            this.lblCantidad5.Size = new System.Drawing.Size(44, 16);
-            this.lblCantidad5.TabIndex = 10;
-            this.lblCantidad5.Text = "label9";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(328, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 16);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Cantidad:";
-            // 
-            // lblCantidad4
-            // 
-            this.lblCantidad4.AutoSize = true;
-            this.lblCantidad4.Location = new System.Drawing.Point(362, 148);
-            this.lblCantidad4.Name = "lblCantidad4";
-            this.lblCantidad4.Size = new System.Drawing.Size(44, 16);
-            this.lblCantidad4.TabIndex = 8;
-            this.lblCantidad4.Text = "label8";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblMaterial6
-            // 
-            this.lblMaterial6.AutoSize = true;
-            this.lblMaterial6.Location = new System.Drawing.Point(64, 214);
-            this.lblMaterial6.Name = "lblMaterial6";
-            this.lblMaterial6.Size = new System.Drawing.Size(44, 16);
-            this.lblMaterial6.TabIndex = 6;
-            this.lblMaterial6.Text = "label7";
-            // 
-            // lblMaterial5
-            // 
-            this.lblMaterial5.AutoSize = true;
-            this.lblMaterial5.Location = new System.Drawing.Point(64, 180);
-            this.lblMaterial5.Name = "lblMaterial5";
-            this.lblMaterial5.Size = new System.Drawing.Size(44, 16);
-            this.lblMaterial5.TabIndex = 5;
-            this.lblMaterial5.Text = "label6";
-            // 
-            // lblMaterial4
-            // 
-            this.lblMaterial4.AutoSize = true;
-            this.lblMaterial4.Location = new System.Drawing.Point(64, 148);
-            this.lblMaterial4.Name = "lblMaterial4";
-            this.lblMaterial4.Size = new System.Drawing.Size(44, 16);
-            this.lblMaterial4.TabIndex = 4;
-            this.lblMaterial4.Text = "label5";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(20, 115);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(141, 16);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Materiales solicitados:";
-            // 
-            // lblMotivo2
-            // 
-            this.lblMotivo2.AutoSize = true;
-            this.lblMotivo2.Location = new System.Drawing.Point(20, 65);
-            this.lblMotivo2.Name = "lblMotivo2";
-            this.lblMotivo2.Size = new System.Drawing.Size(44, 16);
-            this.lblMotivo2.TabIndex = 2;
-            this.lblMotivo2.Text = "label4";
-            // 
-            // lblRol2
-            // 
-            this.lblRol2.AutoSize = true;
-            this.lblRol2.Location = new System.Drawing.Point(419, 23);
-            this.lblRol2.Name = "lblRol2";
-            this.lblRol2.Size = new System.Drawing.Size(44, 16);
-            this.lblRol2.TabIndex = 1;
-            this.lblRol2.Text = "label2";
-            // 
-            // lblNombre2
-            // 
-            this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Location = new System.Drawing.Point(20, 23);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(44, 16);
-            this.lblNombre2.TabIndex = 0;
-            this.lblNombre2.Text = "label1";
             // 
             // panel3
             // 
@@ -607,16 +239,6 @@
             this.lblCantidad7.TabIndex = 8;
             this.lblCantidad7.Text = "label8";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // lblMaterial9
             // 
             this.lblMaterial9.AutoSize = true;
@@ -680,6 +302,402 @@
             this.lblNombre3.TabIndex = 0;
             this.lblNombre3.Text = "label1";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblFecha2);
+            this.panel2.Controls.Add(this.lblMarca6);
+            this.panel2.Controls.Add(this.lblMarca5);
+            this.panel2.Controls.Add(this.lblMarca4);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.lblCantidad6);
+            this.panel2.Controls.Add(this.lblCantidad5);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.lblCantidad4);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.lblMaterial6);
+            this.panel2.Controls.Add(this.lblMaterial5);
+            this.panel2.Controls.Add(this.lblMaterial4);
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.lblMotivo2);
+            this.panel2.Controls.Add(this.lblRol2);
+            this.panel2.Controls.Add(this.lblNombre2);
+            this.panel2.ForeColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(33, 380);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1252, 255);
+            this.panel2.TabIndex = 2;
+            // 
+            // lblFecha2
+            // 
+            this.lblFecha2.AutoSize = true;
+            this.lblFecha2.Location = new System.Drawing.Point(1127, 23);
+            this.lblFecha2.Name = "lblFecha2";
+            this.lblFecha2.Size = new System.Drawing.Size(44, 16);
+            this.lblFecha2.TabIndex = 16;
+            this.lblFecha2.Text = "label3";
+            // 
+            // lblMarca6
+            // 
+            this.lblMarca6.AutoSize = true;
+            this.lblMarca6.Location = new System.Drawing.Point(603, 214);
+            this.lblMarca6.Name = "lblMarca6";
+            this.lblMarca6.Size = new System.Drawing.Size(51, 16);
+            this.lblMarca6.TabIndex = 15;
+            this.lblMarca6.Text = "label13";
+            // 
+            // lblMarca5
+            // 
+            this.lblMarca5.AutoSize = true;
+            this.lblMarca5.Location = new System.Drawing.Point(603, 180);
+            this.lblMarca5.Name = "lblMarca5";
+            this.lblMarca5.Size = new System.Drawing.Size(51, 16);
+            this.lblMarca5.TabIndex = 14;
+            this.lblMarca5.Text = "label12";
+            // 
+            // lblMarca4
+            // 
+            this.lblMarca4.AutoSize = true;
+            this.lblMarca4.Location = new System.Drawing.Point(603, 148);
+            this.lblMarca4.Name = "lblMarca4";
+            this.lblMarca4.Size = new System.Drawing.Size(51, 16);
+            this.lblMarca4.TabIndex = 13;
+            this.lblMarca4.Text = "label11";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(577, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Marca:";
+            // 
+            // lblCantidad6
+            // 
+            this.lblCantidad6.AutoSize = true;
+            this.lblCantidad6.Location = new System.Drawing.Point(362, 214);
+            this.lblCantidad6.Name = "lblCantidad6";
+            this.lblCantidad6.Size = new System.Drawing.Size(51, 16);
+            this.lblCantidad6.TabIndex = 11;
+            this.lblCantidad6.Text = "label10";
+            // 
+            // lblCantidad5
+            // 
+            this.lblCantidad5.AutoSize = true;
+            this.lblCantidad5.Location = new System.Drawing.Point(362, 180);
+            this.lblCantidad5.Name = "lblCantidad5";
+            this.lblCantidad5.Size = new System.Drawing.Size(44, 16);
+            this.lblCantidad5.TabIndex = 10;
+            this.lblCantidad5.Text = "label9";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(328, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 16);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Cantidad:";
+            // 
+            // lblCantidad4
+            // 
+            this.lblCantidad4.AutoSize = true;
+            this.lblCantidad4.Location = new System.Drawing.Point(362, 148);
+            this.lblCantidad4.Name = "lblCantidad4";
+            this.lblCantidad4.Size = new System.Drawing.Size(44, 16);
+            this.lblCantidad4.TabIndex = 8;
+            this.lblCantidad4.Text = "label8";
+            // 
+            // lblMaterial6
+            // 
+            this.lblMaterial6.AutoSize = true;
+            this.lblMaterial6.Location = new System.Drawing.Point(64, 214);
+            this.lblMaterial6.Name = "lblMaterial6";
+            this.lblMaterial6.Size = new System.Drawing.Size(44, 16);
+            this.lblMaterial6.TabIndex = 6;
+            this.lblMaterial6.Text = "label7";
+            // 
+            // lblMaterial5
+            // 
+            this.lblMaterial5.AutoSize = true;
+            this.lblMaterial5.Location = new System.Drawing.Point(64, 180);
+            this.lblMaterial5.Name = "lblMaterial5";
+            this.lblMaterial5.Size = new System.Drawing.Size(44, 16);
+            this.lblMaterial5.TabIndex = 5;
+            this.lblMaterial5.Text = "label6";
+            // 
+            // lblMaterial4
+            // 
+            this.lblMaterial4.AutoSize = true;
+            this.lblMaterial4.Location = new System.Drawing.Point(64, 148);
+            this.lblMaterial4.Name = "lblMaterial4";
+            this.lblMaterial4.Size = new System.Drawing.Size(44, 16);
+            this.lblMaterial4.TabIndex = 4;
+            this.lblMaterial4.Text = "label5";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(20, 115);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(141, 16);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Materiales solicitados:";
+            // 
+            // lblMotivo2
+            // 
+            this.lblMotivo2.AutoSize = true;
+            this.lblMotivo2.Location = new System.Drawing.Point(20, 65);
+            this.lblMotivo2.Name = "lblMotivo2";
+            this.lblMotivo2.Size = new System.Drawing.Size(44, 16);
+            this.lblMotivo2.TabIndex = 2;
+            this.lblMotivo2.Text = "label4";
+            // 
+            // lblRol2
+            // 
+            this.lblRol2.AutoSize = true;
+            this.lblRol2.Location = new System.Drawing.Point(419, 23);
+            this.lblRol2.Name = "lblRol2";
+            this.lblRol2.Size = new System.Drawing.Size(44, 16);
+            this.lblRol2.TabIndex = 1;
+            this.lblRol2.Text = "label2";
+            // 
+            // lblNombre2
+            // 
+            this.lblNombre2.AutoSize = true;
+            this.lblNombre2.Location = new System.Drawing.Point(20, 23);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(44, 16);
+            this.lblNombre2.TabIndex = 0;
+            this.lblNombre2.Text = "label1";
+            // 
+            // pnlSolicitud1
+            // 
+            this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
+            this.pnlSolicitud1.Controls.Add(this.buttonRedondeado1);
+            this.pnlSolicitud1.Controls.Add(this.lblFecha);
+            this.pnlSolicitud1.Controls.Add(this.lblmarca3);
+            this.pnlSolicitud1.Controls.Add(this.lblMarca2);
+            this.pnlSolicitud1.Controls.Add(this.lblMarca1);
+            this.pnlSolicitud1.Controls.Add(this.label8);
+            this.pnlSolicitud1.Controls.Add(this.lblCantidad3);
+            this.pnlSolicitud1.Controls.Add(this.lblCantidad2);
+            this.pnlSolicitud1.Controls.Add(this.label5);
+            this.pnlSolicitud1.Controls.Add(this.lblCantidad1);
+            this.pnlSolicitud1.Controls.Add(this.pictureBox1);
+            this.pnlSolicitud1.Controls.Add(this.lblMaterial3);
+            this.pnlSolicitud1.Controls.Add(this.lblMaterial2);
+            this.pnlSolicitud1.Controls.Add(this.lblMaterial1);
+            this.pnlSolicitud1.Controls.Add(this.label3);
+            this.pnlSolicitud1.Controls.Add(this.lblDescripcion);
+            this.pnlSolicitud1.Controls.Add(this.lblRol);
+            this.pnlSolicitud1.Controls.Add(this.lblNombre);
+            this.pnlSolicitud1.ForeColor = System.Drawing.Color.Black;
+            this.pnlSolicitud1.Location = new System.Drawing.Point(33, 97);
+            this.pnlSolicitud1.Name = "pnlSolicitud1";
+            this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
+            this.pnlSolicitud1.TabIndex = 1;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(1127, 23);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(44, 16);
+            this.lblFecha.TabIndex = 16;
+            this.lblFecha.Text = "label3";
+            // 
+            // lblmarca3
+            // 
+            this.lblmarca3.AutoSize = true;
+            this.lblmarca3.Location = new System.Drawing.Point(603, 214);
+            this.lblmarca3.Name = "lblmarca3";
+            this.lblmarca3.Size = new System.Drawing.Size(51, 16);
+            this.lblmarca3.TabIndex = 15;
+            this.lblmarca3.Text = "label13";
+            // 
+            // lblMarca2
+            // 
+            this.lblMarca2.AutoSize = true;
+            this.lblMarca2.Location = new System.Drawing.Point(603, 180);
+            this.lblMarca2.Name = "lblMarca2";
+            this.lblMarca2.Size = new System.Drawing.Size(51, 16);
+            this.lblMarca2.TabIndex = 14;
+            this.lblMarca2.Text = "label12";
+            // 
+            // lblMarca1
+            // 
+            this.lblMarca1.AutoSize = true;
+            this.lblMarca1.Location = new System.Drawing.Point(603, 148);
+            this.lblMarca1.Name = "lblMarca1";
+            this.lblMarca1.Size = new System.Drawing.Size(51, 16);
+            this.lblMarca1.TabIndex = 13;
+            this.lblMarca1.Text = "label11";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(577, 115);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 16);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Marca:";
+            // 
+            // lblCantidad3
+            // 
+            this.lblCantidad3.AutoSize = true;
+            this.lblCantidad3.Location = new System.Drawing.Point(362, 214);
+            this.lblCantidad3.Name = "lblCantidad3";
+            this.lblCantidad3.Size = new System.Drawing.Size(51, 16);
+            this.lblCantidad3.TabIndex = 11;
+            this.lblCantidad3.Text = "label10";
+            // 
+            // lblCantidad2
+            // 
+            this.lblCantidad2.AutoSize = true;
+            this.lblCantidad2.Location = new System.Drawing.Point(362, 180);
+            this.lblCantidad2.Name = "lblCantidad2";
+            this.lblCantidad2.Size = new System.Drawing.Size(44, 16);
+            this.lblCantidad2.TabIndex = 10;
+            this.lblCantidad2.Text = "label9";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(328, 115);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Cantidad:";
+            // 
+            // lblCantidad1
+            // 
+            this.lblCantidad1.AutoSize = true;
+            this.lblCantidad1.Location = new System.Drawing.Point(362, 148);
+            this.lblCantidad1.Name = "lblCantidad1";
+            this.lblCantidad1.Size = new System.Drawing.Size(44, 16);
+            this.lblCantidad1.TabIndex = 8;
+            this.lblCantidad1.Text = "label8";
+            // 
+            // lblMaterial3
+            // 
+            this.lblMaterial3.AutoSize = true;
+            this.lblMaterial3.Location = new System.Drawing.Point(64, 214);
+            this.lblMaterial3.Name = "lblMaterial3";
+            this.lblMaterial3.Size = new System.Drawing.Size(44, 16);
+            this.lblMaterial3.TabIndex = 6;
+            this.lblMaterial3.Text = "label7";
+            // 
+            // lblMaterial2
+            // 
+            this.lblMaterial2.AutoSize = true;
+            this.lblMaterial2.Location = new System.Drawing.Point(64, 180);
+            this.lblMaterial2.Name = "lblMaterial2";
+            this.lblMaterial2.Size = new System.Drawing.Size(44, 16);
+            this.lblMaterial2.TabIndex = 5;
+            this.lblMaterial2.Text = "label6";
+            // 
+            // lblMaterial1
+            // 
+            this.lblMaterial1.AutoSize = true;
+            this.lblMaterial1.Location = new System.Drawing.Point(64, 148);
+            this.lblMaterial1.Name = "lblMaterial1";
+            this.lblMaterial1.Size = new System.Drawing.Size(44, 16);
+            this.lblMaterial1.TabIndex = 4;
+            this.lblMaterial1.Text = "label5";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Materiales solicitados:";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(20, 65);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(44, 16);
+            this.lblDescripcion.TabIndex = 2;
+            this.lblDescripcion.Text = "label4";
+            // 
+            // lblRol
+            // 
+            this.lblRol.AutoSize = true;
+            this.lblRol.Location = new System.Drawing.Point(419, 23);
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(44, 16);
+            this.lblRol.TabIndex = 1;
+            this.lblRol.Text = "label2";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(20, 23);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 16);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Solicitudes recientes:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // buttonRedondeado1
+            // 
+            this.buttonRedondeado1.BackColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.BorderColor = System.Drawing.Color.Black;
+            this.buttonRedondeado1.BorderRadius = 20;
+            this.buttonRedondeado1.BorderSize = 2;
+            this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
+            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.Location = new System.Drawing.Point(772, 133);
+            this.buttonRedondeado1.Name = "buttonRedondeado1";
+            this.buttonRedondeado1.Size = new System.Drawing.Size(160, 47);
+            this.buttonRedondeado1.TabIndex = 17;
+            this.buttonRedondeado1.Text = "buttonRedondeado1";
+            this.buttonRedondeado1.UseVisualStyleBackColor = false;
+            // 
             // frmSolJefatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -695,15 +713,15 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnlSolicitud1.ResumeLayout(false);
-            this.pnlSolicitud1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnlSolicitud1.ResumeLayout(false);
+            this.pnlSolicitud1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -768,5 +786,6 @@
         private System.Windows.Forms.Label lblMotivo2;
         private System.Windows.Forms.Label lblRol2;
         private System.Windows.Forms.Label lblNombre2;
+        private controles.ButtonRedondeado buttonRedondeado1;
     }
 }
