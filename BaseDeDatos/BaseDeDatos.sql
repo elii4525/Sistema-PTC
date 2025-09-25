@@ -53,22 +53,22 @@ go
 create table Solicitud (
 idSolicitud int identity (1,1) primary key,
 motivo varchar (1000) not null,
-cantidadProducto int not null,
 fecha date not null,
 estado varchar (50) not null,
 id_Usuario int,
-id_Material int,
-constraint fk_Material Foreign key (id_Material) references Material(idMaterial),
 constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
 go
 
-create table HistorialSolicitud (
-idHistorialSolicitud int identity (1,1) primary key,
-estadoSolicitud varchar (50),
-fechaRespuesta date,
-id_Solicitud int not null,
-constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud));
-go
+-- Nuevas tablas
+
+create table SolicitudMaterial (
+    idSolicitudMaterial int identity(1,1) primary key,
+    idSolicitud int not null,
+    idMaterial int not null,
+    cantidad int not null,
+    constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
+    constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
+);
 
 create table salidaDeMaterial (
     idSalidamaterial int identity(1,1) primary key,
@@ -92,8 +92,6 @@ values ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285'
 
 insert into Rol values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
 ('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
-
-
 
 insert into Marca 
 values ('Ardone'),
@@ -185,6 +183,8 @@ insert into salidaDeMaterial values
 (4, 2, '2025-08-06', 4, 'uso adicional de cinta');
 go
 
+
+
 -- Select
 Select *from Usuario
 Select *from Rol
@@ -192,7 +192,7 @@ Select *from Categoria
 Select *from Solicitud
 Select *from Marca
 Select *from Material
-Select *from HistorialSolicitud
+Select *from SolicitudMaterial
 go
 
 
@@ -315,9 +315,51 @@ select * from Categoria;
 select * from Marca;
 select * from Material;
 select * from solicitud;
-select * from HistorialSolicitud;
+select * from SolicitudMaterial;
 select * from salidaDeMaterial;
 go
+
+INSERT INTO Material (nombreMaterial, cantidad, fechaIngreso, descripcionMaterial, modelo, id_Categoria, id_Marca)
+VALUES 
+('Laptop Dell', 5, '2025-09-05', 'Laptop Core i7', 'LAT-5000', 1, 1),
+('Pantalla Samsung', 3, '2025-09-07', 'Pantalla LED 55 pulgadas', 'SAM-5500', 1, 1);
+
+INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
+VALUES ('Solicitud para evento anual', '2025-09-18', 'Pendiente', 2);
+INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
+VALUES 
+(6, 1, 1),  -- Proyector
+(6, 2, 2),  -- Laptops
+(6, 3, 1);  -- Pantalla
+
+INSERT INTO Usuario (nombre, fechaNacimiento, contraseña, telefono, correo, id_Rol)
+VALUES ('Ana López', '1990-02-02', 'abc123', '7777-9999', 'ana@example.com', 1);
+
+-- Solicitud (de Ana)
+INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
+VALUES ('Solicito materiales para capacitación', '2025-09-19', 'Pendiente', 2);
+
+-- Asignar materiales (asegúrate que idMaterial = 1,2,3 existan)
+INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
+VALUES 
+(4, 1, 2),
+(4, 2, 1);
+
+INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
+VALUES ('Reunión de capacitación', '2025-09-19', 'Pendiente', 1);
+
+-- Asociar solo 2 materiales
+INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
+VALUES 
+(3, 1, 1),  -- Proyector
+(3, 2, 1);  -- Laptop
+
+-- Asociar 3 materiales
+INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
+VALUES 
+(2, 1, 1),  -- Proyector
+(2, 2, 2),  -- Laptops
+(2, 3, 1);  -- Pantalla
 
 -- ==========================================================
 -- VERIFICACIÓN DE PROCEDIMIENTOS
