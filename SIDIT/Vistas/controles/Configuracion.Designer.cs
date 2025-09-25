@@ -81,7 +81,7 @@
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(85, 394);
+            this.dtpFecha.Location = new System.Drawing.Point(85, 393);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(250, 22);
@@ -96,12 +96,15 @@
             this.txtRol.ForeColor = System.Drawing.Color.Black;
             this.txtRol.Location = new System.Drawing.Point(299, 303);
             this.txtRol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRol.MaxLength = 32767;
             this.txtRol.multiline = true;
             this.txtRol.Name = "txtRol";
             this.txtRol.Padding = new System.Windows.Forms.Padding(7);
             this.txtRol.PasswordChar = false;
             this.txtRol.ReadOnly = false;
             this.txtRol.Size = new System.Drawing.Size(164, 30);
+            this.txtRol.SoloLetras = false;
+            this.txtRol.SoloNumeros = false;
             this.txtRol.TabIndex = 9;
             this.txtRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRol.Texts = "";
@@ -116,12 +119,15 @@
             this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(85, 303);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumero.MaxLength = 32767;
             this.txtNumero.multiline = true;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Padding = new System.Windows.Forms.Padding(7);
             this.txtNumero.PasswordChar = false;
             this.txtNumero.ReadOnly = false;
             this.txtNumero.Size = new System.Drawing.Size(164, 30);
+            this.txtNumero.SoloLetras = false;
+            this.txtNumero.SoloNumeros = false;
             this.txtNumero.TabIndex = 8;
             this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNumero.Texts = "";
@@ -136,12 +142,15 @@
             this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.txtCorreo.Location = new System.Drawing.Point(85, 209);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 32767;
             this.txtCorreo.multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
             this.txtCorreo.PasswordChar = false;
             this.txtCorreo.ReadOnly = false;
             this.txtCorreo.Size = new System.Drawing.Size(250, 30);
+            this.txtCorreo.SoloLetras = false;
+            this.txtCorreo.SoloNumeros = false;
             this.txtCorreo.TabIndex = 7;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreo.Texts = "";
@@ -156,12 +165,15 @@
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(85, 111);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.MaxLength = 32767;
             this.txtNombre.multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(7);
             this.txtNombre.PasswordChar = false;
             this.txtNombre.ReadOnly = false;
             this.txtNombre.Size = new System.Drawing.Size(250, 30);
+            this.txtNombre.SoloLetras = false;
+            this.txtNombre.SoloNumeros = false;
             this.txtNombre.TabIndex = 6;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombre.Texts = "";
