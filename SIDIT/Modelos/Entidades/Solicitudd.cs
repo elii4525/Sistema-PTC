@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos.Entidades
 {
-    internal class Solicitud
+    internal class Solicitudd
     {
 
         private int idSolicitud;
