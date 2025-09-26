@@ -194,7 +194,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\perez\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Program.cs",
               "RelativeDocumentMoniker": "Vistas\\Program.cs",
@@ -216,8 +216,97 @@
               "RelativeToolTip": "Vistas\\Helper\\FuenteHelper.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T20:01:12.112Z",
-              "IsPinned": true
+              "WhenOpened": "2025-09-24T23:28:30.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ButtonRedondeado.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\ButtonRedondeado.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\ButtonRedondeado.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\ButtonRedondeado.cs",
+              "RelativeToolTip": "Vistas\\controles\\ButtonRedondeado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T23:24:29.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TextBox.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBox.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\TextBox.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBox.cs",
+              "RelativeToolTip": "Vistas\\controles\\TextBox.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAP0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T22:52:39.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TextBox.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBox.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\TextBox.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBox.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\controles\\TextBox.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T22:52:35.932Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TextBoxRedondeado.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBoxRedondeado.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\TextBoxRedondeado.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBoxRedondeado.cs",
+              "RelativeToolTip": "Vistas\\controles\\TextBoxRedondeado.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAQwAMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T22:52:27.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TextBoxRedondeado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBoxRedondeado.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\TextBoxRedondeado.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\TextBoxRedondeado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\controles\\TextBoxRedondeado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T22:46:51.587Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Solicitudd.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Solicitudd.cs",
+              "RelativeDocumentMoniker": "Modelos\\Entidades\\Solicitudd.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Solicitudd.cs",
+              "RelativeToolTip": "Modelos\\Entidades\\Solicitudd.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T22:01:14.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmSolJefatura.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSolJefatura.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSolJefatura.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSolJefatura.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmSolJefatura.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAlwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T23:04:17.911Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

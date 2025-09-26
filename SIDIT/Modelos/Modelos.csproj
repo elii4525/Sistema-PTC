@@ -73,11 +73,11 @@
   <ItemGroup>
     <Compile Include="Conexion\ConexionDB.cs" />
     <Compile Include="Entidades\Categoria.cs" />
-    <Compile Include="Entidades\HistorialSolicitud.cs" />
     <Compile Include="Entidades\Marca.cs" />
     <Compile Include="Entidades\Material.cs" />
+    <Compile Include="Entidades\MaterialSolicitud.cs" />
     <Compile Include="Entidades\Rol.cs" />
-    <Compile Include="Entidades\Solicitud.cs" />
+    <Compile Include="Entidades\Solicitudd.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
