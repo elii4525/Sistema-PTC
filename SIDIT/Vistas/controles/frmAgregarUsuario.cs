@@ -41,7 +41,7 @@ namespace Vistas.Controles
 
         public static bool NoEsNulo(MiTextBox txt, string mensajeError = "El campo no puede estar vacío")
         {
-            if (string.IsNullOrWhiteSpace(txt.Texts)) // usa tu propiedad personalizada
+            if (string.IsNullOrWhiteSpace(txt.Texts))
             {
                 MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt.Focus();

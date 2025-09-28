@@ -32,10 +32,16 @@ namespace Vistas.Controles
             txtNumero.Texts = SesionActual.Telefono;
             txtRol.Texts = SesionActual.Rol;
 
-            // Solo asignar la fecha si no es DateTime.MinValue
             dtpFecha.Value = SesionActual.FechaNacimiento != DateTime.MinValue
                               ? SesionActual.FechaNacimiento
                               : DateTime.Today;
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            frmCambiarContraseña frm = new frmCambiarContraseña();
+            frm.StartPosition = FormStartPosition.CenterScreen; // que se abra en medio
+            frm.ShowDialog(); // ventana emergente
         }
     }
 }

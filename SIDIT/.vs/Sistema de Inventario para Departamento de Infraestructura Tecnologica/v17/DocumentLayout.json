@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\controles\\frmenviarsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\controles\\frmenviarsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmsolicituddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsolicituddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\controles\\frmenviarsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\controles\\frmenviarsolicitud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmsolicituddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmsolicituddit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\modelos\\entidades\\solicitudd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\solicitudd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\formularios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmcambiarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\modelos\\conexion\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\conexion\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\controles\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\controles\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|c:\\users\\danie\\onedrive\\desktop\\sistema-ptc\\sidit\\vistas\\controles\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\controles\\configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20226AC0-85FB-444E-8F52-F97F2D901AF0}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\modelos\\conexion\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1522B11-5E09-495A-AAA0-786AFB6C621E}|Modelos\\Modelos.csproj|solutionrelative:modelos\\conexion\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Program.cs",
               "RelativeDocumentMoniker": "Vistas\\Program.cs",
@@ -60,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ConexionDB.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Conexion\\ConexionDB.cs",
               "RelativeDocumentMoniker": "Modelos\\Conexion\\ConexionDB.cs",
@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "Modelos\\Entidades\\Usuario.cs",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Usuario.cs",
               "RelativeToolTip": "Modelos\\Entidades\\Usuario.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAswMUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAANIAAAAAAAAAAAAYwNQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T06:46:16.877Z",
               "IsPinned": true,
@@ -88,65 +88,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmSolicitudDIT.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSolicitudDIT.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSolicitudDIT.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSolicitudDIT.cs",
-              "RelativeToolTip": "Vistas\\Formularios\\frmSolicitudDIT.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Configuracion.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\Configuracion.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\Configuracion.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\Configuracion.cs",
+              "RelativeToolTip": "Vistas\\controles\\Configuracion.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIA5wCsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T06:59:05.771Z",
+              "WhenOpened": "2025-09-28T19:29:59.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Solicitudd.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Solicitudd.cs",
               "RelativeDocumentMoniker": "Modelos\\Entidades\\Solicitudd.cs",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Modelos\\Entidades\\Solicitudd.cs",
               "RelativeToolTip": "Modelos\\Entidades\\Solicitudd.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwCwAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T06:19:08.615Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmEnviarSolicitud.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\frmEnviarSolicitud.cs",
-              "RelativeDocumentMoniker": "Vistas\\controles\\frmEnviarSolicitud.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\frmEnviarSolicitud.cs",
-              "RelativeToolTip": "Vistas\\controles\\frmEnviarSolicitud.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T04:48:33.053Z",
+              "WhenOpened": "2025-09-28T19:27:21.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmEnviarSolicitud.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\frmEnviarSolicitud.cs",
-              "RelativeDocumentMoniker": "Vistas\\controles\\frmEnviarSolicitud.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\frmEnviarSolicitud.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vistas\\controles\\frmEnviarSolicitud.cs [Dise\u00F1o]",
+              "Title": "frmCambiarContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwDMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T03:12:16.591Z",
+              "WhenOpened": "2025-09-28T19:19:52.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmCambiarContrase\u00F1a.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T19:19:28.702Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmSolicitudDIT.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSolicitudDIT.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmSolicitudDIT.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\Formularios\\frmSolicitudDIT.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vistas\\Formularios\\frmSolicitudDIT.cs [Dise\u00F1o]",
+              "DocumentIndex": 4,
+              "Title": "Configuracion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\Configuracion.cs",
+              "RelativeDocumentMoniker": "Vistas\\controles\\Configuracion.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Desktop\\Sistema-PTC\\SIDIT\\Vistas\\controles\\Configuracion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\controles\\Configuracion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T02:30:18.316Z",
+              "WhenOpened": "2025-09-28T19:18:30.958Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

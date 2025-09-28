@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -194,5 +195,32 @@ namespace Modelos.Entidades
             da.Fill(dt);
             return dt;
         }
+
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+            }
+        }
+        public bool CambiarContraseña(int idUsuario, string nuevaContraseña)
+        {
+            using (SqlConnection con = ConexionDB.Conectar())
+            {
+                if (con == null) return false;
+
+                string hash = HashPassword(nuevaContraseña);
+
+                string sql = "UPDATE Usuario SET contraseña = @contraseña WHERE idUsuario = @idUsuario";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@contraseña", hash);
+                cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                int filas = cmd.ExecuteNonQuery();
+                return filas > 0;
+            }
+        }
+
     }
 }

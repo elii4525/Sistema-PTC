@@ -67,6 +67,7 @@
             this.lblRol2 = new System.Windows.Forms.Label();
             this.lblNombre2 = new System.Windows.Forms.Label();
             this.pnlSolicitud1 = new System.Windows.Forms.Panel();
+            this.lblEstadoSolicitud = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblmarca3 = new System.Windows.Forms.Label();
             this.lblMarca2 = new System.Windows.Forms.Label();
@@ -84,11 +85,11 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblEstadoSolicitud = new System.Windows.Forms.Label();
+            this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
+            this.btnSolicitudesAnteriores = new Vistas.controles.ButtonRedondeado();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -135,6 +136,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSolicitudesAnteriores);
             this.panel1.Controls.Add(this.buttonRedondeado1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -512,6 +514,15 @@
             this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
             this.pnlSolicitud1.TabIndex = 1;
             // 
+            // lblEstadoSolicitud
+            // 
+            this.lblEstadoSolicitud.AutoSize = true;
+            this.lblEstadoSolicitud.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstadoSolicitud.Name = "lblEstadoSolicitud";
+            this.lblEstadoSolicitud.Size = new System.Drawing.Size(110, 16);
+            this.lblEstadoSolicitud.TabIndex = 17;
+            this.lblEstadoSolicitud.Text = "Solicitud enviada";
+            // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
@@ -665,14 +676,39 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Solicitudes recientes:";
             // 
-            // lblEstadoSolicitud
+            // buttonRedondeado1
             // 
-            this.lblEstadoSolicitud.AutoSize = true;
-            this.lblEstadoSolicitud.Location = new System.Drawing.Point(1099, 115);
-            this.lblEstadoSolicitud.Name = "lblEstadoSolicitud";
-            this.lblEstadoSolicitud.Size = new System.Drawing.Size(110, 16);
-            this.lblEstadoSolicitud.TabIndex = 17;
-            this.lblEstadoSolicitud.Text = "Solicitud enviada";
+            this.buttonRedondeado1.BackColor = System.Drawing.Color.Black;
+            this.buttonRedondeado1.BorderColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.BorderRadius = 18;
+            this.buttonRedondeado1.BorderSize = 2;
+            this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
+            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.Location = new System.Drawing.Point(1160, 33);
+            this.buttonRedondeado1.Name = "buttonRedondeado1";
+            this.buttonRedondeado1.Size = new System.Drawing.Size(125, 50);
+            this.buttonRedondeado1.TabIndex = 17;
+            this.buttonRedondeado1.Text = "Enviar solicitud";
+            this.buttonRedondeado1.UseVisualStyleBackColor = false;
+            this.buttonRedondeado1.Click += new System.EventHandler(this.buttonRedondeado1_Click);
+            // 
+            // btnSolicitudesAnteriores
+            // 
+            this.btnSolicitudesAnteriores.BackColor = System.Drawing.Color.Black;
+            this.btnSolicitudesAnteriores.BorderColor = System.Drawing.Color.White;
+            this.btnSolicitudesAnteriores.BorderRadius = 18;
+            this.btnSolicitudesAnteriores.BorderSize = 2;
+            this.btnSolicitudesAnteriores.FlatAppearance.BorderSize = 0;
+            this.btnSolicitudesAnteriores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitudesAnteriores.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitudesAnteriores.Location = new System.Drawing.Point(1020, 33);
+            this.btnSolicitudesAnteriores.Name = "btnSolicitudesAnteriores";
+            this.btnSolicitudesAnteriores.Size = new System.Drawing.Size(125, 50);
+            this.btnSolicitudesAnteriores.TabIndex = 18;
+            this.btnSolicitudesAnteriores.Text = "Solicitudes anteriores";
+            this.btnSolicitudesAnteriores.UseVisualStyleBackColor = false;
+            this.btnSolicitudesAnteriores.Click += new System.EventHandler(this.btnSolicitudesAnteriores_Click);
             // 
             // pictureBox3
             // 
@@ -704,23 +740,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonRedondeado1
-            // 
-            this.buttonRedondeado1.BackColor = System.Drawing.Color.Black;
-            this.buttonRedondeado1.BorderColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.BorderRadius = 18;
-            this.buttonRedondeado1.BorderSize = 2;
-            this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
-            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.Location = new System.Drawing.Point(1160, 33);
-            this.buttonRedondeado1.Name = "buttonRedondeado1";
-            this.buttonRedondeado1.Size = new System.Drawing.Size(125, 50);
-            this.buttonRedondeado1.TabIndex = 17;
-            this.buttonRedondeado1.Text = "Enviar solicitud";
-            this.buttonRedondeado1.UseVisualStyleBackColor = false;
-            this.buttonRedondeado1.Click += new System.EventHandler(this.buttonRedondeado1_Click);
-            // 
             // frmSolicitudDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -731,6 +750,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmSolicitudDIT";
             this.Text = "frmSolicitudDIT";
+            this.Load += new System.EventHandler(this.frmSolicitudDIT_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -812,5 +832,6 @@
         private System.Windows.Forms.Label label2;
         private controles.ButtonRedondeado buttonRedondeado1;
         private System.Windows.Forms.Label lblEstadoSolicitud;
+        private controles.ButtonRedondeado btnSolicitudesAnteriores;
     }
 }

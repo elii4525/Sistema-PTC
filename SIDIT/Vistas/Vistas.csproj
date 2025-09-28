@@ -129,6 +129,12 @@
     <Compile Include="Formularios\frmBienvenidoDIT.Designer.cs">
       <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmInventarioDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,12 @@
     </Compile>
     <Compile Include="Formularios\frmConsumoJefatura.Designer.cs">
       <DependentUpon>frmConsumoJefatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSolicitudesAnteriores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSolicitudesAnteriores.Designer.cs">
+      <DependentUpon>frmSolicitudesAnteriores.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmSolJefatura.cs">
       <SubType>Form</SubType>
@@ -244,6 +256,9 @@
     <EmbeddedResource Include="Formularios\frmBienvenidoDIT.resx">
       <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
       <DependentUpon>frmInventarioDIT.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSolicitudesAnteriores.resx">
+      <DependentUpon>frmSolicitudesAnteriores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolJefatura.resx">
       <DependentUpon>frmSolJefatura.cs</DependentUpon>

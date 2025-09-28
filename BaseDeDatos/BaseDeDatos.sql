@@ -22,6 +22,10 @@ id_Rol int,
 constraint fk_rol Foreign key (id_Rol) references Rol(idRol));
 go
 
+SELECT m.idMarca, m.nombreMarca
+FROM Material mat
+INNER JOIN Marca m ON mat.id_Marca = m.idMarca
+WHERE mat.idMaterial = 2
 
 create table Categoria (
 idCategoria int identity (1,1) primary key,
@@ -81,6 +85,8 @@ create table salidaDeMaterial (
     constraint fk_salida_usuario foreign key (id_Usuario) references Usuario(idUsuario)
 );
 go
+
+-- Vistas
 
 create view VerUltimosUsuarios
 as

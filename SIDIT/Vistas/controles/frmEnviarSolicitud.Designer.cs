@@ -52,8 +52,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEnviarSolicitud = new System.Windows.Forms.Button();
             this.txtCantidad1 = new System.Windows.Forms.TextBox();
             this.txtCantidad2 = new System.Windows.Forms.TextBox();
             this.txtCantidad3 = new System.Windows.Forms.TextBox();
@@ -266,31 +266,33 @@
             this.label16.TabIndex = 29;
             this.label16.Text = "Nombre";
             // 
-            // button2
+            // btnSalir
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Vistas.Properties.Resources.icons8_mudarse_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(1135, 433);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 87);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Cancelar solicitud y salir";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.Color.Black;
+            this.btnSalir.Image = global::Vistas.Properties.Resources.icons8_mudarse_48;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(1135, 433);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(132, 87);
+            this.btnSalir.TabIndex = 22;
+            this.btnSalir.Text = "Cancelar solicitud y salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button1
+            // btnEnviarSolicitud
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Vistas.Properties.Resources.icons8_enviar_50;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1135, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 73);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Enviar solicitud";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEnviarSolicitud.BackColor = System.Drawing.Color.Black;
+            this.btnEnviarSolicitud.Image = global::Vistas.Properties.Resources.icons8_enviar_50;
+            this.btnEnviarSolicitud.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEnviarSolicitud.Location = new System.Drawing.Point(1135, 288);
+            this.btnEnviarSolicitud.Name = "btnEnviarSolicitud";
+            this.btnEnviarSolicitud.Size = new System.Drawing.Size(132, 73);
+            this.btnEnviarSolicitud.TabIndex = 21;
+            this.btnEnviarSolicitud.Text = "Enviar solicitud";
+            this.btnEnviarSolicitud.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEnviarSolicitud.UseVisualStyleBackColor = false;
+            this.btnEnviarSolicitud.Click += new System.EventHandler(this.btnEnviarSolicitud_Click_1);
             // 
             // txtCantidad1
             // 
@@ -334,8 +336,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnEnviarSolicitud);
             this.Controls.Add(this.cbMarca3);
             this.Controls.Add(this.cbMaterial3);
             this.Controls.Add(this.cbMarca2);
@@ -377,8 +379,8 @@
         private System.Windows.Forms.ComboBox cbMaterial2;
         private System.Windows.Forms.ComboBox cbMarca3;
         private System.Windows.Forms.ComboBox cbMaterial3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEnviarSolicitud;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
