@@ -166,18 +166,6 @@
     <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmPedirMate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmPedirMate.Designer.cs">
-      <DependentUpon>frmPedirMate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmPruebaSolicitudes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmPruebaSolicitudes.Designer.cs">
-      <DependentUpon>frmPruebaSolicitudes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmSolicitudDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,12 +256,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmPedirMate.resx">
-      <DependentUpon>frmPedirMate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmPruebaSolicitudes.resx">
-      <DependentUpon>frmPruebaSolicitudes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>

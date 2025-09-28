@@ -16,7 +16,7 @@ namespace Vistas.Formularios
 {
     public partial class frmConsumo : Form
     {
-        private const string connectionString = "Server=DESKTOP-K37VDNM\\SQLEXPRESS; Initial Catalog=BasePTC; Integrated Security=True;";
+        private const string connectionString = "Lenovo\\SQLEXPRESS; Initial Catalog=BasePTC; Integrated Security=True;";
         public frmConsumo()
         {
             InitializeComponent();
