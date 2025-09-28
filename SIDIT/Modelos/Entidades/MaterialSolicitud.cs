@@ -92,7 +92,7 @@ namespace Modelos.Entidades
                 }
                 drSolicitudes.Close();
 
-                // Por cada solicitud, traer sus materiales ya que antes no se llenaba la 3ra solicitud
+                // Por cada solicitud, traer sus materiales
                 for (int i = 0; i < ids.Count && i < 3; i++)
                 {
                     string queryMateriales = @"

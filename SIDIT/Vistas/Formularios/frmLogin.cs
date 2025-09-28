@@ -69,59 +69,67 @@ namespace Vistas.Formularios
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (txtCorreo.Texts != "ejemplo.dit@gmail.com")
+            string correo = txtCorreo.Texts.Trim();
+            string contraseña = txtContra.Texts.Trim();
+
+            // Validaciones básicas
+            if (string.IsNullOrEmpty(correo))
             {
-                if (txtContra.Texts != "X93esAX99")
+                lblError.Text = "Por favor ingrese un correo electrónico válido";
+                lblError.Visible = true;
+                return;
+            }
+
+            if (string.IsNullOrEmpty(contraseña))
+            {
+                lblError.Text = "Por favor ingrese una contraseña válida";
+                lblError.Visible = true;
+                return;
+            }
+
+            try
+            {
+                Usuario usuario = new Usuario();
+
+                string rol = usuario.VerificarLogin(correo, contraseña);
+
+                if (rol != null)
                 {
-                    string correo = txtCorreo.Texts;
-                    string contraseña = txtContra.Texts;
+                    DataTable datosUsuario = usuario.ObtenerDatosUsuario(correo); // SOLO correo
 
-                    Usuario usuario = new Usuario();
-
-                    string rol = usuario.VerificarLogin(correo, contraseña);
-
-                    if (rol != null)
+                    if (datosUsuario.Rows.Count > 0)
                     {
-                        DataTable datosUsuario = usuario.ObtenerDatosUsuario(correo, contraseña);
+                        SesionActual.IdUsuario = Convert.ToInt32(datosUsuario.Rows[0]["idUsuario"]);
+                        SesionActual.Nombre = datosUsuario.Rows[0]["nombre"].ToString();
+                        SesionActual.Correo = datosUsuario.Rows[0]["correo"].ToString();
+                        SesionActual.Telefono = datosUsuario.Rows[0]["telefono"].ToString();
+                        SesionActual.Rol = datosUsuario.Rows[0]["tipoRol"].ToString();
 
-                        if (datosUsuario.Rows.Count > 0)
-                        {
-                            // Aqui se guardan los datos del usuario para usarlos en el perfil
-                            SesionActual.IdUsuario = Convert.ToInt32(datosUsuario.Rows[0]["idUsuario"]);
-                            SesionActual.Nombre = datosUsuario.Rows[0]["nombre"].ToString();
-                            SesionActual.Correo = datosUsuario.Rows[0]["correo"].ToString();
-                            SesionActual.Telefono = datosUsuario.Rows[0]["telefono"].ToString();
+                        if (datosUsuario.Rows[0]["fechaNacimiento"] != DBNull.Value)
                             SesionActual.FechaNacimiento = Convert.ToDateTime(datosUsuario.Rows[0]["fechaNacimiento"]);
-                            SesionActual.Rol = datosUsuario.Rows[0]["tipoRol"].ToString();
-                        }
-
-                        if (rol == "Jefatura")
-                        {
-                            new frmBienvenidaJefatura().Show();
-                        }
                         else
-                        {
-                            new frmBienvenidoDIT().Show();
-                        }
-                        this.Hide();
+                            SesionActual.FechaNacimiento = DateTime.Today;
                     }
+
+                    // Abrir el formulario correspondiente según el rol
+                    if (rol == "Jefatura")
+                        new frmBienvenidaJefatura().Show();
                     else
-                    {
-                        new frmLoginError().Show();
-                    }
+                        new frmBienvenidoDIT().Show();
+
+                    this.Hide();
                 }
                 else
                 {
-                    lblError.Text = "      " + "Por favor ingresar una contraseña valida";
-                    lblError.Visible = true;
+                    new frmLoginError().Show();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                lblError.Text = "      " + "Por favor ingresar un correo electrónico valido";
-                lblError.Visible = true;
+                MessageBox.Show("Error al iniciar sesión: " + ex.Message);
             }
         }
+
 
 
         private void frmLogin_Load(object sender, EventArgs e)

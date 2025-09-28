@@ -82,6 +82,35 @@ create table salidaDeMaterial (
 );
 go
 
+create view VerUltimosUsuarios
+as
+select 
+    u.idUsuario,
+    u.nombre,
+    u.fechaNacimiento,
+    u.contraseña,
+    u.telefono,
+    u.correo,
+    r.idRol
+from Usuario u
+inner join Rol r on u.id_Rol = r.idRol;
+go
+
+select *from VerUltimosUsuarios
+
+create view VerUsuarios
+as
+select 
+    u.idUsuario,
+    u.correo,
+    u.contraseña,
+    r.tipoRol
+from Usuario u
+inner join Rol r on u.id_Rol = r.idRol;
+go
+
+select *from VerUsuarios
+
 -- Inserts into
 insert into Usuario 
 values ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
@@ -318,48 +347,6 @@ select * from solicitud;
 select * from SolicitudMaterial;
 select * from salidaDeMaterial;
 go
-
-INSERT INTO Material (nombreMaterial, cantidad, fechaIngreso, descripcionMaterial, modelo, id_Categoria, id_Marca)
-VALUES 
-('Laptop Dell', 5, '2025-09-05', 'Laptop Core i7', 'LAT-5000', 1, 1),
-('Pantalla Samsung', 3, '2025-09-07', 'Pantalla LED 55 pulgadas', 'SAM-5500', 1, 1);
-
-INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
-VALUES ('Solicitud para evento anual', '2025-09-18', 'Pendiente', 2);
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(6, 1, 1),  -- Proyector
-(6, 2, 2),  -- Laptops
-(6, 3, 1);  -- Pantalla
-
-INSERT INTO Usuario (nombre, fechaNacimiento, contraseña, telefono, correo, id_Rol)
-VALUES ('Ana López', '1990-02-02', 'abc123', '7777-9999', 'ana@example.com', 1);
-
--- Solicitud (de Ana)
-INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
-VALUES ('Solicito materiales para capacitación', '2025-09-19', 'Pendiente', 2);
-
--- Asignar materiales (asegúrate que idMaterial = 1,2,3 existan)
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(4, 1, 2),
-(4, 2, 1);
-
-INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
-VALUES ('Reunión de capacitación', '2025-09-19', 'Pendiente', 1);
-
--- Asociar solo 2 materiales
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(3, 1, 1),  -- Proyector
-(3, 2, 1);  -- Laptop
-
--- Asociar 3 materiales
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(2, 1, 1),  -- Proyector
-(2, 2, 2),  -- Laptops
-(2, 3, 1);  -- Pantalla
 
 -- ==========================================================
 -- VERIFICACIÓN DE PROCEDIMIENTOS

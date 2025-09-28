@@ -79,7 +79,6 @@ namespace Vistas.controles
 
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            base.OnPaint(pevent);
             if (Width <= 0 || Height <= 0) return;
 
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
@@ -91,11 +90,9 @@ namespace Vistas.controles
             using (Pen penSurface = new Pen(Parent?.BackColor ?? BackColor, borderSize))
             using (Pen penBorder = new Pen(borderColor, borderSize))
             {
-                // Fondo
                 Region = new Region(pathSurface);
                 pevent.Graphics.FillPath(new SolidBrush(BackColor), pathSurface);
 
-                // Borde
                 if (borderSize >= 1)
                 {
                     penBorder.Alignment = PenAlignment.Center;
@@ -103,9 +100,14 @@ namespace Vistas.controles
                 }
             }
 
-            // Dibuja el texto centrado
-            TextRenderer.DrawText(pevent.Graphics, Text, Font, rectSurface, ForeColor,
-                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+            TextRenderer.DrawText(
+                pevent.Graphics,
+                Text,
+                Font,
+                rectSurface,
+                ForeColor,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.WordBreak
+            );
         }
     }
 }

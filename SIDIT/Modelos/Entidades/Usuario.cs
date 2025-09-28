@@ -144,19 +144,19 @@ namespace Modelos.Entidades
             return dt;
         }
 
-        public DataTable ObtenerDatosUsuario(string correo, string contraseña)
+        public DataTable ObtenerDatosUsuario(string correo)
         {
             DataTable dt = new DataTable();
 
             using (SqlConnection con = ConexionDB.Conectar())
             {
-                string query = @"SELECT * 
-                         FROM VerUsuarios 
-                         WHERE correo = @correo AND contraseña = @contraseña";
+                string query = @"SELECT U.idUsuario, U.nombre, U.fechaNacimiento, U.telefono, U.correo, R.tipoRol
+                         FROM Usuario U
+                         INNER JOIN Rol R ON U.id_Rol = R.idRol
+                         WHERE U.correo = @correo";
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@correo", correo);
-                cmd.Parameters.AddWithValue("@contraseña", contraseña);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
