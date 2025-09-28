@@ -53,22 +53,22 @@ go
 create table Solicitud (
 idSolicitud int identity (1,1) primary key,
 motivo varchar (1000) not null,
+cantidadProducto int not null,
 fecha date not null,
 estado varchar (50) not null,
 id_Usuario int,
+id_Material int,
+constraint fk_Material Foreign key (id_Material) references Material(idMaterial),
 constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
 go
 
--- Nuevas tablas
-
-create table SolicitudMaterial (
-    idSolicitudMaterial int identity(1,1) primary key,
-    idSolicitud int not null,
-    idMaterial int not null,
-    cantidad int not null,
-    constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
-    constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
-);
+create table HistorialSolicitud (
+idHistorialSolicitud int identity (1,1) primary key,
+estadoSolicitud varchar (50),
+fechaRespuesta date,
+id_Solicitud int not null,
+constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud));
+go
 
 create table salidaDeMaterial (
     idSalidamaterial int identity(1,1) primary key,
@@ -83,13 +83,6 @@ create table salidaDeMaterial (
 go
 
 -- Inserts into
-insert into Usuario 
-values ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
-('Orlando Josue Pineda Rivas', '2003/8/21', 'X933esD4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
-('Michael Steve Murcia Martinez', '2002/5/01', 'AsQQ09211','+503 3385 2265', 'michaelsteve.dit@gmail.com', 2),
-('Cristopher Levi Rogger Marin', '2000/11/07', 'Yqm330pX1','+503 4528 0751','cristlevi.dit@gmail.com',2),
-('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2)
-
 insert into Rol values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
 ('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
 
@@ -108,7 +101,7 @@ values ('Ardone'),
 ('Lenovo'),
 ('Logitech'),
 ('Canon'),
-('Bic')
+('Bic');
 
 insert into Categoria 
 values ('Computación','objetos de computacion'),
@@ -117,6 +110,16 @@ values ('Computación','objetos de computacion'),
 ('Redes','conexion de redes'),
 ('Almacenamiento','almacenamiento del sistema'),
 ('Papeleria','objetos de papeleria');
+
+insert into Usuario 
+values ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
+('Orlando Josue Pineda Rivas', '2003/8/21', 'X933esD4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
+('Michael Steve Murcia Martinez', '2002/5/01', 'AsQQ09211','+503 3385 2265', 'michaelsteve.dit@gmail.com', 2),
+('Cristopher Levi Rogger Marin', '2000/11/07', 'Yqm330pX1','+503 4528 0751','cristlevi.dit@gmail.com',2),
+('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2)
+
+
+
 
 insert into Material 
 values ('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para oficina', 'LAP-001', 1, 1),
@@ -134,7 +137,7 @@ values ('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para ofi
 ('Disco duro externo de 2TB', 5,  '2023-11-30', 'Disco duro externo de 2TB USB 3.0', 'DD-013',  5, 2),
 ('Cable RJ45', 16, '2024-03-05', 'Cámara de seguridad IP para interiores', 'CAM-014', 4, 3),
 ('Plumones Artline', 8,  '2021-06-18', 'Computadora de escritorio básica', 'PC-015', 1, 1); 
-
+go
 insert into Solicitud 
 values ('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'Enviada',2, 4),
 ('Necesito 10 tintas Epson negras para reponer', 10, '2025-02-02', 'Enviada', 3, 6),
@@ -152,6 +155,19 @@ values ('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07
 ('Necesito 5 USB 1TB', 5, '2025-03-03', 'Enviada', 3,12),
 ('Se solicitan 1 Cámara IP NXT-CAM para reponer', 1, '2025-03-28', 'Enviada', 5,9)
 
+insert into salidaDeMaterial values
+(1, 2, '2025-07-26', 2, 'consumo de tinta para impresora'),
+(2, 1, '2025-07-27', 3, 'uso de impresora'),
+(3, 3, '2025-07-28', 4, 'consumo de plumones'),
+(4, 5, '2025-07-29', 5, 'uso de cinta scotch'),
+(5, 4, '2025-07-30', 1, 'limpieza con aire comprimido'),
+(6, 2, '2025-08-01', 3, 'limpieza con spray'),
+(7, 10, '2025-08-02', 4, 'consumo de papel'),
+(8, 1, '2025-08-03', 5, 'uso de proyector'),
+(9, 1, '2025-08-04', 2, 'instalación de cámara'),
+(1, 3, '2025-08-05', 1, 'consumo adicional de tinta'),
+(4, 2, '2025-08-06', 4, 'uso adicional de cinta');
+
 insert into HistorialSolicitud values
 ('Rechazado','2025-07-23', 1),
 ('Rechazado', '2025-02-05', 2),
@@ -168,22 +184,7 @@ insert into HistorialSolicitud values
 ('Rechazado', '2025-01-21', 13),
 ('Aceptado', '2025-06-29', 14),
 ('Aceptado', '2025-03-06', 15);
-
-insert into salidaDeMaterial values
-(1, 2, '2025-07-26', 2, 'consumo de tinta para impresora'),
-(2, 1, '2025-07-27', 3, 'uso de impresora'),
-(3, 3, '2025-07-28', 4, 'consumo de plumones'),
-(4, 5, '2025-07-29', 5, 'uso de cinta scotch'),
-(5, 4, '2025-07-30', 1, 'limpieza con aire comprimido'),
-(6, 2, '2025-08-01', 3, 'limpieza con spray'),
-(7, 10, '2025-08-02', 4, 'consumo de papel'),
-(8, 1, '2025-08-03', 5, 'uso de proyector'),
-(9, 1, '2025-08-04', 2, 'instalación de cámara'),
-(1, 3, '2025-08-05', 1, 'consumo adicional de tinta'),
-(4, 2, '2025-08-06', 4, 'uso adicional de cinta');
 go
-
-
 
 -- Select
 Select *from Usuario
@@ -192,7 +193,7 @@ Select *from Categoria
 Select *from Solicitud
 Select *from Marca
 Select *from Material
-Select *from SolicitudMaterial
+Select *from HistorialSolicitud
 go
 
 
@@ -254,196 +255,61 @@ select *from registrosUlt;
 
 
 --CONSULTAS LENIN
--- ==========================================================
--- PROCEDIMIENTOS ALMACENADOS PARA LAS GRÁFICAS
--- ==========================================================
-
--- Procedimiento para Chart Inventario (Categorías específicas)
-create procedure sp_obtener_inventario_categorias
-as
-begin
-    select 
-        m.nombrematerial,
-        m.cantidad,
-        c.nombrecategoria
-    from material m
-    inner join categoria c on m.id_categoria = c.idcategoria
-    where c.nombrecategoria in ('computación', 'periféricos', 'limpieza', 'papeleria')
-    order by c.nombrecategoria, m.nombrematerial;
-end
-go
-
--- Procedimiento para Chart Consumo (salida_de_material)
-create procedure sp_obtener_consumo_material
-as
-begin
-    select 
-        m.nombrematerial,
-        sum(s.cantidadconsumida) as total_consumido
-    from salida_de_material s
-    inner join material m on s.id_material = m.idmaterial
-    group by m.nombrematerial
-    order by total_consumido desc;
-end
-go
-
--- Procedimiento para DataGridView Catálogo
-create procedure sp_obtener_catalogo_completo
-as
-begin
-    select 
-        m.nombrematerial,
-        m.cantidad,
-        m.descripcionmaterial,
-        m.modelo,
-        c.nombrecategoria,
-        ma.nombremarca
-    from material m
-    inner join categoria c on m.id_categoria = c.idcategoria
-    inner join marca ma on m.id_marca = ma.idmarca
-    order by c.nombrecategoria, m.nombrematerial;
-end
-go
 
 -- ==========================================================
 -- SELECTS PARA VERIFICAR TODOS LOS DATOS
 -- ==========================================================
-
+create procedure spu_consumomaterialpormes
+    @nombrematerial varchar(100),
+    @fechainicio date,
+    @fechafin date
+as
+begin
+    select
+        datename(month, s.fechaConsumo) as Mes,
+        sum(s.cantidadConsumida) as CantidadConsumida,
+        m.nombreMaterial,
+        c.nombreCategoria
+    from
+        salidaDeMaterial s
+    inner join 
+        Material m on s.id_Material = m.idMaterial
+    inner join 
+        Categoria c on m.id_Categoria = c.idCategoria
+    where 
+        m.nombreMaterial like '%' + @nombrematerial + '%'
+        and s.fechaConsumo between @fechainicio and @fechafin
+    group by
+        datename(month, s.fechaConsumo),
+        m.nombreMaterial,
+        c.nombreCategoria
+    order by
+        min(s.fechaConsumo);
+end;
+go
+CREATE PROCEDURE spu_obtenerinventariomaterial
+    @nombrematerial VARCHAR(100)
+AS
+BEGIN
+    -- Selecciona el nombre del material y su cantidad actual
+    SELECT
+        nombreMaterial,
+        cantidad AS cantidadInventario -- Usamos este alias para el C#
+    FROM
+        Material
+    WHERE
+        nombreMaterial LIKE '%' + @nombrematerial + '%'
+    ORDER BY
+        nombreMaterial;
+END;
+GO
+--selects
 select * from Rol;
 select * from Usuario;
 select * from Categoria;
 select * from Marca;
 select * from Material;
 select * from solicitud;
-select * from SolicitudMaterial;
+select * from HistorialSolicitud;
 select * from salidaDeMaterial;
 go
-
-INSERT INTO Material (nombreMaterial, cantidad, fechaIngreso, descripcionMaterial, modelo, id_Categoria, id_Marca)
-VALUES 
-('Laptop Dell', 5, '2025-09-05', 'Laptop Core i7', 'LAT-5000', 1, 1),
-('Pantalla Samsung', 3, '2025-09-07', 'Pantalla LED 55 pulgadas', 'SAM-5500', 1, 1);
-
-INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
-VALUES ('Solicitud para evento anual', '2025-09-18', 'Pendiente', 2);
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(6, 1, 1),  -- Proyector
-(6, 2, 2),  -- Laptops
-(6, 3, 1);  -- Pantalla
-
-INSERT INTO Usuario (nombre, fechaNacimiento, contraseña, telefono, correo, id_Rol)
-VALUES ('Ana López', '1990-02-02', 'abc123', '7777-9999', 'ana@example.com', 1);
-
--- Solicitud (de Ana)
-INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
-VALUES ('Solicito materiales para capacitación', '2025-09-19', 'Pendiente', 2);
-
--- Asignar materiales (asegúrate que idMaterial = 1,2,3 existan)
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(4, 1, 2),
-(4, 2, 1);
-
-INSERT INTO Solicitud (motivo, fecha, estado, id_Usuario)
-VALUES ('Reunión de capacitación', '2025-09-19', 'Pendiente', 1);
-
--- Asociar solo 2 materiales
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(3, 1, 1),  -- Proyector
-(3, 2, 1);  -- Laptop
-
--- Asociar 3 materiales
-INSERT INTO SolicitudMaterial (idSolicitud, idMaterial, cantidad)
-VALUES 
-(2, 1, 1),  -- Proyector
-(2, 2, 2),  -- Laptops
-(2, 3, 1);  -- Pantalla
-
--- ==========================================================
--- VERIFICACIÓN DE PROCEDIMIENTOS
--- ==========================================================
-
--- Verificar que los procedimientos se crearon
-select name, type_desc 
-from sys.procedures 
-where name in ('sp_obtener_inventario_categorias', 'sp_obtener_consumo_material', 'sp_obtener_catalogo_completo');
-go
-
--- Probar el procedimiento de inventario
-exec sp_obtener_inventario_categorias;
-go
-
--- Probar el procedimiento de consumo
-exec sp_obtener_consumo_material;
-go
-
--- Probar el procedimiento de catálogo
-exec sp_obtener_catalogo_completo;
-go
-
--- Procedimiento para obtener materiales para ComboBox
-CREATE PROCEDURE sp_obtener_materiales_combo
-AS
-BEGIN
-    SELECT 
-        m.idMaterial,
-        m.nombreMaterial,
-        ma.nombreMarca,
-        m.cantidad
-    FROM Material m
-    INNER JOIN Marca ma ON m.id_Marca = ma.idMarca
-    ORDER BY m.nombreMaterial;
-END
-GO
-
--- Procedimiento para registrar salida de material
-CREATE PROCEDURE sp_registrar_salida_material
-    @id_material INT,
-    @cantidad_consumida INT,
-    @fecha_consumo DATE,
-    @id_usuario INT,
-    @motivo_salida VARCHAR(1000)
-AS
-BEGIN
-    BEGIN TRY
-        BEGIN TRANSACTION;
-        
-        -- Insertar en salida_de_material
-        INSERT INTO salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        VALUES (@id_material, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
-        
-        -- Actualizar el inventario (restar cantidad)
-        UPDATE Material 
-        SET cantidad = cantidad - @cantidad_consumida
-        WHERE idMaterial = @id_Material;
-        
-        COMMIT TRANSACTION;
-    END TRY
-    BEGIN CATCH
-        ROLLBACK TRANSACTION;
-        THROW;
-    END CATCH
-END
-GO
-
--- Procedimiento para mostrar historial de salidas
-CREATE PROCEDURE sp_obtener_historial_salidas
-AS
-BEGIN
-    SELECT 
-        s.idsalidamaterial,
-        m.nombrematerial,
-        ma.nombremarca,
-        s.cantidadconsumida,
-        s.fechaconsumo,
-        s.motivosalida,
-        u.nombre as usuario_registra
-    FROM salidaDeMaterial s
-    INNER JOIN Material m ON s.id_Material = m.idMaterial
-    INNER JOIN Marca ma ON m.id_Marca = ma.idMarca
-    INNER JOIN Usuario u ON s.id_Usuario = u.idUsuario
-    ORDER BY s.fechaConsumo DESC;
-END
-GO
