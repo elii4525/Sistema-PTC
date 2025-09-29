@@ -22,7 +22,7 @@ namespace Vistas.Controles
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            Application.Restart(); // reinicia la app desde el frmLogin
+            Application.Restart(); // reinicia la app desde el Login
         }
 
         private void Configuracion_Load(object sender, EventArgs e)
@@ -40,8 +40,8 @@ namespace Vistas.Controles
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
             frmCambiarContraseña frm = new frmCambiarContraseña();
-            frm.StartPosition = FormStartPosition.CenterScreen; // que se abra en medio
-            frm.ShowDialog(); // ventana emergente
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog(); 
         }
     }
 }

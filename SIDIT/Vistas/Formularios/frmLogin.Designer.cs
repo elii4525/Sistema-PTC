@@ -38,6 +38,7 @@
             this.lblError = new System.Windows.Forms.Label();
             this.txtCorreo = new Vistas.Controles.TextBox();
             this.txtContra = new Vistas.Controles.TextBox();
+            this.llOlvidasteContraseña = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -125,7 +126,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
             this.pictureBox4.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 607);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 705);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(123, 85);
@@ -197,13 +198,30 @@
             this.txtContra.Enter += new System.EventHandler(this.txtContra_Enter);
             this.txtContra.Leave += new System.EventHandler(this.txtContra_Leave);
             // 
+            // llOlvidasteContraseña
+            // 
+            this.llOlvidasteContraseña.ActiveLinkColor = System.Drawing.Color.DimGray;
+            this.llOlvidasteContraseña.AutoSize = true;
+            this.llOlvidasteContraseña.BackColor = System.Drawing.Color.Black;
+            this.llOlvidasteContraseña.ForeColor = System.Drawing.Color.Black;
+            this.llOlvidasteContraseña.LinkColor = System.Drawing.Color.White;
+            this.llOlvidasteContraseña.Location = new System.Drawing.Point(273, 859);
+            this.llOlvidasteContraseña.Name = "llOlvidasteContraseña";
+            this.llOlvidasteContraseña.Size = new System.Drawing.Size(161, 16);
+            this.llOlvidasteContraseña.TabIndex = 16;
+            this.llOlvidasteContraseña.TabStop = true;
+            this.llOlvidasteContraseña.Text = "¿Olvidaste tu contraseña?";
+            this.llOlvidasteContraseña.VisitedLinkColor = System.Drawing.Color.Black;
+            this.llOlvidasteContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llOlvidasteContraseña_LinkClicked);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Vistas.Properties.Resources.Desktop___47;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1181, 703);
+            this.ClientSize = new System.Drawing.Size(1181, 801);
+            this.Controls.Add(this.llOlvidasteContraseña);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lblError);
@@ -239,5 +257,6 @@
         private System.Windows.Forms.Label lblError;
         private Controles.TextBox txtCorreo;
         private Controles.TextBox txtContra;
+        private System.Windows.Forms.LinkLabel llOlvidasteContraseña;
     }
 }

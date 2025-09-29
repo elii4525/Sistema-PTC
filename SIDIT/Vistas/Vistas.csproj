@@ -171,6 +171,12 @@
     <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRecuperarContraseña.Designer.cs">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSolicitudDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,7 +232,7 @@
       <DependentUpon>frmListaInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperBarraNegra\BarraNegra.cs" />
-    <Compile Include="Helper\FuenteHelper.cs" />
+    <Compile Include="HelperFuente\FuenteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="controles\Configuracion.resx">
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRecuperarContraseña.resx">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>

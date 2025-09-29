@@ -22,6 +22,10 @@ id_Rol int,
 constraint fk_rol Foreign key (id_Rol) references Rol(idRol));
 go
 
+SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Usuario' AND COLUMN_NAME = 'contraseña'
+
 SELECT m.idMarca, m.nombreMarca
 FROM Material mat
 INNER JOIN Marca m ON mat.id_Marca = m.idMarca

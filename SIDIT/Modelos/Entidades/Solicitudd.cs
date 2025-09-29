@@ -37,13 +37,13 @@ namespace Modelos.Entidades
                                OUTPUT INSERTED.idSolicitud 
                                VALUES (@motivo, @fecha, @estado, @idUsuario)";
 
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@motivo", motivo);
-                cmd.Parameters.AddWithValue("@fecha", DateTime.Now.Date);
-                cmd.Parameters.AddWithValue("@estado", "Pendiente");
-                cmd.Parameters.AddWithValue("@idUsuario", idUsuarioActual);
+                     SqlCommand cmd = new SqlCommand(sql, con);
+                     cmd.Parameters.AddWithValue("@motivo", motivo);
+                     cmd.Parameters.AddWithValue("@fecha", DateTime.Now.Date);
+                     cmd.Parameters.AddWithValue("@estado", "Pendiente");
+                     cmd.Parameters.AddWithValue("@idUsuario", idUsuarioActual);
 
-                idSolicitud = (int)cmd.ExecuteScalar();
+                     idSolicitud = (int)cmd.ExecuteScalar();
 
                 foreach (var mat in materiales)
                 {

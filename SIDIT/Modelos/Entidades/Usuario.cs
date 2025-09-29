@@ -106,33 +106,32 @@ namespace Modelos.Entidades
 
         public string VerificarLogin(string correo, string contraseña)
         {
-            string hasEnBaseDeDatos = "";
-            string rol = null;
-
-            using (SqlConnection con = ConexionDB.Conectar())
+            using (SqlConnection conn = ConexionDB.Conectar())
             {
-                string query = @"select U.contraseña, R.tipoRol 
-                         from Usuario U 
-                         inner join Rol R on R.idRol = U.id_Rol
-                         where U.correo = @Correo";
+                string sql = @"SELECT u.contraseña, r.tipoRol 
+                       FROM Usuario u
+                       INNER JOIN Rol r ON u.id_Rol = r.idRol
+                       WHERE u.correo = @correo";
 
-                SqlCommand cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("@Correo", correo);
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@correo", correo);
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    hasEnBaseDeDatos = reader["contraseña"].ToString();
-
-                    if (BCrypt.Net.BCrypt.Verify(contraseña, hasEnBaseDeDatos))
+                    if (reader.Read())
                     {
-                        rol = reader["tipoRol"].ToString();
+                        string hashAlmacenado = reader["contraseña"].ToString();
+                        string rol = reader["tipoRol"].ToString();
+
+                        // 🔑 Validar con BCrypt
+                        if (BCrypt.Net.BCrypt.Verify(contraseña, hashAlmacenado))
+                        {
+                            return rol;
+                        }
                     }
                 }
             }
-
-            return rol; // devuelve el rol si el login estuvo bien, o null si fallo
+            return null; // si no coincide
         }
 
         public DataTable cargarRoles()
@@ -196,30 +195,98 @@ namespace Modelos.Entidades
             return dt;
         }
 
-        public static string HashPassword(string password)
+        public static string ObtenerHashContraseña(int idUsuario)
         {
-            using (SHA256 sha256 = SHA256.Create())
+            using (SqlConnection conn = ConexionDB.Conectar())
             {
-                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+                string sql = "SELECT contraseña FROM Usuario WHERE idUsuario = @idUsuario";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    object result = cmd.ExecuteScalar();
+                    return result == null ? null : result.ToString();
+                }
             }
         }
-        public bool CambiarContraseña(int idUsuario, string nuevaContraseña)
+
+        public static void GuardarNuevaPassword(int idUsuario, string hashPassword)
         {
-            using (SqlConnection con = ConexionDB.Conectar())
+            using (SqlConnection conn = ConexionDB.Conectar())
             {
-                if (con == null) return false;
-
-                string hash = HashPassword(nuevaContraseña);
-
-                string sql = "UPDATE Usuario SET contraseña = @contraseña WHERE idUsuario = @idUsuario";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@contraseña", hash);
-                cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
-
-                int filas = cmd.ExecuteNonQuery();
-                return filas > 0;
+                string sql = "UPDATE Usuario SET contraseña = @pass WHERE idUsuario = @idUsuario";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@pass", hashPassword);
+                    cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    cmd.ExecuteNonQuery();
+                }
             }
+        }
+
+        public string RecuperarContraseña(string usuarioSolicitando)
+        {
+            try
+            {
+                using (SqlConnection conexion = ConexionDB.Conectar())
+                {
+                    // Buscar por nombre o correo
+                    string sql = "SELECT * FROM Usuario WHERE nombre = @usuario OR correo = @correo";
+
+                    using (SqlCommand comando = new SqlCommand(sql, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@usuario", usuarioSolicitando);
+                        comando.Parameters.AddWithValue("@correo", usuarioSolicitando);
+                        comando.CommandType = CommandType.Text;
+
+                        using (SqlDataReader lector = comando.ExecuteReader())
+                        {
+                            if (lector.Read() == true)
+                            {
+                                // Obtenemos primero los datos del usuario
+                                int idUsuario = Convert.ToInt32(lector["idUsuario"]);
+                                string nombreUsuario = lector["nombre"].ToString();
+                                string correoUsuario = lector["correo"].ToString();
+
+                                // Generamos una nueva contraseña temporal
+                                string nuevaPasswordTemporal = GenerarContrasena(8);
+                                string hashTemporal = BCrypt.Net.BCrypt.HashPassword(nuevaPasswordTemporal);
+
+                                lector.Close();
+
+                                GuardarNuevaPassword(idUsuario, hashTemporal);
+
+                                var servicioCorreo = new Modelos.ServiciosCorreoElectronico.SoporteCorreos();
+                                string asunto = "SISTEMA: Solicitud de recuperación de contraseña";
+                                string cuerpo = "Hola, " + nombreUsuario +
+                                                "\nHas solicitado recuperar tu contraseña.\n" +
+                                                "Tu nueva contraseña temporal es: " + nuevaPasswordTemporal +
+                                                "\nPor favor, cambia tu contraseña inmediatamente una vez ingreses al sistema.";
+
+                                servicioCorreo.enviarCorreo(asunto, cuerpo, new List<string> { correoUsuario });
+
+                                return "Hola, " + nombreUsuario +
+                                       "\nHas solicitado recuperar tu contraseña.\n" +
+                                       "Revisa tu correo: " + correoUsuario +
+                                       "\nRecuerda cambiar tu contraseña inmediatamente después de ingresar.";
+                            }
+                            else
+                            {
+                                return "No se encontró una cuenta con ese correo o nombre de usuario.";
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al intentar recuperar la contraseña: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public string recoverPassword(string usuarioSolicitando)
+        {
+            return RecuperarContraseña(usuarioSolicitando);
         }
 
     }

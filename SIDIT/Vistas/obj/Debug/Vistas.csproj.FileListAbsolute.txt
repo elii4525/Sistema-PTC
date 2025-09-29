@@ -370,3 +370,4 @@ C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.contro
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.controles.frmEnviarSolicitud.resources
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudesAnteriores.resources
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmCambiarContraseña.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmRecuperarContraseña.resources

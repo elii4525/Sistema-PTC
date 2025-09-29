@@ -35,7 +35,6 @@ namespace Vistas.Controles
             ConfigurarEdad(dtpFechaNacimiento);
             txtNumero.SoloNumeros = true;
             txtNombre.SoloLetras = true;
-            txtCorreo.SoloLetras = true;
             txtNumero.MaxLength = 8;
         }
 

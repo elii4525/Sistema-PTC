@@ -20,36 +20,40 @@ namespace Vistas.Formularios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            string actual = txtActual.Text;
-            string nueva = txtNueva.Text;
-            string confirmar = txtConfirmar.Text;
-
-            if (nueva != confirmar)
+            try
             {
-                MessageBox.Show("Las contraseñas nuevas no coinciden.");
-                return;
+                string nueva = txtContraseñaNueva.Text ?? "";
+                string confirmar = txtConfirmarContraseña.Text ?? "";
+
+                if (string.IsNullOrWhiteSpace(nueva) || string.IsNullOrWhiteSpace(confirmar))
+                {
+                    MessageBox.Show("Ingresar una nueva contraseña");
+                    return;
+                }
+
+                if (nueva != confirmar)
+                {
+                    MessageBox.Show("Las contraseñas nuevas no coinciden.");
+                    return;
+                }
+
+                int idUsuario = Usuario.SesionActual.IdUsuario;
+                if (idUsuario <= 0)
+                {
+                    MessageBox.Show("No hay datos del usuario");
+                    return;
+                }
+
+                string nuevoHash = SeguridadHelper.HashContraseña(nueva);
+                Usuario.GuardarNuevaPassword(idUsuario, nuevoHash);
+
+                MessageBox.Show("Contraseña cambiada exitosamente");
+                this.Close();
             }
-
-            int idUsuario = Usuario.SesionActual.IdUsuario;
-
-            // 1. Obtener el hash actual desde BD
-            string hashActual = ObtenerHashDesdeBD(idUsuario);
-
-            // 2. Validar que la contraseña actual coincida
-            if (!SeguridadHelper.VerificarPassword(actual, hashActual))
+            catch (Exception ex)
             {
-                MessageBox.Show("La contraseña actual es incorrecta.");
-                return;
+                MessageBox.Show("Error al cambiar contraseña: " + ex.Message);
             }
-
-            // 3. Hashear la nueva contraseña
-            string hashNuevo = SeguridadHelper.HashPassword(nueva);
-
-            // 4. Guardar en BD
-            GuardarNuevaPassword(idUsuario, hashNuevo);
-
-            MessageBox.Show("Contraseña cambiada correctamente.");
-            this.Close();
         }
     }
 }

@@ -145,5 +145,11 @@ namespace Vistas.Formularios
             btnIniciarSesion.Font = FuenteHelper.ObtenerFuente(10);
 
         }
+
+        private void llOlvidasteContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var frmRecuperar = new frmRecuperarContraseña();
+            frmRecuperar.ShowDialog();
+        }
     }
 }
