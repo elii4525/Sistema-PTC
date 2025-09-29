@@ -22,15 +22,7 @@ namespace Vistas.Controles
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            SesionActual.IdUsuario = 0;
-            SesionActual.Nombre = null;
-            SesionActual.Correo = null;
-            SesionActual.Telefono = null;
-            SesionActual.Rol = null;
-
-            frmLogin l = new frmLogin();
-            l.Show();
-            this.Hide();
+            Application.Restart(); // reinicia la app desde el Login
         }
 
         private void Configuracion_Load(object sender, EventArgs e)
@@ -39,7 +31,17 @@ namespace Vistas.Controles
             txtCorreo.Texts = SesionActual.Correo;
             txtNumero.Texts = SesionActual.Telefono;
             txtRol.Texts = SesionActual.Rol;
-            dtpFecha.Value = SesionActual.FechaNacimiento;
+
+            dtpFecha.Value = SesionActual.FechaNacimiento != DateTime.MinValue
+                              ? SesionActual.FechaNacimiento
+                              : DateTime.Today;
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            frmCambiarContraseña frm = new frmCambiarContraseña();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog(); 
         }
     }
 }

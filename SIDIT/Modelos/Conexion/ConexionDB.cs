@@ -11,7 +11,7 @@ namespace Modelos.Conexion
     public class ConexionDB
     {
 
-        private static string servidor = "Orlando\\SQLEXPRESS";
+        private static string servidor = "Lenovo\\SQLEXPRESS";
         private static string database = "BasePTC";
 
         public static SqlConnection Conectar()

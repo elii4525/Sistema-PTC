@@ -23,7 +23,7 @@ namespace Vistas.Controles
 
         private void frmAgregarUsuario_Load(object sender, EventArgs e)
         {
-            CargarUsuarios();
+            //CargarUsuarios();
             EstilizarDataGrid(dgvUltimosUsuarios);
             lbl1.Font = Helper.FuenteHelper.ObtenerFuente(17);
             lbl2.Font = Helper.FuenteHelper.ObtenerFuente(10);
@@ -35,13 +35,12 @@ namespace Vistas.Controles
             ConfigurarEdad(dtpFechaNacimiento);
             txtNumero.SoloNumeros = true;
             txtNombre.SoloLetras = true;
-            txtCorreo.SoloLetras = true;
             txtNumero.MaxLength = 8;
         }
 
         public static bool NoEsNulo(MiTextBox txt, string mensajeError = "El campo no puede estar vacío")
         {
-            if (string.IsNullOrWhiteSpace(txt.Texts)) // usa tu propiedad personalizada
+            if (string.IsNullOrWhiteSpace(txt.Texts))
             {
                 MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt.Focus();
@@ -72,7 +71,7 @@ namespace Vistas.Controles
 
             if (nu.RegistrarUsuario() == true)
             {
-                CargarUsuarios();
+                //CargarUsuarios();
                 LimpiarCampos();
             }
 
@@ -127,10 +126,10 @@ namespace Vistas.Controles
             cbRol.SelectedIndex = -1;
         }
 
-        private void CargarUsuarios()
-        {
-            dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
-        }
+        //private void CargarUsuarios()
+        //{
+        //    dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
+        //}
     }
     
 }

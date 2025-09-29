@@ -94,6 +94,12 @@
     <Compile Include="controles\frmEliminarUsuario.Designer.cs">
       <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="controles\frmEnviarSolicitud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controles\frmEnviarSolicitud.Designer.cs">
+      <DependentUpon>frmEnviarSolicitud.cs</DependentUpon>
+    </Compile>
     <Compile Include="controles\frmVerUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,18 @@
     <Compile Include="controles\TextBoxRedondeado.Designer.cs">
       <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAggCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAggCategoria.Designer.cs">
+      <DependentUpon>frmAggCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarMaterial.Designer.cs">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmBienvenidaJefatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +142,19 @@
     <Compile Include="Formularios\frmBienvenidoDIT.Designer.cs">
       <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Formularios\frmConsumo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmConsumo.Designer.cs">
       <DependentUpon>frmConsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Formularios\frmInventarioDIT.cs">
       <SubType>Form</SubType>
@@ -166,6 +192,12 @@
     <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRecuperarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRecuperarContraseña.Designer.cs">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSolicitudDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +210,12 @@
     <Compile Include="Formularios\frmConsumoJefatura.Designer.cs">
       <DependentUpon>frmConsumoJefatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmSolicitudesAnteriores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSolicitudesAnteriores.Designer.cs">
+      <DependentUpon>frmSolicitudesAnteriores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSolJefatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +227,20 @@
     </Compile>
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="UserControls\frmAggMateriall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\frmAggMateriall.Designer.cs">
+      <DependentUpon>frmAggMateriall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\usercontolsflotantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\usercontolsflotantes.Designer.cs">
+      <DependentUpon>usercontolsflotantes.cs</DependentUpon>
+
     </Compile>
     <Compile Include="UserControls\frmEliminarMaterial.cs">
       <SubType>UserControl</SubType>
@@ -209,7 +261,7 @@
       <DependentUpon>frmListaInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperBarraNegra\BarraNegra.cs" />
-    <Compile Include="Helper\FuenteHelper.cs" />
+    <Compile Include="HelperFuente\FuenteHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="controles\Configuracion.resx">
@@ -221,6 +273,9 @@
     <EmbeddedResource Include="controles\frmEliminarUsuario.resx">
       <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controles\frmEnviarSolicitud.resx">
+      <DependentUpon>frmEnviarSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controles\frmVerUsuarios.resx">
       <DependentUpon>frmVerUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,14 +285,26 @@
     <EmbeddedResource Include="controles\TextBoxRedondeado.resx">
       <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAggCategoria.resx">
+      <DependentUpon>frmAggCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAgregarMaterial.resx">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
       <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBienvenidoDIT.resx">
       <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Formularios\frmConsumo.resx">
       <DependentUpon>frmConsumo.cs</DependentUpon>
+    </EmbeddedResource>
+
+    <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
       <DependentUpon>frmInventarioDIT.cs</DependentUpon>
@@ -257,14 +324,23 @@
     <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRecuperarContraseña.resx">
+      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSolicitudesAnteriores.resx">
+      <DependentUpon>frmSolicitudesAnteriores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolJefatura.resx">
       <DependentUpon>frmSolJefatura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\frmAggMateriall.resx">
+      <DependentUpon>frmAggMateriall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\frmEliminarMaterial.resx">
       <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
@@ -396,6 +472,10 @@
     <Folder Include="ControlesPersonalizados\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-ajustes-50.png" />
+    <None Include="Resources\icons8-mudarse-48.png" />
+    <None Include="Resources\icons8-mudarse-64.png" />
+    <None Include="Resources\icons8-enviar-50.png" />
     <None Include="Resources\Group 1.png" />
     <Content Include="Resources\Group 44.png" />
   </ItemGroup>

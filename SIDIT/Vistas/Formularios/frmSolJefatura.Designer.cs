@@ -41,6 +41,7 @@
             this.lblCantidad8 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lblCantidad7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblMaterial9 = new System.Windows.Forms.Label();
             this.lblMaterial8 = new System.Windows.Forms.Label();
             this.lblMaterial7 = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.lblCantidad5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblCantidad4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblMaterial6 = new System.Windows.Forms.Label();
             this.lblMaterial5 = new System.Windows.Forms.Label();
             this.lblMaterial4 = new System.Windows.Forms.Label();
@@ -75,6 +77,7 @@
             this.lblCantidad2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCantidad1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMaterial3 = new System.Windows.Forms.Label();
             this.lblMaterial2 = new System.Windows.Forms.Label();
             this.lblMaterial1 = new System.Windows.Forms.Label();
@@ -83,18 +86,14 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlSolicitud1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlSolicitud1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,6 +237,16 @@
             this.lblCantidad7.Size = new System.Drawing.Size(44, 16);
             this.lblCantidad7.TabIndex = 8;
             this.lblCantidad7.Text = "label8";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
             // lblMaterial9
             // 
@@ -409,6 +418,16 @@
             this.lblCantidad4.TabIndex = 8;
             this.lblCantidad4.Text = "label8";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblMaterial6
             // 
             this.lblMaterial6.AutoSize = true;
@@ -475,7 +494,6 @@
             // pnlSolicitud1
             // 
             this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
-            this.pnlSolicitud1.Controls.Add(this.buttonRedondeado1);
             this.pnlSolicitud1.Controls.Add(this.lblFecha);
             this.pnlSolicitud1.Controls.Add(this.lblmarca3);
             this.pnlSolicitud1.Controls.Add(this.lblMarca2);
@@ -580,6 +598,16 @@
             this.lblCantidad1.TabIndex = 8;
             this.lblCantidad1.Text = "label8";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblMaterial3
             // 
             this.lblMaterial3.AutoSize = true;
@@ -652,52 +680,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Solicitudes recientes:";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // buttonRedondeado1
-            // 
-            this.buttonRedondeado1.BackColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.BorderColor = System.Drawing.Color.Black;
-            this.buttonRedondeado1.BorderRadius = 20;
-            this.buttonRedondeado1.BorderSize = 2;
-            this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
-            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.Location = new System.Drawing.Point(772, 133);
-            this.buttonRedondeado1.Name = "buttonRedondeado1";
-            this.buttonRedondeado1.Size = new System.Drawing.Size(160, 47);
-            this.buttonRedondeado1.TabIndex = 17;
-            this.buttonRedondeado1.Text = "buttonRedondeado1";
-            this.buttonRedondeado1.UseVisualStyleBackColor = false;
-            // 
             // frmSolJefatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -715,12 +697,12 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlSolicitud1.ResumeLayout(false);
             this.pnlSolicitud1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -786,6 +768,5 @@
         private System.Windows.Forms.Label lblMotivo2;
         private System.Windows.Forms.Label lblRol2;
         private System.Windows.Forms.Label lblNombre2;
-        private controles.ButtonRedondeado buttonRedondeado1;
     }
 }

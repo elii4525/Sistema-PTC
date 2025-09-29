@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.Controles;
 
 namespace Vistas.Formularios
 {
@@ -243,6 +244,14 @@ namespace Vistas.Formularios
         private void icbtnUsuario_Click(object sender, EventArgs e)
         {
             MostrarFormUsuariosEnPanel();
+        }
+
+        private void pbAjustes_Click(object sender, EventArgs e)
+        {
+            Configuracion c= new Configuracion();
+            c.Dock = DockStyle.Fill;
+            pnlContenedorJ.Controls.Clear();
+            pnlContenedorJ.Controls.Add(c);
         }
     }
 }

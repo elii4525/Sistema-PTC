@@ -22,6 +22,14 @@ id_Rol int,
 constraint fk_rol Foreign key (id_Rol) references Rol(idRol));
 go
 
+SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Usuario' AND COLUMN_NAME = 'contraseña'
+
+SELECT m.idMarca, m.nombreMarca
+FROM Material mat
+INNER JOIN Marca m ON mat.id_Marca = m.idMarca
+WHERE mat.idMaterial = 2
 
 create table Categoria (
 idCategoria int identity (1,1) primary key,
@@ -81,6 +89,37 @@ create table salidaDeMaterial (
     constraint fk_salida_usuario foreign key (id_Usuario) references Usuario(idUsuario)
 );
 go
+
+-- Vistas
+
+create view VerUltimosUsuarios
+as
+select 
+    u.idUsuario,
+    u.nombre,
+    u.fechaNacimiento,
+    u.contraseña,
+    u.telefono,
+    u.correo,
+    r.idRol
+from Usuario u
+inner join Rol r on u.id_Rol = r.idRol;
+go
+
+select *from VerUltimosUsuarios
+
+create view VerUsuarios
+as
+select 
+    u.idUsuario,
+    u.correo,
+    u.contraseña,
+    r.tipoRol
+from Usuario u
+inner join Rol r on u.id_Rol = r.idRol;
+go
+
+select *from VerUsuarios
 
 -- Inserts into
 insert into Rol values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
@@ -313,3 +352,92 @@ select * from solicitud;
 select * from HistorialSolicitud;
 select * from salidaDeMaterial;
 go
+
+
+-- ==========================================================
+-- VERIFICACIÓN DE PROCEDIMIENTOS
+-- ==========================================================
+
+-- Verificar que los procedimientos se crearon
+select name, type_desc 
+from sys.procedures 
+where name in ('sp_obtener_inventario_categorias', 'sp_obtener_consumo_material', 'sp_obtener_catalogo_completo');
+go
+
+-- Probar el procedimiento de inventario
+exec sp_obtener_inventario_categorias;
+go
+
+-- Probar el procedimiento de consumo
+exec sp_obtener_consumo_material;
+go
+
+-- Probar el procedimiento de catálogo
+exec sp_obtener_catalogo_completo;
+go
+
+-- Procedimiento para obtener materiales para ComboBox
+CREATE PROCEDURE sp_obtener_materiales_combo
+AS
+BEGIN
+    SELECT 
+        m.idMaterial,
+        m.nombreMaterial,
+        ma.nombreMarca,
+        m.cantidad
+    FROM Material m
+    INNER JOIN Marca ma ON m.id_Marca = ma.idMarca
+    ORDER BY m.nombreMaterial;
+END
+GO
+
+-- Procedimiento para registrar salida de material
+CREATE PROCEDURE sp_registrar_salida_material
+    @id_material INT,
+    @cantidad_consumida INT,
+    @fecha_consumo DATE,
+    @id_usuario INT,
+    @motivo_salida VARCHAR(1000)
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+        
+        -- Insertar en salida_de_material
+        INSERT INTO salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
+        VALUES (@id_material, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+        
+        -- Actualizar el inventario (restar cantidad)
+        UPDATE Material 
+        SET cantidad = cantidad - @cantidad_consumida
+        WHERE idMaterial = @id_Material;
+        
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH
+END
+GO
+
+-- Procedimiento para mostrar historial de salidas
+CREATE PROCEDURE sp_obtener_historial_salidas
+AS
+BEGIN
+    SELECT 
+        s.idsalidamaterial,
+        m.nombrematerial,
+        ma.nombremarca,
+        s.cantidadconsumida,
+        s.fechaconsumo,
+        s.motivosalida,
+        u.nombre as usuario_registra
+    FROM salidaDeMaterial s
+    INNER JOIN Material m ON s.id_Material = m.idMaterial
+    INNER JOIN Marca ma ON m.id_Marca = ma.idMarca
+    INNER JOIN Usuario u ON s.id_Usuario = u.idUsuario
+    ORDER BY s.fechaConsumo DESC;
+END
+GO
+
