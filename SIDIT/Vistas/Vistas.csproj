@@ -112,6 +112,18 @@
     <Compile Include="controles\TextBoxRedondeado.Designer.cs">
       <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAggCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAggCategoria.Designer.cs">
+      <DependentUpon>frmAggCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAgregarMaterial.Designer.cs">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmBienvenidaJefatura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,12 @@
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\frmAggMateriall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\frmAggMateriall.Designer.cs">
+      <DependentUpon>frmAggMateriall.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\frmEliminarMaterial.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +248,12 @@
     <EmbeddedResource Include="controles\TextBoxRedondeado.resx">
       <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAggCategoria.resx">
+      <DependentUpon>frmAggCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAgregarMaterial.resx">
+      <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmBienvenidaJefatura.resx">
       <DependentUpon>frmBienvenidaJefatura.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\frmAggMateriall.resx">
+      <DependentUpon>frmAggMateriall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\frmEliminarMaterial.resx">
       <DependentUpon>frmEliminarMaterial.cs</DependentUpon>

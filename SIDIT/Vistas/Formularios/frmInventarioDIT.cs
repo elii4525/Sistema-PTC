@@ -16,11 +16,7 @@ namespace Vistas.Formularios
 
     public partial class frmInventarioDIT : Form
     {
-        //IconButton porque ese es el control que utilice en el formulario
-        private IconButton botonSeleccionado;
-        private frmListaInventario frmLista = null;
-        private frmEliminarMaterial frmEliminar = null;
-        private frmAggMaterial frmAgg = null;
+        
 
 
         public frmInventarioDIT()
@@ -29,172 +25,135 @@ namespace Vistas.Formularios
 
         }
 
-        private void BotonActivado(object boton)
-        {
-            if (boton != null)  //Verifica que el objeto que se pasó no sea null evitando errores.
-            {
-                DesactivarBoton();
-
-                botonSeleccionado = (IconButton)boton;
-                botonSeleccionado.FlatAppearance.MouseOverBackColor = Color.Transparent;
-                botonSeleccionado.FlatAppearance.MouseDownBackColor = Color.Transparent;
-                //El boton seleccionado es el que disparó el evento, este tiene un paint predeterminado, so lo que hago es forzarlo a que
-                //se repinte, o sea el evento Paint que yo hice en codigo se ejecute.
-                //El invalidate lo marca como invalido haciendo que se llame de nuevo al evento paint (no es que Invalidate lo repinta
-                //directamente).
-                botonSeleccionado.Invalidate();
-            }
-               
-        }
-
-        private void DesactivarBoton()
-        {
-            //Verifica que si haya un boton activo
-            if (botonSeleccionado != null)
-            {
-                //Aqui nuevamente invalido para que se ejecute de nuevo el evento paint. 
-                //Esto borra la linea del boton anterior
-                botonSeleccionado.Invalidate(); 
-                //Esto basicamente indica que no hay ningun boton seleccionado.
-                botonSeleccionado = null;
-            }
-        }
-
-
-        //Llamar metodo botonSeleccionado
-        private void icbtnVerMaterial_Click(object sender, EventArgs e)
-        {
-
-            //Sender es la referencia al objeto que dispara el evento. 
-            //O sea, en este caso el metodo afecta al objeto que disparó este evento, o sea el btn.
-            //Hacer esto ayuda a no hacer un metodo por btn.
-            BotonActivado(sender);
-            MostrarUCLista();
-           
-        }
-
-        private void icbtnAggMaterial_Click(object sender, EventArgs e)
-        {
-            MostrarUCAgg();
-                BotonActivado(sender);
-        }
-
-        private void icbtnActualizarYEliminarMaterial_Click(object sender, EventArgs e)
-        {
- 
-            BotonActivado(sender);
-            MostrarUCEliminar();
-   
-        }
-
-
-        private void MostrarUCLista()
-        {
-            if (frmLista == null)
-            {
-                frmLista = new frmListaInventario();
-                frmLista.Dock = DockStyle.Fill;
-
-            }
-                pnlContenedorUC.Controls.Clear();
-                frmLista.Dock = DockStyle.Fill;
-                pnlContenedorUC.Controls.Add(frmLista);
-                frmLista.Show();
-        }
-           
-
-        private void MostrarUCAgg()
-        {
-           if(frmAgg == null)
-            {
-                frmAgg = new frmAggMaterial();
-                frmAgg.Dock = DockStyle.Fill;
-            }
-            
-            pnlContenedorUC.Controls.Clear();
-            frmAgg.Dock = DockStyle.Fill;
-            pnlContenedorUC.Controls.Add(frmAgg);
-            frmAgg.Show();
-        }
-        private void MostrarUCEliminar()
-        {
-            if (frmEliminar == null)
-            {
-                frmEliminar = new frmEliminarMaterial();
-                frmEliminar.Dock = DockStyle.Fill;
-            }
-            
-            pnlContenedorUC.Controls.Clear();
-            pnlContenedorUC.Controls.Add(frmEliminar);
-            frmEliminar.Show();
-        }
-
-
         
+        Panel p = new Panel();
+
+        private void btnMouseEnter (object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            pnlContenedorPestañas.Controls.Add(p);
+            p.BackColor = Color.White;
+            p.Size = new Size(164, 5);
+            p.Location = new Point(btn.Location.X, btn.Location.Y + 63);
+            p.BringToFront();
+        }
+
+        private void btnMouseLeave (object sender , EventArgs e)
+        {
+            pnlContenedorPestañas.Controls.Remove(p);
+        }
 
         private void frmInventarioDIT_Load(object sender, EventArgs e)
         {
-
-            
-            BotonActivado(icbtnVerMaterial);
-            MostrarUCLista();
-            icbtnActualizarYEliminarMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            icbtnActualizarYEliminarMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
-
-            icbtnAggMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            icbtnAggMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
-
-            icbtnVerMaterial.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            icbtnVerMaterial.FlatAppearance.MouseDownBackColor = Color.Transparent;
-        }
-
-
-        //Estos son los metodos donde pinto la linea a los botones.
-        private void icbtnVerMaterial_Paint(object sender, PaintEventArgs e)
-        {
-            if(botonSeleccionado == sender)
-            {
-                DibujarLinea_Paint(sender, e);
-            }
+            MostrarMateriales();
+            EstilizarDataGrid(dgvMaterialesD);
+            MostrarMarcas();
+            MostrarCategorias();
+            EstilizarDataGrid(dgvCategorias);
+            EstilizarDataGrid(dgvMarcas);
             
         }
 
-        private void icbtnAggMaterial_Paint(object sender, PaintEventArgs e)
+        private void icbtnAgg_Click(object sender, EventArgs e)
         {
-            if (botonSeleccionado == sender)
+            if(!pnlAgg.Visible)
             {
-                DibujarLinea_Paint(sender, e);
+                pnlAgg.Visible = true;
+                pnlAgg.BringToFront();
+                pnlEliminar.Visible = false;
+            }
+            else
+            {
+                pnlAgg.Visible = false;
             }
         }
 
-        private void icbtnActualizarYEliminarMaterial_Paint(object sender, PaintEventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (botonSeleccionado == sender)
+            try
             {
-                DibujarLinea_Paint(sender, e);
+                dgvMaterialesD.DataSource = null;
+                dgvMaterialesD.DataSource = Material.Buscar(txtBuscar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-
-
-        // Metodo para no dibujar en cada boton
-        private void DibujarLinea_Paint(object sender, PaintEventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            //El 'PaintEventArgs e' me da acceso al objeto Graphics
+            txtBuscar.Clear();
+            MostrarMateriales();
+        }
 
-            //Aqui convierto el sender en un IconButton
-            //Permite que si el que llamó al evento no es un IconButton se evitan errores y no hace nada.
-            IconButton botonLinea = sender as IconButton;
-            if (botonLinea == null) return;
-            
+        private void MostrarMateriales()
+        {
+            dgvMaterialesD.DataSource = null;
+            dgvMaterialesD.DataSource = Material.CargarMateriales();
+        }
+        private void MostrarMarcas()
+        {
+            dgvMarcas.DataSource = null;
+            dgvMarcas.DataSource = Marca.CargarMarcas();
+        }
 
-            //Using permite liberar los recursos del sistema cuando Pen se termina de usar (necesario).
-            using (Pen lapiz = new Pen(Color.White, 3))
+        private void MostrarCategorias()
+        {
+            dgvCategorias.DataSource = null;
+            dgvCategorias.DataSource = Categoria.CargarCategorias();
+        }
+
+        private void EstilizarDataGrid(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.BackgroundColor = Color.White;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToResizeColumns = true;
+            dgv.AllowUserToResizeRows = false;
+        }
+
+        private void icbtnEliminar_Click(object sender, EventArgs e)
+        {
+            if (!pnlEliminar.Visible)
             {
-                //Graphics es como el lienzo donde se dibuja la linea, lo que esta entre parentesis son las coordenadas de incio y fin de 
-                //la linea. (pen, x1, y1, x2, y2) Basicamente son los dos puntos entre los que se diuja la linea.
-                e.Graphics.DrawLine(lapiz, 0, botonLinea.Height - 7, botonLinea.Width - 1, botonLinea.Height - 7);
+                pnlEliminar.Visible = true;
+                pnlEliminar.BringToFront();
+                pnlAgg.Visible = false;
             }
+            else
+            {
+                
+                pnlEliminar.Visible = false;
+
+            }
+        }
+        
+        private void icbtnMaterial_Click(object sender, EventArgs e)
+        {
+            frmAgregarMaterial frm = new frmAgregarMaterial();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+
+        }
+
+        private void icbtnCategoria_Click(object sender, EventArgs e)
+        {
+            frmAggCategoria frm = new frmAggCategoria();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
         }
     }
 
