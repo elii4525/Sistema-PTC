@@ -35,13 +35,12 @@ namespace Vistas.Controles
             ConfigurarEdad(dtpFechaNacimiento);
             txtNumero.SoloNumeros = true;
             txtNombre.SoloLetras = true;
-            txtCorreo.SoloLetras = true;
             txtNumero.MaxLength = 8;
         }
 
         public static bool NoEsNulo(MiTextBox txt, string mensajeError = "El campo no puede estar vacío")
         {
-            if (string.IsNullOrWhiteSpace(txt.Texts)) // usa tu propiedad personalizada
+            if (string.IsNullOrWhiteSpace(txt.Texts))
             {
                 MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt.Focus();
