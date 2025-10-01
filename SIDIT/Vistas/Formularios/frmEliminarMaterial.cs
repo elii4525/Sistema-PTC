@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,30 +8,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Modelos.Entidades;
 
 namespace Vistas.Formularios
 {
-    public partial class frmInventarioJefatura : Form
+    public partial class frmEliminarMaterial : Form
     {
-        public frmInventarioJefatura()
+        public frmEliminarMaterial()
         {
             InitializeComponent();
         }
 
-        private void frmInventarioJefatura_Load(object sender, EventArgs e)
+        private void icbtnSalir_Click(object sender, EventArgs e)
         {
-            MostrarMateriales();
-            EstilizarDataGrid(dgvMaterialesJ);
+            this.Close();
+            icbtnSalir.Cursor = Cursors.Hand;
         }
+
+
 
         private void MostrarMateriales()
         {
-            dgvMaterialesJ.DataSource = null;
-            dgvMaterialesJ.DataSource = Material.CargarMateriales();
+            dgvMaterial.DataSource = null;
+            dgvMaterial.DataSource = Material.CargarMateriales();
         }
 
-
+        private void frmEliminarMaterial_Load(object sender, EventArgs e)
+        {
+            MostrarMateriales();
+            EstilizarDataGrid(dgvMaterial);
+        }
 
         private void EstilizarDataGrid(DataGridView dgv)
         {
@@ -53,23 +59,24 @@ namespace Vistas.Formularios
             dgv.AllowUserToResizeRows = false;
         }
 
-        private void btnBuscar_Click_1(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                dgvMaterialesJ.DataSource = null;
-                dgvMaterialesJ.DataSource = Material.Buscar(txtBuscar.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+            int id = int.Parse(dgvMaterial.CurrentRow.Cells[0].Value.ToString());
+            Material m = new Material();
+            string registroAEliminar = dgvMaterial.CurrentRow.Cells[1].Value.ToString();
+            DialogResult respuesta = MessageBox.Show("¿Quieres eliminar este registro?\n" + registroAEliminar, "Advertencia eliminaras un registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-        private void btnLimpiarB_Click(object sender, EventArgs e)
-        {
-            txtBuscar.Clear();
-            MostrarMateriales();
+            if (respuesta == DialogResult.Yes)
+            {
+                if (m.EliminarMaterial(id) == true)
+                {
+                    MessageBox.Show("Registro eliminado\n" + registroAEliminar, "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Registro no eliminado", "seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

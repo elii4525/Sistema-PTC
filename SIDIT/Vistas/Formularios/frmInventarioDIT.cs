@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +9,8 @@ using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
-using Modelos.Entidades;
-using FontAwesome.Sharp;
 
 namespace Vistas.Formularios
 {
@@ -25,22 +26,21 @@ namespace Vistas.Formularios
 
         }
 
-        
-        Panel p = new Panel();
+
+        Panel linea = new Panel();
 
         private void btnMouseEnter (object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            pnlContenedorPestañas.Controls.Add(p);
-            p.BackColor = Color.White;
-            p.Size = new Size(164, 5);
-            p.Location = new Point(btn.Location.X, btn.Location.Y + 63);
-            p.BringToFront();
+            linea.Size = new Size(btn.Width, 3);
+            linea.Location = new Point(btn.Left, btn.Bottom);
+            linea.Visible = true;
+            linea.BringToFront();
         }
 
         private void btnMouseLeave (object sender , EventArgs e)
         {
-            pnlContenedorPestañas.Controls.Remove(p);
+            linea.Visible = false;
         }
 
         private void frmInventarioDIT_Load(object sender, EventArgs e)
@@ -51,7 +51,11 @@ namespace Vistas.Formularios
             MostrarCategorias();
             EstilizarDataGrid(dgvCategorias);
             EstilizarDataGrid(dgvMarcas);
-            
+
+            linea.BackColor = Color.White;
+            linea.Size = new Size(0, 3);
+            linea.Visible = false;
+            pnlContenedorPestañas.Controls.Add(linea);
         }
 
         private void icbtnAgg_Click(object sender, EventArgs e)
@@ -74,17 +78,12 @@ namespace Vistas.Formularios
             {
                 dgvMaterialesD.DataSource = null;
                 dgvMaterialesD.DataSource = Material.Buscar(txtBuscar.Text);
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtBuscar.Clear();
-            MostrarMateriales();
         }
 
         private void MostrarMateriales()
@@ -109,7 +108,7 @@ namespace Vistas.Formularios
             dgv.BorderStyle = BorderStyle.None;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
             dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
             dgv.BackgroundColor = Color.White;
 
@@ -155,6 +154,63 @@ namespace Vistas.Formularios
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog();
         }
-    }
 
+        private void icbtnMarca_Click(object sender, EventArgs e)
+        {
+            frmAggMarca frm = new frmAggMarca();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
+        private void icbtnMaterialEli_Click(object sender, EventArgs e)
+        {
+            frmEliminarMaterial frm = new frmEliminarMaterial();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
+        private void icbtnCategoriaEli_Click(object sender, EventArgs e)
+        {
+            frmEliminarCategoria frm = new frmEliminarCategoria();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
+        private void icbtnMarcaEli_Click(object sender, EventArgs e)
+        {
+            frmEliminarMarca frm = new frmEliminarMarca();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
+        private void btnLimpiarB_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Clear();
+            MostrarMateriales();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvMaterialesD.DataSource = null;
+                dgvMaterialesD.DataSource = Material.Buscar(txtBuscar.Text);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void icbtnActualizar_Click(object sender, EventArgs e)
+        {
+            pnlAgg.Visible = false;
+            pnlEliminar.Visible = false;
+            frmActualizarMaterial frm = new frmActualizarMaterial();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            
+            frm.ShowDialog();
+        }
+    }
 }

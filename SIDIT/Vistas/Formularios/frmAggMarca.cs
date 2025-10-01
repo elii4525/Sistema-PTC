@@ -11,34 +11,33 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class frmAggCategoria : Form
+    public partial class frmAggMarca : Form
     {
-        public frmAggCategoria()
+        public frmAggMarca()
         {
             InitializeComponent();
         }
 
-        
         private void icbtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
             icbtnSalir.Cursor = Cursors.Hand;
         }
 
-        private void btnAggCategoria_Click(object sender, EventArgs e)
+        private void btnAggMarca_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txtCategoria.Text))
+                if (string.IsNullOrEmpty(txtMarca.Text))
                 {
                     MessageBox.Show("No se puede agregar un campo vacío", "Error");
                 }
                 else
                 {
-                    Categoria c = new Categoria();
-                    c.NombreCategoria = txtCategoria.Text;
-                    c.InsertarCategorias();
-                    txtCategoria.Clear();
+                    Marca m = new Marca();
+                    m.NombreMarca = txtMarca.Text;
+                    m.InsertarMarca();
+                    txtMarca.Clear();
 
                     MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -46,8 +45,10 @@ namespace Vistas.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo añadir la categoria" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo añadir la Marca" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }
