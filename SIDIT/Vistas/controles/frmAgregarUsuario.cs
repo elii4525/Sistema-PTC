@@ -23,7 +23,7 @@ namespace Vistas.Controles
 
         private void frmAgregarUsuario_Load(object sender, EventArgs e)
         {
-            CargarUsuarios();
+            //CargarUsuarios();
             EstilizarDataGrid(dgvUltimosUsuarios);
             lbl1.Font = Helper.FuenteHelper.ObtenerFuente(17);
             lbl2.Font = Helper.FuenteHelper.ObtenerFuente(10);
@@ -71,7 +71,7 @@ namespace Vistas.Controles
 
             if (nu.RegistrarUsuario() == true)
             {
-                CargarUsuarios();
+                //CargarUsuarios();
                 LimpiarCampos();
             }
 
@@ -126,10 +126,10 @@ namespace Vistas.Controles
             cbRol.SelectedIndex = -1;
         }
 
-        private void CargarUsuarios()
-        {
-            dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
-        }
+        //private void CargarUsuarios()
+        //{
+        //    dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
+        //}
     }
     
 }

@@ -187,15 +187,15 @@ namespace Modelos.Entidades
             return dt;
         }
 
-        public static DataTable cargarUltimosUsuarios()
-        {
-            SqlConnection con = ConexionDB.Conectar();
-            string query = @"select * from VerUltimosUsuarios";
-            SqlDataAdapter da = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
+        //public static DataTable cargarUltimosUsuarios()
+        //{
+        //    SqlConnection con = ConexionDB.Conectar();
+        //    string query = @"select * from VerUltimosUsuarios";
+        //    SqlDataAdapter da = new SqlDataAdapter(query, con);
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+        //    return dt;
+        //}
 
         public static DataTable cargarUsuariosEliminar()
         {
