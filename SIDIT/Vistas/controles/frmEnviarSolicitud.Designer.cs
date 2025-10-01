@@ -271,9 +271,9 @@
             this.btnSalir.BackColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::Vistas.Properties.Resources.icons8_mudarse_48;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(1135, 433);
+            this.btnSalir.Location = new System.Drawing.Point(1135, 415);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(132, 87);
+            this.btnSalir.Size = new System.Drawing.Size(132, 127);
             this.btnSalir.TabIndex = 22;
             this.btnSalir.Text = "Cancelar solicitud y salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -285,9 +285,9 @@
             this.btnEnviarSolicitud.BackColor = System.Drawing.Color.Black;
             this.btnEnviarSolicitud.Image = global::Vistas.Properties.Resources.icons8_enviar_50;
             this.btnEnviarSolicitud.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEnviarSolicitud.Location = new System.Drawing.Point(1135, 288);
+            this.btnEnviarSolicitud.Location = new System.Drawing.Point(1135, 253);
             this.btnEnviarSolicitud.Name = "btnEnviarSolicitud";
-            this.btnEnviarSolicitud.Size = new System.Drawing.Size(132, 73);
+            this.btnEnviarSolicitud.Size = new System.Drawing.Size(132, 108);
             this.btnEnviarSolicitud.TabIndex = 21;
             this.btnEnviarSolicitud.Text = "Enviar solicitud";
             this.btnEnviarSolicitud.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

@@ -163,6 +163,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_18 {
+            get {
+                object obj = ResourceManager.GetObject("Group 18", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Group_35 {
             get {
                 object obj = ResourceManager.GetObject("Group 35", resourceCulture);
@@ -273,6 +283,26 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuario_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuario-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuario_100__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuario-100 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Line_3 {
             get {
                 object obj = ResourceManager.GetObject("Line 3", resourceCulture);
@@ -296,6 +326,16 @@ namespace Vistas.Properties {
         internal static System.Drawing.Bitmap Line_63 {
             get {
                 object obj = ResourceManager.GetObject("Line 63", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

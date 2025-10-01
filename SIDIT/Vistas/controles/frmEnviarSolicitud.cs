@@ -15,7 +15,6 @@ namespace Vistas.controles
             InitializeComponent();
             solicitud = new Solicitudd(idUsuario);
 
-            // Bloquear edición en los ComboBox
             cbMaterial1.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMaterial2.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMaterial3.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -24,12 +23,10 @@ namespace Vistas.controles
             cbMarca2.DropDownStyle = ComboBoxStyle.DropDownList;
             cbMarca3.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            // Validar que las cantidades solo acepten números
             txtCantidad1.KeyPress += ValidarSoloNumeros;
             txtCantidad2.KeyPress += ValidarSoloNumeros;
             txtCantidad3.KeyPress += ValidarSoloNumeros;
 
-            // 🔹 Fijar fecha de hoy en el DateTimePicker (y bloquear edición)
             dtpFecha.Value = DateTime.Today;
             dtpFecha.Enabled = false;
         }

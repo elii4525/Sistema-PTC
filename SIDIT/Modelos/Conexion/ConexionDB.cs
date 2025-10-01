@@ -12,7 +12,7 @@ namespace Modelos.Conexion
     {
 
         private static string servidor = "Orlando\\SQLEXPRESS";
-        private static string database = "BasePTC";
+        private static string database = "BasePTCC";
 
         public static SqlConnection Conectar()
         {

@@ -18,43 +18,211 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
-        private void frmSolJefatura_Load(object sender, EventArgs e)
+        private int idSolicitud1 = 0;
+        private int idSolicitud2 = 0;
+        private int idSolicitud3 = 0;
+
+        private void CargarSolicitudes()
         {
-            Label[] nombreUsuario1 = { lblNombre };
-            Label[] rol1 = { lblRol };
-            Label[] fecha1 = { lblFecha };
-            Label[] motivo1 = { lblDescripcion };
-            Label[] materiales1 = { lblMaterial1, lblMaterial2, lblMaterial3 };
-            Label[] cantidades1 = { lblCantidad1, lblCantidad2, lblCantidad3 };
-            Label[] marcas1 = { lblMarca1, lblMarca2, lblmarca3 };
+            try
+            {
+                Solicitudd sol = new Solicitudd();
 
-            Label[] nombreUsuario2 = { lblNombre2 };
-            Label[] rol2 = { lblRol2 };
-            Label[] fecha2 = { lblFecha2 };
-            Label[] motivo2 = { lblMotivo2 };
-            Label[] materiales2 = { lblMaterial4, lblMaterial5, lblMaterial6 };
-            Label[] cantidades2 = { lblCantidad4, lblCantidad5, lblCantidad6 };
-            Label[] marcas2 = { lblMarca4, lblMarca5, lblMarca6 };
+                // Trae TODAS las solicitudes
+                DataTable dt = sol.ObtenerSolicitudesJefatura();
 
-            Label[] nombreUsuario3 = { lblNombre3 };
-            Label[] rol3 = { lblRol3 };
-            Label[] fecha3 = { lblFecha3 };
-            Label[] motivo3 = { lblMotivo3 };
-            Label[] materiales3 = { lblMaterial7, lblMaterial8, lblMaterial9 };
-            Label[] cantidades3 = { lblCantidad7, lblCantidad8, lblCantidad9 };
-            Label[] marcas3 = { lblMarca7, lblMarca8, lblMarca9 };
+                // Ocultar paneles por defecto
+                pnlSolicitud1.Visible = false;
+                pnlSolicitud2.Visible = false;
+                pnlSolicitud3.Visible = false;
 
-            Label[][] nombreUsuarios = { nombreUsuario1, nombreUsuario2, nombreUsuario3 };
-            Label[][] roles = { rol1, rol2, rol3 };
-            Label[][] fechas = { fecha1, fecha2, fecha3 };
-            Label[][] motivos = { motivo1, motivo2, motivo3 };
-            Label[][] materiales = { materiales1, materiales2, materiales3 };
-            Label[][] cantidades = { cantidades1, cantidades2, cantidades3 };
-            Label[][] marcas = { marcas1, marcas2, marcas3 };
+                // Agrupar por idSolicitud (una solicitud puede tener varios materiales)
+                var solicitudes = dt.AsEnumerable()
+                    .GroupBy(r => r["idSolicitud"])
+                    .OrderByDescending(g => Convert.ToDateTime(g.First()["fecha"]))
+                    .Take(3) // máximo 3 solicitudes recientes
+                    .ToList();
 
-            Solicitud sol = new Solicitud(nombreUsuarios, roles, fechas, motivos, materiales, cantidades, marcas);
-            sol.CargarUltimasTresSolicitudes();
+                int panelIndex = 0;
+
+                foreach (var g in solicitudes)
+                {
+                    string estado = g.First()["estado"].ToString();
+
+                    if (panelIndex == 0)
+                    {
+                        pnlSolicitud1.Visible = true;
+                        idSolicitud1 = Convert.ToInt32(g.First()["idSolicitud"]);
+                        lblNombre.Text = g.First()["nombreUsuario"].ToString();
+                        lblRol.Text = "Empleado";
+                        lblFecha.Text = Convert.ToDateTime(g.First()["fecha"]).ToString("dd/MM/yyyy");
+                        lblDescripcion.Text = g.First()["motivo"].ToString();
+                        lblEstado.Text = estado;
+
+                        // limpiar labels
+                        lblMaterial1.Text = lblCantidad1.Text = lblMarca1.Text = "";
+                        lblMaterial2.Text = lblCantidad2.Text = lblMarca2.Text = "";
+                        lblMaterial3.Text = lblCantidad3.Text = lblmarca3.Text = "";
+
+                        int i = 0;
+                        foreach (var fila in g)
+                        {
+                            if (i == 0)
+                            {
+                                lblMaterial1.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad1.Text = fila["cantidad"].ToString();
+                                lblMarca1.Text = fila["nombreMarca"].ToString();
+                            }
+                            else if (i == 1)
+                            {
+                                lblMaterial2.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad2.Text = fila["cantidad"].ToString();
+                                lblMarca2.Text = fila["nombreMarca"].ToString();
+                            }
+                            else if (i == 2)
+                            {
+                                lblMaterial3.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad3.Text = fila["cantidad"].ToString();
+                                lblmarca3.Text = fila["nombreMarca"].ToString();
+                            }
+                            i++;
+                        }
+
+                        // Ocultar botones si ya fue procesada
+                        btnAceptar.Visible = btnNegar.Visible = (estado == "Pendiente");
+                    }
+                    else if (panelIndex == 1)
+                    {
+                        pnlSolicitud2.Visible = true;
+                        idSolicitud2 = Convert.ToInt32(g.First()["idSolicitud"]);
+                        lblNombre2.Text = g.First()["nombreUsuario"].ToString();
+                        lblRol2.Text = "Empleado";
+                        lblFecha2.Text = Convert.ToDateTime(g.First()["fecha"]).ToString("dd/MM/yyyy");
+                        lblMotivo2.Text = g.First()["motivo"].ToString();
+                        lblEstado2.Text = estado;
+
+                        lblMaterial4.Text = lblCantidad4.Text = lblMarca4.Text = "";
+                        lblMaterial5.Text = lblCantidad5.Text = lblMarca5.Text = "";
+                        lblMaterial6.Text = lblCantidad6.Text = lblMarca6.Text = "";
+
+                        int i = 0;
+                        foreach (var fila in g)
+                        {
+                            if (i == 0)
+                            {
+                                lblMaterial4.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad4.Text = fila["cantidad"].ToString();
+                                lblMarca4.Text = fila["nombreMarca"].ToString();
+                            }
+                            else if (i == 1)
+                            {
+                                lblMaterial5.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad5.Text = fila["cantidad"].ToString();
+                                lblMarca5.Text = fila["nombreMarca"].ToString();
+                            }
+                            else if (i == 2)
+                            {
+                                lblMaterial6.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad6.Text = fila["cantidad"].ToString();
+                                lblMarca6.Text = fila["nombreMarca"].ToString();
+                            }
+                            i++;
+                        }
+
+                        btnAceptar2.Visible = btnNegar2.Visible = (estado == "Pendiente");
+                    }
+                    else if (panelIndex == 2)
+                    {
+                        pnlSolicitud3.Visible = true;
+                        idSolicitud3 = Convert.ToInt32(g.First()["idSolicitud"]);
+                        lblNombre3.Text = g.First()["nombreUsuario"].ToString();
+                        lblRol3.Text = "Empleado";
+                        lblFecha3.Text = Convert.ToDateTime(g.First()["fecha"]).ToString("dd/MM/yyyy");
+                        lblMotivo3.Text = g.First()["motivo"].ToString();
+                        lblEstado3.Text = estado;
+
+                        lblMaterial7.Text = lblCantidad7.Text = lblMarca7.Text = "";
+                        lblMaterial8.Text = lblCantidad8.Text = lblMarca8.Text = "";
+                        lblMaterial9.Text = lblCantidad9.Text = lblMarca9.Text = "";
+
+                        int i = 0;
+                        foreach (var fila in g)
+                        {
+                            if (i == 0)
+                            {
+                                lblMaterial7.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad7.Text = fila["cantidad"].ToString();
+                                lblMarca7.Text = fila["nombreMarca"].ToString();
+                            }
+                            else if (i == 1)
+                            {
+                                lblMaterial8.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad8.Text = fila["cantidad"].ToString();
+                                lblMarca8.Text = fila["nombreMarca"].ToString();
+                            }
+                            else if (i == 2)
+                            {
+                                lblMaterial9.Text = fila["nombreMaterial"].ToString();
+                                lblCantidad9.Text = fila["cantidad"].ToString();
+                                lblMarca9.Text = fila["nombreMarca"].ToString();
+                            }
+                            i++;
+                        }
+
+                        btnAceptar3.Visible = btnNegar3.Visible = (estado == "Pendiente");
+                    }
+
+                    panelIndex++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar solicitudes (jefatura): " + ex.Message);
+            }
         }
 
+        private void btnAceptar2_Click(object sender, EventArgs e)
+        {
+            Solicitudd.CambiarEstadoSolicitud(idSolicitud2, "Aceptada");
+            lblEstado2.Text = "Aceptada";
+        }
+
+        // Botón Negar Solicitud 2
+        private void btnNegar2_Click(object sender, EventArgs e)
+        {
+            Solicitudd.CambiarEstadoSolicitud(idSolicitud2, "Negada");
+            lblEstado2.Text = "Negada";
+        }
+
+        // Botón Aceptar Solicitud 3
+        private void btnAceptar3_Click(object sender, EventArgs e)
+        {
+            Solicitudd.CambiarEstadoSolicitud(idSolicitud3, "Aceptada");
+            lblEstado3.Text = "Aceptada";
+        }
+
+        // Botón Negar Solicitud 3
+        private void btnNegar3_Click(object sender, EventArgs e)
+        {
+            Solicitudd.CambiarEstadoSolicitud(idSolicitud3, "Negada");
+            lblEstado3.Text = "Negada";
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Solicitudd.CambiarEstadoSolicitud(idSolicitud1, "Aceptada");
+            lblEstado.Text = "Aceptada";
+        }
+
+        private void btnNegar_Click(object sender, EventArgs e)
+        {
+            Solicitudd.CambiarEstadoSolicitud(idSolicitud1, "Aceptada");
+            lblEstado.Text = "Negada";
+        }
+
+        private void frmSolJefatura_Load(object sender, EventArgs e)
+        {
+            CargarSolicitudes();
+        }
     }
 }

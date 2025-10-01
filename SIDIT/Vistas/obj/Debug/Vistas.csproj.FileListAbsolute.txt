@@ -371,3 +371,17 @@ C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.contro
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmSolicitudesAnteriores.resources
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmCambiarContraseña.resources
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmRecuperarContraseña.resources
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\Plantillas\solicitud.html
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\DinkToPdf.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\Modelos.dll.config
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\DinkToPdf.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\DinkToPdf.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\itextsharp.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\itextsharp.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Vistas\obj\Debug\Vistas.Formularios.frmPrimerUsuario.resources

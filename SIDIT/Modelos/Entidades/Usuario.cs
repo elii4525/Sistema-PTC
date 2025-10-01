@@ -31,6 +31,18 @@ namespace Modelos.Entidades
         public int IdRol { get => idRol; set => idRol = value; }
 
         // Esta clase es para guardar los datos de la persona que inicio sesion y asi poder usarlos en el perfil
+
+        public static bool ExistenUsuarios()
+        {
+            using (SqlConnection con = ConexionDB.Conectar())
+            {
+                string query = "SELECT COUNT(*) FROM Usuario";
+                SqlCommand cmd = new SqlCommand(query, con);
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
         public static class SesionActual
         {
             public static int IdUsuario { get; set; }

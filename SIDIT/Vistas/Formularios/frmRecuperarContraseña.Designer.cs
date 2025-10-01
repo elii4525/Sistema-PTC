@@ -55,9 +55,8 @@
             this.lblResultado.AutoSize = true;
             this.lblResultado.Location = new System.Drawing.Point(26, 118);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(44, 16);
+            this.lblResultado.Size = new System.Drawing.Size(0, 16);
             this.lblResultado.TabIndex = 2;
-            this.lblResultado.Text = "label2";
             // 
             // btnEnviar
             // 

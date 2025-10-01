@@ -96,3 +96,15 @@ C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.cspr
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.csproj.Up2Date
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.dll
 C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\obj\Debug\Modelos.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\Modelos.dll.config
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\DinkToPdf.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\System.Reflection.TypeExtensions.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\DinkToPdf.pdb
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\DinkToPdf.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\itextsharp.dll
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\itextsharp.xml
+C:\Users\danie\OneDrive\Desktop\Sistema-PTC\SIDIT\Modelos\bin\Debug\itextsharp.xmlworker.dll

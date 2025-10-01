@@ -12,7 +12,7 @@ namespace Modelos.ServiciosCorreoElectronico
         public SoporteCorreos()
         {
             remitente = "itecavisos@gmail.com";
-            contraseña = "Contrasena123";
+            contraseña = "bchuhdjovbuoattg";
             host = "smtp.gmail.com";
             puerto = 587;
             habilitarSsl = true;
