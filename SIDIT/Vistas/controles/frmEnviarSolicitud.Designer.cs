@@ -324,7 +324,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.txtCantidad3);
             this.Controls.Add(this.txtCantidad2);
             this.Controls.Add(this.txtCantidad1);
@@ -356,7 +356,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmEnviarSolicitud";
-            this.Size = new System.Drawing.Size(1333, 770);
+            this.Size = new System.Drawing.Size(1337, 774);
             this.Load += new System.EventHandler(this.frmEnviarSolicitud_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

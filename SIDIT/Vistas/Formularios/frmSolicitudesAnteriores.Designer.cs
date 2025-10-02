@@ -80,11 +80,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1335, 848);
             this.MinimumSize = new System.Drawing.Size(1335, 848);
             this.Name = "frmSolicitudesAnteriores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSolicitudesAnteriores";
             this.Load += new System.EventHandler(this.frmSolicitudesAnteriores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
