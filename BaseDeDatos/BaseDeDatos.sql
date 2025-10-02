@@ -4,6 +4,12 @@ use BasePTC;
 go
 
 
+create database BasePTC
+go
+use BasePTC;
+go
+
+
 -- Tables 
 create table Rol (
 idRol int identity (1,1) primary key,
@@ -15,21 +21,12 @@ create table Usuario (
 idUsuario int identity (1,1) primary key,
 nombre varchar (50) not null,
 fechaNacimiento date not null,
-contraseña varchar(30),
+contraseÃ±a varchar(30),
 telefono varchar (20),
 correo varchar (75) unique,
 id_Rol int,
 constraint fk_rol Foreign key (id_Rol) references Rol(idRol));
-go
-
-SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'Usuario' AND COLUMN_NAME = 'contraseña'
-
-SELECT m.idMarca, m.nombreMarca
-FROM Material mat
-INNER JOIN Marca m ON mat.id_Marca = m.idMarca
-WHERE mat.idMaterial = 2
+go 
 
 create table Categoria (
 idCategoria int identity (1,1) primary key,
@@ -61,7 +58,6 @@ go
 create table Solicitud (
 idSolicitud int identity (1,1) primary key,
 motivo varchar (1000) not null,
-cantidadProducto int not null,
 fecha date not null,
 estado varchar (50) not null,
 id_Usuario int,
@@ -77,6 +73,19 @@ fechaRespuesta date,
 id_Solicitud int not null,
 constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud) ON DELETE CASCADE);
 go
+constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
+go
+
+-- Nuevas tablas
+
+create table SolicitudMaterial (
+    idSolicitudMaterial int identity(1,1) primary key,
+    idSolicitud int not null,
+    idMaterial int not null,
+    cantidad int not null,
+    constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
+    constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
+);
 
 create table salidaDeMaterial (
     idSalidamaterial int identity(1,1) primary key,
@@ -98,7 +107,7 @@ select
     u.idUsuario,
     u.nombre,
     u.fechaNacimiento,
-    u.contraseña,
+    u.contraseÃ±a,
     u.telefono,
     u.correo,
     r.idRol
@@ -113,7 +122,7 @@ as
 select 
     u.idUsuario,
     u.correo,
-    u.contraseña,
+    u.contraseÃ±a,
     r.tipoRol
 from Usuario u
 inner join Rol r on u.id_Rol = r.idRol;
@@ -122,107 +131,137 @@ go
 select *from VerUsuarios
 
 -- Inserts into
-insert into Rol values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
-('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+insert into Usuario 
+values ('Carlos Perez', '1990-05-12', '12345', '77778888', 'carlos.perez@gmail.com', 1),
+('Ana Gomez', '1995-07-22', 'abcde', '77779999', 'ana.gomez@gmail.com', 2),
+('Luis Torres', '1988-01-15', 'pass123', '70001122', 'luis.torres@gmail.com', 1),
+('Maria Lopez', '1992-03-19', 'maria123', '73334444', 'maria.lopez@gmail.com', 2),
+('Pedro Sanchez', '1987-08-25', 'pedrito', '72223344', 'pedro.sanchez@gmail.com', 1),
+('Lucia Martinez', '1993-09-12', 'lucia2023', '74445566', 'lucia.martinez@gmail.com', 2),
+('Jorge Ramirez', '1991-02-02', 'jorgepass', '70005566', 'jorge.ramirez@gmail.com', 1),
+('Carmen Rivas', '1996-11-30', 'carmen22', '75556677', 'carmen.rivas@gmail.com', 2),
+('Andres Castro', '1989-06-18', 'andrespwd', '71112233', 'andres.castro@gmail.com', 1),
+('Elena Diaz', '1994-10-05', 'elena123', '78889900', 'elena.diaz@gmail.com', 2),
+('Roberto Mendez', '1990-12-21', 'rober90', '73332211', 'roberto.mendez@gmail.com', 1),
+('Sofia Herrera', '1997-01-14', 'sofi123', '70006677', 'sofia.herrera@gmail.com', 2),
+('Miguel Alvarez', '1986-09-09', 'miguelito', '72225555', 'miguel.alvarez@gmail.com', 1),
+('Paola Chavez', '1995-07-30', 'paola95', '75559999', 'paola.chavez@gmail.com', 2),
+('Daniel Morales', '1992-04-17', 'daniel22', '76667777', 'daniel.morales@gmail.com', 1),
+('Gabriela Flores', '1993-08-10', 'gabi2023', '72229999', 'gabriela.flores@gmail.com', 2),
+('Jose Ruiz', '1991-06-06', 'josepass', '79998888', 'jose.ruiz@gmail.com', 1),
+('Valeria Ortiz', '1998-12-03', 'valeria98', '71114455', 'valeria.ortiz@gmail.com', 2),
+('Ricardo Castillo', '1989-11-01', 'rick89', '74446688', 'ricardo.castillo@gmail.com', 1),
+('Natalia Vargas', '1994-03-25', 'naty94', '73331122', 'natalia.vargas@gmail.com', 2);
+go
 
-insert into Marca 
-values ('Ardone'),
-('Dell'),
-('Nexxt Solutions'),
-('Hp'),
-('Office depot'),
-('Mikrotik'),
-('iTouch'),
-('3M'),
-('Sabo'),
-('Epson'),
-('Abro'),
-('Lenovo'),
-('Logitech'),
-('Canon'),
-('Bic');
+insert into Rol 
+values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
+('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+go
 
 insert into Categoria 
-values ('Computación','objetos de computacion'),
-('Perífericos','Aparato auxiliar e independiente conectado a la unidad central de una computadora u otro dispositivo electrónico.'),
-('Limpieza','onjetos de limpieza'),
-('Redes','conexion de redes'),
-('Almacenamiento','almacenamiento del sistema'),
-('Papeleria','objetos de papeleria');
+values ('ElectrÃ³nica', 'Dispositivos electrÃ³nicos en general'),
+('Muebles', 'Mobiliario de oficina y hogar'),
+('PapelerÃ­a', 'Material de oficina y Ãºtiles escolares'),
+('Limpieza', 'Productos de limpieza y aseo'),
+('Deportes', 'ArtÃ­culos deportivos'),
+('Cocina', 'Utensilios y equipos de cocina'),
+('ConstrucciÃ³n', 'Materiales de construcciÃ³n'),
+('Ropa', 'Vestimenta y textiles'),
+('Calzado', 'Zapatos y sandalias'),
+('TecnologÃ­a', 'Accesorios tecnolÃ³gicos'),
+('Juguetes', 'Juguetes infantiles'),
+('Libros', 'Textos y cuadernos'),
+('Herramientas', 'Instrumentos de trabajo manual'),
+('DecoraciÃ³n', 'ArtÃ­culos decorativos'),
+('VehÃ­culos', 'Accesorios de autos y motos'),
+('JardinerÃ­a', 'Productos para jardines'),
+('Seguridad', 'CÃ¡maras, candados y alarmas'),
+('Belleza', 'CosmÃ©ticos y productos de cuidado personal'),
+('Medicamentos', 'FÃ¡rmacos y suplementos'),
+('Otros', 'CategorÃ­a miscelÃ¡nea');
+go
 
-insert into Usuario 
-values ('Fatima Ester Medina Gonzales', '2002/4/3',  'Cesa23A5','+503 4554 5285', 'fatimaester.dit@gmail.com', 2), 
-('Orlando Josue Pineda Rivas', '2003/8/21', 'X933esD4','+503 4478 2547', 'orlandojosue.jefatura@gmail.com', 1), 
-('Michael Steve Murcia Martinez', '2002/5/01', 'AsQQ09211','+503 3385 2265', 'michaelsteve.dit@gmail.com', 2),
-('Cristopher Levi Rogger Marin', '2000/11/07', 'Yqm330pX1','+503 4528 0751','cristlevi.dit@gmail.com',2),
-('Mariana Verenice Villalobos Duran','2001/05/28','uMP931zXa','+503 7106 4809', 'marianavere.dit@gmail.com',2)
-
-
-
+insert into Marca
+values ('Sony'),('Samsung'),('LG'),('Apple'),('Dell'),
+('HP'),('Acer'),('Lenovo'),('Adidas'),('Nike'),
+('Puma'),('Reebok'),('Clorox'),('Colgate'),('Bic'),
+('Pilot'),('Toyota'),('Honda'),('Bosch'),('Makita');
+go
 
 insert into Material 
-values ('Laptop Ryzen 7', 10, '2021-03-15', 'Laptop de alto rendimiento para oficina', 'LAP-001', 1, 1),
-('Monitor Hp', 25, '2022-07-22', 'Teclado inalámbrico compacto', 'TECL-002',  2, 7),
-('Teclado alambrico', 5,  '2023-01-08', 'Aire comprimido para limpieza de computadoras', 'AIRE-003',3, 9),
-('Aire comprimido', 20, '2020-11-30', 'Router inalámbrico de alto rendimiento', 'ROUT-004',  4, 3),
-('Router 1200Mbps', 12, '2024-05-10', 'Impresora multifuncional con sistema de tinta continua', 'IMPR-005',  1, 10),
-('Tinta negra para impresora', 15, '2023-09-05', 'Botellas de tinta negra para impresora EcoTank', 'TINTA-006',  1, 10),
-('Switch RB260GS', 18, '2022-02-12', 'Switch de red 5 puertos Gigabit', 'SWITCH-007', 4, 6),
-('Cinta Scotch', 30, '2024-12-01', 'Memoria USB 64GB', 'USB-008',  5, 7),
-('Cámara IP NXT-CAM', 50, '2021-08-19', 'Cinta adhesiva transparente de oficina', 'CINTA-009',  6, 8),
-('Laptop core i5', 7,  '2023-06-14', 'Proyector portátil para presentaciones', 'PROY-010',  1, 7),
-('Limpiador en spray', 40, '2020-02-20', 'Paquete de hojas tamaño carta', 'PAPEL-011', 6, 5),
-('USB 1TB', 9,  '2022-04-25', 'Limpiador multiusos para superficies electrónicas', 'LIMP-012',  3, 11),
-('Disco duro externo de 2TB', 5,  '2023-11-30', 'Disco duro externo de 2TB USB 3.0', 'DD-013',  5, 2),
-('Cable RJ45', 16, '2024-03-05', 'Cámara de seguridad IP para interiores', 'CAM-014', 4, 3),
-('Plumones Artline', 8,  '2021-06-18', 'Computadora de escritorio básica', 'PC-015', 1, 1); 
+values ('Laptop HP', 10, '2023-01-15', 'Laptop de oficina', 'HP-12345', 10, 6),
+('Smartphone Samsung', 25, '2023-02-10', 'TelÃ©fono inteligente', 'SM-A52', 1, 2),
+('Monitor LG', 15, '2023-03-12', 'Monitor LED 24 pulgadas', 'LG-24MK', 1, 3),
+('Impresora Epson', 5, '2023-04-01', 'Impresora multifuncional', 'EP-TX120', 3, 6),
+('Silla Oficina', 20, '2023-05-11', 'Silla ergonÃ³mica negra', 'SILLA-ERG', 2, 8),
+('BalÃ³n Adidas', 30, '2023-06-14', 'BalÃ³n de fÃºtbol profesional', 'AD-BALON', 5, 9),
+('Zapatos Nike', 50, '2023-07-20', 'Zapatos deportivos', 'NK-SPORT', 9, 10),
+('Set Herramientas Bosch', 12, '2023-08-22', 'Kit de herramientas mecÃ¡nicas', 'BOSCH-SET', 13, 19),
+('Detergente Clorox', 60, '2023-09-01', 'Detergente lÃ­quido', 'CLX-500', 4, 13),
+('Perfume Dior', 40, '2023-09-18', 'Perfume de lujo', 'DIOR-XXL', 18, 20),
+('Camisa Polo', 70, '2023-09-25', 'Camisa de algodÃ³n', 'POLO-CAM', 8, 11),
+('Sandalias Puma', 35, '2023-09-30', 'Sandalias deportivas', 'PM-SAND', 9, 11),
+('CÃ¡mara Sony', 10, '2023-10-05', 'CÃ¡mara digital', 'SONY-CAM', 1, 1),
+('Tablet Apple', 8, '2023-10-12', 'iPad de 10 pulgadas', 'APL-TAB', 10, 4),
+('Licuadora Oster', 18, '2023-10-20', 'Licuadora de vidrio', 'OST-123', 6, 20),
+('Martillo Makita', 22, '2023-10-28', 'Martillo profesional', 'MKT-HAM', 13, 20),
+('Carro Toyota Corolla', 2, '2023-11-01', 'VehÃ­culo sedÃ¡n', 'TOY-COR', 15, 17),
+('Moto Honda', 4, '2023-11-05', 'Motocicleta 150cc', 'HON-150', 15, 18),
+('SofÃ¡ 3 puestos', 6, '2023-11-10', 'SofÃ¡ de cuero negro', 'SOFA-NEG', 2, 8),
+('Libro SQL Server', 25, '2023-11-15', 'Manual de SQL Server', 'BOOK-SQL', 12, 15);
 go
+
 insert into Solicitud 
-values ('Quedan pocas latas de aire comprimido, 3 para ser exactos', 3, '2025-07-18', 'Enviada',2, 4),
-('Necesito 10 tintas Epson negras para reponer', 10, '2025-02-02', 'Enviada', 3, 6),
-('Me hacen falta 5 teclados iTouch para las nuevas PCs', 5, '2025-07-21', 'Enviada', 3, 3),
-('Se necesitan 3 routers Nexxt para la red', 3, '2025-07-22', 'Enviada', 1, 5),
-('Se necesitan envíen 7 paquetes de papel tamaño carta', 7, '2025-06-23', 'Enviada', 3, 1),
-('Ya solo quedan 2 latas de aire comprimido Sabo para limpieza', 2, '2025-01-12', 'Enviada', 2, 4),
-('Se necesitan 2 Monitores HP', 2, '2025-02-12', 'Enviada', 4,2),
-('Necesito 1 tinta negra para impresora', 1, '2025-03-19', 'Enviada', 5,6),
-('Solicito 3 Switch RB260GS para conectar a la red',3,'2025-01-21','Enviada', 4,7),
-('Me hacen falta 4 Disco duro externo de 2TB',4,'2025-06-17','Enviada', 3,13),
-('Quedan pocas unidades de Laptop core i5 necesito 2',2,'2025-04-01','Enviada', 4,10),
-('Se solicitan 2 Teclados alambricos para reponer', 2, '2025-04-11', 'Enviada', 4, 3),
-('Se necesitan 7 Cinta Scotch', 7, '2025-06-27', 'Enviada', 4, 8),
-('Necesito 5 USB 1TB', 5, '2025-03-03', 'Enviada', 3,12),
-('Se solicitan 1 Cámara IP NXT-CAM para reponer', 1, '2025-03-28', 'Enviada', 5,9)
+values ('Requiere laptop para oficina', '2023-02-15', 'Pendiente', 1),
+('Solicita impresora nueva', '2023-03-01', 'Aprobada', 2),
+('Necesita balones para torneo', '2023-03-10', 'Pendiente', 3),
+('Reemplazo de monitor daÃ±ado', '2023-03-25', 'Rechazada', 4),
+('Compra detergente limpieza', '2023-04-05', 'Pendiente', 5),
+('Requiere sillas nuevas', '2023-04-12', 'Aprobada', 6),
+('Pide zapatos deportivos', '2023-04-20', 'Pendiente', 7),
+('Kit herramientas', '2023-05-01', 'Pendiente', 8),
+('Libros de consulta', '2023-05-15', 'Aprobada', 9),
+('Solicita tablet para oficina', '2023-05-30', 'Pendiente', 10),
+('Solicita perfumes para regalos', '2023-06-10', 'Rechazada', 11),
+('Necesita sofÃ¡s nuevos', '2023-06-20', 'Pendiente', 12),
+('Pide camisas para uniformes', '2023-07-01', 'Pendiente', 13),
+('Requiere cÃ¡mara para fotografÃ­a', '2023-07-10', 'Aprobada', 14),
+('Solicita carro institucional', '2023-07-25', 'Pendiente', 15),
+('Necesita moto para repartos', '2023-08-01', 'Pendiente', 16),
+('Compra licuadoras', '2023-08-15', 'Pendiente', 17),
+('Solicita sandalias deportivas', '2023-08-30', 'Aprobada', 18),
+('Solicita artÃ­culos de limpieza', '2023-09-10', 'Pendiente', 19),
+('Compra martillos para taller', '2023-09-25', 'Pendiente', 20);
+go
 
-insert into salidaDeMaterial values
-(1, 2, '2025-07-26', 2, 'consumo de tinta para impresora'),
-(2, 1, '2025-07-27', 3, 'uso de impresora'),
-(3, 3, '2025-07-28', 4, 'consumo de plumones'),
-(4, 5, '2025-07-29', 5, 'uso de cinta scotch'),
-(5, 4, '2025-07-30', 1, 'limpieza con aire comprimido'),
-(6, 2, '2025-08-01', 3, 'limpieza con spray'),
-(7, 10, '2025-08-02', 4, 'consumo de papel'),
-(8, 1, '2025-08-03', 5, 'uso de proyector'),
-(9, 1, '2025-08-04', 2, 'instalación de cámara'),
-(1, 3, '2025-08-05', 1, 'consumo adicional de tinta'),
-(4, 2, '2025-08-06', 4, 'uso adicional de cinta');
+insert into SolicitudMaterial
+values (1, 1, 1),(2, 4, 1),(3, 6, 10),(4, 3, 2),(5, 9, 5),
+(6, 5, 10),(7, 7, 5),(8, 8, 2),(9, 20, 10),(10, 14, 1),
+(11, 10, 3),(12, 19, 2),(13, 11, 20),(14, 13, 1),(15, 17, 1),
+(16, 18, 1),(17, 15, 3),(18, 12, 10),(19, 9, 15),(20, 16, 5);
+go
 
-insert into HistorialSolicitud values
-('Rechazado','2025-07-23', 1),
-('Rechazado', '2025-02-05', 2),
-('Aceptado', '2025-07-25', 3),
-('Aceptado', '2025-07-26', 4),
-('Aceptado', '2025-06-25', 5),
-('Aceptado', '2025-01-15', 6),
-('Rechazado', '2025-02-15', 7),
-('Aceptado','2025-03-21', 8),
-('Aceptado', '2025-01-23', 9),
-('Rechazado', '2025-06-19', 10),
-('Rechazado', '2025-04-06', 11),
-('Rechazado', '2025-04-18', 12),
-('Rechazado', '2025-01-21', 13),
-('Aceptado', '2025-06-29', 14),
-('Aceptado', '2025-03-06', 15);
+insert into salidaDeMaterial
+values (1, 1, '2025-03-01', 1, 'AsignaciÃ³n a oficina'),
+(4, 1, '2025-03-05', 2, 'Uso en Ã¡rea de impresiÃ³n'),
+(6, 5, '2025-03-15', 3, 'Torneo deportivo'),
+(3, 1, '2025-03-30', 4, 'Reemplazo monitor daÃ±ado'),
+(9, 10, '2025-04-10', 5, 'Limpieza general'),
+(5, 5, '2025-04-20', 6, 'Nueva oficina'),
+(7, 2, '2025-04-25', 7, 'Entrenamientos'),
+(8, 1, '2025-05-05', 8, 'Mantenimiento'),
+(20, 5, '2025-05-15', 9, 'Curso SQL'),
+(14, 1, '2025-05-25', 10, 'AsignaciÃ³n a direcciÃ³n'),
+(10, 2, '2025-06-01', 11, 'Regalos institucionales'),
+(19, 1, '2025-06-15', 12, 'Sala de reuniones'),
+(11, 10, '2025-07-05', 13, 'Uniformes'),
+(13, 1, '2025-07-15', 14, 'FotografÃ­a evento'),
+(17, 1, '2025-07-30', 15, 'Uso institucional'),
+(18, 1, '2025-08-05', 16, 'Repartos'),
+(15, 2, '2025-08-20', 17, 'Cocina comedor'),
+(12, 5, '2025-09-01', 18, 'Deporte'),
+(9, 8, '2025-09-15', 19, 'Limpieza bodega');
 go
 
 -- Select
@@ -232,7 +271,7 @@ Select *from Categoria
 Select *from Solicitud
 Select *from Marca
 Select *from Material
-Select *from HistorialSolicitud
+Select *from SolicitudMaterial
 go
 
 
@@ -240,12 +279,13 @@ go
 
 Create View selectMateriales as 
 select 
+m.idMaterial as Id,
 m.nombreMaterial as [Nombre del Material], 
 m.cantidad as Cantidad, 
 m.fechaIngreso as [Fecha de Ingreso], 
-m.descripcionMaterial as [Descripción], 
+m.descripcionMaterial as [DescripciÃ³n], 
 m.modelo as [Modelo], 
-c.nombreCategoria as [Categoría], 
+c.nombreCategoria as [CategorÃ­a], 
 mar.nombreMarca as [Marca] from Material m
 Inner Join
 Categoria c on c.idCategoria = m.id_Categoria
@@ -254,14 +294,14 @@ Marca mar on mar.idMarca = m.id_Marca;
 
 select *from selectMateriales;
 
----No está ejecutada, solo copie la vista para añadir el where y subir el comando a c#
+---No estÃ¡ ejecutada, solo copie la vista para aÃ±adir el where y subir el comando a c#
 select 
 m.nombreMaterial as [Nombre del Material], 
 m.cantidad as Cantidad, 
 m.fechaIngreso as [Fecha de Ingreso], 
-m.descripcionMaterial as [Descripción], 
+m.descripcionMaterial as [DescripciÃ³n], 
 m.modelo as [Modelo], 
-c.nombreCategoria as [Categoría], 
+c.nombreCategoria as [CategorÃ­a], 
 mar.nombreMarca as [Marca] from Material m
 Inner Join
 Categoria c on c.idCategoria = m.id_Categoria
@@ -280,9 +320,9 @@ select Top 10
 m.nombreMaterial as [Nombre del Material], 
 m.cantidad as Cantidad, 
 m.fechaIngreso as [Fecha de Ingreso], 
-m.descripcionMaterial as [Descripción], 
+m.descripcionMaterial as [DescripciÃ³n], 
 m.modelo as [Modelo], 
-c.nombreCategoria as [Categoría], 
+c.nombreCategoria as [CategorÃ­a], 
 mar.nombreMarca as [Marca] from Material m
 Inner Join
 Categoria c on c.idCategoria = m.id_Categoria
@@ -294,38 +334,25 @@ select *from registrosUlt;
 
 
 --CONSULTAS LENIN
+-- ==========================================================
+-- PROCEDIMIENTOS ALMACENADOS PARA LAS GRÃFICAS
+-- ==========================================================
 
--- ==========================================================
--- SELECTS PARA VERIFICAR TODOS LOS DATOS
--- ==========================================================
-create procedure spu_consumomaterialpormes
-    @nombrematerial varchar(100),
-    @fechainicio date,
-    @fechafin date
+-- Procedimiento para Chart Inventario (CategorÃ­as especÃ­ficas)
+create procedure sp_obtener_inventario_categorias
 as
 begin
-    select
-        datename(month, s.fechaConsumo) as Mes,
-        sum(s.cantidadConsumida) as CantidadConsumida,
-        m.nombreMaterial,
-        c.nombreCategoria
-    from
-        salidaDeMaterial s
-    inner join 
-        Material m on s.id_Material = m.idMaterial
-    inner join 
-        Categoria c on m.id_Categoria = c.idCategoria
-    where 
-        m.nombreMaterial like '%' + @nombrematerial + '%'
-        and s.fechaConsumo between @fechainicio and @fechafin
-    group by
-        datename(month, s.fechaConsumo),
-        m.nombreMaterial,
-        c.nombreCategoria
-    order by
-        min(s.fechaConsumo);
-end;
+    select 
+        m.nombrematerial,
+        m.cantidad,
+        c.nombrecategoria
+    from material m
+    inner join categoria c on m.id_categoria = c.idcategoria
+    where c.nombrecategoria in ('computaciÃ³n', 'perifÃ©ricos', 'limpieza', 'papeleria')
+    order by c.nombrecategoria, m.nombrematerial;
+end
 go
+
 CREATE PROCEDURE spu_obtenerinventariomaterial
     @nombrematerial VARCHAR(100)
 AS
@@ -350,11 +377,43 @@ select * from Marca;
 select * from Material;
 select * from solicitud;
 select * from HistorialSolicitud;
+
+
+-- Procedimiento para Chart Consumo (salida_de_material)
+create procedure sp_obtener_consumo_material
+as
+begin
+    select 
+        m.nombrematerial,
+        sum(s.cantidadconsumida) as total_consumido
+    from salida_de_material s
+    inner join material m on s.id_material = m.idmaterial
+    group by m.nombrematerial
+    order by total_consumido desc;
+end
 go
 
 
+-- Procedimiento para DataGridView CatÃ¡logo
+create procedure sp_obtener_catalogo_completo
+as
+begin
+    select 
+        m.nombrematerial,
+        m.cantidad,
+        m.descripcionmaterial,
+        m.modelo,
+        c.nombrecategoria,
+        ma.nombremarca
+    from material m
+    inner join categoria c on m.id_categoria = c.idcategoria
+    inner join marca ma on m.id_marca = ma.idmarca
+    order by c.nombrecategoria, m.nombrematerial;
+end
+go
+
 -- ==========================================================
--- VERIFICACIÓN DE PROCEDIMIENTOS
+-- VERIFICACIÃ“N DE PROCEDIMIENTOS
 -- ==========================================================
 
 -- Verificar que los procedimientos se crearon
@@ -371,7 +430,7 @@ go
 exec sp_obtener_consumo_material;
 go
 
--- Probar el procedimiento de catálogo
+-- Probar el procedimiento de catÃ¡logo
 exec sp_obtener_catalogo_completo;
 go
 
@@ -439,22 +498,23 @@ BEGIN
     ORDER BY s.fechaConsumo DESC;
 END
 GO
--- Ejecuta ESTO en SSMS, asegurándote de usar la BD BasePTC
+-- Ejecuta ESTO en SSMS, asegurÃ¡ndote de usar la BD BasePTC
 -- Si el procedimiento existe, lo modifica. Si no existe, lo crea.
 IF OBJECT_ID('sp_registrar_salida_material', 'P') IS NOT NULL
     DROP PROCEDURE sp_registrar_salida_material;
 GO
 
+
 create procedure sp_registrar_salida_material
     -- RECUERDA: Cambiamos @id_material por @nombre_material
     @nombre_material varchar(100), 
-    @cantidad_consumida int,
-    @fecha_consumo date,
-    @id_usuario int,
-    @motivo_salida varchar(1000)
+Â  Â  @cantidad_consumida int,
+Â  Â  @fecha_consumo date,
+Â  Â  @id_usuario int,
+Â  Â  @motivo_salida varchar(1000)
 as
 begin
-    -- Variables internas para la validación
+    -- Variables internas para la validaciÃ³n
     declare @id_material_local int;
     declare @stock_actual int;
 
@@ -477,25 +537,32 @@ begin
         return;
     end
 
-    -- Si las validaciones pasan, se ejecuta la transacción
+    -- Si las validaciones pasan, se ejecuta la transacciÃ³n
     begin try
-        begin transaction;
-        
-        -- 3. Insertar en salida_de_material (Registra la salida)
-        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
-        
-        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
-        update Material 
-        set cantidad = cantidad - @cantidad_consumida
-        where idMaterial = @id_material_local;
-        
-        commit transaction;
-    end try
-    begin catch
-        if @@trancount > 0
-            rollback transaction;
-        throw;
-    end catch
+Â  Â  Â  Â  begin transaction;
+Â  Â  Â  Â Â 
+Â  Â  Â  Â  -- 3. Insertar en salida_de_material (Registra la salida)
+Â  Â  Â  Â  insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
+Â  Â  Â  Â  values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+Â  Â  Â  Â Â 
+Â  Â  Â  Â  -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
+Â  Â  Â  Â  update MaterialÂ 
+Â  Â  Â  Â  set cantidad = cantidad - @cantidad_consumida
+Â  Â  Â  Â  where idMaterial = @id_material_local;
+Â  Â  Â  Â Â 
+Â  Â  Â  Â  commit transaction;
+Â  Â  end try
+Â  Â  begin catch
+Â  Â  Â  Â  if @@trancount > 0
+Â  Â  Â  Â  Â  Â  rollback transaction;
+Â  Â  Â  Â  throw;
+Â  Â  end catch
 end
 go
+
+
+--UPDATE DE MATERIAL
+
+--No se debe ejecutar, pero es la que utilizo en c#
+Update Material set nombreMaterial = @nombre, cantidad = @cantidad where idMaterial = @id;
+

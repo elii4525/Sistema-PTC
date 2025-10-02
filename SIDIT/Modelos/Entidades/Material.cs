@@ -111,6 +111,20 @@ namespace Modelos.Entidades
             }
         }
 
-        
+        public bool ActualizarMaterial()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string comando = "Update Material set nombreMaterial = @nombre, cantidad = @cantidad where idMaterial = @id;";
+            SqlCommand cmd = new SqlCommand(comando, con);
+            cmd.Parameters.AddWithValue("@nombre", nombreMaterial);
+            cmd.Parameters.AddWithValue("@cantidad", cantidad);
+            cmd.Parameters.AddWithValue("@id", idMaterial);
+
+            if (cmd.ExecuteNonQuery() > 0)
+                return true;
+            else
+                return false;
+
+        }
     }
 }

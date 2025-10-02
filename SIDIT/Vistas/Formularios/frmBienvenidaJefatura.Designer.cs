@@ -36,25 +36,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerUsuarios = new System.Windows.Forms.Label();
             this.icbtnUsuarios = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblVer = new System.Windows.Forms.Label();
             this.icbtnInventario = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblVerSoli = new System.Windows.Forms.Label();
             this.icbtnSol = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblVerConsumo = new System.Windows.Forms.Label();
             this.icbtnConsumo = new FontAwesome.Sharp.IconButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.71698F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.28302F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1749, 310);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1627, 310);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // pictureBox1
@@ -100,7 +100,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 225);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1743, 82);
+            this.panel1.Size = new System.Drawing.Size(1621, 82);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -109,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(543, 0);
+            this.label2.Location = new System.Drawing.Point(482, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(685, 69);
             this.label2.TabIndex = 0;
@@ -121,7 +121,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 125);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1743, 94);
+            this.panel2.Size = new System.Drawing.Size(1621, 94);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.Resize += new System.EventHandler(this.panel2_Resize);
@@ -131,7 +131,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(692, 29);
+            this.label1.Location = new System.Drawing.Point(631, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(391, 65);
             this.label1.TabIndex = 1;
@@ -153,7 +153,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1749, 541);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1627, 493);
             this.tableLayoutPanel2.TabIndex = 17;
             // 
             // panel6
@@ -164,10 +164,22 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.lblVerUsuarios);
             this.panel6.Controls.Add(this.icbtnUsuarios);
-            this.panel6.Location = new System.Drawing.Point(1362, 65);
+            this.panel6.Location = new System.Drawing.Point(1255, 41);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(335, 410);
             this.panel6.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(58, 262);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(241, 28);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Gestión de Usuarios";
             // 
             // label3
             // 
@@ -216,10 +228,22 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.lblVer);
             this.panel3.Controls.Add(this.icbtnInventario);
-            this.panel3.Location = new System.Drawing.Point(51, 65);
+            this.panel3.Location = new System.Drawing.Point(35, 41);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(335, 410);
             this.panel3.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(110, 262);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 28);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Inventario";
             // 
             // label6
             // 
@@ -268,10 +292,22 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.lblVerSoli);
             this.panel4.Controls.Add(this.icbtnSol);
-            this.panel4.Location = new System.Drawing.Point(488, 65);
+            this.panel4.Location = new System.Drawing.Point(441, 41);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(335, 410);
             this.panel4.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(104, 262);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 28);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Solicitudes";
             // 
             // label5
             // 
@@ -320,10 +356,22 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.lblVerConsumo);
             this.panel5.Controls.Add(this.icbtnConsumo);
-            this.panel5.Location = new System.Drawing.Point(925, 65);
+            this.panel5.Location = new System.Drawing.Point(847, 41);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(335, 410);
             this.panel5.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(114, 262);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 28);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Consumo";
             // 
             // label11
             // 
@@ -364,60 +412,12 @@
             this.icbtnConsumo.UseVisualStyleBackColor = true;
             this.icbtnConsumo.Click += new System.EventHandler(this.icbtnConsumo_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(110, 262);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 28);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Inventario";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(104, 262);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 28);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Solicitudes";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(114, 262);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 28);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Consumo";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(58, 262);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(241, 28);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Gestión de Usuarios";
-            // 
             // frmBienvenidaJefatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1749, 851);
+            this.ClientSize = new System.Drawing.Size(1627, 803);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

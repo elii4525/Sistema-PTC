@@ -18,7 +18,8 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistroConsumo());
+            Application.Run(new frmMenuDIT());
+
             //Application.Run(new frmBienvenidaJefatura());
         }
     }
