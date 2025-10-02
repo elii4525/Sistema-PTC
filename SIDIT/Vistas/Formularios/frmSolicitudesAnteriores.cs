@@ -21,6 +21,7 @@ namespace Vistas.Formularios
             InitializeComponent();
             _idUsuario = idUsuario;
             EstilizarDataGrid(dataGridView1);
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(12);
         }
 
         private void frmSolicitudesAnteriores_Load(object sender, EventArgs e)

@@ -16,6 +16,8 @@ namespace Vistas.Formularios
         public frmAggMarca()
         {
             InitializeComponent();
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label6.Font = Helper.FuenteHelper.ObtenerFuente(13);
         }
 
         private void icbtnSalir_Click(object sender, EventArgs e)
@@ -49,6 +51,9 @@ namespace Vistas.Formularios
             }
         }
 
+        private void pnlAggMarcas_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

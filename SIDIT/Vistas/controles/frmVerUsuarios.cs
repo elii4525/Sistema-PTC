@@ -17,6 +17,8 @@ namespace Vistas.Controles
         public frmVerUsuarios()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(13);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
 
         private void frmVerUsuarios_Load(object sender, EventArgs e)

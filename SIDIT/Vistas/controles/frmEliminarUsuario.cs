@@ -18,6 +18,8 @@ namespace Vistas.Controles
         public frmEliminarUsuario()
         {
             InitializeComponent(); 
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(13);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(9);
         }
 
         private void frmEliminarUsuario_Load(object sender, EventArgs e)

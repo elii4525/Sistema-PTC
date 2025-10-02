@@ -1,6 +1,6 @@
-create database BasePTCC
+create database BasePTC2
 go
-use BasePTCC;
+use BasePTC2;
 go
 
 -- Tables 
@@ -14,7 +14,7 @@ create table Usuario (
 idUsuario int identity (1,1) primary key,
 nombre varchar (50) not null,
 fechaNacimiento date not null,
-contrase�a varchar(250),
+contraseña varchar(250),
 telefono varchar (20),
 correo varchar (75) unique,
 id_Rol int,
@@ -66,16 +66,6 @@ create table SolicitudMaterial (
     constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
     constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
 );
-
-create table HistorialSolicitud (
-idHistorialSolicitud int identity (1,1) primary key,
-estadoSolicitud varchar (50),
-fechaRespuesta date,
-id_Solicitud int not null,
-constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud) ON DELETE CASCADE);
-go
-constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
-go
 
 
 create table salidaDeMaterial (
@@ -181,29 +171,6 @@ values ('Laptop HP', 10, '2023-01-15', 'Laptop de oficina', 'HP-12345', 10, 6),
 ('Libro SQL Server', 25, '2023-11-15', 'Manual de SQL Server', 'BOOK-SQL', 12, 15);
 go
 
-insert into Solicitud 
-values ('Requiere laptop para oficina', '2023-02-15', 'Pendiente', 1),
-('Solicita impresora nueva', '2023-03-01', 'Aprobada', 2),
-('Necesita balones para torneo', '2023-03-10', 'Pendiente', 3),
-('Reemplazo de monitor dañado', '2023-03-25', 'Rechazada', 4),
-('Compra detergente limpieza', '2023-04-05', 'Pendiente', 5),
-('Requiere sillas nuevas', '2023-04-12', 'Aprobada', 6),
-('Pide zapatos deportivos', '2023-04-20', 'Pendiente', 7),
-('Kit herramientas', '2023-05-01', 'Pendiente', 8),
-('Libros de consulta', '2023-05-15', 'Aprobada', 9),
-('Solicita tablet para oficina', '2023-05-30', 'Pendiente', 10),
-('Solicita perfumes para regalos', '2023-06-10', 'Rechazada', 11),
-('Necesita sofás nuevos', '2023-06-20', 'Pendiente', 12),
-('Pide camisas para uniformes', '2023-07-01', 'Pendiente', 13),
-('Requiere cámara para fotografía', '2023-07-10', 'Aprobada', 14),
-('Solicita carro institucional', '2023-07-25', 'Pendiente', 15),
-('Necesita moto para repartos', '2023-08-01', 'Pendiente', 16),
-('Compra licuadoras', '2023-08-15', 'Pendiente', 17),
-('Solicita sandalias deportivas', '2023-08-30', 'Aprobada', 18),
-('Solicita artículos de limpieza', '2023-09-10', 'Pendiente', 19),
-('Compra martillos para taller', '2023-09-25', 'Pendiente', 20);
-go
-
 insert into SolicitudMaterial
 values (1, 1, 1),(2, 4, 1),(3, 6, 10),(4, 3, 2),(5, 9, 5),
 (6, 5, 10),(7, 7, 5),(8, 8, 2),(9, 20, 10),(10, 14, 1),
@@ -211,27 +178,6 @@ values (1, 1, 1),(2, 4, 1),(3, 6, 10),(4, 3, 2),(5, 9, 5),
 (16, 18, 1),(17, 15, 3),(18, 12, 10),(19, 9, 15),(20, 16, 5);
 go
 
-insert into salidaDeMaterial
-values (1, 1, '2025-03-01', 1, 'Asignación a oficina'),
-(4, 1, '2025-03-05', 2, 'Uso en área de impresión'),
-(6, 5, '2025-03-15', 3, 'Torneo deportivo'),
-(3, 1, '2025-03-30', 4, 'Reemplazo monitor dañado'),
-(9, 10, '2025-04-10', 5, 'Limpieza general'),
-(5, 5, '2025-04-20', 6, 'Nueva oficina'),
-(7, 2, '2025-04-25', 7, 'Entrenamientos'),
-(8, 1, '2025-05-05', 8, 'Mantenimiento'),
-(20, 5, '2025-05-15', 9, 'Curso SQL'),
-(14, 1, '2025-05-25', 10, 'Asignación a dirección'),
-(10, 2, '2025-06-01', 11, 'Regalos institucionales'),
-(19, 1, '2025-06-15', 12, 'Sala de reuniones'),
-(11, 10, '2025-07-05', 13, 'Uniformes'),
-(13, 1, '2025-07-15', 14, 'Fotografía evento'),
-(17, 1, '2025-07-30', 15, 'Uso institucional'),
-(18, 1, '2025-08-05', 16, 'Repartos'),
-(15, 2, '2025-08-20', 17, 'Cocina comedor'),
-(12, 5, '2025-09-01', 18, 'Deporte'),
-(9, 8, '2025-09-15', 19, 'Limpieza bodega');
-go
 
 -- Select
 Select *from Usuario
@@ -241,6 +187,7 @@ Select *from Solicitud
 Select *from Marca
 Select *from Material
 Select *from SolicitudMaterial
+select *from salidaDeMaterial   
 go
 
 --Creacion de consultas para el sistema en c#
@@ -339,15 +286,6 @@ BEGIN
         nombreMaterial;
 END;
 GO
---selects
-select * from Rol;
-select * from Usuario;
-select * from Categoria;
-select * from Marca;
-select * from Material;
-select * from solicitud;
-select * from HistorialSolicitud;
-
 
 -- Procedimiento para Chart Consumo (salida_de_material)
 create procedure sp_obtener_consumo_material

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.Helper;
 
 namespace Vistas.Formularios
 {
@@ -16,6 +17,8 @@ namespace Vistas.Formularios
         public frmBienvenidoDIT()
         {
             InitializeComponent();
+            label1.Font = FuenteHelper.ObtenerFuente(30);
+            label2.Font = FuenteHelper.ObtenerFuente(35);
         }
 
         private void lblVer_Click(object sender, EventArgs e)

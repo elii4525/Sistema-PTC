@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelos.Entidades;
+using Vistas.HelperBarraNegra;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MiTextBox = Vistas.Controles.TextBox;
 
@@ -19,6 +20,14 @@ namespace Vistas.Controles
         {
             InitializeComponent();
             CargarRoles();
+            OnHandleCreated(EventArgs.Empty);
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+
+            BarraNegra.TryApplyDarkTitleBar(this.Handle);
         }
 
         private void frmAgregarUsuario_Load(object sender, EventArgs e)

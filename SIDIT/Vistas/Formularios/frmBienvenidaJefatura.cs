@@ -17,6 +17,8 @@ namespace Vistas.Formularios
         public frmBienvenidaJefatura()
         {
             InitializeComponent();
+            label1.Font = FuenteHelper.ObtenerFuente(30);
+            label2.Font = FuenteHelper.ObtenerFuente(35);
         }
 
         private void lblVer_Click(object sender, EventArgs e)
@@ -140,6 +142,11 @@ namespace Vistas.Formularios
         private void lblVerUsuarios_MouseLeave(object sender, EventArgs e)
         {
             lblVerUsuarios.ForeColor = Color.White;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

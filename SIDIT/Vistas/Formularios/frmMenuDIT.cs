@@ -200,6 +200,12 @@ namespace Vistas.Formularios
             pbLogoITEC.Invalidate();
         }
 
-
+        private void icpbConfiguracion_Click(object sender, EventArgs e)
+        {
+            Configuracion c = new Configuracion();
+            c.Dock = DockStyle.Fill;
+            pnlContenedorDIT.Controls.Clear();
+            pnlContenedorDIT.Controls.Add(c);
+        }
     }
 }

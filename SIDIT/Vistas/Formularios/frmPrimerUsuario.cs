@@ -23,6 +23,13 @@ namespace Vistas.Formularios
         {
             dtpFecha.MaxDate = DateTime.Today.AddYears(-18);
             dtpFecha.MinDate = DateTime.Today.AddYears(-100);
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(15);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label6.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label7.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(15);
 
         }
 

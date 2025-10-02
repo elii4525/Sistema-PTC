@@ -18,6 +18,13 @@ namespace Vistas.Controles
         public Configuracion()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(12);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label6.Font = Helper.FuenteHelper.ObtenerFuente(8);
+
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

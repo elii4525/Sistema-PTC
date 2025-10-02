@@ -92,7 +92,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(200, 104);
+            this.label8.Location = new System.Drawing.Point(66, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(343, 18);
             this.label8.TabIndex = 51;

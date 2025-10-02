@@ -12,7 +12,7 @@ namespace Modelos.Conexion
     {
 
         private static string servidor = "Orlando\\SQLEXPRESS";
-        private static string database = "BasePTCC";
+        private static string database = "BasePTC2";
 
         //private static string servidor = "Lenovo\\SQLEXPRESS";
         //private static string database = "BasePTC";

@@ -246,12 +246,20 @@ namespace Vistas.Formularios
             MostrarFormUsuariosEnPanel();
         }
 
-        private void pbAjustes_Click(object sender, EventArgs e)
+        private void icpbConfiguracion_Click(object sender, EventArgs e)
         {
-            Configuracion c= new Configuracion();
+            Configuracion c = new Configuracion();
             c.Dock = DockStyle.Fill;
             pnlContenedorJ.Controls.Clear();
             pnlContenedorJ.Controls.Add(c);
+
+            pnlContenedorJ.Controls.Clear(); 
+            frmInventarioJefatura inventarioJ = new frmInventarioJefatura();
+            inventarioJ.TopLevel = false;
+            inventarioJ.FormBorderStyle = FormBorderStyle.None;
+            inventarioJ.Dock = DockStyle.Fill;
+            pnlContenedorJ.Controls.Add(inventarioJ);
+            inventarioJ.Show(); 
         }
     }
 }

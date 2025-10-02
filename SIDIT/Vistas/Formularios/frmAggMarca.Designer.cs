@@ -30,11 +30,11 @@
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlAggMarcas = new System.Windows.Forms.Panel();
+            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAggMarca = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
-            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.pnlAggMarcas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icbtnSalir)).BeginInit();
@@ -72,6 +72,20 @@
             this.pnlAggMarcas.Name = "pnlAggMarcas";
             this.pnlAggMarcas.Size = new System.Drawing.Size(663, 336);
             this.pnlAggMarcas.TabIndex = 1;
+            this.pnlAggMarcas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAggMarcas_Paint);
+            // 
+            // icbtnSalir
+            // 
+            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.icbtnSalir.IconColor = System.Drawing.Color.White;
+            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSalir.IconSize = 27;
+            this.icbtnSalir.Location = new System.Drawing.Point(622, 10);
+            this.icbtnSalir.Name = "icbtnSalir";
+            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
+            this.icbtnSalir.TabIndex = 50;
+            this.icbtnSalir.TabStop = false;
+            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
             // 
             // label6
             // 
@@ -124,19 +138,6 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(269, 36);
             this.txtMarca.TabIndex = 0;
-            // 
-            // icbtnSalir
-            // 
-            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.icbtnSalir.IconColor = System.Drawing.Color.White;
-            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnSalir.IconSize = 27;
-            this.icbtnSalir.Location = new System.Drawing.Point(622, 10);
-            this.icbtnSalir.Name = "icbtnSalir";
-            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
-            this.icbtnSalir.TabIndex = 50;
-            this.icbtnSalir.TabStop = false;
-            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
             // 
             // frmAggMarca
             // 

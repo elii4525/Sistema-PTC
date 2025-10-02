@@ -17,6 +17,7 @@ namespace Vistas.Formularios
         public frmRecuperarContraseña()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)

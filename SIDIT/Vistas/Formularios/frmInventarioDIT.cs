@@ -23,7 +23,9 @@ namespace Vistas.Formularios
         public frmInventarioDIT()
         {
             InitializeComponent();
-
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(12);
+            lblCategoria.Font = Helper.FuenteHelper.ObtenerFuente(13);
+            lblMarcas.Font = Helper.FuenteHelper.ObtenerFuente(13);
         }
 
 

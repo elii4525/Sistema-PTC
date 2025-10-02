@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icbtnSalir)).BeginInit();
@@ -94,6 +94,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(756, 529);
             this.panel2.TabIndex = 6;
+            // 
+            // icbtnSalir
+            // 
+            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.icbtnSalir.IconColor = System.Drawing.Color.White;
+            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSalir.IconSize = 27;
+            this.icbtnSalir.Location = new System.Drawing.Point(707, 12);
+            this.icbtnSalir.Name = "icbtnSalir";
+            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
+            this.icbtnSalir.TabIndex = 48;
+            this.icbtnSalir.TabStop = false;
+            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
             // 
             // label1
             // 
@@ -170,7 +183,7 @@
             this.cbCategoria.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(207, 272);
+            this.cbCategoria.Location = new System.Drawing.Point(235, 272);
             this.cbCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(247, 24);
@@ -181,7 +194,7 @@
             this.cbMarcas.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarcas.FormattingEnabled = true;
-            this.cbMarcas.Location = new System.Drawing.Point(207, 166);
+            this.cbMarcas.Location = new System.Drawing.Point(235, 166);
             this.cbMarcas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMarcas.Name = "cbMarcas";
             this.cbMarcas.Size = new System.Drawing.Size(247, 24);
@@ -190,7 +203,7 @@
             // dtpFechaIng
             // 
             this.dtpFechaIng.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dtpFechaIng.Location = new System.Drawing.Point(207, 375);
+            this.dtpFechaIng.Location = new System.Drawing.Point(235, 375);
             this.dtpFechaIng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaIng.Name = "dtpFechaIng";
             this.dtpFechaIng.Size = new System.Drawing.Size(289, 22);
@@ -199,7 +212,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCantidad.Location = new System.Drawing.Point(207, 427);
+            this.txtCantidad.Location = new System.Drawing.Point(235, 427);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(247, 22);
@@ -208,7 +221,7 @@
             // txtModelo
             // 
             this.txtModelo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtModelo.Location = new System.Drawing.Point(207, 219);
+            this.txtModelo.Location = new System.Drawing.Point(235, 219);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(247, 22);
@@ -217,7 +230,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtDescripcion.Location = new System.Drawing.Point(207, 321);
+            this.txtDescripcion.Location = new System.Drawing.Point(235, 321);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(433, 22);
@@ -226,7 +239,7 @@
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNombre.Location = new System.Drawing.Point(207, 114);
+            this.txtNombre.Location = new System.Drawing.Point(235, 114);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(247, 22);
@@ -291,19 +304,6 @@
             this.label15.Size = new System.Drawing.Size(77, 19);
             this.label15.TabIndex = 32;
             this.label15.Text = "Modelo:";
-            // 
-            // icbtnSalir
-            // 
-            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.icbtnSalir.IconColor = System.Drawing.Color.White;
-            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnSalir.IconSize = 27;
-            this.icbtnSalir.Location = new System.Drawing.Point(707, 12);
-            this.icbtnSalir.Name = "icbtnSalir";
-            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
-            this.icbtnSalir.TabIndex = 48;
-            this.icbtnSalir.TabStop = false;
-            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
             // 
             // frmAgregarMaterial
             // 

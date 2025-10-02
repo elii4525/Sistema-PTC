@@ -16,6 +16,7 @@ namespace Vistas.Formularios
         public frmInventarioJefatura()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(12);
         }
 
         private void frmInventarioJefatura_Load(object sender, EventArgs e)

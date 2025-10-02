@@ -16,6 +16,14 @@ namespace Vistas.Formularios
         public frmAgregarMaterial()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(13);
+            label10.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label11.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label12.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label13.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label14.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label15.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label9.Font = Helper.FuenteHelper.ObtenerFuente(10);
         }
 
         private void icbtnSalir_Click(object sender, EventArgs e)

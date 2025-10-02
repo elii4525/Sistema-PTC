@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlAggCategorias = new System.Windows.Forms.Panel();
+            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAggCategoria = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCategoria = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.pnlAggCategorias.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icbtnSalir)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAggCategorias
@@ -55,6 +55,20 @@
             this.pnlAggCategorias.Name = "pnlAggCategorias";
             this.pnlAggCategorias.Size = new System.Drawing.Size(663, 344);
             this.pnlAggCategorias.TabIndex = 1;
+            this.pnlAggCategorias.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAggCategorias_Paint);
+            // 
+            // icbtnSalir
+            // 
+            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.icbtnSalir.IconColor = System.Drawing.Color.White;
+            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSalir.IconSize = 27;
+            this.icbtnSalir.Location = new System.Drawing.Point(622, 10);
+            this.icbtnSalir.Name = "icbtnSalir";
+            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
+            this.icbtnSalir.TabIndex = 49;
+            this.icbtnSalir.TabStop = false;
+            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
             // 
             // label5
             // 
@@ -62,7 +76,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(228, 38);
+            this.label5.Location = new System.Drawing.Point(204, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(222, 27);
             this.label5.TabIndex = 6;
@@ -121,19 +135,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(669, 348);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // icbtnSalir
-            // 
-            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.icbtnSalir.IconColor = System.Drawing.Color.White;
-            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnSalir.IconSize = 27;
-            this.icbtnSalir.Location = new System.Drawing.Point(622, 10);
-            this.icbtnSalir.Name = "icbtnSalir";
-            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
-            this.icbtnSalir.TabIndex = 49;
-            this.icbtnSalir.TabStop = false;
-            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
-            // 
             // frmAggCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -146,8 +147,8 @@
             this.Text = "frmAggCategoria";
             this.pnlAggCategorias.ResumeLayout(false);
             this.pnlAggCategorias.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icbtnSalir)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

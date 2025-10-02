@@ -91,7 +91,7 @@ namespace Vistas.controles
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; // Bloquea letras y símbolos
+                e.Handled = true; 
             }
         }
 
@@ -99,16 +99,7 @@ namespace Vistas.controles
         {
             try
             {
-                // 🔹 Validar fecha (solo hoy)
-                DateTime fechaSeleccionada = dtpFecha.Value.Date;
-                if (fechaSeleccionada != DateTime.Today)
-                {
-                    MessageBox.Show("Solo se permite enviar solicitudes con la fecha de hoy.",
-                        "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
 
-                // 🔹 Validar motivo
                 if (string.IsNullOrWhiteSpace(txtMotivo.Text))
                 {
                     MessageBox.Show("Debe ingresar un motivo para la solicitud.", "Error",
@@ -118,7 +109,6 @@ namespace Vistas.controles
 
                 List<Solicitudd> materiales = new List<Solicitudd>();
 
-                // Material 1
                 if (cbMaterial1.SelectedIndex != -1)
                 {
                     if (string.IsNullOrWhiteSpace(txtCantidad1.Text) || cbMarca1.SelectedIndex == -1)
@@ -174,13 +164,11 @@ namespace Vistas.controles
                     return;
                 }
 
-                // 🔹 Guardar solicitud
                 int idSolicitud = solicitud.CrearSolicitud(txtMotivo.Text, materiales);
 
                 MessageBox.Show($"¡Solicitud enviada con éxito!\nID: {idSolicitud}",
                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // 🔹 Cerrar el form contenedor si existe
                 if (this.ParentForm != null)
                 {
                     this.ParentForm.DialogResult = DialogResult.OK;

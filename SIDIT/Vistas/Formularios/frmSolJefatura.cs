@@ -16,6 +16,53 @@ namespace Vistas.Formularios
         public frmSolJefatura()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(12);
+            lblNombre.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblNombre2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblNombre3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblRol.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblRol2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblRol3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial1.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial5.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial6.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial7.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial8.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMaterial9.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca1.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca5.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblmarca3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca6.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca7.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca8.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblMarca9.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad1.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad5.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad6.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad7.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad8.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblCantidad9.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label12.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label17.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label25.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label28.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label33.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label8.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label9.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblEstado.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblEstado2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            lblEstado3.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
 
         private int idSolicitud1 = 0;
