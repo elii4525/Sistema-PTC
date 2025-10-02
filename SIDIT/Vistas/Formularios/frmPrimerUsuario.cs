@@ -23,8 +23,9 @@ namespace Vistas.Formularios
         {
             dtpFecha.MaxDate = DateTime.Today.AddYears(-18);
             dtpFecha.MinDate = DateTime.Today.AddYears(-100);
+
         }
-        
+
 
         private void CargarRolJefatura()
         {
@@ -37,7 +38,6 @@ namespace Vistas.Formularios
                 cbRol.DisplayMember = "tipoRol";
                 cbRol.ValueMember = "idRol";
 
-                // Buscar "Jefatura" y dejarlo fijo
                 foreach (DataRow row in roles.Rows)
                 {
                     if (row["tipoRol"].ToString().ToLower().Contains("jefatura"))
@@ -62,11 +62,33 @@ namespace Vistas.Formularios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                 string.IsNullOrWhiteSpace(txtNumero.Text) ||
-                 string.IsNullOrWhiteSpace(txtCorreo.Text))
+                string.IsNullOrWhiteSpace(txtNumero.Text) ||
+                string.IsNullOrWhiteSpace(txtCorreo.Text))
             {
-                MessageBox.Show("Ingrese todos los campos, todos son necesarios.", "Advertencia",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese todos los campos, todos son necesarios.",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (txtNumero.Text.Length != 8)
+            {
+                MessageBox.Show("El número de teléfono debe tener 8 dígitos.",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                txtNumero.Focus();
+                return;
+            }
+
+            if (!txtCorreo.Text.EndsWith("@gmail.com"))
+            {
+                MessageBox.Show("El correo debe terminar en @gmail.com",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                txtCorreo.Focus();
                 return;
             }
 
@@ -76,7 +98,7 @@ namespace Vistas.Formularios
                 {
                     Nombre = txtNombre.Text.Trim(),
                     Telefono = txtNumero.Text.Trim(),
-                    Correo = txtCorreo.Text.Trim(),
+                    Correo = txtCorreo.Text.Trim().ToLower(), 
                     FechaNacimiento = dtpFecha.Value,
                     IdRol = Convert.ToInt32(cbRol.SelectedValue)
                 };
@@ -84,7 +106,9 @@ namespace Vistas.Formularios
                 if (nuevo.RegistrarUsuario())
                 {
                     MessageBox.Show("¡Bienvenido al sistema! Puedes iniciar sesión",
-                        "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    "Éxito",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
 
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -93,8 +117,68 @@ namespace Vistas.Formularios
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar el usuario: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
+        }
+
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
+        {
+            BloquearCopiarPegar(e);
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+            SinEspacios(e);
+        }
+
+        private void txtNumero_KeyDown(object sender, KeyEventArgs e)
+        {
+            BloquearCopiarPegar(e);
+        }
+
+        private void txtCorreo_KeyDown(object sender, KeyEventArgs e)
+        {
+            BloquearCopiarPegar(e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SinEspacios(e);
+        }
+
+        // Métodos de validación 
+
+        private void SoloLetras(KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void SoloNumeros(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void SinEspacios(KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Space)
+                e.Handled = true;
+        }
+
+        private void BloquearCopiarPegar(KeyEventArgs e)
+        {
+            if (e.Control && (e.KeyCode == Keys.C || e.KeyCode == Keys.V || e.KeyCode == Keys.X))
+                e.SuppressKeyPress = true;
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icbtnSalir)).BeginInit();
@@ -95,19 +95,6 @@
             this.panel2.Size = new System.Drawing.Size(756, 529);
             this.panel2.TabIndex = 6;
             // 
-            // icbtnSalir
-            // 
-            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.icbtnSalir.IconColor = System.Drawing.Color.White;
-            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnSalir.IconSize = 41;
-            this.icbtnSalir.Location = new System.Drawing.Point(707, 12);
-            this.icbtnSalir.Name = "icbtnSalir";
-            this.icbtnSalir.Size = new System.Drawing.Size(46, 41);
-            this.icbtnSalir.TabIndex = 48;
-            this.icbtnSalir.TabStop = false;
-            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -135,6 +122,7 @@
             this.btnLimpiar.TabIndex = 46;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // label9
             // 
@@ -163,6 +151,7 @@
             this.btnAggRegistro.TabIndex = 45;
             this.btnAggRegistro.Text = "Agregar";
             this.btnAggRegistro.UseVisualStyleBackColor = false;
+            this.btnAggRegistro.Click += new System.EventHandler(this.btnAggRegistro_Click);
             // 
             // label10
             // 
@@ -303,6 +292,19 @@
             this.label15.TabIndex = 32;
             this.label15.Text = "Modelo:";
             // 
+            // icbtnSalir
+            // 
+            this.icbtnSalir.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.icbtnSalir.IconColor = System.Drawing.Color.White;
+            this.icbtnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSalir.IconSize = 27;
+            this.icbtnSalir.Location = new System.Drawing.Point(707, 12);
+            this.icbtnSalir.Name = "icbtnSalir";
+            this.icbtnSalir.Size = new System.Drawing.Size(32, 27);
+            this.icbtnSalir.TabIndex = 48;
+            this.icbtnSalir.TabStop = false;
+            this.icbtnSalir.Click += new System.EventHandler(this.icbtnSalir_Click);
+            // 
             // frmAgregarMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -314,6 +316,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarMaterial";
             this.Text = "frmAgregarMaterial";
+            this.Load += new System.EventHandler(this.frmAgregarMaterial_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

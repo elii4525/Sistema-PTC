@@ -174,18 +174,19 @@
             this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.txtCorreo.Location = new System.Drawing.Point(484, 334);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 75;
             this.txtCorreo.multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
             this.txtCorreo.PasswordChar = false;
             this.txtCorreo.ReadOnly = false;
             this.txtCorreo.Size = new System.Drawing.Size(423, 30);
+            this.txtCorreo.SoloLetras = false;
             this.txtCorreo.SoloNumeros = false;
             this.txtCorreo.TabIndex = 9;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreo.Texts = "";
             this.txtCorreo.UnderlinedStyle = true;
-
             // 
             // txtNumero
             // 
@@ -196,12 +197,14 @@
             this.txtNumero.ForeColor = System.Drawing.Color.DimGray;
             this.txtNumero.Location = new System.Drawing.Point(484, 228);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumero.MaxLength = 8;
             this.txtNumero.multiline = true;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Padding = new System.Windows.Forms.Padding(7);
             this.txtNumero.PasswordChar = false;
             this.txtNumero.ReadOnly = false;
             this.txtNumero.Size = new System.Drawing.Size(423, 30);
+            this.txtNumero.SoloLetras = false;
             this.txtNumero.SoloNumeros = false;
             this.txtNumero.TabIndex = 7;
             this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -217,12 +220,14 @@
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
             this.txtNombre.Location = new System.Drawing.Point(484, 111);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(7);
             this.txtNombre.PasswordChar = false;
             this.txtNombre.ReadOnly = false;
             this.txtNombre.Size = new System.Drawing.Size(423, 30);
+            this.txtNombre.SoloLetras = false;
             this.txtNombre.SoloNumeros = false;
             this.txtNombre.TabIndex = 5;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
