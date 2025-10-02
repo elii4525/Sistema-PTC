@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
@@ -165,6 +168,7 @@
     </Compile>
     <Compile Include="Formularios\frmCambiarContraseña.Designer.cs">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Formularios\frmEliminarCategoria.cs">
       <SubType>Form</SubType>
@@ -226,6 +230,12 @@
     <Compile Include="Formularios\frmRecuperarContraseña.Designer.cs">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRegistroConsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRegistroConsumo.Designer.cs">
+      <DependentUpon>frmRegistroConsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSolicitudDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +266,14 @@
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="UserControls\frmAggMateriall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\frmAggMateriall.Designer.cs">
+      <DependentUpon>frmAggMateriall.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Formularios\usercontolsflotantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +346,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEliminarCategoria.resx">
       <DependentUpon>frmEliminarCategoria.cs</DependentUpon>
@@ -337,6 +356,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEliminarMaterial.resx">
       <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
       <DependentUpon>frmInventarioDIT.cs</DependentUpon>
@@ -358,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmRecuperarContraseña.resx">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRegistroConsumo.resx">
+      <DependentUpon>frmRegistroConsumo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
