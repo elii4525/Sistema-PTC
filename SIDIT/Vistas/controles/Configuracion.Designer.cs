@@ -43,8 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -256,7 +256,7 @@
             this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
             this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarContraseña.ForeColor = System.Drawing.Color.Black;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(45, 429);
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(44, 377);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
             this.btnCambiarContraseña.Size = new System.Drawing.Size(147, 59);
             this.btnCambiarContraseña.TabIndex = 8;
@@ -264,29 +264,29 @@
             this.btnCambiarContraseña.UseVisualStyleBackColor = false;
             this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_36;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 333);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.White;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(228, 429);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(227, 377);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(141, 59);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.icons8_usuario_100__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // Configuracion
             // 

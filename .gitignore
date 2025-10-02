@@ -1,0 +1,13 @@
+# Archivos de compilación
+bin/
+obj/
+.vs/
+
+# Otros temporales
+*.cache
+*.db
+*.vsidx
+*.pdb
+*.exe
+*.dll
+*.resources

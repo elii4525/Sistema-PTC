@@ -20,6 +20,7 @@ namespace Modelos.Entidades
         public string NombreUsuario { get; set; }
         public string Rol { get; set; }
         public DateTime Fecha { get; set; }
+        public string Estado { get; set; }
         public string Motivo { get; set; }
         public List<MaterialSolicitud> Materiales { get; set; } = new List<MaterialSolicitud>();
     }
