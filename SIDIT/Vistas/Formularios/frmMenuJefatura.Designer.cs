@@ -216,6 +216,7 @@ namespace Vistas.Formularios
             // 
             // icpbConfiguracion
             // 
+            this.icpbConfiguracion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.icpbConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
             this.icpbConfiguracion.IconColor = System.Drawing.Color.White;
             this.icpbConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;

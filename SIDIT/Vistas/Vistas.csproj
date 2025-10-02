@@ -391,11 +391,11 @@
     <Compile Include="Formularios\frmSolicitudDIT.Designer.cs">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmConsumoJefatura.cs">
+    <Compile Include="Formularios\frmConsumoAmbos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmConsumoJefatura.Designer.cs">
-      <DependentUpon>frmConsumoJefatura.cs</DependentUpon>
+    <Compile Include="Formularios\frmConsumoAmbos.Designer.cs">
+      <DependentUpon>frmConsumoAmbos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmSolicitudesAnteriores.cs">
       <SubType>Form</SubType>
@@ -470,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmConsumoAmbos.resx">
+      <DependentUpon>frmConsumoAmbos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEliminarCategoria.resx">
       <DependentUpon>frmEliminarCategoria.cs</DependentUpon>

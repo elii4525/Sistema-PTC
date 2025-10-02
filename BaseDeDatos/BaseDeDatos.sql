@@ -418,10 +418,10 @@ GO
 create procedure sp_registrar_salida_material
     -- RECUERDA: Cambiamos @id_material por @nombre_material
     @nombre_material varchar(100), 
-    @cantidad_consumida int,
-    @fecha_consumo date,
-    @id_usuario int,
-    @motivo_salida varchar(1000)
+    @cantidad_consumida int,
+    @fecha_consumo date,
+    @id_usuario int,
+    @motivo_salida varchar(1000)
 as
 begin
     -- Variables internas para la validación
@@ -449,24 +449,24 @@ begin
 
     -- Si las validaciones pasan, se ejecuta la transacción
     begin try
-        begin transaction;
-        
-        -- 3. Insertar en salida_de_material (Registra la salida)
-        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
-        
-        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
-        update Material 
-        set cantidad = cantidad - @cantidad_consumida
-        where idMaterial = @id_material_local;
-        
-        commit transaction;
-    end try
-    begin catch
-        if @@trancount > 0
-            rollback transaction;
-        throw;
-    end catch
+        begin transaction;
+        
+        -- 3. Insertar en salida_de_material (Registra la salida)
+        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
+        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+        
+        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
+        update Material 
+        set cantidad = cantidad - @cantidad_consumida
+        where idMaterial = @id_material_local;
+        
+        commit transaction;
+    end try
+    begin catch
+        if @@trancount > 0
+            rollback transaction;
+        throw;
+    end catch
 end
 go
 
@@ -475,4 +475,3 @@ go
 
 --No se debe ejecutar, pero es la que utilizo en c#
 Update Material set nombreMaterial = @nombre, cantidad = @cantidad where idMaterial = @id;
-

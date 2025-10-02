@@ -220,23 +220,15 @@ namespace Vistas.Formularios
         // Manejador del botón de AGREGAR/REGISTRAR (Manejador original si el diseñador lo usa)
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+                
             if (ValidarCamposAgregar())
-            {
-                InsertarSalida();
-            }
+                {
+                    InsertarSalida();
+                    LimpiarCampos();
+                }
+            
         }
 
-        // Manejador del botón de ELIMINAR
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarSalidaSeleccionada();
-        }
-
-        // Manejador del botón de ACTUALIZAR (solo placeholder)
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("La funcionalidad de Actualizar requiere un procedimiento UPDATE en SQL.", "Pendiente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
         private void EstilizarDataGrid(DataGridView dgv)
         {

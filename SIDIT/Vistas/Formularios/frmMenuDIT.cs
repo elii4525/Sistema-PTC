@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.controles;
 using Vistas.Controles;
 
 namespace Vistas.Formularios
@@ -121,7 +123,7 @@ namespace Vistas.Formularios
         public void MostrarFormConsumoDEnPanel()
         {
             pnlContenedorDIT.Controls.Clear();
-            frmConsumo consumoD = new frmConsumo();
+            frmConsumoAmbos consumoD = new frmConsumoAmbos();
             consumoD.TopLevel = false;
             consumoD.FormBorderStyle = FormBorderStyle.None;
             consumoD.Dock = DockStyle.Fill;
@@ -202,10 +204,15 @@ namespace Vistas.Formularios
 
         private void icpbConfiguracion_Click(object sender, EventArgs e)
         {
-            Configuracion c = new Configuracion();
-            c.Dock = DockStyle.Fill;
-            pnlContenedorDIT.Controls.Clear();
-            pnlContenedorDIT.Controls.Add(c);
+
+            Configuracion uc = new Configuracion();
+            FrmContenedorUC ven = new FrmContenedorUC(uc);
+
+            if (ven.ShowDialog() == DialogResult.OK)
+            {
+                uc.Show();
+            }
+
         }
     }
 }
