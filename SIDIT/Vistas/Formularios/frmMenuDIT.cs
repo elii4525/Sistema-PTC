@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.Controles;
 
 namespace Vistas.Formularios
 {
@@ -197,6 +198,14 @@ namespace Vistas.Formularios
         private void pbLogoITEC_Resize(object sender, EventArgs e)
         {
             pbLogoITEC.Invalidate();
+        }
+
+        private void pbAjustes_Click(object sender, EventArgs e)
+        {
+            Configuracion c = new Configuracion();
+            c.Dock = DockStyle.Fill;
+            pnlContenedorDIT.Controls.Clear();
+            pnlContenedorDIT.Controls.Add(c);
         }
     }
 }

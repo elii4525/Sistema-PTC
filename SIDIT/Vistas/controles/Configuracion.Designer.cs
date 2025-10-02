@@ -43,8 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,6 +82,7 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Enabled = false;
             this.dtpFecha.Location = new System.Drawing.Point(85, 393);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -93,6 +94,7 @@
             this.txtRol.BackColor = System.Drawing.Color.Black;
             this.txtRol.BorderColor = System.Drawing.Color.White;
             this.txtRol.BorderSize = 2;
+            this.txtRol.Enabled = false;
             this.txtRol.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.ForeColor = System.Drawing.Color.Black;
             this.txtRol.Location = new System.Drawing.Point(299, 303);
@@ -116,6 +118,7 @@
             this.txtNumero.BackColor = System.Drawing.Color.Black;
             this.txtNumero.BorderColor = System.Drawing.Color.White;
             this.txtNumero.BorderSize = 2;
+            this.txtNumero.Enabled = false;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(85, 303);
@@ -139,6 +142,7 @@
             this.txtCorreo.BackColor = System.Drawing.Color.Black;
             this.txtCorreo.BorderColor = System.Drawing.Color.White;
             this.txtCorreo.BorderSize = 2;
+            this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.txtCorreo.Location = new System.Drawing.Point(85, 209);
@@ -162,6 +166,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.Black;
             this.txtNombre.BorderColor = System.Drawing.Color.White;
             this.txtNombre.BorderSize = 2;
+            this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(85, 111);
@@ -264,6 +269,16 @@
             this.btnCambiarContraseña.UseVisualStyleBackColor = false;
             this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.icons8_usuario_100__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.White;
@@ -277,16 +292,6 @@
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.icons8_usuario_100__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 266);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // Configuracion
             // 

@@ -135,7 +135,7 @@ namespace Modelos.Entidades
                         string hashAlmacenado = reader["contraseña"].ToString();
                         string rol = reader["tipoRol"].ToString();
 
-                        // 🔑 Validar con BCrypt
+                        // Validar con BCrypt
                         if (BCrypt.Net.BCrypt.Verify(contraseña, hashAlmacenado))
                         {
                             return rol;
@@ -187,15 +187,15 @@ namespace Modelos.Entidades
             return dt;
         }
 
-        //public static DataTable cargarUltimosUsuarios()
-        //{
-        //    SqlConnection con = ConexionDB.Conectar();
-        //    string query = @"select * from VerUltimosUsuarios";
-        //    SqlDataAdapter da = new SqlDataAdapter(query, con);
-        //    DataTable dt = new DataTable();
-        //    da.Fill(dt);
-        //    return dt;
-        //}
+        public static DataTable cargarUltimosUsuarios()
+        {
+            SqlConnection con = ConexionDB.Conectar();
+            string query = @"select * from VerUltimosUsuarios";
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
         public static DataTable cargarUsuariosEliminar()
         {
@@ -294,11 +294,6 @@ namespace Modelos.Entidades
                 MessageBox.Show("Error al intentar recuperar la contraseña: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-        }
-
-        public string recoverPassword(string usuarioSolicitando)
-        {
-            return RecuperarContraseña(usuarioSolicitando);
         }
 
     }

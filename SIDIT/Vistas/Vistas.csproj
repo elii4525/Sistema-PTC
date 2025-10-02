@@ -159,7 +159,6 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-
     <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.Extensions.4.1.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
       <Private>True</Private>
@@ -206,7 +205,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
-
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -288,7 +286,6 @@
     <Compile Include="Formularios\frmBienvenidoDIT.Designer.cs">
       <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Formularios\frmConsumo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,7 +297,6 @@
     </Compile>
     <Compile Include="Formularios\frmCambiarContraseña.Designer.cs">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Formularios\frmInventarioDIT.cs">
       <SubType>Form</SubType>
@@ -380,7 +376,6 @@
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-
     <Compile Include="UserControls\frmAggMateriall.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -392,7 +387,6 @@
     </Compile>
     <Compile Include="Formularios\usercontolsflotantes.Designer.cs">
       <DependentUpon>usercontolsflotantes.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Plantillas\pdfCreador.cs" />
     <Compile Include="UserControls\frmEliminarMaterial.cs">
@@ -450,14 +444,11 @@
     <EmbeddedResource Include="Formularios\frmBienvenidoDIT.resx">
       <DependentUpon>frmBienvenidoDIT.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Formularios\frmConsumo.resx">
       <DependentUpon>frmConsumo.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
       <DependentUpon>frmInventarioDIT.cs</DependentUpon>

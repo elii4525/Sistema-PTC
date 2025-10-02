@@ -1,5 +1,8 @@
 ﻿namespace Vistas.Formularios
 {
+
+    using Vistas.controles;
+
     partial class frmPrimerUsuario
     {
         /// <summary>
@@ -149,23 +152,32 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(384, 200);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(438, 22);
             this.txtNombre.TabIndex = 15;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(384, 255);
+            this.txtNumero.MaxLength = 8;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(438, 22);
             this.txtNumero.TabIndex = 16;
+            this.txtNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNumero_KeyDown);
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(384, 316);
+            this.txtCorreo.MaxLength = 75;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(438, 22);
             this.txtCorreo.TabIndex = 17;
+            this.txtCorreo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCorreo_KeyDown);
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // btnAgregar
             // 
@@ -176,7 +188,7 @@
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(350, 514);
+            this.btnAgregar.Location = new System.Drawing.Point(401, 504);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(281, 42);
             this.btnAgregar.TabIndex = 12;
@@ -208,7 +220,6 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmPrimerUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrimerUsuario";
             this.Load += new System.EventHandler(this.frmPrimerUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
