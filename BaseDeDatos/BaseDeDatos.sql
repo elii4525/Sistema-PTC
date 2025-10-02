@@ -52,8 +52,8 @@ descripcionMaterial varchar (500),
 modelo varchar (100) unique,
 id_Categoria int,
 id_Marca int,
-constraint fk_Categoria Foreign key(id_Categoria) references Categoria(idCategoria),
-constraint fk_Marca Foreign key(id_Marca) references Marca(idMarca));
+constraint fk_Categoria Foreign key(id_Categoria) references Categoria(idCategoria) ON DELETE CASCADE,
+constraint fk_Marca Foreign key(id_Marca) references Marca(idMarca) ON DELETE CASCADE);
 go
 
 
@@ -66,7 +66,7 @@ fecha date not null,
 estado varchar (50) not null,
 id_Usuario int,
 id_Material int,
-constraint fk_Material Foreign key (id_Material) references Material(idMaterial),
+constraint fk_Material Foreign key (id_Material) references Material(idMaterial)  ON DELETE CASCADE,
 constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
 go
 
@@ -75,7 +75,7 @@ idHistorialSolicitud int identity (1,1) primary key,
 estadoSolicitud varchar (50),
 fechaRespuesta date,
 id_Solicitud int not null,
-constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud));
+constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud) ON DELETE CASCADE);
 go
 
 create table salidaDeMaterial (
@@ -85,7 +85,7 @@ create table salidaDeMaterial (
     fechaConsumo date not null,
     id_Usuario int not null,
     motivoSalida varchar(1000),
-    constraint fk_salida_material foreign key (id_Material) references Material(idMaterial),
+    constraint fk_salida_material foreign key (id_Material) references Material(idMaterial) ON DELETE CASCADE,
     constraint fk_salida_usuario foreign key (id_Usuario) references Usuario(idUsuario)
 );
 go
@@ -440,32 +440,62 @@ BEGIN
 END
 GO
 -- Ejecuta ESTO en SSMS, asegurándote de usar la BD BasePTC
+-- Si el procedimiento existe, lo modifica. Si no existe, lo crea.
+IF OBJECT_ID('sp_registrar_salida_material', 'P') IS NOT NULL
+    DROP PROCEDURE sp_registrar_salida_material;
+GO
+
 create procedure sp_registrar_salida_material
-    @id_material int,
+    -- RECUERDA: Cambiamos @id_material por @nombre_material
+    @nombre_material varchar(100), 
     @cantidad_consumida int,
     @fecha_consumo date,
     @id_usuario int,
     @motivo_salida varchar(1000)
 as
 begin
-    begin try
+    -- Variables internas para la validación
+    declare @id_material_local int;
+    declare @stock_actual int;
+
+    -- 1. Intentar encontrar el material y obtener su stock actual por NOMBRE
+    select @id_material_local = idMaterial, @stock_actual = cantidad
+    from Material
+    where nombreMaterial = @nombre_material;
+
+    -- Validacion 1: El material debe existir
+    if @id_material_local is null
+    begin
+        -- Lanza un error con severidad 16 (lo captura C# como SqlException)
+        raiserror('El material especificado no existe en el inventario. Verifique el nombre.', 16, 1);
+        return;
+    end
+    -- Validacion 2: Hay suficiente stock?
+    if @stock_actual < @cantidad_consumida
+    begin
+        raiserror('Stock insuficiente. Solo quedan %d unidades de %s.', 16, 1, @stock_actual, @nombre_material);
+        return;
+    end
+
+    -- Si las validaciones pasan, se ejecuta la transacción
+    begin try
         begin transaction;
         
-        -- 1. Insertar en salida_de_material (Registra la salida)
+        -- 3. Insertar en salida_de_material (Registra la salida)
         insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        values (@id_material, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
         
-        -- 2. Actualizar el inventario (resta la cantidad del inventario principal)
+        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
         update Material 
         set cantidad = cantidad - @cantidad_consumida
-        where idMaterial = @id_Material;
+        where idMaterial = @id_material_local;
         
         commit transaction;
     end try
     begin catch
-        rollback transaction;
+        if @@trancount > 0
+            rollback transaction;
         throw;
     end catch
 end
 go
-

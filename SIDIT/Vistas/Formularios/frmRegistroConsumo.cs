@@ -8,14 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Vistas.Formularios
 {
     public partial class frmRegistroConsumo : Form
     {
+        // Asegúrate de que esta cadena de conexión sea la correcta.
         private const string ConnectionString = "Data Source=DESKTOP-K37VDNM\\SQLEXPRESS;Initial Catalog=BasePTC;Integrated Security=True;";
 
+        // ID del usuario que registra la salida (debería ser dinámico en una aplicación real)
         private const int IdUsuarioLogueado = 1;
+
         public frmRegistroConsumo()
         {
             InitializeComponent();
@@ -23,32 +25,26 @@ namespace Vistas.Formularios
 
         private void frmRegistroConsumo_Load(object sender, EventArgs e)
         {
-
+            // Cargar el historial de salidas al iniciar el formulario
+            CargarDatosSalidas();
         }
 
+        /// <summary>
+        /// Inserta la salida del material. Delega las validaciones de existencia y stock al Stored Procedure de SQL.
+        /// </summary>
         private void InsertarSalida()
         {
-
-            // ... (Validación y obtención de idMaterial, cantidadConsumida, fechaConsumo, motivoSalida)
-
             string nombreMaterial = txtNombreMaterial.Text.Trim();
 
-            // Obtener ID del Material (esta función está bien)
-            int idMaterial = ObtenerIdMaterial(nombreMaterial);
-
-            if (idMaterial == 0)
+            if (!int.TryParse(txtCantidad.Text, out int cantidadConsumida))
             {
-                MessageBox.Show($"El material '{nombreMaterial}' no se encontró o el nombre no es exacto.", "Error de Material", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            if (!int.TryParse(txtCantidad.Text, out int cantidadConsumida))
-            { return; } // Ya validado
 
             DateTime fechaConsumo = dtpFechaSalida.Value.Date;
             string motivoSalida = txtMotivo.Text;
 
-            // Usamos el Stored Procedure de INSERT/UPDATE
+            // Usamos el Stored Procedure de SQL que valida el nombre y el stock
             string query = "sp_registrar_salida_material";
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -56,31 +52,47 @@ namespace Vistas.Formularios
             {
                 try
                 {
-                    command.CommandType = CommandType.StoredProcedure; // ¡MUY IMPORTANTE!
+                    command.CommandType = CommandType.StoredProcedure;
 
-                    // 2. Definir Parámetros (usando los nombres de tu SP en SQL)
-                    command.Parameters.AddWithValue("@id_material", idMaterial);
+                    // IMPORTANTE: El SP ahora espera el nombre, no el ID.
+                    command.Parameters.AddWithValue("@nombre_material", nombreMaterial);
                     command.Parameters.AddWithValue("@cantidad_consumida", cantidadConsumida);
                     command.Parameters.AddWithValue("@fecha_consumo", fechaConsumo);
                     command.Parameters.AddWithValue("@id_usuario", IdUsuarioLogueado);
                     command.Parameters.AddWithValue("@motivo_salida", motivoSalida);
 
-                    // 3. Ejecutar
                     connection.Open();
                     command.ExecuteNonQuery();
 
                     MessageBox.Show("Salida de material registrada y **inventario actualizado**.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarDatosSalidas(); // Refresca el DataGridView para que se vea el nuevo registro
+                    CargarDatosSalidas(); // Refresca el DataGridView 
                     LimpiarCampos(); // Limpia los TextBoxes
+                }
+                catch (SqlException sqlEx)
+                {
+                    // Captura errores específicos de SQL (RAISERROR del SP para stock o existencia)
+                    if (sqlEx.Number >= 50000 || sqlEx.Class == 16)
+                    {
+                        // Muestra el mensaje de error que viene directamente desde el SP (ej: "Stock insuficiente...")
+                        MessageBox.Show(sqlEx.Message, "Error de Validación de Inventario", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        // Otros errores de SQL (ej: conexión, permisos, etc.)
+                        MessageBox.Show("Error al registrar salida: " + sqlEx.Message, "Error de Transacción SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    // Este catch atrapará errores de SQL, incluyendo si el inventario queda negativo (si el SP lo permite).
-                    MessageBox.Show("Error al registrar salida o actualizar inventario: " + ex.Message, "Error de Transacción SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Errores de C# inesperados
+                    MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-        // Función para validar la cantidad y el texto
+
+        /// <summary>
+        /// Valida que los campos no estén vacíos y que la cantidad sea numérica.
+        /// </summary>
         private bool ValidarCamposAgregar()
         {
             if (string.IsNullOrWhiteSpace(txtCantidad.Text) ||
@@ -91,83 +103,18 @@ namespace Vistas.Formularios
                 return false;
             }
 
-            if (!int.TryParse(txtCantidad.Text, out _)) // Usamos 'int' porque la columna es 'int'
+            if (!int.TryParse(txtCantidad.Text, out int cantidad) || cantidad <= 0)
             {
-                MessageBox.Show("La cantidad debe ser un número entero válido.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La cantidad debe ser un número entero válido mayor a cero.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             return true;
         }
 
-        private int ObtenerIdMaterial(string nombreMaterial)
-        {
-            string query = "SELECT idMaterial FROM Material WHERE nombreMaterial = @Nombre";
-            int idMaterial = 0;
-
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-                try
-                {
-                    command.Parameters.AddWithValue("@Nombre", nombreMaterial);
-                    connection.Open();
-                    object result = command.ExecuteScalar();
-
-                    if (result != null && result != DBNull.Value)
-                    {
-                        idMaterial = Convert.ToInt32(result);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al buscar material: " + ex.Message, "Error SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            return idMaterial;
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (ValidarCamposAgregar())
-            {
-                // 1. Ejecutar INSERT en SQL
-                // 2. Volver a llamar a CargarDatos() para que el DataGridView muestre el nuevo registro.
-                // 3. Limpiar los TextBoxes.
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-            if (dgvConsumo.SelectedRows.Count > 0)
-            {
-                // Obtener el ID de la fila seleccionada (asumiendo que tienes una columna 'ID' oculta o visible)
-                int idRegistro = Convert.ToInt32(dgvConsumo.SelectedRows[0].Cells["ID"].Value);
-
-                DialogResult result = MessageBox.Show("¿Está seguro de eliminar este registro?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    // 1. Ejecutar DELETE en SQL usando el 'idRegistro'
-                    //    DELETE FROM Consumos WHERE ID = @ID
-                    // 2. Volver a llamar a CargarDatos() para que el DataGridView se refresque.
-                }
-            }
-            else
-            {
-                MessageBox.Show("Seleccione una fila del registro para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            if (ValidarCamposAgregar()) // Puedes reusar la misma validación
-            {
-                // 1. Obtener el ID del registro que se está editando (debe estar guardado en alguna variable o control oculto).
-                // 2. Ejecutar UPDATE en SQL usando el ID y los nuevos valores de los TextBoxes.
-                // 3. Volver a llamar a CargarDatos() para refrescar.
-            }
-        }
+        /// <summary>
+        /// Carga los datos del historial de salidas en el DataGridView.
+        /// </summary>
         private void CargarDatosSalidas()
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -176,16 +123,15 @@ namespace Vistas.Formularios
                 {
                     connection.Open();
 
-                    // Usamos el Stored Procedure de SQL
+                    // Usamos el Stored Procedure de SQL para obtener el historial
                     SqlCommand command = new SqlCommand("sp_obtener_historial_salidas", connection);
-                    command.CommandType = CommandType.StoredProcedure; // ¡MUY IMPORTANTE! Indica que es un SP
+                    command.CommandType = CommandType.StoredProcedure;
 
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     DataTable dt = new DataTable();
 
                     adapter.Fill(dt);
 
-                    //  ESTO HACE QUE LOS DATOS APAREZCAN EN LA PANTALLA
                     dgvConsumo.DataSource = dt;
 
                     // Ocultar la columna de ID que necesitamos para eliminar/actualizar
@@ -200,6 +146,10 @@ namespace Vistas.Formularios
                 }
             }
         }
+
+        /// <summary>
+        /// Ejecuta la eliminación del registro de salida seleccionado.
+        /// </summary>
         private void EliminarSalidaSeleccionada()
         {
             if (dgvConsumo.SelectedRows.Count == 0)
@@ -208,10 +158,17 @@ namespace Vistas.Formularios
                 return;
             }
 
+            // CORRECCIÓN: Verifica si la columna existe en las columnas del DataGridView, no en las celdas de la fila.
+            if (!dgvConsumo.Columns.Contains("idSalidamaterial"))
+            {
+                MessageBox.Show("Error de configuración: La columna 'idSalidamaterial' no está presente en la tabla. Asegúrate de que el procedimiento almacenado la devuelva.", "Error de Columna", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // Usamos la columna OCULTA 'idSalidamaterial' para identificar la fila
             int idSalida = Convert.ToInt32(dgvConsumo.SelectedRows[0].Cells["idSalidamaterial"].Value);
 
-            DialogResult result = MessageBox.Show("¿Está seguro de eliminar esta salida de material? Esta acción es irreversible.", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("¿Está seguro de eliminar esta salida de material? Esta acción es irreversible y NO restaurará el inventario.", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
@@ -239,20 +196,45 @@ namespace Vistas.Formularios
                 }
             }
         }
+
         private void LimpiarCampos()
         {
             txtCantidad.Clear();
             txtNombreMaterial.Clear();
             txtMotivo.Clear();
-            dtpFechaSalida.Value = DateTime.Now; // Pone la fecha actual
+            dtpFechaSalida.Value = DateTime.Now;
         }
 
+        // --- Manejadores de Eventos (Event Handlers) ---
+
+        // Manejador del botón de AGREGAR/REGISTRAR (Asegúrate que este sea el que usa tu botón en el diseñador)
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             if (ValidarCamposAgregar())
             {
-                InsertarSalida(); //  Esta línea resuelve la inserción y el refresco.
+                InsertarSalida();
             }
+        }
+
+        // Manejador del botón de AGREGAR/REGISTRAR (Manejador original si el diseñador lo usa)
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCamposAgregar())
+            {
+                InsertarSalida();
+            }
+        }
+
+        // Manejador del botón de ELIMINAR
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarSalidaSeleccionada();
+        }
+
+        // Manejador del botón de ACTUALIZAR (solo placeholder)
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("La funcionalidad de Actualizar requiere un procedimiento UPDATE en SQL.", "Pendiente", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
