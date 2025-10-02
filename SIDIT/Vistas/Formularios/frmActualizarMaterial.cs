@@ -22,7 +22,6 @@ namespace Vistas.Formularios
 
         private void icbtnSalir_Click(object sender, EventArgs e)
         {
-            
             this.Close();
             icbtnSalir.Cursor = Cursors.Hand;
             
@@ -40,9 +39,7 @@ namespace Vistas.Formularios
                 MostrarMateriales();
                 txtCantidad.Clear();
                 txtNombre.Clear();
-                //frmActualizarMaterial frm = new frmActualizarMaterial();
-                //frm.FormClosed += (s, args) =>
-                //MostrarMateriales();  //La s y args son los parametros del evento. s = sender.
+                
             }
             else
             {

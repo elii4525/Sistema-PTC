@@ -144,6 +144,7 @@ namespace Vistas.Formularios
         {
             frmAgregarMaterial frm = new frmAgregarMaterial();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormClosed += (s, args) => MostrarMateriales();
             frm.ShowDialog();
 
         }
@@ -152,6 +153,7 @@ namespace Vistas.Formularios
         {
             frmAggCategoria frm = new frmAggCategoria();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormClosed += (s, args) => MostrarMateriales();
             frm.ShowDialog();
         }
 
@@ -159,6 +161,7 @@ namespace Vistas.Formularios
         {
             frmAggMarca frm = new frmAggMarca();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormClosed += (s, args) => MostrarMateriales();
             frm.ShowDialog();
         }
 
@@ -166,6 +169,7 @@ namespace Vistas.Formularios
         {
             frmEliminarMaterial frm = new frmEliminarMaterial();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormClosed += (s, args) => MostrarMateriales();
             frm.ShowDialog();
         }
 
@@ -173,6 +177,7 @@ namespace Vistas.Formularios
         {
             frmEliminarCategoria frm = new frmEliminarCategoria();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormClosed += (s, args) => MostrarMateriales();
             frm.ShowDialog();
         }
 
@@ -180,6 +185,7 @@ namespace Vistas.Formularios
         {
             frmEliminarMarca frm = new frmEliminarMarca();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.FormClosed += (s, args) => MostrarMateriales();
             frm.ShowDialog();
         }
 
@@ -209,8 +215,10 @@ namespace Vistas.Formularios
             pnlEliminar.Visible = false;
             frmActualizarMaterial frm = new frmActualizarMaterial();
             frm.StartPosition = FormStartPosition.CenterScreen;
-            
+            frm.FormClosed += (s, args) => MostrarMateriales(); //Esta linea de codigo hace lo siguiente: Cuando el frm se cierre (FormClosed) debes hacer lo siguiente => Refresca el dgv.
             frm.ShowDialog();
         }
+
+
     }
 }
