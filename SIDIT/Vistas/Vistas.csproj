@@ -415,39 +415,13 @@
     <Compile Include="Formularios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\frmAggMateriall.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\frmAggMateriall.Designer.cs">
-      <DependentUpon>frmAggMateriall.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\usercontolsflotantes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\usercontolsflotantes.Designer.cs">
       <DependentUpon>usercontolsflotantes.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Plantillas\pdfCreador.cs" />
-    <Compile Include="UserControls\frmEliminarMaterial.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\frmEliminarMaterial.Designer.cs">
-      <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\frmAggMaterial.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\frmAggMaterial.Designer.cs">
-      <DependentUpon>frmAggMaterial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\frmListaInventario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\frmListaInventario.Designer.cs">
-      <DependentUpon>frmListaInventario.cs</DependentUpon>
-
-    </Compile>
     <Compile Include="HelperBarraNegra\BarraNegra.cs" />
     <Compile Include="HelperFuente\FuenteHelper.cs" />
     <Compile Include="Program.cs" />
@@ -496,7 +470,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEliminarCategoria.resx">
       <DependentUpon>frmEliminarCategoria.cs</DependentUpon>
@@ -506,7 +479,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmEliminarMaterial.resx">
       <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
       <DependentUpon>frmInventarioDIT.cs</DependentUpon>
