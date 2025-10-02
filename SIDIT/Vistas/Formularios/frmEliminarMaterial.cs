@@ -71,6 +71,7 @@ namespace Vistas.Formularios
                 if (m.EliminarMaterial(id) == true)
                 {
                     MessageBox.Show("Registro eliminado\n" + registroAEliminar, "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MostrarMateriales();
                 }
             }
             else

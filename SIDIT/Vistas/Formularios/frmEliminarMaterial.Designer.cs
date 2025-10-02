@@ -34,7 +34,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnEliminar = new Vistas.controles.ButtonRedondeado();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
@@ -124,9 +124,6 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnEliminar.BorderRadius = 10;
-            this.btnEliminar.BorderSize = 2;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,6 +165,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconPictureBox icbtnSalir;
-        private controles.ButtonRedondeado btnEliminar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

@@ -22,7 +22,7 @@ namespace Vistas.Formularios
             pnlBarraSuperior.BringToFront();
             pnlBarraLateral.BringToFront();
             pbLogoITEC.BringToFront();
-
+            MostrarFormInvenDEnPanel();
         }
 
 

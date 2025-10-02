@@ -153,7 +153,7 @@ namespace Vistas.Formularios
         {
             frmAggCategoria frm = new frmAggCategoria();
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.FormClosed += (s, args) => MostrarMateriales();
+            frm.FormClosed += (s, args) => MostrarCategorias();
             frm.ShowDialog();
         }
 
@@ -161,7 +161,7 @@ namespace Vistas.Formularios
         {
             frmAggMarca frm = new frmAggMarca();
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.FormClosed += (s, args) => MostrarMateriales();
+            frm.FormClosed += (s, args) => MostrarMarcas();
             frm.ShowDialog();
         }
 
@@ -177,7 +177,7 @@ namespace Vistas.Formularios
         {
             frmEliminarCategoria frm = new frmEliminarCategoria();
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.FormClosed += (s, args) => MostrarMateriales();
+            frm.FormClosed += (s, args) => MostrarCategorias();
             frm.ShowDialog();
         }
 
@@ -185,7 +185,7 @@ namespace Vistas.Formularios
         {
             frmEliminarMarca frm = new frmEliminarMarca();
             frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.FormClosed += (s, args) => MostrarMateriales();
+            frm.FormClosed += (s, args) => MostrarMarcas();
             frm.ShowDialog();
         }
 

@@ -34,8 +34,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new Vistas.controles.ButtonRedondeado();
-            this.btnLimpiarB = new Vistas.controles.ButtonRedondeado();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnLimpiarB = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterialesJ)).BeginInit();
@@ -117,9 +117,6 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnBuscar.BorderRadius = 8;
-            this.btnBuscar.BorderSize = 2;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,9 +132,6 @@
             // btnLimpiarB
             // 
             this.btnLimpiarB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnLimpiarB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnLimpiarB.BorderRadius = 8;
-            this.btnLimpiarB.BorderSize = 2;
             this.btnLimpiarB.FlatAppearance.BorderSize = 0;
             this.btnLimpiarB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarB.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,7 +173,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
-        private controles.ButtonRedondeado btnBuscar;
-        private controles.ButtonRedondeado btnLimpiarB;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnLimpiarB;
     }
 }

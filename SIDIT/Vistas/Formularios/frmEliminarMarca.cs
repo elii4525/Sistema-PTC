@@ -36,7 +36,7 @@ namespace Vistas.Formularios
                 if (mar.EliminarMarca(id) == true)
                 {
                     MessageBox.Show("Registro eliminado\n" + registroAEliminar, "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    MostrarMarcas();
                 }
             }
             else

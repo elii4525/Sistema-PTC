@@ -34,7 +34,7 @@
             this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnActualizar = new Vistas.controles.ButtonRedondeado();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
@@ -110,9 +110,6 @@
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnActualizar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnActualizar.BorderRadius = 10;
-            this.btnActualizar.BorderSize = 2;
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,7 +174,7 @@
         private FontAwesome.Sharp.IconPictureBox icbtnSalir;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombre;
-        private controles.ButtonRedondeado btnActualizar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label label1;
     }

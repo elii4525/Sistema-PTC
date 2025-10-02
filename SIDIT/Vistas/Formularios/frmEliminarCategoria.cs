@@ -30,7 +30,7 @@ namespace Vistas.Formularios
                 if (cat.EliminarCategorias(id) == true)
                 {
                     MessageBox.Show("Registro eliminado\n" + registroAEliminar, "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    MostrarCategorias();
                 }
             }
             else

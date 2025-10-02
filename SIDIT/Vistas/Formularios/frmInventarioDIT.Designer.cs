@@ -1,5 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
+    
     partial class frmInventarioDIT
     {
         /// <summary>
@@ -38,6 +39,8 @@
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.dgvMaterialesD = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnLimpiarB = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pnlEliminar = new System.Windows.Forms.Panel();
@@ -49,11 +52,9 @@
             this.icbtnCategoria = new FontAwesome.Sharp.IconButton();
             this.icbtnMaterial = new FontAwesome.Sharp.IconButton();
             this.pnlContenedorPestañas = new System.Windows.Forms.Panel();
+            this.icbtnActualizar = new FontAwesome.Sharp.IconButton();
             this.icbtnAgg = new FontAwesome.Sharp.IconButton();
             this.icbtnEliminar = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new Vistas.controles.ButtonRedondeado();
-            this.btnLimpiarB = new Vistas.controles.ButtonRedondeado();
-            this.icbtnActualizar = new FontAwesome.Sharp.IconButton();
             this.tlpFrmInventario.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -196,6 +197,36 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1540, 60);
             this.panel3.TabIndex = 1;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Location = new System.Drawing.Point(616, 15);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(87, 34);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnLimpiarB
+            // 
+            this.btnLimpiarB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
+            this.btnLimpiarB.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarB.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarB.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarB.Location = new System.Drawing.Point(728, 14);
+            this.btnLimpiarB.Name = "btnLimpiarB";
+            this.btnLimpiarB.Size = new System.Drawing.Size(181, 37);
+            this.btnLimpiarB.TabIndex = 7;
+            this.btnLimpiarB.Text = "Limpiar búsqueda";
+            this.btnLimpiarB.UseVisualStyleBackColor = false;
+            this.btnLimpiarB.Click += new System.EventHandler(this.btnLimpiarB_Click);
             // 
             // label1
             // 
@@ -407,6 +438,33 @@
             this.pnlContenedorPestañas.Size = new System.Drawing.Size(1546, 71);
             this.pnlContenedorPestañas.TabIndex = 48;
             // 
+            // icbtnActualizar
+            // 
+            this.icbtnActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icbtnActualizar.FlatAppearance.BorderSize = 0;
+            this.icbtnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.icbtnActualizar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icbtnActualizar.IconColor = System.Drawing.Color.White;
+            this.icbtnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnActualizar.IconSize = 33;
+            this.icbtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnActualizar.Location = new System.Drawing.Point(351, 0);
+            this.icbtnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnActualizar.Name = "icbtnActualizar";
+            this.icbtnActualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.icbtnActualizar.Size = new System.Drawing.Size(164, 63);
+            this.icbtnActualizar.TabIndex = 7;
+            this.icbtnActualizar.Text = "Actualizar";
+            this.icbtnActualizar.UseVisualStyleBackColor = false;
+            this.icbtnActualizar.Click += new System.EventHandler(this.icbtnActualizar_Click);
+            this.icbtnActualizar.MouseEnter += new System.EventHandler(this.btnMouseEnter);
+            this.icbtnActualizar.MouseLeave += new System.EventHandler(this.btnMouseLeave);
+            // 
             // icbtnAgg
             // 
             this.icbtnAgg.BackColor = System.Drawing.Color.Transparent;
@@ -463,69 +521,6 @@
             this.icbtnEliminar.MouseEnter += new System.EventHandler(this.btnMouseEnter);
             this.icbtnEliminar.MouseLeave += new System.EventHandler(this.btnMouseLeave);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnBuscar.BorderRadius = 8;
-            this.btnBuscar.BorderSize = 2;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(616, 15);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(87, 34);
-            this.btnBuscar.TabIndex = 13;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // btnLimpiarB
-            // 
-            this.btnLimpiarB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnLimpiarB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnLimpiarB.BorderRadius = 8;
-            this.btnLimpiarB.BorderSize = 2;
-            this.btnLimpiarB.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarB.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarB.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiarB.Location = new System.Drawing.Point(728, 14);
-            this.btnLimpiarB.Name = "btnLimpiarB";
-            this.btnLimpiarB.Size = new System.Drawing.Size(181, 37);
-            this.btnLimpiarB.TabIndex = 7;
-            this.btnLimpiarB.Text = "Limpiar búsqueda";
-            this.btnLimpiarB.UseVisualStyleBackColor = false;
-            this.btnLimpiarB.Click += new System.EventHandler(this.btnLimpiarB_Click);
-            // 
-            // icbtnActualizar
-            // 
-            this.icbtnActualizar.BackColor = System.Drawing.Color.Transparent;
-            this.icbtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icbtnActualizar.FlatAppearance.BorderSize = 0;
-            this.icbtnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.icbtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.icbtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.icbtnActualizar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.icbtnActualizar.IconColor = System.Drawing.Color.White;
-            this.icbtnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnActualizar.IconSize = 33;
-            this.icbtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.icbtnActualizar.Location = new System.Drawing.Point(351, 0);
-            this.icbtnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.icbtnActualizar.Name = "icbtnActualizar";
-            this.icbtnActualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.icbtnActualizar.Size = new System.Drawing.Size(164, 63);
-            this.icbtnActualizar.TabIndex = 7;
-            this.icbtnActualizar.Text = "Actualizar";
-            this.icbtnActualizar.UseVisualStyleBackColor = false;
-            this.icbtnActualizar.Click += new System.EventHandler(this.icbtnActualizar_Click);
-            this.icbtnActualizar.MouseEnter += new System.EventHandler(this.btnMouseEnter);
-            this.icbtnActualizar.MouseLeave += new System.EventHandler(this.btnMouseLeave);
-            // 
             // frmInventarioDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -581,8 +576,8 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.DataGridView dgvMarcas;
         private System.Windows.Forms.DataGridView dgvCategorias;
-        private controles.ButtonRedondeado btnLimpiarB;
-        private controles.ButtonRedondeado btnBuscar;
+        private System.Windows.Forms.Button btnLimpiarB;
+        private System.Windows.Forms.Button btnBuscar;
         private FontAwesome.Sharp.IconButton icbtnActualizar;
     }
 }

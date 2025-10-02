@@ -92,7 +92,7 @@
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersWidth = 51;
             this.dgvCategorias.RowTemplate.Height = 24;
-            this.dgvCategorias.Size = new System.Drawing.Size(498, 274);
+            this.dgvCategorias.Size = new System.Drawing.Size(515, 279);
             this.dgvCategorias.TabIndex = 9;
             // 
             // label5
@@ -117,7 +117,7 @@
             this.btnEliminarCategorias.Location = new System.Drawing.Point(444, 97);
             this.btnEliminarCategorias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarCategorias.Name = "btnEliminarCategorias";
-            this.btnEliminarCategorias.Size = new System.Drawing.Size(95, 28);
+            this.btnEliminarCategorias.Size = new System.Drawing.Size(110, 32);
             this.btnEliminarCategorias.TabIndex = 7;
             this.btnEliminarCategorias.Text = "Eliminar";
             this.btnEliminarCategorias.UseVisualStyleBackColor = false;
