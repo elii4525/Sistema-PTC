@@ -41,12 +41,14 @@
             this.lblTituloInventarioD = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pbLogoITEC = new System.Windows.Forms.PictureBox();
+            this.pbAjustes = new System.Windows.Forms.PictureBox();
             this.tlpMenuDIT.SuspendLayout();
             this.pnlBarraLateral.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMenuDIT
@@ -75,10 +77,10 @@
             this.pnlBarraLateral.Controls.Add(this.icbtnSolicitudesD);
             this.pnlBarraLateral.Controls.Add(this.icbtnInventarioD);
             this.pnlBarraLateral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBarraLateral.Location = new System.Drawing.Point(3, 89);
+            this.pnlBarraLateral.Location = new System.Drawing.Point(3, 90);
             this.pnlBarraLateral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlBarraLateral.Name = "pnlBarraLateral";
-            this.pnlBarraLateral.Size = new System.Drawing.Size(165, 659);
+            this.pnlBarraLateral.Size = new System.Drawing.Size(173, 667);
             this.pnlBarraLateral.TabIndex = 0;
             this.pnlBarraLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraLateral_Paint);
             this.pnlBarraLateral.Resize += new System.EventHandler(this.pnlBarraLateral_Resize);
@@ -106,6 +108,7 @@
             this.icbtnConsumoD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.icbtnConsumoD.UseVisualStyleBackColor = false;
             this.icbtnConsumoD.Click += new System.EventHandler(this.icbtnConsumoD_Click);
+
             // 
             // icbtnSolicitudesD
             // 
@@ -159,6 +162,7 @@
             this.pnlContenedorDIT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+
             this.pnlContenedorDIT.Location = new System.Drawing.Point(174, 89);
             this.pnlContenedorDIT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContenedorDIT.Name = "pnlContenedorDIT";
@@ -170,6 +174,7 @@
             this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+
             this.pnlBarraSuperior.Controls.Add(this.icpbConfiguracion);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudD);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoD);
@@ -260,11 +265,21 @@
             this.pbLogoITEC.Paint += new System.Windows.Forms.PaintEventHandler(this.pbLogoITEC_Paint);
             this.pbLogoITEC.Resize += new System.EventHandler(this.pbLogoITEC_Resize);
             // 
+            // pbAjustes
+            // 
+            this.pbAjustes.Image = global::Vistas.Properties.Resources.icons8_ajustes_50;
+            this.pbAjustes.Location = new System.Drawing.Point(1498, 21);
+            this.pbAjustes.Name = "pbAjustes";
+            this.pbAjustes.Size = new System.Drawing.Size(57, 50);
+            this.pbAjustes.TabIndex = 5;
+            this.pbAjustes.TabStop = false;
+            this.pbAjustes.Click += new System.EventHandler(this.pbAjustes_Click);
+            // 
             // frmMenuDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1680, 750);
+            this.ClientSize = new System.Drawing.Size(1749, 759);
             this.Controls.Add(this.tlpMenuDIT);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1698, 797);
@@ -279,6 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,5 +314,6 @@
         private System.Windows.Forms.Label lblTituloConsumoD;
         private System.Windows.Forms.Label lblTituloInventarioD;
         private FontAwesome.Sharp.IconPictureBox icpbConfiguracion;
+
     }
 }

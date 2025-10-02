@@ -1,14 +1,7 @@
-create database BasePTC
+create database BasePTCC
 go
-use BasePTC;
+use BasePTCC;
 go
-
-
-create database BasePTC
-go
-use BasePTC;
-go
-
 
 -- Tables 
 create table Rol (
@@ -21,7 +14,7 @@ create table Usuario (
 idUsuario int identity (1,1) primary key,
 nombre varchar (50) not null,
 fechaNacimiento date not null,
-contraseña varchar(30),
+contrase�a varchar(250),
 telefono varchar (20),
 correo varchar (75) unique,
 id_Rol int,
@@ -54,7 +47,6 @@ constraint fk_Marca Foreign key(id_Marca) references Marca(idMarca) ON DELETE CA
 go
 
 
-
 create table Solicitud (
 idSolicitud int identity (1,1) primary key,
 motivo varchar (1000) not null,
@@ -66,6 +58,15 @@ constraint fk_Material Foreign key (id_Material) references Material(idMaterial)
 constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
 go
 
+create table SolicitudMaterial (
+    idSolicitudMaterial int identity(1,1) primary key,
+    idSolicitud int not null,
+    idMaterial int not null,
+    cantidad int not null,
+    constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
+    constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
+);
+
 create table HistorialSolicitud (
 idHistorialSolicitud int identity (1,1) primary key,
 estadoSolicitud varchar (50),
@@ -76,16 +77,6 @@ go
 constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
 go
 
--- Nuevas tablas
-
-create table SolicitudMaterial (
-    idSolicitudMaterial int identity(1,1) primary key,
-    idSolicitud int not null,
-    idMaterial int not null,
-    cantidad int not null,
-    constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
-    constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
-);
 
 create table salidaDeMaterial (
     idSalidamaterial int identity(1,1) primary key,
@@ -103,17 +94,18 @@ go
 
 create view VerUltimosUsuarios
 as
-select 
+select top 10 
     u.idUsuario,
     u.nombre,
     u.fechaNacimiento,
-    u.contraseña,
     u.telefono,
     u.correo,
-    r.idRol
+    r.tipoRol,
+    r.descripcionRol
 from Usuario u
-inner join Rol r on u.id_Rol = r.idRol;
-go
+INNER JOIN Rol r on u.id_Rol = r.idRol
+order by u.idUsuario desc;
+GO
 
 select *from VerUltimosUsuarios
 
@@ -131,29 +123,6 @@ go
 select *from VerUsuarios
 
 -- Inserts into
-insert into Usuario 
-values ('Carlos Perez', '1990-05-12', '12345', '77778888', 'carlos.perez@gmail.com', 1),
-('Ana Gomez', '1995-07-22', 'abcde', '77779999', 'ana.gomez@gmail.com', 2),
-('Luis Torres', '1988-01-15', 'pass123', '70001122', 'luis.torres@gmail.com', 1),
-('Maria Lopez', '1992-03-19', 'maria123', '73334444', 'maria.lopez@gmail.com', 2),
-('Pedro Sanchez', '1987-08-25', 'pedrito', '72223344', 'pedro.sanchez@gmail.com', 1),
-('Lucia Martinez', '1993-09-12', 'lucia2023', '74445566', 'lucia.martinez@gmail.com', 2),
-('Jorge Ramirez', '1991-02-02', 'jorgepass', '70005566', 'jorge.ramirez@gmail.com', 1),
-('Carmen Rivas', '1996-11-30', 'carmen22', '75556677', 'carmen.rivas@gmail.com', 2),
-('Andres Castro', '1989-06-18', 'andrespwd', '71112233', 'andres.castro@gmail.com', 1),
-('Elena Diaz', '1994-10-05', 'elena123', '78889900', 'elena.diaz@gmail.com', 2),
-('Roberto Mendez', '1990-12-21', 'rober90', '73332211', 'roberto.mendez@gmail.com', 1),
-('Sofia Herrera', '1997-01-14', 'sofi123', '70006677', 'sofia.herrera@gmail.com', 2),
-('Miguel Alvarez', '1986-09-09', 'miguelito', '72225555', 'miguel.alvarez@gmail.com', 1),
-('Paola Chavez', '1995-07-30', 'paola95', '75559999', 'paola.chavez@gmail.com', 2),
-('Daniel Morales', '1992-04-17', 'daniel22', '76667777', 'daniel.morales@gmail.com', 1),
-('Gabriela Flores', '1993-08-10', 'gabi2023', '72229999', 'gabriela.flores@gmail.com', 2),
-('Jose Ruiz', '1991-06-06', 'josepass', '79998888', 'jose.ruiz@gmail.com', 1),
-('Valeria Ortiz', '1998-12-03', 'valeria98', '71114455', 'valeria.ortiz@gmail.com', 2),
-('Ricardo Castillo', '1989-11-01', 'rick89', '74446688', 'ricardo.castillo@gmail.com', 1),
-('Natalia Vargas', '1994-03-25', 'naty94', '73331122', 'natalia.vargas@gmail.com', 2);
-go
-
 insert into Rol 
 values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
 ('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
@@ -274,7 +243,6 @@ Select *from Material
 Select *from SolicitudMaterial
 go
 
-
 --Creacion de consultas para el sistema en c#
 
 Create View selectMateriales as 
@@ -335,7 +303,9 @@ select *from registrosUlt;
 
 --CONSULTAS LENIN
 -- ==========================================================
+
 -- PROCEDIMIENTOS ALMACENADOS PARA LAS GRÁFICAS
+
 -- ==========================================================
 
 -- Procedimiento para Chart Inventario (Categorías específicas)
@@ -413,7 +383,9 @@ end
 go
 
 -- ==========================================================
+
 -- VERIFICACIÓN DE PROCEDIMIENTOS
+
 -- ==========================================================
 
 -- Verificar que los procedimientos se crearon

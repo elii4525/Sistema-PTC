@@ -36,6 +36,7 @@
             this.icbtnInventarioJ = new FontAwesome.Sharp.IconButton();
             this.pnlContenedorJ = new System.Windows.Forms.Panel();
             this.pnlBarraSuperior = new System.Windows.Forms.Panel();
+            this.pbAjustes = new System.Windows.Forms.PictureBox();
             this.lblTituloUsuarios = new System.Windows.Forms.Label();
             this.lblTituloInventarioJ = new System.Windows.Forms.Label();
             this.lblTituloSolicitudJ = new System.Windows.Forms.Label();
@@ -218,6 +219,71 @@
             this.lblTituloUsuarios.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloUsuarios.ForeColor = System.Drawing.Color.White;
             this.lblTituloUsuarios.Location = new System.Drawing.Point(707, 23);
+            this.lblTituloUsuarios.Name = "lblTituloUsuarios";
+            this.lblTituloUsuarios.Size = new System.Drawing.Size(181, 47);
+            this.lblTituloUsuarios.TabIndex = 3;
+            this.lblTituloUsuarios.Text = "Usuarios";
+            this.lblTituloUsuarios.Visible = false;
+            // 
+            // lblTituloInventarioJ
+            // 
+            this.lblTituloInventarioJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloInventarioJ.AutoSize = true;
+            this.lblTituloInventarioJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloInventarioJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloInventarioJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloInventarioJ.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloInventarioJ.Name = "lblTituloInventarioJ";
+            this.lblTituloInventarioJ.Size = new System.Drawing.Size(214, 47);
+            this.lblTituloInventarioJ.TabIndex = 0;
+            this.lblTituloInventarioJ.Text = "Inventario";
+            this.lblTituloInventarioJ.Visible = false;
+            // 
+            // lblTituloSolicitudJ
+            // 
+            this.lblTituloSolicitudJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloSolicitudJ.AutoSize = true;
+            this.lblTituloSolicitudJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloSolicitudJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSolicitudJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloSolicitudJ.Location = new System.Drawing.Point(695, 20);
+            this.lblTituloSolicitudJ.Name = "lblTituloSolicitudJ";
+            this.lblTituloSolicitudJ.Size = new System.Drawing.Size(229, 47);
+            this.lblTituloSolicitudJ.TabIndex = 2;
+            this.lblTituloSolicitudJ.Text = "Solicitudes";
+            this.lblTituloSolicitudJ.Visible = false;
+            // 
+            // lblTituloConsumoJ
+            // 
+            this.lblTituloConsumoJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloConsumoJ.AutoSize = true;
+            this.lblTituloConsumoJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloConsumoJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloConsumoJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloConsumoJ.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloConsumoJ.Name = "lblTituloConsumoJ";
+            this.lblTituloConsumoJ.Size = new System.Drawing.Size(207, 47);
+            this.lblTituloConsumoJ.TabIndex = 1;
+            this.lblTituloConsumoJ.Text = "Consumo";
+            this.lblTituloConsumoJ.Visible = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pbLogoITEC);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogo.Location = new System.Drawing.Point(3, 3);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(173, 81);
+            this.pnlLogo.TabIndex = 4;
+            // 
+            // lblTituloUsuarios
+            // 
+            this.lblTituloUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTituloUsuarios.AutoSize = true;
+            this.lblTituloUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloUsuarios.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloUsuarios.ForeColor = System.Drawing.Color.White;
+            this.lblTituloUsuarios.Location = new System.Drawing.Point(707, 33);
             this.lblTituloUsuarios.Name = "lblTituloUsuarios";
             this.lblTituloUsuarios.Size = new System.Drawing.Size(181, 47);
             this.lblTituloUsuarios.TabIndex = 3;

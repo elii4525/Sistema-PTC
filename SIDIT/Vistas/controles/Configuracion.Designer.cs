@@ -82,6 +82,7 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Enabled = false;
             this.dtpFecha.Location = new System.Drawing.Point(85, 393);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -93,6 +94,7 @@
             this.txtRol.BackColor = System.Drawing.Color.Black;
             this.txtRol.BorderColor = System.Drawing.Color.White;
             this.txtRol.BorderSize = 2;
+            this.txtRol.Enabled = false;
             this.txtRol.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.ForeColor = System.Drawing.Color.Black;
             this.txtRol.Location = new System.Drawing.Point(299, 303);
@@ -116,6 +118,7 @@
             this.txtNumero.BackColor = System.Drawing.Color.Black;
             this.txtNumero.BorderColor = System.Drawing.Color.White;
             this.txtNumero.BorderSize = 2;
+            this.txtNumero.Enabled = false;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(85, 303);
@@ -139,6 +142,7 @@
             this.txtCorreo.BackColor = System.Drawing.Color.Black;
             this.txtCorreo.BorderColor = System.Drawing.Color.White;
             this.txtCorreo.BorderSize = 2;
+            this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.txtCorreo.Location = new System.Drawing.Point(85, 209);
@@ -162,6 +166,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.Black;
             this.txtNombre.BorderColor = System.Drawing.Color.White;
             this.txtNombre.BorderSize = 2;
+            this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(85, 111);
@@ -256,7 +261,7 @@
             this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
             this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarContraseña.ForeColor = System.Drawing.Color.Black;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(45, 429);
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(44, 377);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
             this.btnCambiarContraseña.Size = new System.Drawing.Size(147, 59);
             this.btnCambiarContraseña.TabIndex = 8;
@@ -266,10 +271,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_36;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 67);
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.icons8_usuario_100__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 333);
+            this.pictureBox1.Size = new System.Drawing.Size(237, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -280,7 +285,7 @@
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(228, 429);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(227, 377);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(141, 59);
             this.btnCerrarSesion.TabIndex = 6;

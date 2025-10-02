@@ -23,8 +23,9 @@ namespace Vistas.Controles
 
         private void frmAgregarUsuario_Load(object sender, EventArgs e)
         {
-            //CargarUsuarios();
+            CargarUsuarios();
             EstilizarDataGrid(dgvUltimosUsuarios);
+            
             lbl1.Font = Helper.FuenteHelper.ObtenerFuente(17);
             lbl2.Font = Helper.FuenteHelper.ObtenerFuente(10);
             btnAgregarUsuario.Font = Helper.FuenteHelper.ObtenerFuente(9);
@@ -32,12 +33,15 @@ namespace Vistas.Controles
             lbl4.Font = Helper.FuenteHelper.ObtenerFuente(10);
             lbl5.Font = Helper.FuenteHelper.ObtenerFuente(10);
             lbl6.Font = Helper.FuenteHelper.ObtenerFuente(10);
+
             ConfigurarEdad(dtpFechaNacimiento);
+
             txtNumero.SoloNumeros = true;
             txtNombre.SoloLetras = true;
             txtNumero.MaxLength = 8;
         }
 
+        // Validación de campos vacíos
         public static bool NoEsNulo(MiTextBox txt, string mensajeError = "El campo no puede estar vacío")
         {
             if (string.IsNullOrWhiteSpace(txt.Texts))
@@ -51,9 +55,9 @@ namespace Vistas.Controles
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
-
+            // Validaciones
             if (!NoEsNulo(txtNombre, "El nombre es obligatorio"))
-                return; 
+                return;
 
             if (!NoEsNulo(txtNumero, "El número es obligatorio"))
                 return;
@@ -61,29 +65,60 @@ namespace Vistas.Controles
             if (!NoEsNulo(txtCorreo, "El correo es obligatorio"))
                 return;
 
-            Usuario nu = new Usuario();
-
-            nu.Nombre = txtNombre.Texts;
-            nu.FechaNacimiento = dtpFechaNacimiento.Value; 
-            nu.Telefono = txtNumero.Texts;
-            nu.Correo = txtCorreo.Texts;
-            nu.IdRol = Convert.ToInt32(cbRol.SelectedValue);
-
-            if (nu.RegistrarUsuario() == true)
+            if (txtNumero.Texts.Length != 8)
             {
-                //CargarUsuarios();
-                LimpiarCampos();
+                MessageBox.Show("El número debe tener exactamente 8 dígitos",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNumero.Focus();
+                return;
             }
 
+            if (!txtCorreo.Texts.EndsWith("@gmail.com"))
+            {
+                MessageBox.Show("El correo debe terminar en @gmail.com",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCorreo.Focus();
+                return;
+            }
+
+            try
+            {
+                Usuario nu = new Usuario
+                {
+                    Nombre = txtNombre.Texts.Trim(),
+                    FechaNacimiento = dtpFechaNacimiento.Value,
+                    Telefono = txtNumero.Texts.Trim(),
+                    Correo = txtCorreo.Texts.Trim().ToLower(),
+                    IdRol = Convert.ToInt32(cbRol.SelectedValue)
+                };
+
+                if (nu.RegistrarUsuario())
+                {
+                    MessageBox.Show("Usuario agregado correctamente",
+                                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    CargarUsuarios();   
+                    LimpiarCampos();    
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo registrar el usuario.",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar el usuario: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        // Con esto se configura el DateTimePicker y solo se agregan personas mayores de 18 años
         private void ConfigurarEdad(DateTimePicker dtpEdad)
         {
             DateTime hoy = DateTime.Today;
             dtpEdad.MaxDate = hoy.AddYears(-18);
             dtpEdad.MinDate = hoy.AddYears(-100);
-            dtpEdad.Value = dtpEdad.MaxDate; 
+            dtpEdad.Value = dtpEdad.MaxDate;
         }
 
         private void EstilizarDataGrid(DataGridView dgv)
@@ -109,13 +144,13 @@ namespace Vistas.Controles
 
         private void CargarRoles()
         {
-            Usuario u = new Usuario(); 
+            Usuario u = new Usuario();
             DataTable roles = u.cargarRoles();
 
             cbRol.DataSource = roles;
-            cbRol.DisplayMember = "tipoRol"; 
-            cbRol.ValueMember = "idRol";      
-            cbRol.SelectedIndex = -1;      
+            cbRol.DisplayMember = "tipoRol";
+            cbRol.ValueMember = "idRol";
+            cbRol.SelectedIndex = -1; 
         }
 
         private void LimpiarCampos()
@@ -126,10 +161,10 @@ namespace Vistas.Controles
             cbRol.SelectedIndex = -1;
         }
 
-        //private void CargarUsuarios()
-        //{
-        //    dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
-        //}
+        private void CargarUsuarios()
+        {
+            dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
+        }
     }
-    
 }
+
