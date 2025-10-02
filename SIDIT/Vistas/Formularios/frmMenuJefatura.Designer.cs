@@ -1,4 +1,6 @@
-﻿namespace Vistas.Formularios
+﻿using System.Windows.Forms;
+
+namespace Vistas.Formularios
 {
     partial class frmMenuJefatura
     {
@@ -401,6 +403,7 @@
         private FontAwesome.Sharp.IconButton icbtnInventarioJ;
         private System.Windows.Forms.Panel pnlContenedorJ;
         private System.Windows.Forms.Panel pnlBarraSuperior;
+        private PictureBox pbAjustes;
         private System.Windows.Forms.Label lblTituloSolicitudJ;
         private System.Windows.Forms.Label lblTituloConsumoJ;
         private System.Windows.Forms.Label lblTituloInventarioJ;
