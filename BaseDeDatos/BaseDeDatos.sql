@@ -350,7 +350,6 @@ select * from Marca;
 select * from Material;
 select * from solicitud;
 select * from HistorialSolicitud;
-select * from salidaDeMaterial;
 go
 
 
@@ -440,4 +439,33 @@ BEGIN
     ORDER BY s.fechaConsumo DESC;
 END
 GO
+-- Ejecuta ESTO en SSMS, asegurándote de usar la BD BasePTC
+create procedure sp_registrar_salida_material
+    @id_material int,
+    @cantidad_consumida int,
+    @fecha_consumo date,
+    @id_usuario int,
+    @motivo_salida varchar(1000)
+as
+begin
+    begin try
+        begin transaction;
+        
+        -- 1. Insertar en salida_de_material (Registra la salida)
+        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
+        values (@id_material, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+        
+        -- 2. Actualizar el inventario (resta la cantidad del inventario principal)
+        update Material 
+        set cantidad = cantidad - @cantidad_consumida
+        where idMaterial = @id_Material;
+        
+        commit transaction;
+    end try
+    begin catch
+        rollback transaction;
+        throw;
+    end catch
+end
+go
 
