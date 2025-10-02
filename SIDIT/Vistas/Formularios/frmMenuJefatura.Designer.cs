@@ -43,12 +43,13 @@
             this.lblTituloConsumoJ = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pbLogoITEC = new System.Windows.Forms.PictureBox();
+            this.icpbConfiguracion = new FontAwesome.Sharp.IconPictureBox();
             this.tlpMenuDIT.SuspendLayout();
             this.pnlBarraLateral.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMenuDIT
@@ -197,7 +198,7 @@
             this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBarraSuperior.Controls.Add(this.pbAjustes);
+            this.pnlBarraSuperior.Controls.Add(this.icpbConfiguracion);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloUsuarios);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioJ);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudJ);
@@ -210,15 +211,70 @@
             this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
             this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
             // 
-            // pbAjustes
+            // lblTituloUsuarios
             // 
-            this.pbAjustes.Image = global::Vistas.Properties.Resources.icons8_ajustes_50;
-            this.pbAjustes.Location = new System.Drawing.Point(1498, 20);
-            this.pbAjustes.Name = "pbAjustes";
-            this.pbAjustes.Size = new System.Drawing.Size(57, 50);
-            this.pbAjustes.TabIndex = 4;
-            this.pbAjustes.TabStop = false;
-            this.pbAjustes.Click += new System.EventHandler(this.pbAjustes_Click);
+            this.lblTituloUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTituloUsuarios.AutoSize = true;
+            this.lblTituloUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloUsuarios.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloUsuarios.ForeColor = System.Drawing.Color.White;
+            this.lblTituloUsuarios.Location = new System.Drawing.Point(707, 23);
+            this.lblTituloUsuarios.Name = "lblTituloUsuarios";
+            this.lblTituloUsuarios.Size = new System.Drawing.Size(181, 47);
+            this.lblTituloUsuarios.TabIndex = 3;
+            this.lblTituloUsuarios.Text = "Usuarios";
+            this.lblTituloUsuarios.Visible = false;
+            // 
+            // lblTituloInventarioJ
+            // 
+            this.lblTituloInventarioJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloInventarioJ.AutoSize = true;
+            this.lblTituloInventarioJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloInventarioJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloInventarioJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloInventarioJ.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloInventarioJ.Name = "lblTituloInventarioJ";
+            this.lblTituloInventarioJ.Size = new System.Drawing.Size(214, 47);
+            this.lblTituloInventarioJ.TabIndex = 0;
+            this.lblTituloInventarioJ.Text = "Inventario";
+            this.lblTituloInventarioJ.Visible = false;
+            // 
+            // lblTituloSolicitudJ
+            // 
+            this.lblTituloSolicitudJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloSolicitudJ.AutoSize = true;
+            this.lblTituloSolicitudJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloSolicitudJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSolicitudJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloSolicitudJ.Location = new System.Drawing.Point(695, 20);
+            this.lblTituloSolicitudJ.Name = "lblTituloSolicitudJ";
+            this.lblTituloSolicitudJ.Size = new System.Drawing.Size(229, 47);
+            this.lblTituloSolicitudJ.TabIndex = 2;
+            this.lblTituloSolicitudJ.Text = "Solicitudes";
+            this.lblTituloSolicitudJ.Visible = false;
+            // 
+            // lblTituloConsumoJ
+            // 
+            this.lblTituloConsumoJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloConsumoJ.AutoSize = true;
+            this.lblTituloConsumoJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloConsumoJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloConsumoJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloConsumoJ.Location = new System.Drawing.Point(707, 20);
+            this.lblTituloConsumoJ.Name = "lblTituloConsumoJ";
+            this.lblTituloConsumoJ.Size = new System.Drawing.Size(207, 47);
+            this.lblTituloConsumoJ.TabIndex = 1;
+            this.lblTituloConsumoJ.Text = "Consumo";
+            this.lblTituloConsumoJ.Visible = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pbLogoITEC);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogo.Location = new System.Drawing.Point(3, 3);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(173, 81);
+            this.pnlLogo.TabIndex = 4;
             // 
             // lblTituloUsuarios
             // 
@@ -301,6 +357,18 @@
             this.pbLogoITEC.Paint += new System.Windows.Forms.PaintEventHandler(this.pbLogoITEC_Paint);
             this.pbLogoITEC.Resize += new System.EventHandler(this.pbLogoITEC_Resize);
             // 
+            // icpbConfiguracion
+            // 
+            this.icpbConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.icpbConfiguracion.IconColor = System.Drawing.Color.White;
+            this.icpbConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icpbConfiguracion.IconSize = 59;
+            this.icpbConfiguracion.Location = new System.Drawing.Point(1495, 11);
+            this.icpbConfiguracion.Name = "icpbConfiguracion";
+            this.icpbConfiguracion.Size = new System.Drawing.Size(60, 59);
+            this.icpbConfiguracion.TabIndex = 5;
+            this.icpbConfiguracion.TabStop = false;
+            // 
             // frmMenuJefatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,9 +385,9 @@
             this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraSuperior.ResumeLayout(false);
             this.pnlBarraSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,6 +408,6 @@
         private FontAwesome.Sharp.IconButton icbtnUsuario;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblTituloUsuarios;
-        private System.Windows.Forms.PictureBox pbAjustes;
+        private FontAwesome.Sharp.IconPictureBox icpbConfiguracion;
     }
 }

@@ -15,7 +15,6 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             // Esto es para validar si existen usuarios en la base de datos
             if (!Usuario.ExistenUsuarios())
             {
@@ -35,6 +34,7 @@ namespace Vistas
                 // Si ya existen usuarios en la bd, ir directo al login
                 Application.Run(new frmLogin());
             }
+
         }
     }
 }

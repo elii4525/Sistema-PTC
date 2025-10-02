@@ -23,7 +23,7 @@ namespace Vistas.Formularios
             pnlBarraSuperior.BringToFront();
             pnlBarraLateral.BringToFront();
             pbLogoITEC.BringToFront();
-
+            MostrarFormInvenDEnPanel();
         }
 
 
@@ -118,28 +118,28 @@ namespace Vistas.Formularios
             ColoresConsumo();
         }
 
-        //public void MostrarFormConsumoDEnPanel()
-        //{
-        //    pnlContenedorDIT.Controls.Clear();
-        //    frmConsumoDIT consumoD = new frmConsumoDIT();
-        //    consumoD.TopLevel = false;
-        //    consumoD.FormBorderStyle = FormBorderStyle.None;
-        //    consumoD.Dock = DockStyle.Fill;
-        //    pnlContenedorDIT.Controls.Add(consumoD);
-        //    consumoD.Show();
+        public void MostrarFormConsumoDEnPanel()
+        {
+            pnlContenedorDIT.Controls.Clear();
+            frmConsumo consumoD = new frmConsumo();
+            consumoD.TopLevel = false;
+            consumoD.FormBorderStyle = FormBorderStyle.None;
+            consumoD.Dock = DockStyle.Fill;
+            pnlContenedorDIT.Controls.Add(consumoD);
+            consumoD.Show();
 
-        //    //Indicar panel activo
-        //    icbtnConsumoD.BackColor = Color.FromArgb(18, 18, 18);
-        //    icbtnConsumoD.IconColor = Color.White;
-        //    icbtnConsumoD.ForeColor = Color.White;
-        //    lblTituloConsumoD.Visible = true;
+            //Indicar panel activo
+            icbtnConsumoD.BackColor = Color.FromArgb(18, 18, 18);
+            icbtnConsumoD.IconColor = Color.White;
+            icbtnConsumoD.ForeColor = Color.White;
+            lblTituloConsumoD.Visible = true;
 
-        //    //Restablecer colores de paneles 
-        //    //Inventario
-        //    ColoresInventario();
-        //    //Solicitud
-        //    ColoresSolicitud();
-        //}
+            //Restablecer colores de paneles 
+            //Inventario
+            ColoresInventario();
+            //Solicitud
+            ColoresSolicitud();
+        }
 
         private void icbtnInventarioD_Click(object sender, EventArgs e)
         {
@@ -151,10 +151,10 @@ namespace Vistas.Formularios
             MostrarFormSoliDEnPanel();
         }
 
-        ////private void icbtnConsumoD_Click(object sender, EventArgs e)
-        ////{
-        ////    MostrarFormConsumoDEnPanel();
-        ////}
+        private void icbtnConsumoD_Click(object sender, EventArgs e)
+        {
+            MostrarFormConsumoDEnPanel();
+        }
 
 
 
@@ -200,12 +200,6 @@ namespace Vistas.Formularios
             pbLogoITEC.Invalidate();
         }
 
-        private void pbAjustes_Click(object sender, EventArgs e)
-        {
-            Configuracion c = new Configuracion();
-            c.Dock = DockStyle.Fill;
-            pnlContenedorDIT.Controls.Clear();
-            pnlContenedorDIT.Controls.Add(c);
-        }
+
     }
 }

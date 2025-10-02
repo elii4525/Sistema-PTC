@@ -1,5 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
+    
     partial class frmInventarioDIT
     {
         /// <summary>
@@ -38,21 +39,21 @@
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.dgvMaterialesD = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnLimpiarB = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pnlEliminar = new System.Windows.Forms.Panel();
+            this.icbtnMarcaEli = new FontAwesome.Sharp.IconButton();
+            this.icbtnCategoriaEli = new FontAwesome.Sharp.IconButton();
+            this.icbtnMaterialEli = new FontAwesome.Sharp.IconButton();
             this.pnlAgg = new System.Windows.Forms.Panel();
-            this.pnlContenedorPestañas = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.icbtnMarca = new FontAwesome.Sharp.IconButton();
             this.icbtnCategoria = new FontAwesome.Sharp.IconButton();
             this.icbtnMaterial = new FontAwesome.Sharp.IconButton();
-            this.icbtnAgg = new FontAwesome.Sharp.IconButton();
+            this.pnlContenedorPestañas = new System.Windows.Forms.Panel();
             this.icbtnActualizar = new FontAwesome.Sharp.IconButton();
+            this.icbtnAgg = new FontAwesome.Sharp.IconButton();
             this.icbtnEliminar = new FontAwesome.Sharp.IconButton();
             this.tlpFrmInventario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -188,8 +189,8 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btnLimpiar);
             this.panel3.Controls.Add(this.btnBuscar);
+            this.panel3.Controls.Add(this.btnLimpiarB);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.txtBuscar);
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -197,35 +198,35 @@
             this.panel3.Size = new System.Drawing.Size(1540, 60);
             this.panel3.TabIndex = 1;
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(729, 14);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(183, 37);
-            this.btnLimpiar.TabIndex = 3;
-            this.btnLimpiar.Text = "Limpiar búsqueda";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(562, 14);
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Location = new System.Drawing.Point(616, 15);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(137, 37);
-            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Size = new System.Drawing.Size(87, 34);
+            this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // btnLimpiarB
+            // 
+            this.btnLimpiarB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
+            this.btnLimpiarB.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarB.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarB.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiarB.Location = new System.Drawing.Point(728, 14);
+            this.btnLimpiarB.Name = "btnLimpiarB";
+            this.btnLimpiarB.Size = new System.Drawing.Size(181, 37);
+            this.btnLimpiarB.TabIndex = 7;
+            this.btnLimpiarB.Text = "Limpiar búsqueda";
+            this.btnLimpiarB.UseVisualStyleBackColor = false;
+            this.btnLimpiarB.Click += new System.EventHandler(this.btnLimpiarB_Click);
             // 
             // label1
             // 
@@ -251,19 +252,94 @@
             // 
             // pnlEliminar
             // 
-            this.pnlEliminar.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.pnlEliminar.Controls.Add(this.iconButton1);
-            this.pnlEliminar.Controls.Add(this.iconButton2);
-            this.pnlEliminar.Controls.Add(this.iconButton3);
+            this.pnlEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.pnlEliminar.Controls.Add(this.icbtnMarcaEli);
+            this.pnlEliminar.Controls.Add(this.icbtnCategoriaEli);
+            this.pnlEliminar.Controls.Add(this.icbtnMaterialEli);
             this.pnlEliminar.Location = new System.Drawing.Point(181, 71);
             this.pnlEliminar.Name = "pnlEliminar";
             this.pnlEliminar.Size = new System.Drawing.Size(164, 140);
             this.pnlEliminar.TabIndex = 50;
             this.pnlEliminar.Visible = false;
             // 
+            // icbtnMarcaEli
+            // 
+            this.icbtnMarcaEli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.icbtnMarcaEli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icbtnMarcaEli.FlatAppearance.BorderSize = 0;
+            this.icbtnMarcaEli.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
+            this.icbtnMarcaEli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
+            this.icbtnMarcaEli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnMarcaEli.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnMarcaEli.ForeColor = System.Drawing.Color.White;
+            this.icbtnMarcaEli.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icbtnMarcaEli.IconColor = System.Drawing.Color.White;
+            this.icbtnMarcaEli.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnMarcaEli.IconSize = 33;
+            this.icbtnMarcaEli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnMarcaEli.Location = new System.Drawing.Point(0, 98);
+            this.icbtnMarcaEli.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
+            this.icbtnMarcaEli.Name = "icbtnMarcaEli";
+            this.icbtnMarcaEli.Padding = new System.Windows.Forms.Padding(11, 0, 10, 0);
+            this.icbtnMarcaEli.Size = new System.Drawing.Size(164, 42);
+            this.icbtnMarcaEli.TabIndex = 9;
+            this.icbtnMarcaEli.Text = "Marca";
+            this.icbtnMarcaEli.UseVisualStyleBackColor = false;
+            this.icbtnMarcaEli.Click += new System.EventHandler(this.icbtnMarcaEli_Click);
+            // 
+            // icbtnCategoriaEli
+            // 
+            this.icbtnCategoriaEli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.icbtnCategoriaEli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icbtnCategoriaEli.FlatAppearance.BorderSize = 0;
+            this.icbtnCategoriaEli.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
+            this.icbtnCategoriaEli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
+            this.icbtnCategoriaEli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnCategoriaEli.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnCategoriaEli.ForeColor = System.Drawing.Color.White;
+            this.icbtnCategoriaEli.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icbtnCategoriaEli.IconColor = System.Drawing.Color.White;
+            this.icbtnCategoriaEli.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnCategoriaEli.IconSize = 33;
+            this.icbtnCategoriaEli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnCategoriaEli.Location = new System.Drawing.Point(0, 50);
+            this.icbtnCategoriaEli.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
+            this.icbtnCategoriaEli.Name = "icbtnCategoriaEli";
+            this.icbtnCategoriaEli.Padding = new System.Windows.Forms.Padding(11, 0, 10, 0);
+            this.icbtnCategoriaEli.Size = new System.Drawing.Size(164, 42);
+            this.icbtnCategoriaEli.TabIndex = 8;
+            this.icbtnCategoriaEli.Text = "Categoría";
+            this.icbtnCategoriaEli.UseVisualStyleBackColor = false;
+            this.icbtnCategoriaEli.Click += new System.EventHandler(this.icbtnCategoriaEli_Click);
+            // 
+            // icbtnMaterialEli
+            // 
+            this.icbtnMaterialEli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
+            this.icbtnMaterialEli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icbtnMaterialEli.FlatAppearance.BorderSize = 0;
+            this.icbtnMaterialEli.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
+            this.icbtnMaterialEli.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
+            this.icbtnMaterialEli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnMaterialEli.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnMaterialEli.ForeColor = System.Drawing.Color.White;
+            this.icbtnMaterialEli.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icbtnMaterialEli.IconColor = System.Drawing.Color.White;
+            this.icbtnMaterialEli.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnMaterialEli.IconSize = 33;
+            this.icbtnMaterialEli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnMaterialEli.Location = new System.Drawing.Point(0, 2);
+            this.icbtnMaterialEli.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
+            this.icbtnMaterialEli.Name = "icbtnMaterialEli";
+            this.icbtnMaterialEli.Padding = new System.Windows.Forms.Padding(11, 0, 10, 0);
+            this.icbtnMaterialEli.Size = new System.Drawing.Size(164, 42);
+            this.icbtnMaterialEli.TabIndex = 7;
+            this.icbtnMaterialEli.Text = "Material";
+            this.icbtnMaterialEli.UseVisualStyleBackColor = false;
+            this.icbtnMaterialEli.Click += new System.EventHandler(this.icbtnMaterialEli_Click);
+            // 
             // pnlAgg
             // 
-            this.pnlAgg.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.pnlAgg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.pnlAgg.Controls.Add(this.icbtnMarca);
             this.pnlAgg.Controls.Add(this.icbtnCategoria);
             this.pnlAgg.Controls.Add(this.icbtnMaterial);
@@ -273,95 +349,9 @@
             this.pnlAgg.TabIndex = 49;
             this.pnlAgg.Visible = false;
             // 
-            // pnlContenedorPestañas
-            // 
-            this.pnlContenedorPestañas.BackColor = System.Drawing.Color.Sienna;
-            this.pnlContenedorPestañas.Controls.Add(this.icbtnAgg);
-            this.pnlContenedorPestañas.Controls.Add(this.icbtnActualizar);
-            this.pnlContenedorPestañas.Controls.Add(this.icbtnEliminar);
-            this.pnlContenedorPestañas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlContenedorPestañas.ForeColor = System.Drawing.Color.White;
-            this.pnlContenedorPestañas.Location = new System.Drawing.Point(0, 0);
-            this.pnlContenedorPestañas.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlContenedorPestañas.Name = "pnlContenedorPestañas";
-            this.pnlContenedorPestañas.Size = new System.Drawing.Size(1546, 71);
-            this.pnlContenedorPestañas.TabIndex = 48;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 33;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.Location = new System.Drawing.Point(0, 98);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(11, 0, 10, 0);
-            this.iconButton1.Size = new System.Drawing.Size(164, 42);
-            this.iconButton1.TabIndex = 9;
-            this.iconButton1.Text = "Marca";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
-            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 33;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.Location = new System.Drawing.Point(0, 50);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(11, 0, 10, 0);
-            this.iconButton2.Size = new System.Drawing.Size(164, 42);
-            this.iconButton2.TabIndex = 8;
-            this.iconButton2.Text = "Categoría";
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 33;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.Location = new System.Drawing.Point(0, 2);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(10, 2, 3, 2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(11, 0, 10, 0);
-            this.iconButton3.Size = new System.Drawing.Size(164, 42);
-            this.iconButton3.TabIndex = 7;
-            this.iconButton3.Text = "Material";
-            this.iconButton3.UseVisualStyleBackColor = false;
-            // 
             // icbtnMarca
             // 
-            this.icbtnMarca.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.icbtnMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.icbtnMarca.FlatAppearance.BorderSize = 0;
             this.icbtnMarca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
@@ -382,10 +372,11 @@
             this.icbtnMarca.TabIndex = 9;
             this.icbtnMarca.Text = "Marca";
             this.icbtnMarca.UseVisualStyleBackColor = false;
+            this.icbtnMarca.Click += new System.EventHandler(this.icbtnMarca_Click);
             // 
             // icbtnCategoria
             // 
-            this.icbtnCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.icbtnCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.icbtnCategoria.FlatAppearance.BorderSize = 0;
             this.icbtnCategoria.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
@@ -410,7 +401,7 @@
             // 
             // icbtnMaterial
             // 
-            this.icbtnMaterial.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(0)))));
             this.icbtnMaterial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.icbtnMaterial.FlatAppearance.BorderSize = 0;
             this.icbtnMaterial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(89)))), ((int)(((byte)(133)))));
@@ -432,6 +423,47 @@
             this.icbtnMaterial.Text = "Material";
             this.icbtnMaterial.UseVisualStyleBackColor = false;
             this.icbtnMaterial.Click += new System.EventHandler(this.icbtnMaterial_Click);
+            // 
+            // pnlContenedorPestañas
+            // 
+            this.pnlContenedorPestañas.BackColor = System.Drawing.Color.Black;
+            this.pnlContenedorPestañas.Controls.Add(this.icbtnActualizar);
+            this.pnlContenedorPestañas.Controls.Add(this.icbtnAgg);
+            this.pnlContenedorPestañas.Controls.Add(this.icbtnEliminar);
+            this.pnlContenedorPestañas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlContenedorPestañas.ForeColor = System.Drawing.Color.White;
+            this.pnlContenedorPestañas.Location = new System.Drawing.Point(0, 0);
+            this.pnlContenedorPestañas.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContenedorPestañas.Name = "pnlContenedorPestañas";
+            this.pnlContenedorPestañas.Size = new System.Drawing.Size(1546, 71);
+            this.pnlContenedorPestañas.TabIndex = 48;
+            // 
+            // icbtnActualizar
+            // 
+            this.icbtnActualizar.BackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.icbtnActualizar.FlatAppearance.BorderSize = 0;
+            this.icbtnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.icbtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.icbtnActualizar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icbtnActualizar.IconColor = System.Drawing.Color.White;
+            this.icbtnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnActualizar.IconSize = 33;
+            this.icbtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.icbtnActualizar.Location = new System.Drawing.Point(351, 0);
+            this.icbtnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnActualizar.Name = "icbtnActualizar";
+            this.icbtnActualizar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.icbtnActualizar.Size = new System.Drawing.Size(164, 63);
+            this.icbtnActualizar.TabIndex = 7;
+            this.icbtnActualizar.Text = "Actualizar";
+            this.icbtnActualizar.UseVisualStyleBackColor = false;
+            this.icbtnActualizar.Click += new System.EventHandler(this.icbtnActualizar_Click);
+            this.icbtnActualizar.MouseEnter += new System.EventHandler(this.btnMouseEnter);
+            this.icbtnActualizar.MouseLeave += new System.EventHandler(this.btnMouseLeave);
             // 
             // icbtnAgg
             // 
@@ -458,30 +490,8 @@
             this.icbtnAgg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtnAgg.UseVisualStyleBackColor = false;
             this.icbtnAgg.Click += new System.EventHandler(this.icbtnAgg_Click);
-            // 
-            // icbtnActualizar
-            // 
-            this.icbtnActualizar.BackColor = System.Drawing.Color.Transparent;
-            this.icbtnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.icbtnActualizar.FlatAppearance.BorderSize = 0;
-            this.icbtnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.icbtnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.icbtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtnActualizar.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.icbtnActualizar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.icbtnActualizar.IconColor = System.Drawing.Color.White;
-            this.icbtnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnActualizar.IconSize = 33;
-            this.icbtnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.icbtnActualizar.Location = new System.Drawing.Point(354, 0);
-            this.icbtnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.icbtnActualizar.Name = "icbtnActualizar";
-            this.icbtnActualizar.Padding = new System.Windows.Forms.Padding(8, 0, 10, 0);
-            this.icbtnActualizar.Size = new System.Drawing.Size(164, 63);
-            this.icbtnActualizar.TabIndex = 5;
-            this.icbtnActualizar.Text = "Actualizar";
-            this.icbtnActualizar.UseVisualStyleBackColor = false;
+            this.icbtnAgg.MouseEnter += new System.EventHandler(this.btnMouseEnter);
+            this.icbtnAgg.MouseLeave += new System.EventHandler(this.btnMouseLeave);
             // 
             // icbtnEliminar
             // 
@@ -508,6 +518,8 @@
             this.icbtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtnEliminar.UseVisualStyleBackColor = false;
             this.icbtnEliminar.Click += new System.EventHandler(this.icbtnEliminar_Click);
+            this.icbtnEliminar.MouseEnter += new System.EventHandler(this.btnMouseEnter);
+            this.icbtnEliminar.MouseLeave += new System.EventHandler(this.btnMouseLeave);
             // 
             // frmInventarioDIT
             // 
@@ -545,27 +557,27 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlContenedorPestañas;
         private FontAwesome.Sharp.IconButton icbtnAgg;
-        private FontAwesome.Sharp.IconButton icbtnActualizar;
         private FontAwesome.Sharp.IconButton icbtnEliminar;
         private System.Windows.Forms.Panel pnlAgg;
         private FontAwesome.Sharp.IconButton icbtnMaterial;
         private FontAwesome.Sharp.IconButton icbtnMarca;
         private FontAwesome.Sharp.IconButton icbtnCategoria;
         private System.Windows.Forms.Panel pnlEliminar;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton icbtnMarcaEli;
+        private FontAwesome.Sharp.IconButton icbtnCategoriaEli;
+        private FontAwesome.Sharp.IconButton icbtnMaterialEli;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvMaterialesD;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblMarcas;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.DataGridView dgvMarcas;
         private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.Button btnLimpiarB;
+        private System.Windows.Forms.Button btnBuscar;
+        private FontAwesome.Sharp.IconButton icbtnActualizar;
     }
 }

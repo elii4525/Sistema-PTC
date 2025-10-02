@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
@@ -262,11 +265,23 @@
     <Compile Include="controles\TextBoxRedondeado.Designer.cs">
       <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmActualizarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmActualizarMaterial.Designer.cs">
+      <DependentUpon>frmActualizarMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmAggCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmAggCategoria.Designer.cs">
       <DependentUpon>frmAggCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAggMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAggMarca.Designer.cs">
+      <DependentUpon>frmAggMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmAgregarMaterial.cs">
       <SubType>Form</SubType>
@@ -297,6 +312,24 @@
     </Compile>
     <Compile Include="Formularios\frmCambiarContraseña.Designer.cs">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEliminarCategoria.Designer.cs">
+      <DependentUpon>frmEliminarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEliminarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEliminarMarca.Designer.cs">
+      <DependentUpon>frmEliminarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEliminarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEliminarMaterial.Designer.cs">
+      <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmInventarioDIT.cs">
       <SubType>Form</SubType>
@@ -346,6 +379,12 @@
     <Compile Include="Formularios\frmRecuperarContraseña.Designer.cs">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmRegistroConsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRegistroConsumo.Designer.cs">
+      <DependentUpon>frmRegistroConsumo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSolicitudDIT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +426,7 @@
     </Compile>
     <Compile Include="Formularios\usercontolsflotantes.Designer.cs">
       <DependentUpon>usercontolsflotantes.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Plantillas\pdfCreador.cs" />
     <Compile Include="UserControls\frmEliminarMaterial.cs">
@@ -406,6 +446,7 @@
     </Compile>
     <Compile Include="UserControls\frmListaInventario.Designer.cs">
       <DependentUpon>frmListaInventario.cs</DependentUpon>
+
     </Compile>
     <Compile Include="HelperBarraNegra\BarraNegra.cs" />
     <Compile Include="HelperFuente\FuenteHelper.cs" />
@@ -432,8 +473,14 @@
     <EmbeddedResource Include="controles\TextBoxRedondeado.resx">
       <DependentUpon>TextBoxRedondeado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmActualizarMaterial.resx">
+      <DependentUpon>frmActualizarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAggCategoria.resx">
       <DependentUpon>frmAggCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAggMarca.resx">
+      <DependentUpon>frmAggMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAgregarMaterial.resx">
       <DependentUpon>frmAgregarMaterial.cs</DependentUpon>
@@ -449,6 +496,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEliminarCategoria.resx">
+      <DependentUpon>frmEliminarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEliminarMarca.resx">
+      <DependentUpon>frmEliminarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEliminarMaterial.resx">
+      <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInventarioDIT.resx">
       <DependentUpon>frmInventarioDIT.cs</DependentUpon>
@@ -474,6 +532,9 @@
     <EmbeddedResource Include="Formularios\frmRecuperarContraseña.resx">
       <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmRegistroConsumo.resx">
+      <DependentUpon>frmRegistroConsumo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSolicitudDIT.resx">
       <DependentUpon>frmSolicitudDIT.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,18 +546,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\frmAggMateriall.resx">
-      <DependentUpon>frmAggMateriall.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\frmEliminarMaterial.resx">
-      <DependentUpon>frmEliminarMaterial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\frmAggMaterial.resx">
-      <DependentUpon>frmAggMaterial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\frmListaInventario.resx">
-      <DependentUpon>frmListaInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
