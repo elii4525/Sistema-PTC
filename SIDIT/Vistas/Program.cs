@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vistas.Formularios;
+using Modelos.Entidades;
 
 namespace Vistas
 {
@@ -17,8 +15,27 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUsuarios());
-            //Application.Run(new frmBienvenidaJefatura());
+
+            // Esto es para validar si existen usuarios en la base de datos
+            if (!Usuario.ExistenUsuarios())
+            {
+                frmPrimerUsuario frm = new frmPrimerUsuario();
+
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmLogin());
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                // Si ya existen usuarios en la bd, ir directo al login
+                Application.Run(new frmLogin());
+            }
         }
     }
 }
+

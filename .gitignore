@@ -1,6 +1,17 @@
+
 # Carpetas de compilación
 bin/
 obj/
+.vs/
+
+# Otros temporales
+*.cache
+*.db
+*.vsidx
+*.pdb
+*.exe
+*.dll
+*.resources
 
 # Archivos de usuario de Visual Studio
 *.user
@@ -16,3 +27,4 @@ obj/
 *.nupkg
 *.nuspec
 packages/
+

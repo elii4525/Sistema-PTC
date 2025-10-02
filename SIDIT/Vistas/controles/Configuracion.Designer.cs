@@ -42,8 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,10 +82,10 @@
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(85, 394);
+            this.dtpFecha.Location = new System.Drawing.Point(85, 393);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpFecha.Size = new System.Drawing.Size(250, 22);
+            this.dtpFecha.Size = new System.Drawing.Size(267, 22);
             this.dtpFecha.TabIndex = 10;
             // 
             // txtRol
@@ -96,12 +97,15 @@
             this.txtRol.ForeColor = System.Drawing.Color.Black;
             this.txtRol.Location = new System.Drawing.Point(299, 303);
             this.txtRol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRol.MaxLength = 32767;
             this.txtRol.multiline = true;
             this.txtRol.Name = "txtRol";
             this.txtRol.Padding = new System.Windows.Forms.Padding(7);
             this.txtRol.PasswordChar = false;
             this.txtRol.ReadOnly = false;
             this.txtRol.Size = new System.Drawing.Size(164, 30);
+            this.txtRol.SoloLetras = false;
+            this.txtRol.SoloNumeros = false;
             this.txtRol.TabIndex = 9;
             this.txtRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRol.Texts = "";
@@ -116,12 +120,15 @@
             this.txtNumero.ForeColor = System.Drawing.Color.Black;
             this.txtNumero.Location = new System.Drawing.Point(85, 303);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumero.MaxLength = 32767;
             this.txtNumero.multiline = true;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Padding = new System.Windows.Forms.Padding(7);
             this.txtNumero.PasswordChar = false;
             this.txtNumero.ReadOnly = false;
             this.txtNumero.Size = new System.Drawing.Size(164, 30);
+            this.txtNumero.SoloLetras = false;
+            this.txtNumero.SoloNumeros = false;
             this.txtNumero.TabIndex = 8;
             this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNumero.Texts = "";
@@ -136,12 +143,15 @@
             this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
             this.txtCorreo.Location = new System.Drawing.Point(85, 209);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 32767;
             this.txtCorreo.multiline = true;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
             this.txtCorreo.PasswordChar = false;
             this.txtCorreo.ReadOnly = false;
             this.txtCorreo.Size = new System.Drawing.Size(250, 30);
+            this.txtCorreo.SoloLetras = false;
+            this.txtCorreo.SoloNumeros = false;
             this.txtCorreo.TabIndex = 7;
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCorreo.Texts = "";
@@ -156,12 +166,15 @@
             this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(85, 111);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.MaxLength = 32767;
             this.txtNombre.multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Padding = new System.Windows.Forms.Padding(7);
             this.txtNombre.PasswordChar = false;
             this.txtNombre.ReadOnly = false;
             this.txtNombre.Size = new System.Drawing.Size(250, 30);
+            this.txtNombre.SoloLetras = false;
+            this.txtNombre.SoloNumeros = false;
             this.txtNombre.TabIndex = 6;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombre.Texts = "";
@@ -229,6 +242,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCambiarContraseña);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnCerrarSesion);
             this.panel2.Location = new System.Drawing.Point(540, 3);
@@ -236,15 +250,19 @@
             this.panel2.Size = new System.Drawing.Size(411, 526);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox1
+            // btnCambiarContraseña
             // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_36;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 333);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.btnCambiarContraseña.BackColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.Black;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(44, 377);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(147, 59);
+            this.btnCambiarContraseña.TabIndex = 8;
+            this.btnCambiarContraseña.Text = "Cambiar contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
             // btnCerrarSesion
             // 
@@ -252,13 +270,23 @@
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(149, 432);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(227, 377);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(132, 39);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(141, 59);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.icons8_usuario_100__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // Configuracion
             // 
@@ -298,5 +326,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Button btnCambiarContraseña;
     }
 }
