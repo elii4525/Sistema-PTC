@@ -144,8 +144,9 @@ namespace Vistas.Formularios
         {
             frmAgregarMaterial frm = new frmAgregarMaterial();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
             frm.FormClosed += (s, args) => MostrarMateriales();
-            frm.ShowDialog();
+            frm.ShowDialog(this);
 
         }
 
@@ -153,40 +154,45 @@ namespace Vistas.Formularios
         {
             frmAggCategoria frm = new frmAggCategoria();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
             frm.FormClosed += (s, args) => MostrarCategorias();
-            frm.ShowDialog();
+            frm.ShowDialog(this);
         }
 
         private void icbtnMarca_Click(object sender, EventArgs e)
         {
             frmAggMarca frm = new frmAggMarca();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
             frm.FormClosed += (s, args) => MostrarMarcas();
-            frm.ShowDialog();
+            frm.ShowDialog(this);
         }
 
         private void icbtnMaterialEli_Click(object sender, EventArgs e)
         {
             frmEliminarMaterial frm = new frmEliminarMaterial();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
             frm.FormClosed += (s, args) => MostrarMateriales();
-            frm.ShowDialog();
+            frm.ShowDialog(this);
         }
 
         private void icbtnCategoriaEli_Click(object sender, EventArgs e)
         {
             frmEliminarCategoria frm = new frmEliminarCategoria();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
             frm.FormClosed += (s, args) => MostrarCategorias();
-            frm.ShowDialog();
+            frm.ShowDialog(this);
         }
 
         private void icbtnMarcaEli_Click(object sender, EventArgs e)
         {
             frmEliminarMarca frm = new frmEliminarMarca();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
             frm.FormClosed += (s, args) => MostrarMarcas();
-            frm.ShowDialog();
+            frm.ShowDialog(this);
         }
 
         private void btnLimpiarB_Click(object sender, EventArgs e)
@@ -215,8 +221,9 @@ namespace Vistas.Formularios
             pnlEliminar.Visible = false;
             frmActualizarMaterial frm = new frmActualizarMaterial();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;  // <--- Esto evita que aparezca en la barra de tareas
             frm.FormClosed += (s, args) => MostrarMateriales(); //Esta linea de codigo hace lo siguiente: Cuando el frm se cierre (FormClosed) debes hacer lo siguiente => Refresca el dgv.
-            frm.ShowDialog();
+            frm.ShowDialog(this);
         }
 
 

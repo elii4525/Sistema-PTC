@@ -347,6 +347,7 @@
             this.icbtnConsumo.Size = new System.Drawing.Size(181, 164);
             this.icbtnConsumo.TabIndex = 0;
             this.icbtnConsumo.UseVisualStyleBackColor = true;
+            this.icbtnConsumo.Click += new System.EventHandler(this.icbtnConsumo_Click);
             // 
             // frmBienvenidoDIT
             // 
@@ -357,7 +358,7 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1598, 787);
             this.Name = "frmBienvenidoDIT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -36,19 +36,19 @@
             this.icbtnInventarioJ = new FontAwesome.Sharp.IconButton();
             this.pnlContenedorJ = new System.Windows.Forms.Panel();
             this.pnlBarraSuperior = new System.Windows.Forms.Panel();
-            this.pbAjustes = new System.Windows.Forms.PictureBox();
             this.lblTituloUsuarios = new System.Windows.Forms.Label();
             this.lblTituloInventarioJ = new System.Windows.Forms.Label();
             this.lblTituloSolicitudJ = new System.Windows.Forms.Label();
             this.lblTituloConsumoJ = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pbLogoITEC = new System.Windows.Forms.PictureBox();
+            this.icpbConfiguracion = new FontAwesome.Sharp.IconPictureBox();
             this.tlpMenuDIT.SuspendLayout();
             this.pnlBarraLateral.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMenuDIT
@@ -197,7 +197,7 @@
             this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBarraSuperior.Controls.Add(this.pbAjustes);
+            this.pnlBarraSuperior.Controls.Add(this.icpbConfiguracion);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloUsuarios);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioJ);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudJ);
@@ -209,16 +209,6 @@
             this.pnlBarraSuperior.TabIndex = 3;
             this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
             this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
-            // 
-            // pbAjustes
-            // 
-            this.pbAjustes.Image = global::Vistas.Properties.Resources.icons8_ajustes_50;
-            this.pbAjustes.Location = new System.Drawing.Point(1498, 20);
-            this.pbAjustes.Name = "pbAjustes";
-            this.pbAjustes.Size = new System.Drawing.Size(57, 50);
-            this.pbAjustes.TabIndex = 4;
-            this.pbAjustes.TabStop = false;
-            this.pbAjustes.Click += new System.EventHandler(this.pbAjustes_Click);
             // 
             // lblTituloUsuarios
             // 
@@ -301,6 +291,18 @@
             this.pbLogoITEC.Paint += new System.Windows.Forms.PaintEventHandler(this.pbLogoITEC_Paint);
             this.pbLogoITEC.Resize += new System.EventHandler(this.pbLogoITEC_Resize);
             // 
+            // icpbConfiguracion
+            // 
+            this.icpbConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.icpbConfiguracion.IconColor = System.Drawing.Color.White;
+            this.icpbConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icpbConfiguracion.IconSize = 59;
+            this.icpbConfiguracion.Location = new System.Drawing.Point(1495, 11);
+            this.icpbConfiguracion.Name = "icpbConfiguracion";
+            this.icpbConfiguracion.Size = new System.Drawing.Size(60, 59);
+            this.icpbConfiguracion.TabIndex = 5;
+            this.icpbConfiguracion.TabStop = false;
+            // 
             // frmMenuJefatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,9 +319,9 @@
             this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraSuperior.ResumeLayout(false);
             this.pnlBarraSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,6 +342,6 @@
         private FontAwesome.Sharp.IconButton icbtnUsuario;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblTituloUsuarios;
-        private System.Windows.Forms.PictureBox pbAjustes;
+        private FontAwesome.Sharp.IconPictureBox icpbConfiguracion;
     }
 }

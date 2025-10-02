@@ -35,18 +35,18 @@
             this.icbtnInventarioD = new FontAwesome.Sharp.IconButton();
             this.pnlContenedorDIT = new System.Windows.Forms.Panel();
             this.pnlBarraSuperior = new System.Windows.Forms.Panel();
+            this.icpbConfiguracion = new FontAwesome.Sharp.IconPictureBox();
             this.lblTituloSolicitudD = new System.Windows.Forms.Label();
             this.lblTituloConsumoD = new System.Windows.Forms.Label();
             this.lblTituloInventarioD = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pbLogoITEC = new System.Windows.Forms.PictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.tlpMenuDIT.SuspendLayout();
             this.pnlBarraLateral.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpMenuDIT
@@ -105,6 +105,7 @@
             this.icbtnConsumoD.Text = "Consumo";
             this.icbtnConsumoD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.icbtnConsumoD.UseVisualStyleBackColor = false;
+            this.icbtnConsumoD.Click += new System.EventHandler(this.icbtnConsumoD_Click);
             // 
             // icbtnSolicitudesD
             // 
@@ -169,7 +170,7 @@
             this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBarraSuperior.Controls.Add(this.iconPictureBox1);
+            this.pnlBarraSuperior.Controls.Add(this.icpbConfiguracion);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudD);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoD);
             this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioD);
@@ -180,6 +181,19 @@
             this.pnlBarraSuperior.TabIndex = 3;
             this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
             this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
+            // 
+            // icpbConfiguracion
+            // 
+            this.icpbConfiguracion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.icpbConfiguracion.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.icpbConfiguracion.IconColor = System.Drawing.Color.White;
+            this.icpbConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icpbConfiguracion.IconSize = 59;
+            this.icpbConfiguracion.Location = new System.Drawing.Point(1443, 10);
+            this.icpbConfiguracion.Name = "icpbConfiguracion";
+            this.icpbConfiguracion.Size = new System.Drawing.Size(60, 59);
+            this.icpbConfiguracion.TabIndex = 3;
+            this.icpbConfiguracion.TabStop = false;
             // 
             // lblTituloSolicitudD
             // 
@@ -246,18 +260,6 @@
             this.pbLogoITEC.Paint += new System.Windows.Forms.PaintEventHandler(this.pbLogoITEC_Paint);
             this.pbLogoITEC.Resize += new System.EventHandler(this.pbLogoITEC_Resize);
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 59;
-            this.iconPictureBox1.Location = new System.Drawing.Point(1434, 10);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(60, 59);
-            this.iconPictureBox1.TabIndex = 3;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // frmMenuDIT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,9 +276,9 @@
             this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraSuperior.ResumeLayout(false);
             this.pnlBarraSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,6 +297,6 @@
         private System.Windows.Forms.Label lblTituloSolicitudD;
         private System.Windows.Forms.Label lblTituloConsumoD;
         private System.Windows.Forms.Label lblTituloInventarioD;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox icpbConfiguracion;
     }
 }

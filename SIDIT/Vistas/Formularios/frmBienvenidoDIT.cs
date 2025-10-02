@@ -53,21 +53,21 @@ namespace Vistas.Formularios
             sol.MostrarFormSoliDEnPanel();
         }
 
-        //private void lblVerConsumo_Click(object sender, EventArgs e)
-        //{
-        //    this.Hide();
-        //    frmMenuDIT consu = new frmMenuDIT();
-        //    consu.Show();
-        //    consu.MostrarFormConsumoDEnPanel();
-        //}
+        private void lblVerConsumo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenuDIT consu = new frmMenuDIT();
+            consu.Show();
+            consu.MostrarFormConsumoDEnPanel();
+        }
 
-        //private void icbtnConsumo_Click(object sender, EventArgs e)
-        //{
-        //    this.Hide();
-        //    frmMenuDIT consu = new frmMenuDIT();
-        //    consu.Show();
-        //    consu.MostrarFormConsumoDEnPanel();
-        //}
+        private void icbtnConsumo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenuDIT consu = new frmMenuDIT();
+            consu.Show();
+            consu.MostrarFormConsumoDEnPanel();
+        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -112,5 +112,7 @@ namespace Vistas.Formularios
         {
             lblVerConsumo.ForeColor = Color.White;
         }
+
+
     }
 }
