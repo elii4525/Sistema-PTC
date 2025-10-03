@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,18 +38,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblVer = new System.Windows.Forms.Label();
-            this.icbtnInventario = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblVerSoli = new System.Windows.Forms.Label();
-            this.icbtnSol = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblVerConsumo = new System.Windows.Forms.Label();
+            this.icbtnInventario = new FontAwesome.Sharp.IconButton();
+            this.icbtnSol = new FontAwesome.Sharp.IconButton();
             this.icbtnConsumo = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,18 +57,8 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -77,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(459, 0);
+            this.label2.Location = new System.Drawing.Point(433, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(685, 69);
             this.label2.TabIndex = 0;
@@ -128,7 +117,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(608, 30);
+            this.label1.Location = new System.Drawing.Point(595, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(391, 65);
             this.label1.TabIndex = 1;
@@ -204,20 +193,6 @@
             this.lblVer.MouseLeave += new System.EventHandler(this.lblVer_MouseLeave);
             this.lblVer.MouseHover += new System.EventHandler(this.lblVer_MouseHover);
             // 
-            // icbtnInventario
-            // 
-            this.icbtnInventario.IconChar = FontAwesome.Sharp.IconChar.BoxesStacked;
-            this.icbtnInventario.IconColor = System.Drawing.Color.Black;
-            this.icbtnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnInventario.IconSize = 125;
-            this.icbtnInventario.Location = new System.Drawing.Point(77, 78);
-            this.icbtnInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.icbtnInventario.Name = "icbtnInventario";
-            this.icbtnInventario.Size = new System.Drawing.Size(181, 164);
-            this.icbtnInventario.TabIndex = 0;
-            this.icbtnInventario.UseVisualStyleBackColor = true;
-            this.icbtnInventario.Click += new System.EventHandler(this.icbtnInventario_Click);
-            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -270,20 +245,6 @@
             this.lblVerSoli.MouseLeave += new System.EventHandler(this.lblVerSoli_MouseLeave);
             this.lblVerSoli.MouseHover += new System.EventHandler(this.lblVerSoli_MouseHover);
             // 
-            // icbtnSol
-            // 
-            this.icbtnSol.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.icbtnSol.IconColor = System.Drawing.Color.Black;
-            this.icbtnSol.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnSol.IconSize = 125;
-            this.icbtnSol.Location = new System.Drawing.Point(79, 80);
-            this.icbtnSol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.icbtnSol.Name = "icbtnSol";
-            this.icbtnSol.Size = new System.Drawing.Size(181, 164);
-            this.icbtnSol.TabIndex = 0;
-            this.icbtnSol.UseVisualStyleBackColor = true;
-            this.icbtnSol.Click += new System.EventHandler(this.icbtnSol_Click);
-            // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -335,6 +296,34 @@
             this.lblVerConsumo.MouseLeave += new System.EventHandler(this.lblVerConsumo_MouseLeave);
             this.lblVerConsumo.MouseHover += new System.EventHandler(this.lblVerConsumo_MouseHover);
             // 
+            // icbtnInventario
+            // 
+            this.icbtnInventario.IconChar = FontAwesome.Sharp.IconChar.BoxesStacked;
+            this.icbtnInventario.IconColor = System.Drawing.Color.Black;
+            this.icbtnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnInventario.IconSize = 125;
+            this.icbtnInventario.Location = new System.Drawing.Point(77, 78);
+            this.icbtnInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnInventario.Name = "icbtnInventario";
+            this.icbtnInventario.Size = new System.Drawing.Size(181, 164);
+            this.icbtnInventario.TabIndex = 0;
+            this.icbtnInventario.UseVisualStyleBackColor = true;
+            this.icbtnInventario.Click += new System.EventHandler(this.icbtnInventario_Click);
+            // 
+            // icbtnSol
+            // 
+            this.icbtnSol.IconChar = FontAwesome.Sharp.IconChar.Envelope;
+            this.icbtnSol.IconColor = System.Drawing.Color.Black;
+            this.icbtnSol.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSol.IconSize = 125;
+            this.icbtnSol.Location = new System.Drawing.Point(79, 80);
+            this.icbtnSol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.icbtnSol.Name = "icbtnSol";
+            this.icbtnSol.Size = new System.Drawing.Size(181, 164);
+            this.icbtnSol.TabIndex = 0;
+            this.icbtnSol.UseVisualStyleBackColor = true;
+            this.icbtnSol.Click += new System.EventHandler(this.icbtnSol_Click);
+            // 
             // icbtnConsumo
             // 
             this.icbtnConsumo.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
@@ -347,21 +336,31 @@
             this.icbtnConsumo.Size = new System.Drawing.Size(181, 164);
             this.icbtnConsumo.TabIndex = 0;
             this.icbtnConsumo.UseVisualStyleBackColor = true;
+            this.icbtnConsumo.Click += new System.EventHandler(this.icbtnConsumo_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_4;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmBienvenidoDIT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1580, 770);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1598, 787);
             this.Name = "frmBienvenidoDIT";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -373,6 +372,7 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

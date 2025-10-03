@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlSolicitud3 = new System.Windows.Forms.Panel();
+            this.lblEstado3 = new System.Windows.Forms.Label();
+            this.btnNegar3 = new Vistas.controles.ButtonRedondeado();
+            this.btnAceptar3 = new Vistas.controles.ButtonRedondeado();
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.lblMarca9 = new System.Windows.Forms.Label();
             this.lblMarca8 = new System.Windows.Forms.Label();
@@ -49,7 +51,10 @@
             this.lblMotivo3 = new System.Windows.Forms.Label();
             this.lblRol3 = new System.Windows.Forms.Label();
             this.lblNombre3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSolicitud2 = new System.Windows.Forms.Panel();
+            this.lblEstado2 = new System.Windows.Forms.Label();
+            this.btnNegar2 = new Vistas.controles.ButtonRedondeado();
+            this.btnAceptar2 = new Vistas.controles.ButtonRedondeado();
             this.lblFecha2 = new System.Windows.Forms.Label();
             this.lblMarca6 = new System.Windows.Forms.Label();
             this.lblMarca5 = new System.Windows.Forms.Label();
@@ -68,6 +73,9 @@
             this.lblRol2 = new System.Windows.Forms.Label();
             this.lblNombre2 = new System.Windows.Forms.Label();
             this.pnlSolicitud1 = new System.Windows.Forms.Panel();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.btnNegar = new Vistas.controles.ButtonRedondeado();
+            this.btnAceptar = new Vistas.controles.ButtonRedondeado();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblmarca3 = new System.Windows.Forms.Label();
             this.lblMarca2 = new System.Windows.Forms.Label();
@@ -87,11 +95,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlSolicitud3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnlSolicitud2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlSolicitud1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,60 +109,105 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1324, 950);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1446, 962);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1318, 944);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoScrollMargin = new System.Drawing.Size(1, 1);
+            this.panel1.AutoScrollMinSize = new System.Drawing.Size(1, 1);
+            this.panel1.Controls.Add(this.pnlSolicitud3);
+            this.panel1.Controls.Add(this.pnlSolicitud2);
             this.panel1.Controls.Add(this.pnlSolicitud1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1315, 1033);
+            this.panel1.Size = new System.Drawing.Size(1440, 956);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
+            // pnlSolicitud3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.lblFecha3);
-            this.panel3.Controls.Add(this.lblMarca9);
-            this.panel3.Controls.Add(this.lblMarca8);
-            this.panel3.Controls.Add(this.lblMarca7);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.lblCantidad9);
-            this.panel3.Controls.Add(this.lblCantidad8);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.lblCantidad7);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.lblMaterial9);
-            this.panel3.Controls.Add(this.lblMaterial8);
-            this.panel3.Controls.Add(this.lblMaterial7);
-            this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.lblMotivo3);
-            this.panel3.Controls.Add(this.lblRol3);
-            this.panel3.Controls.Add(this.lblNombre3);
-            this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(33, 664);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1252, 256);
-            this.panel3.TabIndex = 17;
+            this.pnlSolicitud3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud3.BackColor = System.Drawing.Color.White;
+            this.pnlSolicitud3.Controls.Add(this.lblEstado3);
+            this.pnlSolicitud3.Controls.Add(this.btnNegar3);
+            this.pnlSolicitud3.Controls.Add(this.btnAceptar3);
+            this.pnlSolicitud3.Controls.Add(this.lblFecha3);
+            this.pnlSolicitud3.Controls.Add(this.lblMarca9);
+            this.pnlSolicitud3.Controls.Add(this.lblMarca8);
+            this.pnlSolicitud3.Controls.Add(this.lblMarca7);
+            this.pnlSolicitud3.Controls.Add(this.label25);
+            this.pnlSolicitud3.Controls.Add(this.lblCantidad9);
+            this.pnlSolicitud3.Controls.Add(this.lblCantidad8);
+            this.pnlSolicitud3.Controls.Add(this.label28);
+            this.pnlSolicitud3.Controls.Add(this.lblCantidad7);
+            this.pnlSolicitud3.Controls.Add(this.pictureBox3);
+            this.pnlSolicitud3.Controls.Add(this.lblMaterial9);
+            this.pnlSolicitud3.Controls.Add(this.lblMaterial8);
+            this.pnlSolicitud3.Controls.Add(this.lblMaterial7);
+            this.pnlSolicitud3.Controls.Add(this.label33);
+            this.pnlSolicitud3.Controls.Add(this.lblMotivo3);
+            this.pnlSolicitud3.Controls.Add(this.lblRol3);
+            this.pnlSolicitud3.Controls.Add(this.lblNombre3);
+            this.pnlSolicitud3.ForeColor = System.Drawing.Color.Black;
+            this.pnlSolicitud3.Location = new System.Drawing.Point(159, 663);
+            this.pnlSolicitud3.Name = "pnlSolicitud3";
+            this.pnlSolicitud3.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
+            this.pnlSolicitud3.Size = new System.Drawing.Size(1252, 256);
+            this.pnlSolicitud3.TabIndex = 17;
+            // 
+            // lblEstado3
+            // 
+            this.lblEstado3.AutoSize = true;
+            this.lblEstado3.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado3.Location = new System.Drawing.Point(1058, 88);
+            this.lblEstado3.Name = "lblEstado3";
+            this.lblEstado3.Size = new System.Drawing.Size(44, 16);
+            this.lblEstado3.TabIndex = 21;
+            this.lblEstado3.Text = "label4";
+            // 
+            // btnNegar3
+            // 
+            this.btnNegar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNegar3.BorderColor = System.Drawing.Color.Black;
+            this.btnNegar3.BorderRadius = 17;
+            this.btnNegar3.BorderSize = 2;
+            this.btnNegar3.FlatAppearance.BorderSize = 0;
+            this.btnNegar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegar3.ForeColor = System.Drawing.Color.Black;
+            this.btnNegar3.Location = new System.Drawing.Point(1108, 106);
+            this.btnNegar3.Name = "btnNegar3";
+            this.btnNegar3.Size = new System.Drawing.Size(89, 34);
+            this.btnNegar3.TabIndex = 22;
+            this.btnNegar3.Text = "Negar";
+            this.btnNegar3.UseVisualStyleBackColor = false;
+            this.btnNegar3.Click += new System.EventHandler(this.btnNegar3_Click);
+            // 
+            // btnAceptar3
+            // 
+            this.btnAceptar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAceptar3.BorderColor = System.Drawing.Color.Black;
+            this.btnAceptar3.BorderRadius = 17;
+            this.btnAceptar3.BorderSize = 2;
+            this.btnAceptar3.FlatAppearance.BorderSize = 0;
+            this.btnAceptar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar3.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptar3.Location = new System.Drawing.Point(1108, 56);
+            this.btnAceptar3.Name = "btnAceptar3";
+            this.btnAceptar3.Size = new System.Drawing.Size(89, 34);
+            this.btnAceptar3.TabIndex = 21;
+            this.btnAceptar3.Text = "Aceptar";
+            this.btnAceptar3.UseVisualStyleBackColor = false;
+            this.btnAceptar3.Click += new System.EventHandler(this.btnAceptar3_Click);
             // 
             // lblFecha3
             // 
@@ -311,31 +363,80 @@
             this.lblNombre3.TabIndex = 0;
             this.lblNombre3.Text = "label1";
             // 
-            // panel2
+            // pnlSolicitud2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblFecha2);
-            this.panel2.Controls.Add(this.lblMarca6);
-            this.panel2.Controls.Add(this.lblMarca5);
-            this.panel2.Controls.Add(this.lblMarca4);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblCantidad6);
-            this.panel2.Controls.Add(this.lblCantidad5);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.lblCantidad4);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lblMaterial6);
-            this.panel2.Controls.Add(this.lblMaterial5);
-            this.panel2.Controls.Add(this.lblMaterial4);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.lblMotivo2);
-            this.panel2.Controls.Add(this.lblRol2);
-            this.panel2.Controls.Add(this.lblNombre2);
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(33, 380);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1252, 255);
-            this.panel2.TabIndex = 2;
+            this.pnlSolicitud2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud2.BackColor = System.Drawing.Color.White;
+            this.pnlSolicitud2.Controls.Add(this.lblEstado2);
+            this.pnlSolicitud2.Controls.Add(this.btnNegar2);
+            this.pnlSolicitud2.Controls.Add(this.btnAceptar2);
+            this.pnlSolicitud2.Controls.Add(this.lblFecha2);
+            this.pnlSolicitud2.Controls.Add(this.lblMarca6);
+            this.pnlSolicitud2.Controls.Add(this.lblMarca5);
+            this.pnlSolicitud2.Controls.Add(this.lblMarca4);
+            this.pnlSolicitud2.Controls.Add(this.label9);
+            this.pnlSolicitud2.Controls.Add(this.lblCantidad6);
+            this.pnlSolicitud2.Controls.Add(this.lblCantidad5);
+            this.pnlSolicitud2.Controls.Add(this.label12);
+            this.pnlSolicitud2.Controls.Add(this.lblCantidad4);
+            this.pnlSolicitud2.Controls.Add(this.pictureBox2);
+            this.pnlSolicitud2.Controls.Add(this.lblMaterial6);
+            this.pnlSolicitud2.Controls.Add(this.lblMaterial5);
+            this.pnlSolicitud2.Controls.Add(this.lblMaterial4);
+            this.pnlSolicitud2.Controls.Add(this.label17);
+            this.pnlSolicitud2.Controls.Add(this.lblMotivo2);
+            this.pnlSolicitud2.Controls.Add(this.lblRol2);
+            this.pnlSolicitud2.Controls.Add(this.lblNombre2);
+            this.pnlSolicitud2.ForeColor = System.Drawing.Color.Black;
+            this.pnlSolicitud2.Location = new System.Drawing.Point(158, 381);
+            this.pnlSolicitud2.Name = "pnlSolicitud2";
+            this.pnlSolicitud2.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
+            this.pnlSolicitud2.Size = new System.Drawing.Size(1252, 255);
+            this.pnlSolicitud2.TabIndex = 2;
+            // 
+            // lblEstado2
+            // 
+            this.lblEstado2.AutoSize = true;
+            this.lblEstado2.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado2.Location = new System.Drawing.Point(1058, 102);
+            this.lblEstado2.Name = "lblEstado2";
+            this.lblEstado2.Size = new System.Drawing.Size(44, 16);
+            this.lblEstado2.TabIndex = 20;
+            this.lblEstado2.Text = "label2";
+            // 
+            // btnNegar2
+            // 
+            this.btnNegar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNegar2.BorderColor = System.Drawing.Color.Black;
+            this.btnNegar2.BorderRadius = 17;
+            this.btnNegar2.BorderSize = 2;
+            this.btnNegar2.FlatAppearance.BorderSize = 0;
+            this.btnNegar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegar2.ForeColor = System.Drawing.Color.Black;
+            this.btnNegar2.Location = new System.Drawing.Point(1108, 115);
+            this.btnNegar2.Name = "btnNegar2";
+            this.btnNegar2.Size = new System.Drawing.Size(89, 34);
+            this.btnNegar2.TabIndex = 20;
+            this.btnNegar2.Text = "Negar";
+            this.btnNegar2.UseVisualStyleBackColor = false;
+            this.btnNegar2.Click += new System.EventHandler(this.btnNegar2_Click);
+            // 
+            // btnAceptar2
+            // 
+            this.btnAceptar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAceptar2.BorderColor = System.Drawing.Color.Black;
+            this.btnAceptar2.BorderRadius = 17;
+            this.btnAceptar2.BorderSize = 2;
+            this.btnAceptar2.FlatAppearance.BorderSize = 0;
+            this.btnAceptar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar2.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptar2.Location = new System.Drawing.Point(1108, 65);
+            this.btnAceptar2.Name = "btnAceptar2";
+            this.btnAceptar2.Size = new System.Drawing.Size(89, 34);
+            this.btnAceptar2.TabIndex = 19;
+            this.btnAceptar2.Text = "Aceptar";
+            this.btnAceptar2.UseVisualStyleBackColor = false;
+            this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
             // 
             // lblFecha2
             // 
@@ -493,7 +594,11 @@
             // 
             // pnlSolicitud1
             // 
+            this.pnlSolicitud1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
+            this.pnlSolicitud1.Controls.Add(this.lblEstado);
+            this.pnlSolicitud1.Controls.Add(this.btnNegar);
+            this.pnlSolicitud1.Controls.Add(this.btnAceptar);
             this.pnlSolicitud1.Controls.Add(this.lblFecha);
             this.pnlSolicitud1.Controls.Add(this.lblmarca3);
             this.pnlSolicitud1.Controls.Add(this.lblMarca2);
@@ -512,10 +617,55 @@
             this.pnlSolicitud1.Controls.Add(this.lblRol);
             this.pnlSolicitud1.Controls.Add(this.lblNombre);
             this.pnlSolicitud1.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud1.Location = new System.Drawing.Point(33, 97);
+            this.pnlSolicitud1.Location = new System.Drawing.Point(159, 98);
             this.pnlSolicitud1.Name = "pnlSolicitud1";
+            this.pnlSolicitud1.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
             this.pnlSolicitud1.TabIndex = 1;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado.Location = new System.Drawing.Point(1058, 101);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(44, 16);
+            this.lblEstado.TabIndex = 19;
+            this.lblEstado.Text = "label2";
+            // 
+            // btnNegar
+            // 
+            this.btnNegar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNegar.BorderColor = System.Drawing.Color.Black;
+            this.btnNegar.BorderRadius = 17;
+            this.btnNegar.BorderSize = 2;
+            this.btnNegar.FlatAppearance.BorderSize = 0;
+            this.btnNegar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegar.ForeColor = System.Drawing.Color.Black;
+            this.btnNegar.Location = new System.Drawing.Point(1108, 115);
+            this.btnNegar.Name = "btnNegar";
+            this.btnNegar.Size = new System.Drawing.Size(89, 34);
+            this.btnNegar.TabIndex = 18;
+            this.btnNegar.Text = "Negar";
+            this.btnNegar.UseVisualStyleBackColor = false;
+            this.btnNegar.Click += new System.EventHandler(this.btnNegar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.Black;
+            this.btnAceptar.BorderRadius = 17;
+            this.btnAceptar.BorderSize = 2;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptar.Location = new System.Drawing.Point(1108, 65);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(89, 34);
+            this.btnAceptar.TabIndex = 17;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblFecha
             // 
@@ -682,24 +832,22 @@
             // 
             // frmSolJefatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(1, 1);
             this.AutoScrollMinSize = new System.Drawing.Size(1, 1);
-            this.ClientSize = new System.Drawing.Size(1324, 950);
+            this.ClientSize = new System.Drawing.Size(1446, 962);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmSolJefatura";
             this.Load += new System.EventHandler(this.frmSolJefatura_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlSolicitud3.ResumeLayout(false);
+            this.pnlSolicitud3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlSolicitud2.ResumeLayout(false);
+            this.pnlSolicitud2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlSolicitud1.ResumeLayout(false);
             this.pnlSolicitud1.PerformLayout();
@@ -711,7 +859,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlSolicitud1;
         private System.Windows.Forms.Label label1;
@@ -732,7 +879,7 @@
         private System.Windows.Forms.Label lblCantidad2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblCantidad1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlSolicitud3;
         private System.Windows.Forms.Label lblFecha3;
         private System.Windows.Forms.Label lblMarca9;
         private System.Windows.Forms.Label lblMarca8;
@@ -750,7 +897,7 @@
         private System.Windows.Forms.Label lblMotivo3;
         private System.Windows.Forms.Label lblRol3;
         private System.Windows.Forms.Label lblNombre3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlSolicitud2;
         private System.Windows.Forms.Label lblFecha2;
         private System.Windows.Forms.Label lblMarca6;
         private System.Windows.Forms.Label lblMarca5;
@@ -768,5 +915,14 @@
         private System.Windows.Forms.Label lblMotivo2;
         private System.Windows.Forms.Label lblRol2;
         private System.Windows.Forms.Label lblNombre2;
+        private controles.ButtonRedondeado btnNegar;
+        private controles.ButtonRedondeado btnAceptar;
+        private controles.ButtonRedondeado btnNegar3;
+        private controles.ButtonRedondeado btnAceptar3;
+        private controles.ButtonRedondeado btnNegar2;
+        private controles.ButtonRedondeado btnAceptar2;
+        private System.Windows.Forms.Label lblEstado3;
+        private System.Windows.Forms.Label lblEstado2;
+        private System.Windows.Forms.Label lblEstado;
     }
 }

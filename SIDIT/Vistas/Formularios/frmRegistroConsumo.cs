@@ -21,12 +21,18 @@ namespace Vistas.Formularios
         public frmRegistroConsumo()
         {
             InitializeComponent();
+           
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
 
         private void frmRegistroConsumo_Load(object sender, EventArgs e)
         {
             // Cargar el historial de salidas al iniciar el formulario
             CargarDatosSalidas();
+            EstilizarDataGrid(dgvConsumo);
         }
 
         /// <summary>
@@ -219,22 +225,35 @@ namespace Vistas.Formularios
         // Manejador del botón de AGREGAR/REGISTRAR (Manejador original si el diseñador lo usa)
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+                
             if (ValidarCamposAgregar())
-            {
-                InsertarSalida();
-            }
+                {
+                    InsertarSalida();
+                    LimpiarCampos();
+                }
+            
         }
 
-        // Manejador del botón de ELIMINAR
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarSalidaSeleccionada();
-        }
 
-        // Manejador del botón de ACTUALIZAR (solo placeholder)
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void EstilizarDataGrid(DataGridView dgv)
         {
-            MessageBox.Show("La funcionalidad de Actualizar requiere un procedimiento UPDATE en SQL.", "Pendiente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.BackgroundColor = Color.White;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToResizeColumns = true;
+            dgv.AllowUserToResizeRows = false;
         }
     }
 }

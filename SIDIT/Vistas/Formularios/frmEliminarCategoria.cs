@@ -16,6 +16,7 @@ namespace Vistas.Formularios
         public frmEliminarCategoria()
         {
             InitializeComponent();
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(15);
         }
 
         private void btnEliminarCategorias_Click(object sender, EventArgs e)

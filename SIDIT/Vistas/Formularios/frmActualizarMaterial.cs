@@ -18,8 +18,6 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
-  
-
         private void icbtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -62,7 +60,10 @@ namespace Vistas.Formularios
         private void frmActualizarMaterial_Load(object sender, EventArgs e)
         {
             MostrarMateriales();
-            
+            label7.Font = Helper.FuenteHelper.ObtenerFuente(15);
+            label6.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label8.Font = Helper.FuenteHelper.ObtenerFuente(10);
         }
     }
 }

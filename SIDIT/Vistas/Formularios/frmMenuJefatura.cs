@@ -16,6 +16,10 @@ namespace Vistas.Formularios
         public frmMenuJefatura()
         {
             InitializeComponent();
+            lblTituloConsumoJ.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloInventarioJ.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloSolicitudJ.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloUsuarios.Font = Helper.FuenteHelper.ObtenerFuente(30);
         }
 
         //Mostrar formularios
@@ -89,7 +93,7 @@ namespace Vistas.Formularios
         public void MostrarFormConsumoJEnPanel()
         {
             pnlContenedorJ.Controls.Clear();
-            frmConsumoJefatura consumoJ = new frmConsumoJefatura();
+            frmConsumoAmbos consumoJ = new frmConsumoAmbos();
             consumoJ.TopLevel = false;
             consumoJ.FormBorderStyle = FormBorderStyle.None;
             consumoJ.Dock = DockStyle.Fill;
@@ -113,19 +117,19 @@ namespace Vistas.Formularios
 
         public void MostrarFormUsuariosEnPanel()
         {
-            //pnlContenedorJ.Controls.Clear();
-            //frmGestionUsuario usuario = new frmGestionUsuario();
-            //usuario.TopLevel = false;
-            //usuario.FormBorderStyle = FormBorderStyle.None;
-            //usuario.Dock = DockStyle.Fill;
-            //pnlContenedorJ.Controls.Add(usuario);
-            //usuario.Show();
+            pnlContenedorJ.Controls.Clear();
+            frmUsuarios usuario = new frmUsuarios();
+            usuario.TopLevel = false;
+            usuario.FormBorderStyle = FormBorderStyle.None;
+            usuario.Dock = DockStyle.Fill;
+            pnlContenedorJ.Controls.Add(usuario);
+            usuario.Show();
 
-            ////Indicar panel activo
-            //icbtnUsuario.BackColor = Color.FromArgb(18, 18, 18);
-            //icbtnUsuario.IconColor = Color.White;
-            //icbtnUsuario.ForeColor = Color.White;
-            //lblTituloUsuarios.Visible = true;
+            //Indicar panel activo
+            icbtnUsuario.BackColor = Color.FromArgb(18, 18, 18);
+            icbtnUsuario.IconColor = Color.White;
+            icbtnUsuario.ForeColor = Color.White;
+            lblTituloUsuarios.Visible = true;
 
             //Restablecer colores de paneles 
             //Inventario
@@ -177,6 +181,7 @@ namespace Vistas.Formularios
         //Load
         private void frmMenuJefatura_Load(object sender, EventArgs e)
         {
+            MostrarFormInvenJEnPanel();
             pnlBarraSuperior.BringToFront();
             pnlBarraLateral.BringToFront();
             pbLogoITEC.BringToFront();
@@ -246,12 +251,33 @@ namespace Vistas.Formularios
             MostrarFormUsuariosEnPanel();
         }
 
-        private void pbAjustes_Click(object sender, EventArgs e)
+        //private void icpbConfiguracion_Click(object sender, EventArgs e)
+        //{
+        //    Configuracion c = new Configuracion();
+        //    c.Dock = DockStyle.Fill;
+        //    pnlContenedorJ.Controls.Clear();
+        //    pnlContenedorJ.Controls.Add(c);
+
+        //    pnlContenedorJ.Controls.Clear(); 
+        //    frmInventarioJefatura inventarioJ = new frmInventarioJefatura();
+        //    inventarioJ.TopLevel = false;
+        //    inventarioJ.FormBorderStyle = FormBorderStyle.None;
+        //    inventarioJ.Dock = DockStyle.Fill;
+        //    pnlContenedorJ.Controls.Add(inventarioJ);
+        //    inventarioJ.Show(); 
+        //}
+
+        private void icpbConfiguracion_Click(object sender, EventArgs e)
         {
-            Configuracion c= new Configuracion();
-            c.Dock = DockStyle.Fill;
-            pnlContenedorJ.Controls.Clear();
-            pnlContenedorJ.Controls.Add(c);
+
+            Configuracion uc = new Configuracion();
+            FrmContenedorUC ven = new FrmContenedorUC(uc);
+
+            if (ven.ShowDialog() == DialogResult.OK)
+            {
+                uc.Show();
+            }
+
         }
     }
 }

@@ -16,10 +16,14 @@ namespace Vistas.Formularios
 {
     public partial class frmConsumo : Form
     {
-        private const string connectionString = "Lenovo\\SQLEXPRESS; Initial Catalog=BasePTC; Integrated Security=True;";
+        private const string connectionString = "Lenovo\\SQLEXPRESS; Initial Catalog=BasePTC2; Integrated Security=True;";
         public frmConsumo()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(10);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -289,6 +293,7 @@ namespace Vistas.Formularios
             chartInventario.ChartAreas[0].AxisY.Minimum = 0;
             chartInventario.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.FromArgb(220, 220, 220);
         }
+
     }
 
 }

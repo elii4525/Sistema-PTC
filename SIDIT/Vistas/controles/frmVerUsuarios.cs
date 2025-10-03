@@ -17,14 +17,16 @@ namespace Vistas.Controles
         public frmVerUsuarios()
         {
             InitializeComponent();
+            
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
 
         private void frmVerUsuarios_Load(object sender, EventArgs e)
         {
             dgvVerUsuarios.DataSource = Usuario.cargarUsuarios();
             EstilizarDataGrid(dgvVerUsuarios);
-            label1.Font = FuenteHelper.ObtenerFuente(15);
-            label2.Font = FuenteHelper.ObtenerFuente(8);
+            
+            label2.Font = FuenteHelper.ObtenerFuente(15);
         }
 
         private void EstilizarDataGrid(DataGridView dgv)

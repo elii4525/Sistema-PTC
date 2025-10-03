@@ -1,14 +1,7 @@
-create database BasePTC
+create database BasePTCC
 go
-use BasePTC;
+use BasePTCC;
 go
-
-
-create database BasePTC
-go
-use BasePTC;
-go
-
 
 -- Tables 
 create table Rol (
@@ -21,7 +14,7 @@ create table Usuario (
 idUsuario int identity (1,1) primary key,
 nombre varchar (50) not null,
 fechaNacimiento date not null,
-contraseña varchar(30),
+contraseña varchar(250),
 telefono varchar (20),
 correo varchar (75) unique,
 id_Rol int,
@@ -54,7 +47,6 @@ constraint fk_Marca Foreign key(id_Marca) references Marca(idMarca) ON DELETE CA
 go
 
 
-
 create table Solicitud (
 idSolicitud int identity (1,1) primary key,
 motivo varchar (1000) not null,
@@ -66,18 +58,6 @@ constraint fk_Material Foreign key (id_Material) references Material(idMaterial)
 constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
 go
 
-create table HistorialSolicitud (
-idHistorialSolicitud int identity (1,1) primary key,
-estadoSolicitud varchar (50),
-fechaRespuesta date,
-id_Solicitud int not null,
-constraint fk_solicitud Foreign key (id_Solicitud) references Solicitud(idSolicitud) ON DELETE CASCADE);
-go
-constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
-go
-
--- Nuevas tablas
-
 create table SolicitudMaterial (
     idSolicitudMaterial int identity(1,1) primary key,
     idSolicitud int not null,
@@ -86,6 +66,7 @@ create table SolicitudMaterial (
     constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
     constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
 );
+
 
 create table salidaDeMaterial (
     idSalidamaterial int identity(1,1) primary key,
@@ -103,17 +84,18 @@ go
 
 create view VerUltimosUsuarios
 as
-select 
+select top 10 
     u.idUsuario,
     u.nombre,
     u.fechaNacimiento,
-    u.contraseña,
     u.telefono,
     u.correo,
-    r.idRol
+    r.tipoRol,
+    r.descripcionRol
 from Usuario u
-inner join Rol r on u.id_Rol = r.idRol;
-go
+INNER JOIN Rol r on u.id_Rol = r.idRol
+order by u.idUsuario desc;
+GO
 
 select *from VerUltimosUsuarios
 
@@ -131,29 +113,6 @@ go
 select *from VerUsuarios
 
 -- Inserts into
-insert into Usuario 
-values ('Carlos Perez', '1990-05-12', '12345', '77778888', 'carlos.perez@gmail.com', 1),
-('Ana Gomez', '1995-07-22', 'abcde', '77779999', 'ana.gomez@gmail.com', 2),
-('Luis Torres', '1988-01-15', 'pass123', '70001122', 'luis.torres@gmail.com', 1),
-('Maria Lopez', '1992-03-19', 'maria123', '73334444', 'maria.lopez@gmail.com', 2),
-('Pedro Sanchez', '1987-08-25', 'pedrito', '72223344', 'pedro.sanchez@gmail.com', 1),
-('Lucia Martinez', '1993-09-12', 'lucia2023', '74445566', 'lucia.martinez@gmail.com', 2),
-('Jorge Ramirez', '1991-02-02', 'jorgepass', '70005566', 'jorge.ramirez@gmail.com', 1),
-('Carmen Rivas', '1996-11-30', 'carmen22', '75556677', 'carmen.rivas@gmail.com', 2),
-('Andres Castro', '1989-06-18', 'andrespwd', '71112233', 'andres.castro@gmail.com', 1),
-('Elena Diaz', '1994-10-05', 'elena123', '78889900', 'elena.diaz@gmail.com', 2),
-('Roberto Mendez', '1990-12-21', 'rober90', '73332211', 'roberto.mendez@gmail.com', 1),
-('Sofia Herrera', '1997-01-14', 'sofi123', '70006677', 'sofia.herrera@gmail.com', 2),
-('Miguel Alvarez', '1986-09-09', 'miguelito', '72225555', 'miguel.alvarez@gmail.com', 1),
-('Paola Chavez', '1995-07-30', 'paola95', '75559999', 'paola.chavez@gmail.com', 2),
-('Daniel Morales', '1992-04-17', 'daniel22', '76667777', 'daniel.morales@gmail.com', 1),
-('Gabriela Flores', '1993-08-10', 'gabi2023', '72229999', 'gabriela.flores@gmail.com', 2),
-('Jose Ruiz', '1991-06-06', 'josepass', '79998888', 'jose.ruiz@gmail.com', 1),
-('Valeria Ortiz', '1998-12-03', 'valeria98', '71114455', 'valeria.ortiz@gmail.com', 2),
-('Ricardo Castillo', '1989-11-01', 'rick89', '74446688', 'ricardo.castillo@gmail.com', 1),
-('Natalia Vargas', '1994-03-25', 'naty94', '73331122', 'natalia.vargas@gmail.com', 2);
-go
-
 insert into Rol 
 values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
 ('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
@@ -212,57 +171,6 @@ values ('Laptop HP', 10, '2023-01-15', 'Laptop de oficina', 'HP-12345', 10, 6),
 ('Libro SQL Server', 25, '2023-11-15', 'Manual de SQL Server', 'BOOK-SQL', 12, 15);
 go
 
-insert into Solicitud 
-values ('Requiere laptop para oficina', '2023-02-15', 'Pendiente', 1),
-('Solicita impresora nueva', '2023-03-01', 'Aprobada', 2),
-('Necesita balones para torneo', '2023-03-10', 'Pendiente', 3),
-('Reemplazo de monitor dañado', '2023-03-25', 'Rechazada', 4),
-('Compra detergente limpieza', '2023-04-05', 'Pendiente', 5),
-('Requiere sillas nuevas', '2023-04-12', 'Aprobada', 6),
-('Pide zapatos deportivos', '2023-04-20', 'Pendiente', 7),
-('Kit herramientas', '2023-05-01', 'Pendiente', 8),
-('Libros de consulta', '2023-05-15', 'Aprobada', 9),
-('Solicita tablet para oficina', '2023-05-30', 'Pendiente', 10),
-('Solicita perfumes para regalos', '2023-06-10', 'Rechazada', 11),
-('Necesita sofás nuevos', '2023-06-20', 'Pendiente', 12),
-('Pide camisas para uniformes', '2023-07-01', 'Pendiente', 13),
-('Requiere cámara para fotografía', '2023-07-10', 'Aprobada', 14),
-('Solicita carro institucional', '2023-07-25', 'Pendiente', 15),
-('Necesita moto para repartos', '2023-08-01', 'Pendiente', 16),
-('Compra licuadoras', '2023-08-15', 'Pendiente', 17),
-('Solicita sandalias deportivas', '2023-08-30', 'Aprobada', 18),
-('Solicita artículos de limpieza', '2023-09-10', 'Pendiente', 19),
-('Compra martillos para taller', '2023-09-25', 'Pendiente', 20);
-go
-
-insert into SolicitudMaterial
-values (1, 1, 1),(2, 4, 1),(3, 6, 10),(4, 3, 2),(5, 9, 5),
-(6, 5, 10),(7, 7, 5),(8, 8, 2),(9, 20, 10),(10, 14, 1),
-(11, 10, 3),(12, 19, 2),(13, 11, 20),(14, 13, 1),(15, 17, 1),
-(16, 18, 1),(17, 15, 3),(18, 12, 10),(19, 9, 15),(20, 16, 5);
-go
-
-insert into salidaDeMaterial
-values (1, 1, '2025-03-01', 1, 'Asignación a oficina'),
-(4, 1, '2025-03-05', 2, 'Uso en área de impresión'),
-(6, 5, '2025-03-15', 3, 'Torneo deportivo'),
-(3, 1, '2025-03-30', 4, 'Reemplazo monitor dañado'),
-(9, 10, '2025-04-10', 5, 'Limpieza general'),
-(5, 5, '2025-04-20', 6, 'Nueva oficina'),
-(7, 2, '2025-04-25', 7, 'Entrenamientos'),
-(8, 1, '2025-05-05', 8, 'Mantenimiento'),
-(20, 5, '2025-05-15', 9, 'Curso SQL'),
-(14, 1, '2025-05-25', 10, 'Asignación a dirección'),
-(10, 2, '2025-06-01', 11, 'Regalos institucionales'),
-(19, 1, '2025-06-15', 12, 'Sala de reuniones'),
-(11, 10, '2025-07-05', 13, 'Uniformes'),
-(13, 1, '2025-07-15', 14, 'Fotografía evento'),
-(17, 1, '2025-07-30', 15, 'Uso institucional'),
-(18, 1, '2025-08-05', 16, 'Repartos'),
-(15, 2, '2025-08-20', 17, 'Cocina comedor'),
-(12, 5, '2025-09-01', 18, 'Deporte'),
-(9, 8, '2025-09-15', 19, 'Limpieza bodega');
-go
 
 -- Select
 Select *from Usuario
@@ -272,8 +180,8 @@ Select *from Solicitud
 Select *from Marca
 Select *from Material
 Select *from SolicitudMaterial
+select *from salidaDeMaterial   
 go
-
 
 --Creacion de consultas para el sistema en c#
 
@@ -328,14 +236,16 @@ Inner Join
 Categoria c on c.idCategoria = m.id_Categoria
 Inner Join 
 Marca mar on mar.idMarca = m.id_Marca
-Order by m.idMaterial desc;
+Order by m.idMaterial   desc;
 
 select *from registrosUlt;
 
 
 --CONSULTAS LENIN
 -- ==========================================================
+
 -- PROCEDIMIENTOS ALMACENADOS PARA LAS GRÁFICAS
+
 -- ==========================================================
 
 -- Procedimiento para Chart Inventario (Categorías específicas)
@@ -369,15 +279,6 @@ BEGIN
         nombreMaterial;
 END;
 GO
---selects
-select * from Rol;
-select * from Usuario;
-select * from Categoria;
-select * from Marca;
-select * from Material;
-select * from solicitud;
-select * from HistorialSolicitud;
-
 
 -- Procedimiento para Chart Consumo (salida_de_material)
 create procedure sp_obtener_consumo_material
@@ -413,7 +314,9 @@ end
 go
 
 -- ==========================================================
+
 -- VERIFICACIÓN DE PROCEDIMIENTOS
+
 -- ==========================================================
 
 -- Verificar que los procedimientos se crearon
@@ -508,10 +411,10 @@ GO
 create procedure sp_registrar_salida_material
     -- RECUERDA: Cambiamos @id_material por @nombre_material
     @nombre_material varchar(100), 
-    @cantidad_consumida int,
-    @fecha_consumo date,
-    @id_usuario int,
-    @motivo_salida varchar(1000)
+    @cantidad_consumida int,
+    @fecha_consumo date,
+    @id_usuario int,
+    @motivo_salida varchar(1000)
 as
 begin
     -- Variables internas para la validación
@@ -539,24 +442,24 @@ begin
 
     -- Si las validaciones pasan, se ejecuta la transacción
     begin try
-        begin transaction;
-        
-        -- 3. Insertar en salida_de_material (Registra la salida)
-        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
-        
-        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
-        update Material 
-        set cantidad = cantidad - @cantidad_consumida
-        where idMaterial = @id_material_local;
-        
-        commit transaction;
-    end try
-    begin catch
-        if @@trancount > 0
-            rollback transaction;
-        throw;
-    end catch
+        begin transaction;
+        
+        -- 3. Insertar en salida_de_material (Registra la salida)
+        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
+        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+        
+        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
+        update Material 
+        set cantidad = cantidad - @cantidad_consumida
+        where idMaterial = @id_material_local;
+        
+        commit transaction;
+    end try
+    begin catch
+        if @@trancount > 0
+            rollback transaction;
+        throw;
+    end catch
 end
 go
 
@@ -565,4 +468,3 @@ go
 
 --No se debe ejecutar, pero es la que utilizo en c#
 Update Material set nombreMaterial = @nombre, cantidad = @cantidad where idMaterial = @id;
-

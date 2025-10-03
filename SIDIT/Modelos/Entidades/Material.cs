@@ -39,7 +39,7 @@ namespace Modelos.Entidades
             string comando = "select *from selectMateriales;";
             SqlDataAdapter ad = new SqlDataAdapter(comando, conexion);
             DataTable dt = new DataTable();
-            ad.Fill(dt);
+            ad.Fill(dt); 
             return dt;
         }
 

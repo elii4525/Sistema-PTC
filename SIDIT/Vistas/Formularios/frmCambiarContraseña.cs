@@ -16,6 +16,10 @@ namespace Vistas.Formularios
         public frmCambiarContraseña()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

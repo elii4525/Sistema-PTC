@@ -16,6 +16,7 @@ namespace Vistas.Formularios
         public frmEliminarMaterial()
         {
             InitializeComponent();
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(15);
         }
 
         private void icbtnSalir_Click(object sender, EventArgs e)

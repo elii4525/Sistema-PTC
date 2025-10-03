@@ -49,5 +49,11 @@ namespace Vistas.Formularios
                 MessageBox.Show("No se pudo añadir la categoria" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pnlAggCategorias_Paint(object sender, PaintEventArgs e)
+        {
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(15);
+        }
     }
 }

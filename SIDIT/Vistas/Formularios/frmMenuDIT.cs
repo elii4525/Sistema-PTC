@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.controles;
+using Vistas.Controles;
 
 namespace Vistas.Formularios
 {
@@ -15,6 +18,9 @@ namespace Vistas.Formularios
         public frmMenuDIT()
         {
             InitializeComponent();
+            lblTituloInventarioD.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloConsumoD.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloSolicitudD.Font = Helper.FuenteHelper.ObtenerFuente(30);
         }
 
         private void frmMenuDIT_Load(object sender, EventArgs e)
@@ -117,28 +123,28 @@ namespace Vistas.Formularios
             ColoresConsumo();
         }
 
-        //public void MostrarFormConsumoDEnPanel()
-        //{
-        //    pnlContenedorDIT.Controls.Clear();
-        //    frmConsumoDIT consumoD = new frmConsumoDIT();
-        //    consumoD.TopLevel = false;
-        //    consumoD.FormBorderStyle = FormBorderStyle.None;
-        //    consumoD.Dock = DockStyle.Fill;
-        //    pnlContenedorDIT.Controls.Add(consumoD);
-        //    consumoD.Show();
+        public void MostrarFormConsumoDEnPanel()
+        {
+            pnlContenedorDIT.Controls.Clear();
+            frmConsumoAmbos consumoD = new frmConsumoAmbos();
+            consumoD.TopLevel = false;
+            consumoD.FormBorderStyle = FormBorderStyle.None;
+            consumoD.Dock = DockStyle.Fill;
+            pnlContenedorDIT.Controls.Add(consumoD);
+            consumoD.Show();
 
-        //    //Indicar panel activo
-        //    icbtnConsumoD.BackColor = Color.FromArgb(18, 18, 18);
-        //    icbtnConsumoD.IconColor = Color.White;
-        //    icbtnConsumoD.ForeColor = Color.White;
-        //    lblTituloConsumoD.Visible = true;
+            //Indicar panel activo
+            icbtnConsumoD.BackColor = Color.FromArgb(18, 18, 18);
+            icbtnConsumoD.IconColor = Color.White;
+            icbtnConsumoD.ForeColor = Color.White;
+            lblTituloConsumoD.Visible = true;
 
-        //    //Restablecer colores de paneles 
-        //    //Inventario
-        //    ColoresInventario();
-        //    //Solicitud
-        //    ColoresSolicitud();
-        //}
+            //Restablecer colores de paneles 
+            //Inventario
+            ColoresInventario();
+            //Solicitud
+            ColoresSolicitud();
+        }
 
         private void icbtnInventarioD_Click(object sender, EventArgs e)
         {
@@ -150,10 +156,10 @@ namespace Vistas.Formularios
             MostrarFormSoliDEnPanel();
         }
 
-        ////private void icbtnConsumoD_Click(object sender, EventArgs e)
-        ////{
-        ////    MostrarFormConsumoDEnPanel();
-        ////}
+        private void icbtnConsumoD_Click(object sender, EventArgs e)
+        {
+            MostrarFormConsumoDEnPanel();
+        }
 
 
 
@@ -197,6 +203,19 @@ namespace Vistas.Formularios
         private void pbLogoITEC_Resize(object sender, EventArgs e)
         {
             pbLogoITEC.Invalidate();
+        }
+
+        private void icpbConfiguracion_Click(object sender, EventArgs e)
+        {
+
+            Configuracion uc = new Configuracion();
+            FrmContenedorUC ven = new FrmContenedorUC(uc);
+
+            if (ven.ShowDialog() == DialogResult.OK)
+            {
+                uc.Show();
+            }
+
         }
     }
 }

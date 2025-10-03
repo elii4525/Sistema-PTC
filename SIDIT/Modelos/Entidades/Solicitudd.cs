@@ -63,6 +63,63 @@ namespace Modelos.Entidades
             return idSolicitud;
         }
 
+        public SolicitudInfo ObtenerSolicitudCompleta(int idSolicitud)
+        {
+            SolicitudInfo info = null;
+
+            using (SqlConnection con = ConexionDB.Conectar())
+            {
+                string query = @"
+            SELECT 
+                s.idSolicitud,
+                u.nombre AS NombreUsuario,
+                r.tipoRol AS Rol,
+                s.fecha,
+                s.motivo,
+                m.nombreMaterial,
+                sm.cantidad,
+                ma.nombreMarca
+            FROM Solicitud s
+            INNER JOIN Usuario u ON u.idUsuario = s.id_Usuario
+            INNER JOIN Rol r ON u.id_Rol = r.idRol
+            INNER JOIN SolicitudMaterial sm ON sm.idSolicitud = s.idSolicitud
+            INNER JOIN Material m ON m.idMaterial = sm.idMaterial
+            INNER JOIN Marca ma ON ma.idMarca = m.id_Marca
+            WHERE s.idSolicitud = @idSolicitud";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@idSolicitud", idSolicitud);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    if (info == null)
+                    {
+                        info = new SolicitudInfo
+                        {
+                            IdSolicitud = Convert.ToInt32(dr["idSolicitud"]),
+                            NombreUsuario = dr["NombreUsuario"].ToString(),
+                            Rol = dr["Rol"].ToString(),
+                            Fecha = Convert.ToDateTime(dr["fecha"]),
+                            Motivo = dr["motivo"].ToString(),
+                            Materiales = new List<MaterialSolicitud>()
+                        };
+                    }
+
+                    info.Materiales.Add(new MaterialSolicitud
+                    {
+                        NombreMaterial = dr["nombreMaterial"].ToString(),
+                        Marca = dr["nombreMarca"].ToString(),
+                        Cantidad = Convert.ToInt32(dr["cantidad"])
+                    });
+                }
+            }
+
+            return info;
+        }
+
+
         public DataTable ObtenerMateriales()
         {
             using (SqlConnection con = ConexionDB.Conectar())
@@ -79,20 +136,21 @@ namespace Modelos.Entidades
         public DataTable ObtenerSolicitudesPorUsuario(int idUsuario)
         {
             string query = @"SELECT 
-                    s.idSolicitud,
-                    u.nombre AS nombreUsuario,
-                    s.fecha,
-                    s.motivo,
-                    m.nombreMaterial,
-                    sm.cantidad,
-                    ma.nombreMarca
-                FROM Solicitud s
-                INNER JOIN Usuario u ON u.idUsuario = s.id_Usuario
-                INNER JOIN SolicitudMaterial sm ON sm.idSolicitud = s.idSolicitud
-                INNER JOIN Material m ON m.idMaterial = sm.idMaterial
-                INNER JOIN Marca ma ON ma.idMarca = m.id_Marca
-                WHERE s.id_Usuario = @idUsuario
-            ORDER BY s.fecha DESC;";
+                s.idSolicitud,
+                u.nombre AS nombreUsuario,
+                s.fecha,
+                s.motivo,
+                m.nombreMaterial,
+                sm.cantidad,
+                ma.nombreMarca,
+                s.estado
+            FROM Solicitud s
+            INNER JOIN Usuario u ON u.idUsuario = s.id_Usuario
+            INNER JOIN SolicitudMaterial sm ON sm.idSolicitud = s.idSolicitud
+            INNER JOIN Material m ON m.idMaterial = sm.idMaterial
+            INNER JOIN Marca ma ON ma.idMarca = m.id_Marca
+            WHERE s.id_Usuario = @idUsuario
+            ORDER BY s.fecha DESC, s.idSolicitud DESC;";
 
             using (SqlConnection con = ConexionDB.Conectar())
             using (SqlCommand cmd = new SqlCommand(query, con))
@@ -105,6 +163,36 @@ namespace Modelos.Entidades
                 return dt;
             }
         }
+
+        public DataTable ObtenerSolicitudesJefatura()
+        {
+            string query = @"SELECT 
+            s.idSolicitud,
+            u.nombre AS nombreUsuario,
+            s.fecha,
+            s.motivo,
+            m.nombreMaterial,
+            sm.cantidad,
+            ma.nombreMarca,
+            s.estado
+        FROM Solicitud s
+        INNER JOIN Usuario u ON u.idUsuario = s.id_Usuario
+        INNER JOIN SolicitudMaterial sm ON sm.idSolicitud = s.idSolicitud
+        INNER JOIN Material m ON m.idMaterial = sm.idMaterial
+        INNER JOIN Marca ma ON ma.idMarca = m.id_Marca
+        ORDER BY s.fecha DESC, s.idSolicitud DESC;";
+
+            using (SqlConnection con = ConexionDB.Conectar())
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+
 
         public DataTable ObtenerMarcasPorMaterial(int idMaterial)
         {
@@ -125,6 +213,52 @@ namespace Modelos.Entidades
                 return dt;
             }
         }
+
+        public static void CambiarEstadoSolicitud(int idSolicitud, string nuevoEstado)
+        {
+            using (SqlConnection con = ConexionDB.Conectar())
+            {
+                string query = "UPDATE Solicitud SET estado = @estado WHERE idSolicitud = @idSolicitud";
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@estado", nuevoEstado);
+                cmd.Parameters.AddWithValue("@idSolicitud", idSolicitud);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public DataTable ObtenerTodasLasSolicitudes()
+        {
+            string query = @"SELECT 
+                s.idSolicitud,
+                u.nombre AS nombreUsuario,
+                r.tipoRol AS rol,
+                s.fecha,
+                s.motivo,
+                m.nombreMaterial,
+                sm.cantidad,
+                ma.nombreMarca,
+                s.estado
+            FROM Solicitud s
+            INNER JOIN Usuario u ON u.idUsuario = s.id_Usuario
+            INNER JOIN Rol r ON r.idRol = u.id_Rol
+            INNER JOIN SolicitudMaterial sm ON sm.idSolicitud = s.idSolicitud
+            INNER JOIN Material m ON m.idMaterial = sm.idMaterial
+            INNER JOIN Marca ma ON ma.idMarca = m.id_Marca
+            ORDER BY s.fecha DESC;";
+
+            using (SqlConnection con = ConexionDB.Conectar())
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+
     }
 }
 

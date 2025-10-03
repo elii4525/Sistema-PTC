@@ -1,10 +1,13 @@
-# Visual Studio
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+# Archivos de compilación
+bin/
+obj/
 .vs/
 
-# Build folders
-**/bin/
-**/obj/
+# Otros temporales
+*.cache
+*.db
+*.vsidx
+*.pdb
+*.exe
+*.dll
+*.resources

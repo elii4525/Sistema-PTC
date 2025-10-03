@@ -16,6 +16,14 @@ namespace Vistas.Formularios
         public frmAgregarMaterial()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(13);
+            label10.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label11.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label12.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label13.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label14.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label15.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label9.Font = Helper.FuenteHelper.ObtenerFuente(10);
         }
 
         private void icbtnSalir_Click(object sender, EventArgs e)
@@ -46,6 +54,13 @@ namespace Vistas.Formularios
                     
 
                     MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtCantidad.Clear();
+                    txtNombre.Clear();
+                    txtModelo.Clear();
+                    cbCategoria.SelectedIndex = -1;
+                    txtDescripcion.Clear();
+                    cbMarcas.SelectedIndex = -1;
                 }
 
 
@@ -73,15 +88,7 @@ namespace Vistas.Formularios
             cbMarcas.SelectedIndex = -1;
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtCantidad.Clear();
-            txtNombre.Clear();
-            txtModelo.Clear();
-            cbCategoria.SelectedIndex = -1;
-            txtDescripcion.Clear();
-            cbMarcas.SelectedIndex = -1;
-        }
+
 
         private void frmAgregarMaterial_Load(object sender, EventArgs e)
         {

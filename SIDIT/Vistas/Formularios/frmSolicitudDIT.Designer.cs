@@ -30,9 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSolicitudesAnteriores = new Vistas.controles.ButtonRedondeado();
+            this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
+            this.pnlSolicitud3 = new System.Windows.Forms.Panel();
+            this.btnGenerarPdf3 = new Vistas.controles.ButtonRedondeado();
+            this.lblEstado3 = new System.Windows.Forms.Label();
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.lblMarca9 = new System.Windows.Forms.Label();
             this.lblMarca8 = new System.Windows.Forms.Label();
@@ -42,6 +45,7 @@
             this.lblCantidad8 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lblCantidad7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblMaterial9 = new System.Windows.Forms.Label();
             this.lblMaterial8 = new System.Windows.Forms.Label();
             this.lblMaterial7 = new System.Windows.Forms.Label();
@@ -49,7 +53,9 @@
             this.lblMotivo3 = new System.Windows.Forms.Label();
             this.lblRol3 = new System.Windows.Forms.Label();
             this.lblNombre3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSolicitud2 = new System.Windows.Forms.Panel();
+            this.btnGenerarPdf2 = new Vistas.controles.ButtonRedondeado();
+            this.lblEstado2 = new System.Windows.Forms.Label();
             this.lblFecha2 = new System.Windows.Forms.Label();
             this.lblMarca6 = new System.Windows.Forms.Label();
             this.lblMarca5 = new System.Windows.Forms.Label();
@@ -59,6 +65,7 @@
             this.lblCantidad5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblCantidad4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblMaterial6 = new System.Windows.Forms.Label();
             this.lblMaterial5 = new System.Windows.Forms.Label();
             this.lblMaterial4 = new System.Windows.Forms.Label();
@@ -67,7 +74,8 @@
             this.lblRol2 = new System.Windows.Forms.Label();
             this.lblNombre2 = new System.Windows.Forms.Label();
             this.pnlSolicitud1 = new System.Windows.Forms.Panel();
-            this.lblEstadoSolicitud = new System.Windows.Forms.Label();
+            this.btnGenerarPdf1 = new Vistas.controles.ButtonRedondeado();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblmarca3 = new System.Windows.Forms.Label();
             this.lblMarca2 = new System.Windows.Forms.Label();
@@ -77,6 +85,7 @@
             this.lblCantidad2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblCantidad1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMaterial3 = new System.Windows.Forms.Label();
             this.lblMaterial2 = new System.Windows.Forms.Label();
             this.lblMaterial1 = new System.Windows.Forms.Label();
@@ -85,19 +94,13 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
-            this.btnSolicitudesAnteriores = new Vistas.controles.ButtonRedondeado();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlSolicitud1.SuspendLayout();
+            this.pnlSolicitud3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlSolicitud2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pnlSolicitud1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,62 +119,125 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1324, 950);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1343, 950);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1318, 944);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
+            this.panel1.AutoScrollMargin = new System.Drawing.Size(1, 1);
+            this.panel1.AutoScrollMinSize = new System.Drawing.Size(1, 1);
             this.panel1.Controls.Add(this.btnSolicitudesAnteriores);
             this.panel1.Controls.Add(this.buttonRedondeado1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.pnlSolicitud3);
+            this.panel1.Controls.Add(this.pnlSolicitud2);
             this.panel1.Controls.Add(this.pnlSolicitud1);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1315, 1033);
+            this.panel1.Size = new System.Drawing.Size(1337, 944);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
+            // btnSolicitudesAnteriores
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.lblFecha3);
-            this.panel3.Controls.Add(this.lblMarca9);
-            this.panel3.Controls.Add(this.lblMarca8);
-            this.panel3.Controls.Add(this.lblMarca7);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.lblCantidad9);
-            this.panel3.Controls.Add(this.lblCantidad8);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.lblCantidad7);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.lblMaterial9);
-            this.panel3.Controls.Add(this.lblMaterial8);
-            this.panel3.Controls.Add(this.lblMaterial7);
-            this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.lblMotivo3);
-            this.panel3.Controls.Add(this.lblRol3);
-            this.panel3.Controls.Add(this.lblNombre3);
-            this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(33, 664);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1252, 256);
-            this.panel3.TabIndex = 17;
+            this.btnSolicitudesAnteriores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSolicitudesAnteriores.BackColor = System.Drawing.Color.Black;
+            this.btnSolicitudesAnteriores.BorderColor = System.Drawing.Color.White;
+            this.btnSolicitudesAnteriores.BorderRadius = 18;
+            this.btnSolicitudesAnteriores.BorderSize = 2;
+            this.btnSolicitudesAnteriores.FlatAppearance.BorderSize = 0;
+            this.btnSolicitudesAnteriores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitudesAnteriores.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitudesAnteriores.Location = new System.Drawing.Point(1075, 33);
+            this.btnSolicitudesAnteriores.Name = "btnSolicitudesAnteriores";
+            this.btnSolicitudesAnteriores.Size = new System.Drawing.Size(125, 50);
+            this.btnSolicitudesAnteriores.TabIndex = 18;
+            this.btnSolicitudesAnteriores.Text = "Solicitudes anteriores";
+            this.btnSolicitudesAnteriores.UseVisualStyleBackColor = false;
+            this.btnSolicitudesAnteriores.Click += new System.EventHandler(this.btnSolicitudesAnteriores_Click);
+            // 
+            // buttonRedondeado1
+            // 
+            this.buttonRedondeado1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRedondeado1.BackColor = System.Drawing.Color.Black;
+            this.buttonRedondeado1.BorderColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.BorderRadius = 18;
+            this.buttonRedondeado1.BorderSize = 2;
+            this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
+            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
+            this.buttonRedondeado1.Location = new System.Drawing.Point(1206, 33);
+            this.buttonRedondeado1.Name = "buttonRedondeado1";
+            this.buttonRedondeado1.Size = new System.Drawing.Size(125, 50);
+            this.buttonRedondeado1.TabIndex = 17;
+            this.buttonRedondeado1.Text = "Enviar solicitud";
+            this.buttonRedondeado1.UseVisualStyleBackColor = false;
+            this.buttonRedondeado1.Click += new System.EventHandler(this.buttonRedondeado1_Click);
+            // 
+            // pnlSolicitud3
+            // 
+            this.pnlSolicitud3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud3.BackColor = System.Drawing.Color.White;
+            this.pnlSolicitud3.Controls.Add(this.btnGenerarPdf3);
+            this.pnlSolicitud3.Controls.Add(this.lblEstado3);
+            this.pnlSolicitud3.Controls.Add(this.lblFecha3);
+            this.pnlSolicitud3.Controls.Add(this.lblMarca9);
+            this.pnlSolicitud3.Controls.Add(this.lblMarca8);
+            this.pnlSolicitud3.Controls.Add(this.lblMarca7);
+            this.pnlSolicitud3.Controls.Add(this.label25);
+            this.pnlSolicitud3.Controls.Add(this.lblCantidad9);
+            this.pnlSolicitud3.Controls.Add(this.lblCantidad8);
+            this.pnlSolicitud3.Controls.Add(this.label28);
+            this.pnlSolicitud3.Controls.Add(this.lblCantidad7);
+            this.pnlSolicitud3.Controls.Add(this.pictureBox3);
+            this.pnlSolicitud3.Controls.Add(this.lblMaterial9);
+            this.pnlSolicitud3.Controls.Add(this.lblMaterial8);
+            this.pnlSolicitud3.Controls.Add(this.lblMaterial7);
+            this.pnlSolicitud3.Controls.Add(this.label33);
+            this.pnlSolicitud3.Controls.Add(this.lblMotivo3);
+            this.pnlSolicitud3.Controls.Add(this.lblRol3);
+            this.pnlSolicitud3.Controls.Add(this.lblNombre3);
+            this.pnlSolicitud3.ForeColor = System.Drawing.Color.Black;
+            this.pnlSolicitud3.Location = new System.Drawing.Point(65, 667);
+            this.pnlSolicitud3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.pnlSolicitud3.Name = "pnlSolicitud3";
+            this.pnlSolicitud3.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
+            this.pnlSolicitud3.Size = new System.Drawing.Size(1252, 256);
+            this.pnlSolicitud3.TabIndex = 17;
+            // 
+            // btnGenerarPdf3
+            // 
+            this.btnGenerarPdf3.BackColor = System.Drawing.Color.White;
+            this.btnGenerarPdf3.BorderColor = System.Drawing.Color.Black;
+            this.btnGenerarPdf3.BorderRadius = 19;
+            this.btnGenerarPdf3.BorderSize = 2;
+            this.btnGenerarPdf3.FlatAppearance.BorderSize = 0;
+            this.btnGenerarPdf3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPdf3.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerarPdf3.Location = new System.Drawing.Point(1088, 52);
+            this.btnGenerarPdf3.Name = "btnGenerarPdf3";
+            this.btnGenerarPdf3.Size = new System.Drawing.Size(121, 43);
+            this.btnGenerarPdf3.TabIndex = 24;
+            this.btnGenerarPdf3.Text = "Descargar PDF";
+            this.btnGenerarPdf3.UseVisualStyleBackColor = false;
+            this.btnGenerarPdf3.Click += new System.EventHandler(this.btnGenerarPdf3_Click_1);
+            // 
+            // lblEstado3
+            // 
+            this.lblEstado3.AutoSize = true;
+            this.lblEstado3.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstado3.Name = "lblEstado3";
+            this.lblEstado3.Size = new System.Drawing.Size(110, 16);
+            this.lblEstado3.TabIndex = 19;
+            this.lblEstado3.Text = "Solicitud enviada";
             // 
             // lblFecha3
             // 
@@ -254,6 +320,16 @@
             this.lblCantidad7.TabIndex = 8;
             this.lblCantidad7.Text = "label8";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
             // lblMaterial9
             // 
             this.lblMaterial9.AutoSize = true;
@@ -317,31 +393,61 @@
             this.lblNombre3.TabIndex = 0;
             this.lblNombre3.Text = "label1";
             // 
-            // panel2
+            // pnlSolicitud2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblFecha2);
-            this.panel2.Controls.Add(this.lblMarca6);
-            this.panel2.Controls.Add(this.lblMarca5);
-            this.panel2.Controls.Add(this.lblMarca4);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.lblCantidad6);
-            this.panel2.Controls.Add(this.lblCantidad5);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.lblCantidad4);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lblMaterial6);
-            this.panel2.Controls.Add(this.lblMaterial5);
-            this.panel2.Controls.Add(this.lblMaterial4);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.lblMotivo2);
-            this.panel2.Controls.Add(this.lblRol2);
-            this.panel2.Controls.Add(this.lblNombre2);
-            this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(33, 380);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1252, 255);
-            this.panel2.TabIndex = 2;
+            this.pnlSolicitud2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud2.BackColor = System.Drawing.Color.White;
+            this.pnlSolicitud2.Controls.Add(this.btnGenerarPdf2);
+            this.pnlSolicitud2.Controls.Add(this.lblEstado2);
+            this.pnlSolicitud2.Controls.Add(this.lblFecha2);
+            this.pnlSolicitud2.Controls.Add(this.lblMarca6);
+            this.pnlSolicitud2.Controls.Add(this.lblMarca5);
+            this.pnlSolicitud2.Controls.Add(this.lblMarca4);
+            this.pnlSolicitud2.Controls.Add(this.label9);
+            this.pnlSolicitud2.Controls.Add(this.lblCantidad6);
+            this.pnlSolicitud2.Controls.Add(this.lblCantidad5);
+            this.pnlSolicitud2.Controls.Add(this.label12);
+            this.pnlSolicitud2.Controls.Add(this.lblCantidad4);
+            this.pnlSolicitud2.Controls.Add(this.pictureBox2);
+            this.pnlSolicitud2.Controls.Add(this.lblMaterial6);
+            this.pnlSolicitud2.Controls.Add(this.lblMaterial5);
+            this.pnlSolicitud2.Controls.Add(this.lblMaterial4);
+            this.pnlSolicitud2.Controls.Add(this.label17);
+            this.pnlSolicitud2.Controls.Add(this.lblMotivo2);
+            this.pnlSolicitud2.Controls.Add(this.lblRol2);
+            this.pnlSolicitud2.Controls.Add(this.lblNombre2);
+            this.pnlSolicitud2.ForeColor = System.Drawing.Color.Black;
+            this.pnlSolicitud2.Location = new System.Drawing.Point(65, 383);
+            this.pnlSolicitud2.Name = "pnlSolicitud2";
+            this.pnlSolicitud2.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
+            this.pnlSolicitud2.Size = new System.Drawing.Size(1252, 255);
+            this.pnlSolicitud2.TabIndex = 2;
+            // 
+            // btnGenerarPdf2
+            // 
+            this.btnGenerarPdf2.BackColor = System.Drawing.Color.White;
+            this.btnGenerarPdf2.BorderColor = System.Drawing.Color.Black;
+            this.btnGenerarPdf2.BorderRadius = 19;
+            this.btnGenerarPdf2.BorderSize = 2;
+            this.btnGenerarPdf2.FlatAppearance.BorderSize = 0;
+            this.btnGenerarPdf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPdf2.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerarPdf2.Location = new System.Drawing.Point(1088, 52);
+            this.btnGenerarPdf2.Name = "btnGenerarPdf2";
+            this.btnGenerarPdf2.Size = new System.Drawing.Size(121, 43);
+            this.btnGenerarPdf2.TabIndex = 23;
+            this.btnGenerarPdf2.Text = "Descargar PDF";
+            this.btnGenerarPdf2.UseVisualStyleBackColor = false;
+            this.btnGenerarPdf2.Click += new System.EventHandler(this.btnGenerarPdf2_Click_1);
+            // 
+            // lblEstado2
+            // 
+            this.lblEstado2.AutoSize = true;
+            this.lblEstado2.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstado2.Name = "lblEstado2";
+            this.lblEstado2.Size = new System.Drawing.Size(110, 16);
+            this.lblEstado2.TabIndex = 18;
+            this.lblEstado2.Text = "Solicitud enviada";
             // 
             // lblFecha2
             // 
@@ -424,6 +530,16 @@
             this.lblCantidad4.TabIndex = 8;
             this.lblCantidad4.Text = "label8";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // lblMaterial6
             // 
             this.lblMaterial6.AutoSize = true;
@@ -489,8 +605,10 @@
             // 
             // pnlSolicitud1
             // 
+            this.pnlSolicitud1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
-            this.pnlSolicitud1.Controls.Add(this.lblEstadoSolicitud);
+            this.pnlSolicitud1.Controls.Add(this.btnGenerarPdf1);
+            this.pnlSolicitud1.Controls.Add(this.lblEstado);
             this.pnlSolicitud1.Controls.Add(this.lblFecha);
             this.pnlSolicitud1.Controls.Add(this.lblmarca3);
             this.pnlSolicitud1.Controls.Add(this.lblMarca2);
@@ -509,19 +627,37 @@
             this.pnlSolicitud1.Controls.Add(this.lblRol);
             this.pnlSolicitud1.Controls.Add(this.lblNombre);
             this.pnlSolicitud1.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud1.Location = new System.Drawing.Point(33, 97);
+            this.pnlSolicitud1.Location = new System.Drawing.Point(65, 100);
             this.pnlSolicitud1.Name = "pnlSolicitud1";
+            this.pnlSolicitud1.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
             this.pnlSolicitud1.TabIndex = 1;
             // 
-            // lblEstadoSolicitud
+            // btnGenerarPdf1
             // 
-            this.lblEstadoSolicitud.AutoSize = true;
-            this.lblEstadoSolicitud.Location = new System.Drawing.Point(1099, 115);
-            this.lblEstadoSolicitud.Name = "lblEstadoSolicitud";
-            this.lblEstadoSolicitud.Size = new System.Drawing.Size(110, 16);
-            this.lblEstadoSolicitud.TabIndex = 17;
-            this.lblEstadoSolicitud.Text = "Solicitud enviada";
+            this.btnGenerarPdf1.BackColor = System.Drawing.Color.White;
+            this.btnGenerarPdf1.BorderColor = System.Drawing.Color.Black;
+            this.btnGenerarPdf1.BorderRadius = 19;
+            this.btnGenerarPdf1.BorderSize = 2;
+            this.btnGenerarPdf1.FlatAppearance.BorderSize = 0;
+            this.btnGenerarPdf1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPdf1.ForeColor = System.Drawing.Color.Black;
+            this.btnGenerarPdf1.Location = new System.Drawing.Point(1088, 52);
+            this.btnGenerarPdf1.Name = "btnGenerarPdf1";
+            this.btnGenerarPdf1.Size = new System.Drawing.Size(121, 43);
+            this.btnGenerarPdf1.TabIndex = 22;
+            this.btnGenerarPdf1.Text = "Descargar PDF";
+            this.btnGenerarPdf1.UseVisualStyleBackColor = false;
+            this.btnGenerarPdf1.Click += new System.EventHandler(this.btnGenerarPdf1_Click_1);
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(110, 16);
+            this.lblEstado.TabIndex = 17;
+            this.lblEstado.Text = "Solicitud enviada";
             // 
             // lblFecha
             // 
@@ -604,6 +740,16 @@
             this.lblCantidad1.TabIndex = 8;
             this.lblCantidad1.Text = "label8";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
+            this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblMaterial3
             // 
             this.lblMaterial3.AutoSize = true;
@@ -676,93 +822,28 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Solicitudes recientes:";
             // 
-            // buttonRedondeado1
-            // 
-            this.buttonRedondeado1.BackColor = System.Drawing.Color.Black;
-            this.buttonRedondeado1.BorderColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.BorderRadius = 18;
-            this.buttonRedondeado1.BorderSize = 2;
-            this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
-            this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.Location = new System.Drawing.Point(1160, 33);
-            this.buttonRedondeado1.Name = "buttonRedondeado1";
-            this.buttonRedondeado1.Size = new System.Drawing.Size(125, 50);
-            this.buttonRedondeado1.TabIndex = 17;
-            this.buttonRedondeado1.Text = "Enviar solicitud";
-            this.buttonRedondeado1.UseVisualStyleBackColor = false;
-            this.buttonRedondeado1.Click += new System.EventHandler(this.buttonRedondeado1_Click);
-            // 
-            // btnSolicitudesAnteriores
-            // 
-            this.btnSolicitudesAnteriores.BackColor = System.Drawing.Color.Black;
-            this.btnSolicitudesAnteriores.BorderColor = System.Drawing.Color.White;
-            this.btnSolicitudesAnteriores.BorderRadius = 18;
-            this.btnSolicitudesAnteriores.BorderSize = 2;
-            this.btnSolicitudesAnteriores.FlatAppearance.BorderSize = 0;
-            this.btnSolicitudesAnteriores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolicitudesAnteriores.ForeColor = System.Drawing.Color.White;
-            this.btnSolicitudesAnteriores.Location = new System.Drawing.Point(1020, 33);
-            this.btnSolicitudesAnteriores.Name = "btnSolicitudesAnteriores";
-            this.btnSolicitudesAnteriores.Size = new System.Drawing.Size(125, 50);
-            this.btnSolicitudesAnteriores.TabIndex = 18;
-            this.btnSolicitudesAnteriores.Text = "Solicitudes anteriores";
-            this.btnSolicitudesAnteriores.UseVisualStyleBackColor = false;
-            this.btnSolicitudesAnteriores.Click += new System.EventHandler(this.btnSolicitudesAnteriores_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
-            this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmSolicitudDIT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1324, 950);
+            this.ClientSize = new System.Drawing.Size(1343, 950);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "frmSolicitudDIT";
             this.Text = "frmSolicitudDIT";
             this.Load += new System.EventHandler(this.frmSolicitudDIT_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlSolicitud3.ResumeLayout(false);
+            this.pnlSolicitud3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlSolicitud2.ResumeLayout(false);
+            this.pnlSolicitud2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlSolicitud1.ResumeLayout(false);
             this.pnlSolicitud1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -773,9 +854,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private controles.ButtonRedondeado btnSolicitudesAnteriores;
+        private controles.ButtonRedondeado buttonRedondeado1;
+        private System.Windows.Forms.Panel pnlSolicitud3;
+        private controles.ButtonRedondeado btnGenerarPdf3;
+        private System.Windows.Forms.Label lblEstado3;
         private System.Windows.Forms.Label lblFecha3;
         private System.Windows.Forms.Label lblMarca9;
         private System.Windows.Forms.Label lblMarca8;
@@ -793,7 +877,9 @@
         private System.Windows.Forms.Label lblMotivo3;
         private System.Windows.Forms.Label lblRol3;
         private System.Windows.Forms.Label lblNombre3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlSolicitud2;
+        private controles.ButtonRedondeado btnGenerarPdf2;
+        private System.Windows.Forms.Label lblEstado2;
         private System.Windows.Forms.Label lblFecha2;
         private System.Windows.Forms.Label lblMarca6;
         private System.Windows.Forms.Label lblMarca5;
@@ -812,6 +898,8 @@
         private System.Windows.Forms.Label lblRol2;
         private System.Windows.Forms.Label lblNombre2;
         private System.Windows.Forms.Panel pnlSolicitud1;
+        private controles.ButtonRedondeado btnGenerarPdf1;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblmarca3;
         private System.Windows.Forms.Label lblMarca2;
@@ -830,8 +918,5 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label2;
-        private controles.ButtonRedondeado buttonRedondeado1;
-        private System.Windows.Forms.Label lblEstadoSolicitud;
-        private controles.ButtonRedondeado btnSolicitudesAnteriores;
     }
 }

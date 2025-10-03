@@ -126,7 +126,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
             this.pictureBox4.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 705);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 707);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(123, 85);
@@ -220,7 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Vistas.Properties.Resources.Desktop___47;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1181, 801);
+            this.ClientSize = new System.Drawing.Size(1627, 803);
             this.Controls.Add(this.llOlvidasteContraseña);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtCorreo);

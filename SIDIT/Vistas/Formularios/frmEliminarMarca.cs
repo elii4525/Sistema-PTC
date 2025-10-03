@@ -16,6 +16,7 @@ namespace Vistas.Formularios
         public frmEliminarMarca()
         {
             InitializeComponent();
+            label6.Font = Helper.FuenteHelper.ObtenerFuente(15);
         }
 
         private void icbtnSalir_Click(object sender, EventArgs e)
