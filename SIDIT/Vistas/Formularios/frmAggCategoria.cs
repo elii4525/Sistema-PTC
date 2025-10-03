@@ -55,5 +55,23 @@ namespace Vistas.Formularios
             label1.Font = Helper.FuenteHelper.ObtenerFuente(8);
             label5.Font = Helper.FuenteHelper.ObtenerFuente(15);
         }
+
+        private void txtCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                return;
+            }
+
+            if (char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true; 
+            }
+        }
     }
 }

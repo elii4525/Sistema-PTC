@@ -15,7 +15,8 @@ namespace Vistas.Formularios
         public frmLoginError()
         {
             InitializeComponent();
-            label1.Font = Helper.FuenteHelper.ObtenerFuente(5);
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(15);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(10);
         }
 
         private void btnOK_Click(object sender, EventArgs e)

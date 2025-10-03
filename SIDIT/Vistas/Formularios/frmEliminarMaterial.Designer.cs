@@ -130,7 +130,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(199, 13);
+            this.label4.Location = new System.Drawing.Point(46, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(340, 23);
             this.label4.TabIndex = 6;

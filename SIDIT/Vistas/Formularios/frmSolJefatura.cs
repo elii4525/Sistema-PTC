@@ -177,6 +177,7 @@ namespace Vistas.Formularios
                         }
 
                         btnAceptar2.Visible = btnNegar2.Visible = (estado == "Pendiente");
+
                     }
                     else if (panelIndex == 2)
                     {
@@ -232,44 +233,55 @@ namespace Vistas.Formularios
         {
             Solicitudd.CambiarEstadoSolicitud(idSolicitud2, "Aceptada");
             lblEstado2.Text = "Aceptada";
+            btnAceptar2.Visible = btnNegar2.Visible = false;
         }
 
-        // Botón Negar Solicitud 2
         private void btnNegar2_Click(object sender, EventArgs e)
         {
             Solicitudd.CambiarEstadoSolicitud(idSolicitud2, "Negada");
             lblEstado2.Text = "Negada";
+            btnNegar2.Visible = btnAceptar2.Visible = false;
+
         }
 
-        // Botón Aceptar Solicitud 3
         private void btnAceptar3_Click(object sender, EventArgs e)
         {
             Solicitudd.CambiarEstadoSolicitud(idSolicitud3, "Aceptada");
             lblEstado3.Text = "Aceptada";
+            btnAceptar3.Visible = btnNegar3.Visible = false;
         }
 
-        // Botón Negar Solicitud 3
         private void btnNegar3_Click(object sender, EventArgs e)
         {
             Solicitudd.CambiarEstadoSolicitud(idSolicitud3, "Negada");
             lblEstado3.Text = "Negada";
+            btnNegar3.Visible = btnAceptar3.Visible = false;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             Solicitudd.CambiarEstadoSolicitud(idSolicitud1, "Aceptada");
             lblEstado.Text = "Aceptada";
+            btnAceptar.Visible = btnNegar.Visible = false;
         }
 
         private void btnNegar_Click(object sender, EventArgs e)
         {
             Solicitudd.CambiarEstadoSolicitud(idSolicitud1, "Aceptada");
             lblEstado.Text = "Negada";
+            btnNegar.Visible = btnAceptar.Visible = false;
         }
 
         private void frmSolJefatura_Load(object sender, EventArgs e)
         {
             CargarSolicitudes();
+        }
+
+        private void btnSolicitudesAnteriores_Click(object sender, EventArgs e)
+        {
+            frmSolicitudesAnteriores frm = new frmSolicitudesAnteriores();
+            frm.ShowDialog();
+
         }
     }
 }

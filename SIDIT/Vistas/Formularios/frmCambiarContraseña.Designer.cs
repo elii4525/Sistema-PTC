@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCambiarContraseña));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -92,6 +93,7 @@
             // txtContraseñaNueva
             // 
             this.txtContraseñaNueva.Location = new System.Drawing.Point(73, 85);
+            this.txtContraseñaNueva.MaxLength = 50;
             this.txtContraseñaNueva.Name = "txtContraseñaNueva";
             this.txtContraseñaNueva.Size = new System.Drawing.Size(250, 22);
             this.txtContraseñaNueva.TabIndex = 8;
@@ -99,6 +101,7 @@
             // txtConfirmarContraseña
             // 
             this.txtConfirmarContraseña.Location = new System.Drawing.Point(73, 153);
+            this.txtConfirmarContraseña.MaxLength = 50;
             this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
             this.txtConfirmarContraseña.Size = new System.Drawing.Size(250, 22);
             this.txtConfirmarContraseña.TabIndex = 9;
@@ -117,6 +120,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCambiarContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);

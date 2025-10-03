@@ -184,7 +184,8 @@
             // 
             // pnlSolicitud3
             // 
-            this.pnlSolicitud3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud3.BackColor = System.Drawing.Color.White;
             this.pnlSolicitud3.Controls.Add(this.btnGenerarPdf3);
             this.pnlSolicitud3.Controls.Add(this.lblEstado3);
@@ -215,6 +216,7 @@
             // 
             // btnGenerarPdf3
             // 
+            this.btnGenerarPdf3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerarPdf3.BackColor = System.Drawing.Color.White;
             this.btnGenerarPdf3.BorderColor = System.Drawing.Color.Black;
             this.btnGenerarPdf3.BorderRadius = 19;
@@ -222,7 +224,7 @@
             this.btnGenerarPdf3.FlatAppearance.BorderSize = 0;
             this.btnGenerarPdf3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarPdf3.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarPdf3.Location = new System.Drawing.Point(1088, 52);
+            this.btnGenerarPdf3.Location = new System.Drawing.Point(1088, 73);
             this.btnGenerarPdf3.Name = "btnGenerarPdf3";
             this.btnGenerarPdf3.Size = new System.Drawing.Size(121, 43);
             this.btnGenerarPdf3.TabIndex = 24;
@@ -232,8 +234,9 @@
             // 
             // lblEstado3
             // 
+            this.lblEstado3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado3.AutoSize = true;
-            this.lblEstado3.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstado3.Location = new System.Drawing.Point(1099, 136);
             this.lblEstado3.Name = "lblEstado3";
             this.lblEstado3.Size = new System.Drawing.Size(110, 16);
             this.lblEstado3.TabIndex = 19;
@@ -241,6 +244,7 @@
             // 
             // lblFecha3
             // 
+            this.lblFecha3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha3.AutoSize = true;
             this.lblFecha3.Location = new System.Drawing.Point(1127, 23);
             this.lblFecha3.Name = "lblFecha3";
@@ -322,6 +326,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
             this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
             this.pictureBox3.Name = "pictureBox3";
@@ -395,7 +400,8 @@
             // 
             // pnlSolicitud2
             // 
-            this.pnlSolicitud2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud2.BackColor = System.Drawing.Color.White;
             this.pnlSolicitud2.Controls.Add(this.btnGenerarPdf2);
             this.pnlSolicitud2.Controls.Add(this.lblEstado2);
@@ -425,6 +431,7 @@
             // 
             // btnGenerarPdf2
             // 
+            this.btnGenerarPdf2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerarPdf2.BackColor = System.Drawing.Color.White;
             this.btnGenerarPdf2.BorderColor = System.Drawing.Color.Black;
             this.btnGenerarPdf2.BorderRadius = 19;
@@ -432,7 +439,7 @@
             this.btnGenerarPdf2.FlatAppearance.BorderSize = 0;
             this.btnGenerarPdf2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarPdf2.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarPdf2.Location = new System.Drawing.Point(1088, 52);
+            this.btnGenerarPdf2.Location = new System.Drawing.Point(1088, 69);
             this.btnGenerarPdf2.Name = "btnGenerarPdf2";
             this.btnGenerarPdf2.Size = new System.Drawing.Size(121, 43);
             this.btnGenerarPdf2.TabIndex = 23;
@@ -442,8 +449,9 @@
             // 
             // lblEstado2
             // 
+            this.lblEstado2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado2.AutoSize = true;
-            this.lblEstado2.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstado2.Location = new System.Drawing.Point(1099, 132);
             this.lblEstado2.Name = "lblEstado2";
             this.lblEstado2.Size = new System.Drawing.Size(110, 16);
             this.lblEstado2.TabIndex = 18;
@@ -451,6 +459,7 @@
             // 
             // lblFecha2
             // 
+            this.lblFecha2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha2.AutoSize = true;
             this.lblFecha2.Location = new System.Drawing.Point(1127, 23);
             this.lblFecha2.Name = "lblFecha2";
@@ -532,6 +541,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
             this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
             this.pictureBox2.Name = "pictureBox2";
@@ -605,7 +615,8 @@
             // 
             // pnlSolicitud1
             // 
-            this.pnlSolicitud1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
             this.pnlSolicitud1.Controls.Add(this.btnGenerarPdf1);
             this.pnlSolicitud1.Controls.Add(this.lblEstado);
@@ -635,6 +646,7 @@
             // 
             // btnGenerarPdf1
             // 
+            this.btnGenerarPdf1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerarPdf1.BackColor = System.Drawing.Color.White;
             this.btnGenerarPdf1.BorderColor = System.Drawing.Color.Black;
             this.btnGenerarPdf1.BorderRadius = 19;
@@ -642,7 +654,7 @@
             this.btnGenerarPdf1.FlatAppearance.BorderSize = 0;
             this.btnGenerarPdf1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarPdf1.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerarPdf1.Location = new System.Drawing.Point(1088, 52);
+            this.btnGenerarPdf1.Location = new System.Drawing.Point(1088, 68);
             this.btnGenerarPdf1.Name = "btnGenerarPdf1";
             this.btnGenerarPdf1.Size = new System.Drawing.Size(121, 43);
             this.btnGenerarPdf1.TabIndex = 22;
@@ -652,8 +664,9 @@
             // 
             // lblEstado
             // 
+            this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(1099, 115);
+            this.lblEstado.Location = new System.Drawing.Point(1099, 131);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(110, 16);
             this.lblEstado.TabIndex = 17;
@@ -661,6 +674,7 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Location = new System.Drawing.Point(1127, 23);
             this.lblFecha.Name = "lblFecha";
@@ -742,6 +756,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
             this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
             this.pictureBox1.Name = "pictureBox1";
@@ -833,6 +848,7 @@
             this.Name = "frmSolicitudDIT";
             this.Text = "frmSolicitudDIT";
             this.Load += new System.EventHandler(this.frmSolicitudDIT_Load);
+            this.Resize += new System.EventHandler(this.frmSolicitudDIT_Resize);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

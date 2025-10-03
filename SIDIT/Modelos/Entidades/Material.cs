@@ -33,6 +33,23 @@ namespace Modelos.Entidades
         public int IdMarca { get => idMarca; set => idMarca = value; }
         public string NombreMaterial { get => nombreMaterial; set => nombreMaterial = value; }
 
+        public static int ObtenerCantidad(int idMaterial)
+        {
+            int cantidad = 0;
+            using (SqlConnection cn = ConexionDB.Conectar())
+            {
+                string query = "SELECT cantidad FROM Material WHERE idMaterial = @id";
+                using (SqlCommand cmd = new SqlCommand(query, cn))
+                {
+                    cmd.Parameters.AddWithValue("@id", idMaterial);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                        cantidad = Convert.ToInt32(result);
+                }
+            }
+            return cantidad;
+        }
+
         public static DataTable CargarMateriales()
         {
             SqlConnection conexion = ConexionDB.Conectar();

@@ -111,7 +111,7 @@ namespace Vistas.Formularios
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
-            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.BackgroundColor = Color.White;
 
             dgv.EnableHeadersVisualStyles = false;
@@ -227,7 +227,6 @@ namespace Vistas.Formularios
             frm.FormClosed += (s, args) => MostrarMateriales(); //Esta linea de codigo hace lo siguiente: Cuando el frm se cierre (FormClosed) debes hacer lo siguiente => Refresca el dgv.
             frm.ShowDialog(this);
         }
-
 
     }
 }

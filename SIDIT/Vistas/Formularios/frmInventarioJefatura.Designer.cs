@@ -129,7 +129,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 20);
+            this.label1.Location = new System.Drawing.Point(65, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 23);
             this.label1.TabIndex = 2;
@@ -139,7 +139,8 @@
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(325, 20);
+            this.txtBuscar.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtBuscar.Location = new System.Drawing.Point(379, 20);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(291, 27);
             this.txtBuscar.TabIndex = 0;

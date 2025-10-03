@@ -1,343 +1,240 @@
-create database BasePTCC
-go
-use BasePTCC;
-go
 
--- Tables 
-create table Rol (
-idRol int identity (1,1) primary key,
-tipoRol varchar (50) not null,
-descripcionRol varchar (500) not null);
-go
-
-create table Usuario (
-idUsuario int identity (1,1) primary key,
-nombre varchar (50) not null,
-fechaNacimiento date not null,
-contraseña varchar(250),
-telefono varchar (20),
-correo varchar (75) unique,
-id_Rol int,
-constraint fk_rol Foreign key (id_Rol) references Rol(idRol));
-go 
-
-create table Categoria (
-idCategoria int identity (1,1) primary key,
-nombreCategoria varchar (70), 
-descripcionCategoria varchar (300));
-go
-
-
-create table Marca (
-idMarca int identity (1,1) primary key,
-nombreMarca varchar (70) not null);
-go
-
-create table Material (
-idMaterial int identity (1,1) primary key,
-nombreMaterial varchar (100) not null,
-cantidad int not null,
-fechaIngreso date,
-descripcionMaterial varchar (500),
-modelo varchar (100) unique,
-id_Categoria int,
-id_Marca int,
-constraint fk_Categoria Foreign key(id_Categoria) references Categoria(idCategoria) ON DELETE CASCADE,
-constraint fk_Marca Foreign key(id_Marca) references Marca(idMarca) ON DELETE CASCADE);
-go
-
-
-create table Solicitud (
-idSolicitud int identity (1,1) primary key,
-motivo varchar (1000) not null,
-fecha date not null,
-estado varchar (50) not null,
-id_Usuario int,
-id_Material int,
-constraint fk_Material Foreign key (id_Material) references Material(idMaterial)  ON DELETE CASCADE,
-constraint fk_usuario Foreign key (id_Usuario) references Usuario(idUsuario));
-go
-
-create table SolicitudMaterial (
-    idSolicitudMaterial int identity(1,1) primary key,
-    idSolicitud int not null,
-    idMaterial int not null,
-    cantidad int not null,
-    constraint fk_Solicitud foreign key (idSolicitud) references Solicitud(idSolicitud),
-    constraint fk_MaterialSolicitud foreign key (idMaterial) references Material(idMaterial)
-);
-
-
-create table salidaDeMaterial (
-    idSalidamaterial int identity(1,1) primary key,
-    id_Material int not null,
-    cantidadConsumida int not null,
-    fechaConsumo date not null,
-    id_Usuario int not null,
-    motivoSalida varchar(1000),
-    constraint fk_salida_material foreign key (id_Material) references Material(idMaterial) ON DELETE CASCADE,
-    constraint fk_salida_usuario foreign key (id_Usuario) references Usuario(idUsuario)
-);
-go
-
--- Vistas
-
-create view VerUltimosUsuarios
-as
-select top 10 
-    u.idUsuario,
-    u.nombre,
-    u.fechaNacimiento,
-    u.telefono,
-    u.correo,
-    r.tipoRol,
-    r.descripcionRol
-from Usuario u
-INNER JOIN Rol r on u.id_Rol = r.idRol
-order by u.idUsuario desc;
+USE master;
 GO
 
-select *from VerUltimosUsuarios
+IF DB_ID('BasePTC') IS NOT NULL
+    DROP DATABASE BasePTC;
+GO
+CREATE DATABASE BasePTC;
+GO
+USE BasePTC;
+GO
 
-create view VerUsuarios
-as
-select 
-    u.idUsuario,
-    u.correo,
-    u.contraseña,
-    r.tipoRol
-from Usuario u
-inner join Rol r on u.id_Rol = r.idRol;
-go
+-- Tablas
+CREATE TABLE Rol (
+    idRol INT IDENTITY (1,1) PRIMARY KEY,
+    tipoRol VARCHAR (50) NOT NULL,
+    descripcionRol VARCHAR (500) NOT NULL
+);
+GO
 
-select *from VerUsuarios
+CREATE TABLE Usuario (
+    idUsuario INT IDENTITY (1,1) PRIMARY KEY,
+    nombre VARCHAR (50) NOT NULL,
+    fechaNacimiento DATE NOT NULL,
+    contraseña VARCHAR(250),
+    telefono VARCHAR (20),
+    correo VARCHAR (75) UNIQUE,
+    id_Rol INT,
+    CONSTRAINT fk_rol FOREIGN KEY (id_Rol) REFERENCES Rol(idRol)
+);
+insert into Usuario values ('Daniel', '2007-10-03', '$2y$10$ja9D65NqxCm3ZwaCeyA1FeiqFAzdYZufkU1LKdWZ7ReFEmXn2Whce', 12345678, 'danielorlandoperezvasquez@gmail.com', 1)
+GO 
 
--- Inserts into
-insert into Rol 
-values ('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
-('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
-go
+CREATE TABLE Categoria (
+    idCategoria INT IDENTITY (1,1) PRIMARY KEY,
+    nombreCategoria VARCHAR (70), 
+    descripcionCategoria VARCHAR (300)
+);
+GO
 
-insert into Categoria 
-values ('Electrónica', 'Dispositivos electrónicos en general'),
-('Muebles', 'Mobiliario de oficina y hogar'),
-('Papelería', 'Material de oficina y útiles escolares'),
-('Limpieza', 'Productos de limpieza y aseo'),
-('Deportes', 'Artículos deportivos'),
-('Cocina', 'Utensilios y equipos de cocina'),
-('Construcción', 'Materiales de construcción'),
-('Ropa', 'Vestimenta y textiles'),
-('Calzado', 'Zapatos y sandalias'),
-('Tecnología', 'Accesorios tecnológicos'),
-('Juguetes', 'Juguetes infantiles'),
-('Libros', 'Textos y cuadernos'),
-('Herramientas', 'Instrumentos de trabajo manual'),
-('Decoración', 'Artículos decorativos'),
-('Vehículos', 'Accesorios de autos y motos'),
-('Jardinería', 'Productos para jardines'),
-('Seguridad', 'Cámaras, candados y alarmas'),
-('Belleza', 'Cosméticos y productos de cuidado personal'),
-('Medicamentos', 'Fármacos y suplementos'),
-('Otros', 'Categoría miscelánea');
-go
+CREATE TABLE Marca (
+    idMarca INT IDENTITY (1,1) PRIMARY KEY,
+    nombreMarca VARCHAR (70) NOT NULL
+);
+GO
 
-insert into Marca
-values ('Sony'),('Samsung'),('LG'),('Apple'),('Dell'),
-('HP'),('Acer'),('Lenovo'),('Adidas'),('Nike'),
-('Puma'),('Reebok'),('Clorox'),('Colgate'),('Bic'),
-('Pilot'),('Toyota'),('Honda'),('Bosch'),('Makita');
-go
+CREATE TABLE Material (
+    idMaterial INT IDENTITY (1,1) PRIMARY KEY,
+    nombreMaterial VARCHAR (100) NOT NULL,
+    cantidad INT NOT NULL,
+    fechaIngreso DATE,
+    descripcionMaterial VARCHAR (500),
+    modelo VARCHAR (100) UNIQUE,
+    id_Categoria INT,
+    id_Marca INT,
+    CONSTRAINT fk_Categoria FOREIGN KEY(id_Categoria) REFERENCES Categoria(idCategoria) ON DELETE CASCADE,
+    CONSTRAINT fk_Marca FOREIGN KEY(id_Marca) REFERENCES Marca(idMarca) ON DELETE CASCADE
+);
+GO
 
-insert into Material 
-values ('Laptop HP', 10, '2023-01-15', 'Laptop de oficina', 'HP-12345', 10, 6),
-('Smartphone Samsung', 25, '2023-02-10', 'Teléfono inteligente', 'SM-A52', 1, 2),
-('Monitor LG', 15, '2023-03-12', 'Monitor LED 24 pulgadas', 'LG-24MK', 1, 3),
-('Impresora Epson', 5, '2023-04-01', 'Impresora multifuncional', 'EP-TX120', 3, 6),
-('Silla Oficina', 20, '2023-05-11', 'Silla ergonómica negra', 'SILLA-ERG', 2, 8),
-('Balón Adidas', 30, '2023-06-14', 'Balón de fútbol profesional', 'AD-BALON', 5, 9),
-('Zapatos Nike', 50, '2023-07-20', 'Zapatos deportivos', 'NK-SPORT', 9, 10),
-('Set Herramientas Bosch', 12, '2023-08-22', 'Kit de herramientas mecánicas', 'BOSCH-SET', 13, 19),
-('Detergente Clorox', 60, '2023-09-01', 'Detergente líquido', 'CLX-500', 4, 13),
-('Perfume Dior', 40, '2023-09-18', 'Perfume de lujo', 'DIOR-XXL', 18, 20),
-('Camisa Polo', 70, '2023-09-25', 'Camisa de algodón', 'POLO-CAM', 8, 11),
-('Sandalias Puma', 35, '2023-09-30', 'Sandalias deportivas', 'PM-SAND', 9, 11),
-('Cámara Sony', 10, '2023-10-05', 'Cámara digital', 'SONY-CAM', 1, 1),
-('Tablet Apple', 8, '2023-10-12', 'iPad de 10 pulgadas', 'APL-TAB', 10, 4),
-('Licuadora Oster', 18, '2023-10-20', 'Licuadora de vidrio', 'OST-123', 6, 20),
-('Martillo Makita', 22, '2023-10-28', 'Martillo profesional', 'MKT-HAM', 13, 20),
-('Carro Toyota Corolla', 2, '2023-11-01', 'Vehículo sedán', 'TOY-COR', 15, 17),
-('Moto Honda', 4, '2023-11-05', 'Motocicleta 150cc', 'HON-150', 15, 18),
-('Sofá 3 puestos', 6, '2023-11-10', 'Sofá de cuero negro', 'SOFA-NEG', 2, 8),
-('Libro SQL Server', 25, '2023-11-15', 'Manual de SQL Server', 'BOOK-SQL', 12, 15);
-go
+CREATE TABLE Solicitud (
+    idSolicitud INT IDENTITY (1,1) PRIMARY KEY,
+    motivo VARCHAR (1000) NOT NULL,
+    fecha DATE NOT NULL,
+    estado VARCHAR (50) NOT NULL,
+    id_Usuario INT,
+    id_Material INT,
+    CONSTRAINT fk_Material FOREIGN KEY (id_Material) REFERENCES Material(idMaterial) ON DELETE CASCADE,
+    CONSTRAINT fk_usuario FOREIGN KEY (id_Usuario) REFERENCES Usuario(idUsuario)
+);
+GO
 
+CREATE TABLE SolicitudMaterial (
+    idSolicitudMaterial INT IDENTITY(1,1) PRIMARY KEY,
+    idSolicitud INT NOT NULL,
+    idMaterial INT NOT NULL,
+    cantidad INT NOT NULL,
+    CONSTRAINT fk_Solicitud FOREIGN KEY (idSolicitud) REFERENCES Solicitud(idSolicitud),
+    CONSTRAINT fk_MaterialSolicitud FOREIGN KEY (idMaterial) REFERENCES Material(idMaterial)
+);
+GO
 
--- Select
-Select *from Usuario
-Select *from Rol
-Select *from Categoria
-Select *from Solicitud
-Select *from Marca
-Select *from Material
-Select *from SolicitudMaterial
-select *from salidaDeMaterial   
-go
+CREATE TABLE salidaDeMaterial (
+    idSalidamaterial INT IDENTITY(1,1) PRIMARY KEY,
+    id_Material INT NOT NULL,
+    cantidadConsumida INT NOT NULL,
+    fechaConsumo DATE NOT NULL,
+    id_Usuario INT NOT NULL,
+    motivoSalida VARCHAR(1000),
+    CONSTRAINT fk_salida_material FOREIGN KEY (id_Material) REFERENCES Material(idMaterial) ON DELETE CASCADE,
+    CONSTRAINT fk_salida_usuario FOREIGN KEY (id_Usuario) REFERENCES Usuario(idUsuario)
+);
+GO
 
---Creacion de consultas para el sistema en c#
+-- Vistas
+CREATE VIEW VerUltimosUsuarios
+AS
+SELECT TOP 10 
+    u.idUsuario AS Codigo,
+    u.nombre AS Nombre,
+    u.fechaNacimiento AS [Fecha de Nacimiento],
+    u.telefono AS Telefono,
+    u.correo AS Correo,
+    r.tipoRol AS Rol,
+    r.descripcionRol AS DescripcionRol
+FROM Usuario u
+INNER JOIN Rol r ON u.id_Rol = r.idRol
+ORDER BY u.idUsuario DESC;
+GO
 
-Create View selectMateriales as 
-select 
-m.idMaterial as Id,
-m.nombreMaterial as [Nombre del Material], 
-m.cantidad as Cantidad, 
-m.fechaIngreso as [Fecha de Ingreso], 
-m.descripcionMaterial as [Descripción], 
-m.modelo as [Modelo], 
-c.nombreCategoria as [Categoría], 
-mar.nombreMarca as [Marca] from Material m
-Inner Join
-Categoria c on c.idCategoria = m.id_Categoria
-Inner Join 
-Marca mar on mar.idMarca = m.id_Marca;
+CREATE VIEW VerUsuarios
+AS
+SELECT 
+    u.idUsuario AS Codigo,
+    u.correo AS Correo,
+    u.contraseña AS Contraseña,
+    r.tipoRol AS Rol
+FROM Usuario u
+INNER JOIN Rol r ON u.id_Rol = r.idRol;
+GO
 
-select *from selectMateriales;
+CREATE VIEW selectMateriales AS 
+SELECT 
+    m.idMaterial AS Codigo,
+    m.nombreMaterial AS [Nombre del Material], 
+    m.cantidad AS Cantidad, 
+    m.fechaIngreso AS [Fecha de Ingreso], 
+    m.descripcionMaterial AS [Descripción], 
+    m.modelo AS [Modelo], 
+    c.nombreCategoria AS [Categoría], 
+    mar.nombreMarca AS [Marca]
+FROM Material m
+INNER JOIN Categoria c ON c.idCategoria = m.id_Categoria
+INNER JOIN Marca mar ON mar.idMarca = m.id_Marca;
+GO
 
----No está ejecutada, solo copie la vista para añadir el where y subir el comando a c#
-select 
-m.nombreMaterial as [Nombre del Material], 
-m.cantidad as Cantidad, 
-m.fechaIngreso as [Fecha de Ingreso], 
-m.descripcionMaterial as [Descripción], 
-m.modelo as [Modelo], 
-c.nombreCategoria as [Categoría], 
-mar.nombreMarca as [Marca] from Material m
-Inner Join
-Categoria c on c.idCategoria = m.id_Categoria
-Inner Join 
-Marca mar on mar.idMarca = m.id_Marca Where m.nombreMaterial like '%{@}%';
+CREATE VIEW registrosUlt AS 
+SELECT TOP 10
+    m.nombreMaterial AS [Nombre del Material], 
+    m.cantidad AS Cantidad, 
+    m.fechaIngreso AS [Fecha de Ingreso], 
+    m.descripcionMaterial AS [Descripción], 
+    m.modelo AS [Modelo], 
+    c.nombreCategoria AS [Categoría], 
+    mar.nombreMarca AS [Marca]
+FROM Material m
+INNER JOIN Categoria c ON c.idCategoria = m.id_Categoria
+INNER JOIN Marca mar ON mar.idMarca = m.id_Marca
+ORDER BY m.idMaterial DESC;
+GO
 
-insert into Marca (nombreMarca) values ('@');
-insert into Categoria (nombreCategoria) values ('');
-insert into Material (nombreMaterial, cantidad, fechaIngreso, descripcionMaterial, modelo, id_Categoria, id_Marca) values ('');
-select top 5 *From Material order by idMaterial desc
-go
-
---Mostrar ultimos 10 registros
-create view registrosUlt as 
-select Top 10
-m.nombreMaterial as [Nombre del Material], 
-m.cantidad as Cantidad, 
-m.fechaIngreso as [Fecha de Ingreso], 
-m.descripcionMaterial as [Descripción], 
-m.modelo as [Modelo], 
-c.nombreCategoria as [Categoría], 
-mar.nombreMarca as [Marca] from Material m
-Inner Join
-Categoria c on c.idCategoria = m.id_Categoria
-Inner Join 
-Marca mar on mar.idMarca = m.id_Marca
-Order by m.idMaterial   desc;
-
-select *from registrosUlt;
-
-
---CONSULTAS LENIN
--- ==========================================================
-
--- PROCEDIMIENTOS ALMACENADOS PARA LAS GRÁFICAS
-
--- ==========================================================
-
--- Procedimiento para Chart Inventario (Categorías específicas)
-create procedure sp_obtener_inventario_categorias
-as
-begin
-    select 
-        m.nombrematerial,
+-- Procedimientos
+IF OBJECT_ID('sp_obtener_inventario_categorias','P') IS NOT NULL
+    DROP PROCEDURE sp_obtener_inventario_categorias;
+GO
+CREATE PROCEDURE sp_obtener_inventario_categorias
+AS
+BEGIN
+    SELECT 
+        m.nombreMaterial,
         m.cantidad,
-        c.nombrecategoria
-    from material m
-    inner join categoria c on m.id_categoria = c.idcategoria
-    where c.nombrecategoria in ('computación', 'periféricos', 'limpieza', 'papeleria')
-    order by c.nombrecategoria, m.nombrematerial;
-end
-go
+        c.nombreCategoria
+    FROM Material m
+    INNER JOIN Categoria c ON m.id_Categoria = c.idCategoria
+    WHERE c.nombreCategoria IN ('computación', 'periféricos', 'limpieza', 'papeleria')
+    ORDER BY c.nombreCategoria, m.nombreMaterial;
+END
+GO
 
+IF OBJECT_ID('sp_obtener_stock_material','P') IS NOT NULL
+    DROP PROCEDURE sp_obtener_stock_material;
+GO
+CREATE PROCEDURE sp_obtener_stock_material
+    @id_material INT
+AS
+BEGIN
+    SELECT cantidad
+    FROM Material
+    WHERE idMaterial = @id_material;
+END
+GO
+
+IF OBJECT_ID('spu_obtenerinventariomaterial','P') IS NOT NULL
+    DROP PROCEDURE spu_obtenerinventariomaterial;
+GO
 CREATE PROCEDURE spu_obtenerinventariomaterial
     @nombrematerial VARCHAR(100)
 AS
 BEGIN
-    -- Selecciona el nombre del material y su cantidad actual
     SELECT
         nombreMaterial,
-        cantidad AS cantidadInventario -- Usamos este alias para el C#
-    FROM
-        Material
-    WHERE
-        nombreMaterial LIKE '%' + @nombrematerial + '%'
-    ORDER BY
-        nombreMaterial;
+        cantidad AS cantidadInventario
+    FROM Material
+    WHERE nombreMaterial LIKE '%' + @nombrematerial + '%'
+    ORDER BY nombreMaterial;
 END;
 GO
 
--- Procedimiento para Chart Consumo (salida_de_material)
-create procedure sp_obtener_consumo_material
-as
-begin
-    select 
-        m.nombrematerial,
-        sum(s.cantidadconsumida) as total_consumido
-    from salida_de_material s
-    inner join material m on s.id_material = m.idmaterial
-    group by m.nombrematerial
-    order by total_consumido desc;
-end
-go
+IF OBJECT_ID('sp_obtener_consumo_material','P') IS NOT NULL
+    DROP PROCEDURE sp_obtener_consumo_material;
+GO
+CREATE PROCEDURE sp_obtener_consumo_material
+AS
+BEGIN
+    SELECT 
+        m.nombreMaterial,
+        SUM(s.cantidadConsumida) AS total_consumido
+    FROM salidaDeMaterial s
+    INNER JOIN Material m ON s.id_Material = m.idMaterial
+    GROUP BY m.nombreMaterial
+    ORDER BY total_consumido DESC;
+END
+GO
 
-
--- Procedimiento para DataGridView Catálogo
-create procedure sp_obtener_catalogo_completo
-as
-begin
-    select 
-        m.nombrematerial,
+IF OBJECT_ID('sp_obtener_catalogo_completo','P') IS NOT NULL
+    DROP PROCEDURE sp_obtener_catalogo_completo;
+GO
+CREATE PROCEDURE sp_obtener_catalogo_completo
+AS
+BEGIN
+    SELECT 
+        m.nombreMaterial,
         m.cantidad,
-        m.descripcionmaterial,
+        m.descripcionMaterial,
         m.modelo,
-        c.nombrecategoria,
-        ma.nombremarca
-    from material m
-    inner join categoria c on m.id_categoria = c.idcategoria
-    inner join marca ma on m.id_marca = ma.idmarca
-    order by c.nombrecategoria, m.nombrematerial;
-end
-go
+        c.nombreCategoria,
+        ma.nombreMarca
+    FROM Material m
+    INNER JOIN Categoria c ON m.id_Categoria = c.idCategoria
+    INNER JOIN Marca ma ON m.id_Marca = ma.idMarca
+    ORDER BY c.nombreCategoria, m.nombreMaterial;
+END
+GO
 
--- ==========================================================
-
--- VERIFICACIÓN DE PROCEDIMIENTOS
-
--- ==========================================================
-
--- Verificar que los procedimientos se crearon
-select name, type_desc 
-from sys.procedures 
-where name in ('sp_obtener_inventario_categorias', 'sp_obtener_consumo_material', 'sp_obtener_catalogo_completo');
-go
-
--- Probar el procedimiento de inventario
-exec sp_obtener_inventario_categorias;
-go
-
--- Probar el procedimiento de consumo
-exec sp_obtener_consumo_material;
-go
-
--- Probar el procedimiento de catálogo
-exec sp_obtener_catalogo_completo;
-go
-
--- Procedimiento para obtener materiales para ComboBox
+IF OBJECT_ID('sp_obtener_materiales_combo','P') IS NOT NULL
+    DROP PROCEDURE sp_obtener_materiales_combo;
+GO
 CREATE PROCEDURE sp_obtener_materiales_combo
 AS
 BEGIN
@@ -352,27 +249,52 @@ BEGIN
 END
 GO
 
--- Procedimiento para registrar salida de material
-CREATE PROCEDURE sp_registrar_salida_material
-    @id_material INT,
+IF OBJECT_ID('sp_registrar_salida_materialll','P') IS NOT NULL
+    DROP PROCEDURE sp_registrar_salida_materialll;
+GO
+CREATE PROCEDURE sp_registrar_salida_materialll
+    @id_material INT = NULL,
+    @nombre_material VARCHAR(100) = NULL,
     @cantidad_consumida INT,
     @fecha_consumo DATE,
     @id_usuario INT,
     @motivo_salida VARCHAR(1000)
 AS
 BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @id_material_local INT;
+    DECLARE @stock_actual INT;
+
+    IF @id_material IS NULL AND @nombre_material IS NOT NULL
+    BEGIN
+        SELECT TOP 1 @id_material_local = idMaterial
+        FROM Material
+        WHERE nombreMaterial = @nombre_material;
+    END
+    ELSE
+        SET @id_material_local = @id_material;
+
+    SELECT @stock_actual = cantidad
+    FROM Material
+    WHERE idMaterial = @id_material_local;
+
+    IF @stock_actual < @cantidad_consumida
+    BEGIN
+        RAISERROR ('No hay suficiente stock para realizar la salida. Stock actual: %d', 16, 1, @stock_actual);
+        RETURN;
+    END
+
     BEGIN TRY
         BEGIN TRANSACTION;
-        
-        -- Insertar en salida_de_material
-        INSERT INTO salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        VALUES (@id_material, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
-        
-        -- Actualizar el inventario (restar cantidad)
-        UPDATE Material 
+
+        INSERT INTO salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivoSalida)
+        VALUES (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+
+        UPDATE Material
         SET cantidad = cantidad - @cantidad_consumida
-        WHERE idMaterial = @id_Material;
-        
+        WHERE idMaterial = @id_material_local;
+
         COMMIT TRANSACTION;
     END TRY
     BEGIN CATCH
@@ -382,18 +304,20 @@ BEGIN
 END
 GO
 
--- Procedimiento para mostrar historial de salidas
+IF OBJECT_ID('sp_obtener_historial_salidas','P') IS NOT NULL
+    DROP PROCEDURE sp_obtener_historial_salidas;
+GO
 CREATE PROCEDURE sp_obtener_historial_salidas
 AS
 BEGIN
     SELECT 
-        s.idsalidamaterial,
-        m.nombrematerial,
-        ma.nombremarca,
-        s.cantidadconsumida,
-        s.fechaconsumo,
-        s.motivosalida,
-        u.nombre as usuario_registra
+        s.idSalidamaterial,
+        m.nombreMaterial,
+        ma.nombreMarca,
+        s.cantidadConsumida,
+        s.fechaConsumo,
+        s.motivoSalida,
+        u.nombre AS usuario_registra
     FROM salidaDeMaterial s
     INNER JOIN Material m ON s.id_Material = m.idMaterial
     INNER JOIN Marca ma ON m.id_Marca = ma.idMarca
@@ -401,70 +325,91 @@ BEGIN
     ORDER BY s.fechaConsumo DESC;
 END
 GO
--- Ejecuta ESTO en SSMS, asegurándote de usar la BD BasePTC
--- Si el procedimiento existe, lo modifica. Si no existe, lo crea.
-IF OBJECT_ID('sp_registrar_salida_material', 'P') IS NOT NULL
-    DROP PROCEDURE sp_registrar_salida_material;
+
+IF OBJECT_ID('spu_registrarconsumo','P') IS NOT NULL
+    DROP PROCEDURE spu_registrarconsumo;
+GO
+CREATE PROCEDURE spu_registrarconsumo
+    @id_material INT = NULL,
+    @nombre_material VARCHAR(100) = NULL,
+    @cantidad_consumida INT,
+    @fecha_consumo DATE,
+    @id_usuario INT,
+    @motivo_salida VARCHAR(1000)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @id_material_local INT;
+    DECLARE @stock_actual INT;
+
+    IF @id_material IS NOT NULL
+    BEGIN
+        SELECT @id_material_local = idMaterial, @stock_actual = cantidad
+        FROM Material
+        WHERE idMaterial = @id_material;
+    END
+    ELSE IF @nombre_material IS NOT NULL
+    BEGIN
+        SELECT @id_material_local = idMaterial, @stock_actual = cantidad
+        FROM Material
+        WHERE nombreMaterial = @nombre_material;
+    END
+    ELSE
+    BEGIN
+        RAISERROR('Se requiere id_material o nombre_material.', 16, 1);
+        RETURN;
+    END
+
+    IF @id_material_local IS NULL
+    BEGIN
+        RAISERROR('El material especificado no existe en el inventario.', 16, 1);
+        RETURN;
+    END
+
+    IF @stock_actual < @cantidad_consumida
+    BEGIN
+        RAISERROR('Stock insuficiente. Solo quedan %d unidades.', 16, 1, @stock_actual);
+        RETURN;
+    END
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        INSERT INTO salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivoSalida)
+        VALUES (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
+
+        UPDATE Material
+        SET cantidad = cantidad - @cantidad_consumida
+        WHERE idMaterial = @id_material_local;
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH
+END
 GO
 
+-- Inserts
+INSERT INTO Rol (tipoRol, descripcionRol)
+VALUES 
+('Jefatura', 'Este rol tiene acceso al inventario, consumo y al manejo de solicitudes'), 
+('Departamento IT', 'Este rol tiene acceso al inventario, consumo y a la realizacion de solicitudes');
+GO
 
-create procedure sp_registrar_salida_material
-    -- RECUERDA: Cambiamos @id_material por @nombre_material
-    @nombre_material varchar(100), 
-    @cantidad_consumida int,
-    @fecha_consumo date,
-    @id_usuario int,
-    @motivo_salida varchar(1000)
-as
-begin
-    -- Variables internas para la validación
-    declare @id_material_local int;
-    declare @stock_actual int;
-
-    -- 1. Intentar encontrar el material y obtener su stock actual por NOMBRE
-    select @id_material_local = idMaterial, @stock_actual = cantidad
-    from Material
-    where nombreMaterial = @nombre_material;
-
-    -- Validacion 1: El material debe existir
-    if @id_material_local is null
-    begin
-        -- Lanza un error con severidad 16 (lo captura C# como SqlException)
-        raiserror('El material especificado no existe en el inventario. Verifique el nombre.', 16, 1);
-        return;
-    end
-    -- Validacion 2: Hay suficiente stock?
-    if @stock_actual < @cantidad_consumida
-    begin
-        raiserror('Stock insuficiente. Solo quedan %d unidades de %s.', 16, 1, @stock_actual, @nombre_material);
-        return;
-    end
-
-    -- Si las validaciones pasan, se ejecuta la transacción
-    begin try
-        begin transaction;
-        
-        -- 3. Insertar en salida_de_material (Registra la salida)
-        insert into salidaDeMaterial (id_Material, cantidadConsumida, fechaConsumo, id_Usuario, motivosalida)
-        values (@id_material_local, @cantidad_consumida, @fecha_consumo, @id_usuario, @motivo_salida);
-        
-        -- 4. Actualizar el inventario (resta la cantidad del inventario principal)
-        update Material 
-        set cantidad = cantidad - @cantidad_consumida
-        where idMaterial = @id_material_local;
-        
-        commit transaction;
-    end try
-    begin catch
-        if @@trancount > 0
-            rollback transaction;
-        throw;
-    end catch
-end
-go
-
-
---UPDATE DE MATERIAL
-
---No se debe ejecutar, pero es la que utilizo en c#
-Update Material set nombreMaterial = @nombre, cantidad = @cantidad where idMaterial = @id;
+-- Selects 
+SELECT * FROM Rol;
+SELECT * FROM Usuario;
+SELECT * FROM Categoria;
+SELECT * FROM Marca;
+SELECT * FROM Material;
+SELECT * FROM Solicitud;
+SELECT * FROM SolicitudMaterial;
+SELECT * FROM salidaDeMaterial;
+SELECT * FROM VerUltimosUsuarios;
+SELECT * FROM VerUsuarios;
+SELECT * FROM selectMateriales;
+SELECT * FROM registrosUlt;

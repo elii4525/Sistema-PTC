@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,10 @@ namespace Modelos.Conexion
     {
 
         //private static string servidor = "Orlando\\SQLEXPRESS";
-        //private static string database = "BasePTC2";
+        //private static string database = "BasePTC";
 
         private static string servidor = "Lenovo\\SQLEXPRESS";
-        private static string database = "BasePTCC";
+        private static string database = "BasePTC";
 
 
         public static SqlConnection Conectar()
@@ -32,8 +33,10 @@ namespace Modelos.Conexion
                 MessageBox.Show("No se pudo conectar al servidor" +ex, "Error de Conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
-            
-
+        }
+        public static string GetCadena()
+        {
+            return $"Data Source={servidor};Initial Catalog={database};Integrated Security=true;";
         }
 
     }

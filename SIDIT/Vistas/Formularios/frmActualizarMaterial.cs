@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelos.Entidades;
 
@@ -22,26 +17,58 @@ namespace Vistas.Formularios
         {
             this.Close();
             icbtnSalir.Cursor = Cursors.Hand;
-            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Material m = new Material();
-            m.NombreMaterial = txtNombre.Text;
-            m.Cantidad = int.Parse(txtCantidad.Text);
-            m.IdMaterial = int.Parse(dgvMaterial.CurrentRow.Cells[0].Value.ToString());
+            if (dgvMaterial.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione un material de la lista.", "Advertencia",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            if (m.ActualizarMaterial() == true )
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtCantidad.Text))
+            {
+                MessageBox.Show("Debe ingresar nombre y cantidad.", "Advertencia",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int idMaterial = int.Parse(dgvMaterial.CurrentRow.Cells[0].Value.ToString());
+            int cantidadNueva = int.Parse(txtCantidad.Text);
+
+            // 🔹 Obtener la cantidad actual desde la BD
+            int cantidadActual = Material.ObtenerCantidad(idMaterial);
+
+            // 🔹 Validar que la nueva cantidad no sea menor
+            if (cantidadNueva < cantidadActual)
+            {
+                MessageBox.Show($"No puedes asignar una cantidad menor a la actual ({cantidadActual}).",
+                                "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCantidad.Text = cantidadActual.ToString(); // Restaurar valor
+                return;
+            }
+
+            Material m = new Material
+            {
+                NombreMaterial = txtNombre.Text.Trim(),
+                Cantidad = cantidadNueva,
+                IdMaterial = idMaterial
+            };
+
+            if (m.ActualizarMaterial())
             {
                 MostrarMateriales();
                 txtCantidad.Clear();
                 txtNombre.Clear();
-                
+                MessageBox.Show("Material actualizado correctamente.", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Hubo un error", "Error");
+                MessageBox.Show("Hubo un error al actualizar.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -64,6 +91,15 @@ namespace Vistas.Formularios
             label6.Font = Helper.FuenteHelper.ObtenerFuente(10);
             label1.Font = Helper.FuenteHelper.ObtenerFuente(10);
             label8.Font = Helper.FuenteHelper.ObtenerFuente(10);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Solo permitir dígitos y control (backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

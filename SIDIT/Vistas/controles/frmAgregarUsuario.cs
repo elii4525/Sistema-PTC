@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelos.Entidades;
 using Vistas.HelperBarraNegra;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MiTextBox = Vistas.Controles.TextBox;
 
 namespace Vistas.Controles
@@ -26,7 +25,6 @@ namespace Vistas.Controles
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-
             BarraNegra.TryApplyDarkTitleBar(this.Handle);
         }
 
@@ -34,7 +32,8 @@ namespace Vistas.Controles
         {
             CargarUsuarios();
             EstilizarDataGrid(dgvUltimosUsuarios);
-            
+
+            // Ajustar fuentes
             label7.Font = Helper.FuenteHelper.ObtenerFuente(10);
             lbl2.Font = Helper.FuenteHelper.ObtenerFuente(10);
             btnAgregarUsuario.Font = Helper.FuenteHelper.ObtenerFuente(9);
@@ -82,11 +81,31 @@ namespace Vistas.Controles
                 return;
             }
 
-            if (!txtCorreo.Texts.EndsWith("@gmail.com"))
+            if (!txtCorreo.Texts.Contains("@") || !txtCorreo.Texts.EndsWith("@gmail.com"))
             {
-                MessageBox.Show("El correo debe terminar en @gmail.com",
+                MessageBox.Show("El correo debe ser válido y terminar en @gmail.com",
                                 "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCorreo.Focus();
+                return;
+            }
+
+            if (cbRol.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un rol.",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbRol.Focus();
+                return;
+            }
+
+            // Validar edad mínima
+            DateTime hoy = DateTime.Today;
+            int edad = hoy.Year - dtpFechaNacimiento.Value.Year;
+            if (dtpFechaNacimiento.Value > hoy.AddYears(-edad)) edad--;
+
+            if (edad < 18)
+            {
+                MessageBox.Show("El usuario debe ser mayor de 18 años.",
+                                "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -106,8 +125,8 @@ namespace Vistas.Controles
                     MessageBox.Show("Usuario agregado correctamente",
                                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    CargarUsuarios();   
-                    LimpiarCampos();    
+                    CargarUsuarios();
+                    LimpiarCampos();
                 }
                 else
                 {
@@ -130,8 +149,6 @@ namespace Vistas.Controles
             dtpEdad.Value = dtpEdad.MaxDate;
         }
 
-
-
         private void CargarRoles()
         {
             Usuario u = new Usuario();
@@ -140,7 +157,7 @@ namespace Vistas.Controles
             cbRol.DataSource = roles;
             cbRol.DisplayMember = "tipoRol";
             cbRol.ValueMember = "idRol";
-            cbRol.SelectedIndex = -1; 
+            cbRol.SelectedIndex = -1;
         }
 
         private void LimpiarCampos()
@@ -149,12 +166,14 @@ namespace Vistas.Controles
             txtNumero.Clear();
             txtCorreo.Clear();
             cbRol.SelectedIndex = -1;
+            ConfigurarEdad(dtpFechaNacimiento);
         }
 
         private void CargarUsuarios()
         {
             dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
         }
+
         private void EstilizarDataGrid(DataGridView dgv)
         {
             dgv.BorderStyle = BorderStyle.None;
@@ -177,4 +196,3 @@ namespace Vistas.Controles
         }
     }
 }
-

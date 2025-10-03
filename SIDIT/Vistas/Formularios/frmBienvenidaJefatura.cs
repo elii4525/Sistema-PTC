@@ -37,6 +37,8 @@ namespace Vistas.Formularios
             frmMenuJefatura inven = new frmMenuJefatura();
             inven.Show();
             inven.MostrarFormInvenJEnPanel();
+            //frmCambiarContraseña cont = new frmCambiarContraseña();
+            //cont.ShowDialog();
         }
 
         private void lblVerSoli_Click(object sender, EventArgs e)

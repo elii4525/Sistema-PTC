@@ -166,7 +166,7 @@ namespace Vistas.Formularios
 
         private void SoloLetras(KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
                 e.Handled = true;
         }
 
