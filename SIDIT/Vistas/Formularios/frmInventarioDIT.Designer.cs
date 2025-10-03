@@ -245,7 +245,8 @@
             // 
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(254, 20);
+            this.txtBuscar.Location = new System.Drawing.Point(271, 20);
+            this.txtBuscar.MaxLength = 100;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(192, 27);
             this.txtBuscar.TabIndex = 0;

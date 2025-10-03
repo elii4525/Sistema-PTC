@@ -14,12 +14,14 @@ namespace Vistas.Formularios
     public partial class frmSolicitudesAnteriores : Form
     {
         private int _idUsuario;
+        private string _rol;
 
-        // Constructor que recibe el idUsuario
-        public frmSolicitudesAnteriores(int idUsuario)
+        public frmSolicitudesAnteriores()
         {
             InitializeComponent();
-            _idUsuario = idUsuario;
+            _idUsuario = Usuario.SesionActual.IdUsuario;
+            _rol = Usuario.SesionActual.Rol;
+
             EstilizarDataGrid(dataGridView1);
             label1.Font = Helper.FuenteHelper.ObtenerFuente(15);
         }
@@ -27,7 +29,15 @@ namespace Vistas.Formularios
         private void frmSolicitudesAnteriores_Load(object sender, EventArgs e)
         {
             Solicitudd sol = new Solicitudd();
-            dataGridView1.DataSource = sol.ObtenerSolicitudesPorUsuario(_idUsuario);
+
+            if (_rol == "Jefatura")
+            {
+                dataGridView1.DataSource = sol.ObtenerTodasLasSolicitudes();
+            }
+            else
+            {
+                dataGridView1.DataSource = sol.ObtenerSolicitudesPorUsuario(_idUsuario);
+            }
         }
 
         private void buttonRedondeado2_Click(object sender, EventArgs e)
@@ -40,16 +50,13 @@ namespace Vistas.Formularios
             dgv.BorderStyle = BorderStyle.None;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.DefaultCellStyle.SelectionBackColor = Color.Gray;
-            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.BackgroundColor = Color.White;
-
-            dgv.DefaultCellStyle.ForeColor = Color.Black;
 
             dgv.EnableHeadersVisualStyles = false;
             dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.Black;
-
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

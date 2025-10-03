@@ -76,7 +76,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(204, 37);
+            this.label5.Location = new System.Drawing.Point(157, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(222, 27);
             this.label5.TabIndex = 6;
@@ -118,9 +118,11 @@
             this.txtCategoria.ForeColor = System.Drawing.Color.Black;
             this.txtCategoria.Location = new System.Drawing.Point(49, 215);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCategoria.MaxLength = 70;
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(269, 34);
             this.txtCategoria.TabIndex = 0;
+            this.txtCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCategoria_KeyPress);
             // 
             // tableLayoutPanel1
             // 

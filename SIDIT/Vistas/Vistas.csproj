@@ -367,6 +367,12 @@
     <Compile Include="Formularios\frmMenuJefatura.Designer.cs">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmPantallaCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPantallaCarga.Designer.cs">
+      <DependentUpon>frmPantallaCarga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmPrimerUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -501,6 +507,9 @@
     <EmbeddedResource Include="Formularios\frmMenuJefatura.resx">
       <DependentUpon>frmMenuJefatura.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPantallaCarga.resx">
+      <DependentUpon>frmPantallaCarga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrimerUsuario.resx">
       <DependentUpon>frmPrimerUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\usercontolsflotantes.resx">
+      <DependentUpon>usercontolsflotantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -645,6 +657,7 @@
     <None Include="Resources\icons8-usuario-100.png" />
     <None Include="Resources\icons8-usuario-100 %282%29.png" />
     <None Include="Resources\Group 18.png" />
+    <None Include="Resources\Desktop - 36.png" />
     <Content Include="Resources\logo.png" />
     <None Include="Resources\icons8-ajustes-50.png" />
     <None Include="Resources\icons8-mudarse-48.png" />

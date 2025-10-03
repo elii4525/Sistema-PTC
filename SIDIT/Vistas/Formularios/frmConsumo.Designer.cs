@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.chartInventario = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -55,6 +55,7 @@
             this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBusqueda.Location = new System.Drawing.Point(421, 19);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBusqueda.MaxLength = 100;
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(236, 22);
             this.txtBusqueda.TabIndex = 0;
@@ -80,17 +81,17 @@
             this.chartInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea5.Name = "ChartArea1";
-            this.chartInventario.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartInventario.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chartInventario.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartInventario.Legends.Add(legend1);
             this.chartInventario.Location = new System.Drawing.Point(4, 4);
             this.chartInventario.Margin = new System.Windows.Forms.Padding(4);
             this.chartInventario.Name = "chartInventario";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartInventario.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartInventario.Series.Add(series1);
             this.chartInventario.Size = new System.Drawing.Size(509, 381);
             this.chartInventario.TabIndex = 2;
             this.chartInventario.Text = "chart1";
@@ -100,21 +101,20 @@
             this.chartConsumo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea6.Name = "ChartArea1";
-            this.chartConsumo.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartConsumo.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chartConsumo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartConsumo.Legends.Add(legend2);
             this.chartConsumo.Location = new System.Drawing.Point(521, 4);
             this.chartConsumo.Margin = new System.Windows.Forms.Padding(4);
             this.chartConsumo.Name = "chartConsumo";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartConsumo.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartConsumo.Series.Add(series2);
             this.chartConsumo.Size = new System.Drawing.Size(510, 381);
             this.chartConsumo.TabIndex = 3;
             this.chartConsumo.Text = "chart2";
-            this.chartConsumo.Click += new System.EventHandler(this.chartConsumo_Click);
             // 
             // label1
             // 
@@ -146,7 +146,6 @@
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaInicio.TabIndex = 6;
-            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // dtpFechaFin
             // 
@@ -216,6 +215,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsumo";
             this.Text = "frmConsumo";
+            this.Load += new System.EventHandler(this.frmConsumo_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.chartInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

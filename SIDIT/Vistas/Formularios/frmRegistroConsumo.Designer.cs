@@ -1,4 +1,4 @@
-﻿namespace Vistas.Formularios
+﻿namespace Vistas
 {
     partial class frmRegistroConsumo
     {
@@ -28,31 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNombreMaterial = new System.Windows.Forms.TextBox();
             this.dtpFechaSalida = new System.Windows.Forms.DateTimePicker();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtMotivo = new System.Windows.Forms.TextBox();
-            this.dgvConsumo = new System.Windows.Forms.DataGridView();
+            this.dgvHistorial = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbMaterial = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsumo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtNombreMaterial
-            // 
-            this.txtNombreMaterial.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNombreMaterial.Location = new System.Drawing.Point(271, 90);
-            this.txtNombreMaterial.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreMaterial.Name = "txtNombreMaterial";
-            this.txtNombreMaterial.Size = new System.Drawing.Size(132, 22);
-            this.txtNombreMaterial.TabIndex = 0;
             // 
             // dtpFechaSalida
             // 
@@ -67,33 +58,36 @@
             // txtCantidad
             // 
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCantidad.Location = new System.Drawing.Point(271, 142);
+            this.txtCantidad.Location = new System.Drawing.Point(271, 139);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCantidad.MaxLength = 5;
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(132, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(265, 22);
             this.txtCantidad.TabIndex = 2;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtMotivo
             // 
             this.txtMotivo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtMotivo.Location = new System.Drawing.Point(271, 195);
             this.txtMotivo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMotivo.MaxLength = 1000;
             this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(132, 22);
+            this.txtMotivo.Size = new System.Drawing.Size(265, 22);
             this.txtMotivo.TabIndex = 3;
             // 
-            // dgvConsumo
+            // dgvHistorial
             // 
-            this.dgvConsumo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvHistorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvConsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsumo.Location = new System.Drawing.Point(176, 284);
-            this.dgvConsumo.Margin = new System.Windows.Forms.Padding(4, 4, 40, 4);
-            this.dgvConsumo.Name = "dgvConsumo";
-            this.dgvConsumo.RowHeadersWidth = 51;
-            this.dgvConsumo.Size = new System.Drawing.Size(685, 244);
-            this.dgvConsumo.TabIndex = 4;
+            this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorial.Location = new System.Drawing.Point(176, 284);
+            this.dgvHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 40, 4);
+            this.dgvHistorial.Name = "dgvHistorial";
+            this.dgvHistorial.RowHeadersWidth = 51;
+            this.dgvHistorial.Size = new System.Drawing.Size(685, 244);
+            this.dgvHistorial.TabIndex = 4;
             // 
             // btnAgregar
             // 
@@ -110,7 +104,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label2
             // 
@@ -162,23 +156,30 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cmbMaterial);
             this.panel1.Controls.Add(this.dtpFechaSalida);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtNombreMaterial);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtCantidad);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtMotivo);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dgvConsumo);
+            this.panel1.Controls.Add(this.dgvHistorial);
             this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1038, 546);
             this.panel1.TabIndex = 14;
+            // 
+            // cmbMaterial
+            // 
+            this.cmbMaterial.FormattingEnabled = true;
+            this.cmbMaterial.Location = new System.Drawing.Point(271, 93);
+            this.cmbMaterial.Name = "cmbMaterial";
+            this.cmbMaterial.Size = new System.Drawing.Size(265, 24);
+            this.cmbMaterial.TabIndex = 13;
             // 
             // tableLayoutPanel1
             // 
@@ -203,7 +204,7 @@
             this.Name = "frmRegistroConsumo";
             this.Text = "frmRegistroConsumo";
             this.Load += new System.EventHandler(this.frmRegistroConsumo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsumo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -212,12 +213,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtNombreMaterial;
         private System.Windows.Forms.DateTimePicker dtpFechaSalida;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtMotivo;
-        private System.Windows.Forms.DataGridView dgvConsumo;
+        private System.Windows.Forms.DataGridView dgvHistorial;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -225,5 +224,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ComboBox cmbMaterial;
     }
 }

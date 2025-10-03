@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuDIT));
             this.tlpMenuDIT = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBarraLateral = new System.Windows.Forms.Panel();
             this.icbtnConsumoD = new FontAwesome.Sharp.IconButton();
@@ -266,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1749, 759);
             this.Controls.Add(this.tlpMenuDIT);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1698, 797);
             this.Name = "frmMenuDIT";

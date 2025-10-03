@@ -100,8 +100,10 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(734, 220);
+            this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(165, 28);
@@ -114,9 +116,9 @@
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizar.Location = new System.Drawing.Point(772, 391);
+            this.btnActualizar.Location = new System.Drawing.Point(754, 393);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(93, 39);
+            this.btnActualizar.Size = new System.Drawing.Size(131, 39);
             this.btnActualizar.TabIndex = 55;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -126,9 +128,11 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(734, 322);
+            this.txtCantidad.MaxLength = 5;
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(165, 28);
             this.txtCantidad.TabIndex = 56;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label1
             // 

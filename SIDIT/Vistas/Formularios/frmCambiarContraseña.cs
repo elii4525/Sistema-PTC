@@ -31,32 +31,45 @@ namespace Vistas.Formularios
 
                 if (string.IsNullOrWhiteSpace(nueva) || string.IsNullOrWhiteSpace(confirmar))
                 {
-                    MessageBox.Show("Ingresar una nueva contraseña");
+                    MessageBox.Show("Debe ingresar la nueva contraseña.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (nueva.Length < 8)
+                {
+                    MessageBox.Show("La contraseña debe tener al menos 8 caracteres.", "Contraseña insegura",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 if (nueva != confirmar)
                 {
-                    MessageBox.Show("Las contraseñas nuevas no coinciden.");
+                    MessageBox.Show("Las contraseñas no coinciden.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 int idUsuario = Usuario.SesionActual.IdUsuario;
                 if (idUsuario <= 0)
                 {
-                    MessageBox.Show("No hay datos del usuario");
+                    MessageBox.Show("No hay datos del usuario.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
+                // Guardar nueva contraseña
                 string nuevoHash = SeguridadHelper.HashContraseña(nueva);
                 Usuario.GuardarNuevaPassword(idUsuario, nuevoHash);
 
-                MessageBox.Show("Contraseña cambiada exitosamente");
+                MessageBox.Show("Contraseña cambiada exitosamente.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cambiar contraseña: " + ex.Message);
+                MessageBox.Show("Error al cambiar contraseña: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

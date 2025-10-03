@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblIngreseDatos = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
@@ -157,7 +158,7 @@
             this.txtCorreo.ForeColor = System.Drawing.Color.White;
             this.txtCorreo.Location = new System.Drawing.Point(120, 542);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.MaxLength = 32767;
+            this.txtCorreo.MaxLength = 75;
             this.txtCorreo.multiline = false;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
@@ -182,7 +183,7 @@
             this.txtContra.ForeColor = System.Drawing.Color.White;
             this.txtContra.Location = new System.Drawing.Point(120, 658);
             this.txtContra.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContra.MaxLength = 32767;
+            this.txtContra.MaxLength = 50;
             this.txtContra.multiline = false;
             this.txtContra.Name = "txtContra";
             this.txtContra.Padding = new System.Windows.Forms.Padding(7);
@@ -233,6 +234,7 @@
             this.Controls.Add(this.lblIngreseDatos);
             this.Controls.Add(this.lblBienvenido);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

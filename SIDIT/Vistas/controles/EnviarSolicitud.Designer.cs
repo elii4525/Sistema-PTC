@@ -324,6 +324,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidad1.Location = new System.Drawing.Point(451, 426);
+            this.txtCantidad1.MaxLength = 4;
             this.txtCantidad1.Name = "txtCantidad1";
             this.txtCantidad1.Size = new System.Drawing.Size(271, 22);
             this.txtCantidad1.TabIndex = 35;
@@ -334,6 +335,7 @@
             this.txtCantidad2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidad2.Location = new System.Drawing.Point(451, 542);
+            this.txtCantidad2.MaxLength = 4;
             this.txtCantidad2.Name = "txtCantidad2";
             this.txtCantidad2.Size = new System.Drawing.Size(271, 22);
             this.txtCantidad2.TabIndex = 36;
@@ -344,6 +346,7 @@
             this.txtCantidad3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidad3.Location = new System.Drawing.Point(451, 665);
+            this.txtCantidad3.MaxLength = 4;
             this.txtCantidad3.Name = "txtCantidad3";
             this.txtCantidad3.Size = new System.Drawing.Size(271, 22);
             this.txtCantidad3.TabIndex = 37;

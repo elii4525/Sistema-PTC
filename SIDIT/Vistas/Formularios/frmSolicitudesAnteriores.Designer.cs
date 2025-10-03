@@ -1,7 +1,10 @@
 ﻿namespace Vistas.Formularios
 {
+    using Vistas.controles;
     partial class frmSolicitudesAnteriores
     {
+
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -75,7 +78,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1335, 848);
+            this.ClientSize = new System.Drawing.Size(1317, 801);
             this.Controls.Add(this.buttonRedondeado2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);

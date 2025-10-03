@@ -95,5 +95,45 @@ namespace Vistas.Formularios
             MostrarCategorias();
             MostrarMarcas();
         }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
+        private void txtCantidad_Leave(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtCantidad.Text, out int valor))
+            {
+                if (valor < 0)
+                {
+                    MessageBox.Show("No se permiten números negativos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCantidad.Text = "0";
+                }
+            }
+            else
+            {
+                txtCantidad.Text = ""; 
+            }
+        }
     }
 }

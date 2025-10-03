@@ -112,7 +112,7 @@
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(120, 16);
             this.lbl6.TabIndex = 4;
-            this.lbl6.Text = "Correo electronico;";
+            this.lbl6.Text = "Correo electronico:";
             // 
             // dgvUltimosUsuarios
             // 
@@ -125,7 +125,7 @@
             this.dgvUltimosUsuarios.Name = "dgvUltimosUsuarios";
             this.dgvUltimosUsuarios.RowHeadersWidth = 51;
             this.dgvUltimosUsuarios.RowTemplate.Height = 24;
-            this.dgvUltimosUsuarios.Size = new System.Drawing.Size(1053, 305);
+            this.dgvUltimosUsuarios.Size = new System.Drawing.Size(1053, 239);
             this.dgvUltimosUsuarios.TabIndex = 10;
             // 
             // btnAgregarUsuario

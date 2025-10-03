@@ -91,7 +91,7 @@ namespace Vistas.controles
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
 
@@ -182,12 +182,5 @@ namespace Vistas.controles
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            if (this.ParentForm != null)
-                this.ParentForm.Close();
-            else
-                this.Visible = false;
-        }
     }
 }

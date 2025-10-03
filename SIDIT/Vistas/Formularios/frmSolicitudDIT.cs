@@ -321,10 +321,9 @@ namespace Vistas.Formularios
         // 🔹 Botón para ver solicitudes anteriores
         private void btnSolicitudesAnteriores_Click(object sender, EventArgs e)
         {
-            int idUsuario = Usuario.SesionActual.IdUsuario;
-
-            frmSolicitudesAnteriores frm = new frmSolicitudesAnteriores(idUsuario);
+            frmSolicitudesAnteriores frm = new frmSolicitudesAnteriores();
             frm.ShowDialog();
+
         }
 
         // 🔹 Botones de Generar PDF
@@ -459,6 +458,12 @@ namespace Vistas.Formularios
                 lblDescripcion.Text,
                 materiales
             );
+        }
+
+        private void frmSolicitudDIT_Resize(object sender, EventArgs e)
+        {
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = 50; // o el margen que quieras desde arriba
         }
     }
 }

@@ -31,6 +31,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtRol = new Vistas.Controles.TextBox();
+            this.txtNumero = new Vistas.Controles.TextBox();
+            this.txtCorreo = new Vistas.Controles.TextBox();
+            this.txtNombre = new Vistas.Controles.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,10 +45,6 @@
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.txtRol = new Vistas.Controles.TextBox();
-            this.txtNumero = new Vistas.Controles.TextBox();
-            this.txtCorreo = new Vistas.Controles.TextBox();
-            this.txtNombre = new Vistas.Controles.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,6 +88,102 @@
             this.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFecha.Size = new System.Drawing.Size(267, 22);
             this.dtpFecha.TabIndex = 10;
+            // 
+            // txtRol
+            // 
+            this.txtRol.BackColor = System.Drawing.Color.Black;
+            this.txtRol.BorderColor = System.Drawing.Color.White;
+            this.txtRol.BorderSize = 2;
+            this.txtRol.Enabled = false;
+            this.txtRol.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.ForeColor = System.Drawing.Color.Black;
+            this.txtRol.Location = new System.Drawing.Point(299, 303);
+            this.txtRol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRol.MaxLength = 32767;
+            this.txtRol.multiline = true;
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Padding = new System.Windows.Forms.Padding(7);
+            this.txtRol.PasswordChar = false;
+            this.txtRol.ReadOnly = false;
+            this.txtRol.Size = new System.Drawing.Size(164, 30);
+            this.txtRol.SoloLetras = false;
+            this.txtRol.SoloNumeros = false;
+            this.txtRol.TabIndex = 9;
+            this.txtRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRol.Texts = "";
+            this.txtRol.UnderlinedStyle = true;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.BackColor = System.Drawing.Color.Black;
+            this.txtNumero.BorderColor = System.Drawing.Color.White;
+            this.txtNumero.BorderSize = 2;
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.ForeColor = System.Drawing.Color.Black;
+            this.txtNumero.Location = new System.Drawing.Point(85, 303);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumero.MaxLength = 32767;
+            this.txtNumero.multiline = true;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNumero.PasswordChar = false;
+            this.txtNumero.ReadOnly = false;
+            this.txtNumero.Size = new System.Drawing.Size(164, 30);
+            this.txtNumero.SoloLetras = false;
+            this.txtNumero.SoloNumeros = false;
+            this.txtNumero.TabIndex = 8;
+            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNumero.Texts = "";
+            this.txtNumero.UnderlinedStyle = true;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.BackColor = System.Drawing.Color.Black;
+            this.txtCorreo.BorderColor = System.Drawing.Color.White;
+            this.txtCorreo.BorderSize = 2;
+            this.txtCorreo.Enabled = false;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCorreo.Location = new System.Drawing.Point(85, 209);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.MaxLength = 32767;
+            this.txtCorreo.multiline = true;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
+            this.txtCorreo.PasswordChar = false;
+            this.txtCorreo.ReadOnly = false;
+            this.txtCorreo.Size = new System.Drawing.Size(301, 30);
+            this.txtCorreo.SoloLetras = false;
+            this.txtCorreo.SoloNumeros = false;
+            this.txtCorreo.TabIndex = 7;
+            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCorreo.Texts = "";
+            this.txtCorreo.UnderlinedStyle = true;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.Black;
+            this.txtNombre.BorderColor = System.Drawing.Color.White;
+            this.txtNombre.BorderSize = 2;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.Location = new System.Drawing.Point(85, 111);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.MaxLength = 32767;
+            this.txtNombre.multiline = true;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNombre.PasswordChar = false;
+            this.txtNombre.ReadOnly = false;
+            this.txtNombre.Size = new System.Drawing.Size(301, 30);
+            this.txtNombre.SoloLetras = false;
+            this.txtNombre.SoloNumeros = false;
+            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre.Texts = "";
+            this.txtNombre.UnderlinedStyle = true;
             // 
             // label6
             // 
@@ -198,102 +294,6 @@
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // txtRol
-            // 
-            this.txtRol.BackColor = System.Drawing.Color.Black;
-            this.txtRol.BorderColor = System.Drawing.Color.White;
-            this.txtRol.BorderSize = 2;
-            this.txtRol.Enabled = false;
-            this.txtRol.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRol.ForeColor = System.Drawing.Color.Black;
-            this.txtRol.Location = new System.Drawing.Point(299, 303);
-            this.txtRol.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRol.MaxLength = 32767;
-            this.txtRol.multiline = true;
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Padding = new System.Windows.Forms.Padding(7);
-            this.txtRol.PasswordChar = false;
-            this.txtRol.ReadOnly = false;
-            this.txtRol.Size = new System.Drawing.Size(164, 30);
-            this.txtRol.SoloLetras = false;
-            this.txtRol.SoloNumeros = false;
-            this.txtRol.TabIndex = 9;
-            this.txtRol.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtRol.Texts = "";
-            this.txtRol.UnderlinedStyle = true;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.BackColor = System.Drawing.Color.Black;
-            this.txtNumero.BorderColor = System.Drawing.Color.White;
-            this.txtNumero.BorderSize = 2;
-            this.txtNumero.Enabled = false;
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.ForeColor = System.Drawing.Color.Black;
-            this.txtNumero.Location = new System.Drawing.Point(85, 303);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNumero.MaxLength = 32767;
-            this.txtNumero.multiline = true;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNumero.PasswordChar = false;
-            this.txtNumero.ReadOnly = false;
-            this.txtNumero.Size = new System.Drawing.Size(164, 30);
-            this.txtNumero.SoloLetras = false;
-            this.txtNumero.SoloNumeros = false;
-            this.txtNumero.TabIndex = 8;
-            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNumero.Texts = "";
-            this.txtNumero.UnderlinedStyle = true;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.BackColor = System.Drawing.Color.Black;
-            this.txtCorreo.BorderColor = System.Drawing.Color.White;
-            this.txtCorreo.BorderSize = 2;
-            this.txtCorreo.Enabled = false;
-            this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCorreo.Location = new System.Drawing.Point(85, 209);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.MaxLength = 32767;
-            this.txtCorreo.multiline = true;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCorreo.PasswordChar = false;
-            this.txtCorreo.ReadOnly = false;
-            this.txtCorreo.Size = new System.Drawing.Size(250, 30);
-            this.txtCorreo.SoloLetras = false;
-            this.txtCorreo.SoloNumeros = false;
-            this.txtCorreo.TabIndex = 7;
-            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCorreo.Texts = "";
-            this.txtCorreo.UnderlinedStyle = true;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.Black;
-            this.txtNombre.BorderColor = System.Drawing.Color.White;
-            this.txtNombre.BorderSize = 2;
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(85, 111);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.MaxLength = 32767;
-            this.txtNombre.multiline = true;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNombre.PasswordChar = false;
-            this.txtNombre.ReadOnly = false;
-            this.txtNombre.Size = new System.Drawing.Size(250, 30);
-            this.txtNombre.SoloLetras = false;
-            this.txtNombre.SoloNumeros = false;
-            this.txtNombre.TabIndex = 6;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNombre.Texts = "";
-            this.txtNombre.UnderlinedStyle = true;
             // 
             // Configuracion
             // 

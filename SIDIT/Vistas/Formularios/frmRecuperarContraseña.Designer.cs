@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarContraseña));
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuarioOContraseña = new System.Windows.Forms.TextBox();
             this.lblResultado = new System.Windows.Forms.Label();
@@ -82,7 +83,9 @@
             this.Controls.Add(this.txtUsuarioOContraseña);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecuperarContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar contraseña";
             this.ResumeLayout(false);
             this.PerformLayout();

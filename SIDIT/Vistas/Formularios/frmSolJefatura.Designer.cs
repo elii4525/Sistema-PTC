@@ -32,8 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlSolicitud3 = new System.Windows.Forms.Panel();
             this.lblEstado3 = new System.Windows.Forms.Label();
-            this.btnNegar3 = new Vistas.controles.ButtonRedondeado();
-            this.btnAceptar3 = new Vistas.controles.ButtonRedondeado();
             this.lblFecha3 = new System.Windows.Forms.Label();
             this.lblMarca9 = new System.Windows.Forms.Label();
             this.lblMarca8 = new System.Windows.Forms.Label();
@@ -53,8 +51,6 @@
             this.lblNombre3 = new System.Windows.Forms.Label();
             this.pnlSolicitud2 = new System.Windows.Forms.Panel();
             this.lblEstado2 = new System.Windows.Forms.Label();
-            this.btnNegar2 = new Vistas.controles.ButtonRedondeado();
-            this.btnAceptar2 = new Vistas.controles.ButtonRedondeado();
             this.lblFecha2 = new System.Windows.Forms.Label();
             this.lblMarca6 = new System.Windows.Forms.Label();
             this.lblMarca5 = new System.Windows.Forms.Label();
@@ -74,8 +70,6 @@
             this.lblNombre2 = new System.Windows.Forms.Label();
             this.pnlSolicitud1 = new System.Windows.Forms.Panel();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.btnNegar = new Vistas.controles.ButtonRedondeado();
-            this.btnAceptar = new Vistas.controles.ButtonRedondeado();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblmarca3 = new System.Windows.Forms.Label();
             this.lblMarca2 = new System.Windows.Forms.Label();
@@ -94,6 +88,13 @@
             this.lblRol = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnNegar3 = new Vistas.controles.ButtonRedondeado();
+            this.btnAceptar3 = new Vistas.controles.ButtonRedondeado();
+            this.btnNegar2 = new Vistas.controles.ButtonRedondeado();
+            this.btnAceptar2 = new Vistas.controles.ButtonRedondeado();
+            this.btnNegar = new Vistas.controles.ButtonRedondeado();
+            this.btnAceptar = new Vistas.controles.ButtonRedondeado();
+            this.btnSolicitudesAnteriores = new Vistas.controles.ButtonRedondeado();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlSolicitud3.SuspendLayout();
@@ -124,6 +125,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoScrollMargin = new System.Drawing.Size(1, 1);
             this.panel1.AutoScrollMinSize = new System.Drawing.Size(1, 1);
+            this.panel1.Controls.Add(this.btnSolicitudesAnteriores);
             this.panel1.Controls.Add(this.pnlSolicitud3);
             this.panel1.Controls.Add(this.pnlSolicitud2);
             this.panel1.Controls.Add(this.pnlSolicitud1);
@@ -136,7 +138,8 @@
             // 
             // pnlSolicitud3
             // 
-            this.pnlSolicitud3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud3.BackColor = System.Drawing.Color.White;
             this.pnlSolicitud3.Controls.Add(this.lblEstado3);
             this.pnlSolicitud3.Controls.Add(this.btnNegar3);
@@ -159,7 +162,7 @@
             this.pnlSolicitud3.Controls.Add(this.lblRol3);
             this.pnlSolicitud3.Controls.Add(this.lblNombre3);
             this.pnlSolicitud3.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud3.Location = new System.Drawing.Point(159, 663);
+            this.pnlSolicitud3.Location = new System.Drawing.Point(87, 661);
             this.pnlSolicitud3.Name = "pnlSolicitud3";
             this.pnlSolicitud3.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud3.Size = new System.Drawing.Size(1252, 256);
@@ -167,50 +170,18 @@
             // 
             // lblEstado3
             // 
+            this.lblEstado3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado3.AutoSize = true;
             this.lblEstado3.BackColor = System.Drawing.Color.Transparent;
-            this.lblEstado3.Location = new System.Drawing.Point(1058, 88);
+            this.lblEstado3.Location = new System.Drawing.Point(1029, 88);
             this.lblEstado3.Name = "lblEstado3";
             this.lblEstado3.Size = new System.Drawing.Size(44, 16);
             this.lblEstado3.TabIndex = 21;
             this.lblEstado3.Text = "label4";
             // 
-            // btnNegar3
-            // 
-            this.btnNegar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnNegar3.BorderColor = System.Drawing.Color.Black;
-            this.btnNegar3.BorderRadius = 17;
-            this.btnNegar3.BorderSize = 2;
-            this.btnNegar3.FlatAppearance.BorderSize = 0;
-            this.btnNegar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNegar3.ForeColor = System.Drawing.Color.Black;
-            this.btnNegar3.Location = new System.Drawing.Point(1108, 106);
-            this.btnNegar3.Name = "btnNegar3";
-            this.btnNegar3.Size = new System.Drawing.Size(89, 34);
-            this.btnNegar3.TabIndex = 22;
-            this.btnNegar3.Text = "Negar";
-            this.btnNegar3.UseVisualStyleBackColor = false;
-            this.btnNegar3.Click += new System.EventHandler(this.btnNegar3_Click);
-            // 
-            // btnAceptar3
-            // 
-            this.btnAceptar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAceptar3.BorderColor = System.Drawing.Color.Black;
-            this.btnAceptar3.BorderRadius = 17;
-            this.btnAceptar3.BorderSize = 2;
-            this.btnAceptar3.FlatAppearance.BorderSize = 0;
-            this.btnAceptar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar3.ForeColor = System.Drawing.Color.Black;
-            this.btnAceptar3.Location = new System.Drawing.Point(1108, 56);
-            this.btnAceptar3.Name = "btnAceptar3";
-            this.btnAceptar3.Size = new System.Drawing.Size(89, 34);
-            this.btnAceptar3.TabIndex = 21;
-            this.btnAceptar3.Text = "Aceptar";
-            this.btnAceptar3.UseVisualStyleBackColor = false;
-            this.btnAceptar3.Click += new System.EventHandler(this.btnAceptar3_Click);
-            // 
             // lblFecha3
             // 
+            this.lblFecha3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha3.AutoSize = true;
             this.lblFecha3.Location = new System.Drawing.Point(1127, 23);
             this.lblFecha3.Name = "lblFecha3";
@@ -292,6 +263,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = global::Vistas.Properties.Resources.Group_1;
             this.pictureBox3.Location = new System.Drawing.Point(1131, 176);
             this.pictureBox3.Name = "pictureBox3";
@@ -365,7 +337,8 @@
             // 
             // pnlSolicitud2
             // 
-            this.pnlSolicitud2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud2.BackColor = System.Drawing.Color.White;
             this.pnlSolicitud2.Controls.Add(this.lblEstado2);
             this.pnlSolicitud2.Controls.Add(this.btnNegar2);
@@ -388,7 +361,7 @@
             this.pnlSolicitud2.Controls.Add(this.lblRol2);
             this.pnlSolicitud2.Controls.Add(this.lblNombre2);
             this.pnlSolicitud2.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud2.Location = new System.Drawing.Point(158, 381);
+            this.pnlSolicitud2.Location = new System.Drawing.Point(86, 379);
             this.pnlSolicitud2.Name = "pnlSolicitud2";
             this.pnlSolicitud2.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud2.Size = new System.Drawing.Size(1252, 255);
@@ -396,50 +369,18 @@
             // 
             // lblEstado2
             // 
+            this.lblEstado2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado2.AutoSize = true;
             this.lblEstado2.BackColor = System.Drawing.Color.Transparent;
-            this.lblEstado2.Location = new System.Drawing.Point(1058, 102);
+            this.lblEstado2.Location = new System.Drawing.Point(1030, 106);
             this.lblEstado2.Name = "lblEstado2";
             this.lblEstado2.Size = new System.Drawing.Size(44, 16);
             this.lblEstado2.TabIndex = 20;
             this.lblEstado2.Text = "label2";
             // 
-            // btnNegar2
-            // 
-            this.btnNegar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnNegar2.BorderColor = System.Drawing.Color.Black;
-            this.btnNegar2.BorderRadius = 17;
-            this.btnNegar2.BorderSize = 2;
-            this.btnNegar2.FlatAppearance.BorderSize = 0;
-            this.btnNegar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNegar2.ForeColor = System.Drawing.Color.Black;
-            this.btnNegar2.Location = new System.Drawing.Point(1108, 115);
-            this.btnNegar2.Name = "btnNegar2";
-            this.btnNegar2.Size = new System.Drawing.Size(89, 34);
-            this.btnNegar2.TabIndex = 20;
-            this.btnNegar2.Text = "Negar";
-            this.btnNegar2.UseVisualStyleBackColor = false;
-            this.btnNegar2.Click += new System.EventHandler(this.btnNegar2_Click);
-            // 
-            // btnAceptar2
-            // 
-            this.btnAceptar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAceptar2.BorderColor = System.Drawing.Color.Black;
-            this.btnAceptar2.BorderRadius = 17;
-            this.btnAceptar2.BorderSize = 2;
-            this.btnAceptar2.FlatAppearance.BorderSize = 0;
-            this.btnAceptar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar2.ForeColor = System.Drawing.Color.Black;
-            this.btnAceptar2.Location = new System.Drawing.Point(1108, 65);
-            this.btnAceptar2.Name = "btnAceptar2";
-            this.btnAceptar2.Size = new System.Drawing.Size(89, 34);
-            this.btnAceptar2.TabIndex = 19;
-            this.btnAceptar2.Text = "Aceptar";
-            this.btnAceptar2.UseVisualStyleBackColor = false;
-            this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
-            // 
             // lblFecha2
             // 
+            this.lblFecha2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha2.AutoSize = true;
             this.lblFecha2.Location = new System.Drawing.Point(1127, 23);
             this.lblFecha2.Name = "lblFecha2";
@@ -521,6 +462,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::Vistas.Properties.Resources.Group_1;
             this.pictureBox2.Location = new System.Drawing.Point(1131, 176);
             this.pictureBox2.Name = "pictureBox2";
@@ -594,7 +536,8 @@
             // 
             // pnlSolicitud1
             // 
-            this.pnlSolicitud1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSolicitud1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSolicitud1.BackColor = System.Drawing.Color.White;
             this.pnlSolicitud1.Controls.Add(this.lblEstado);
             this.pnlSolicitud1.Controls.Add(this.btnNegar);
@@ -617,7 +560,7 @@
             this.pnlSolicitud1.Controls.Add(this.lblRol);
             this.pnlSolicitud1.Controls.Add(this.lblNombre);
             this.pnlSolicitud1.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud1.Location = new System.Drawing.Point(159, 98);
+            this.pnlSolicitud1.Location = new System.Drawing.Point(87, 96);
             this.pnlSolicitud1.Name = "pnlSolicitud1";
             this.pnlSolicitud1.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
@@ -625,50 +568,18 @@
             // 
             // lblEstado
             // 
+            this.lblEstado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEstado.AutoSize = true;
             this.lblEstado.BackColor = System.Drawing.Color.Transparent;
-            this.lblEstado.Location = new System.Drawing.Point(1058, 101);
+            this.lblEstado.Location = new System.Drawing.Point(1029, 98);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(44, 16);
             this.lblEstado.TabIndex = 19;
             this.lblEstado.Text = "label2";
             // 
-            // btnNegar
-            // 
-            this.btnNegar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnNegar.BorderColor = System.Drawing.Color.Black;
-            this.btnNegar.BorderRadius = 17;
-            this.btnNegar.BorderSize = 2;
-            this.btnNegar.FlatAppearance.BorderSize = 0;
-            this.btnNegar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNegar.ForeColor = System.Drawing.Color.Black;
-            this.btnNegar.Location = new System.Drawing.Point(1108, 115);
-            this.btnNegar.Name = "btnNegar";
-            this.btnNegar.Size = new System.Drawing.Size(89, 34);
-            this.btnNegar.TabIndex = 18;
-            this.btnNegar.Text = "Negar";
-            this.btnNegar.UseVisualStyleBackColor = false;
-            this.btnNegar.Click += new System.EventHandler(this.btnNegar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnAceptar.BorderColor = System.Drawing.Color.Black;
-            this.btnAceptar.BorderRadius = 17;
-            this.btnAceptar.BorderSize = 2;
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.ForeColor = System.Drawing.Color.Black;
-            this.btnAceptar.Location = new System.Drawing.Point(1108, 65);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(89, 34);
-            this.btnAceptar.TabIndex = 17;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFecha.AutoSize = true;
             this.lblFecha.Location = new System.Drawing.Point(1127, 23);
             this.lblFecha.Name = "lblFecha";
@@ -750,6 +661,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_1;
             this.pictureBox1.Location = new System.Drawing.Point(1131, 176);
             this.pictureBox1.Name = "pictureBox1";
@@ -829,6 +741,132 @@
             this.label1.Size = new System.Drawing.Size(134, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Solicitudes recientes:";
+            // 
+            // btnNegar3
+            // 
+            this.btnNegar3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNegar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNegar3.BorderColor = System.Drawing.Color.Black;
+            this.btnNegar3.BorderRadius = 17;
+            this.btnNegar3.BorderSize = 2;
+            this.btnNegar3.FlatAppearance.BorderSize = 0;
+            this.btnNegar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegar3.ForeColor = System.Drawing.Color.Black;
+            this.btnNegar3.Location = new System.Drawing.Point(1108, 106);
+            this.btnNegar3.Name = "btnNegar3";
+            this.btnNegar3.Size = new System.Drawing.Size(89, 34);
+            this.btnNegar3.TabIndex = 22;
+            this.btnNegar3.Text = "Negar";
+            this.btnNegar3.UseVisualStyleBackColor = false;
+            this.btnNegar3.Click += new System.EventHandler(this.btnNegar3_Click);
+            // 
+            // btnAceptar3
+            // 
+            this.btnAceptar3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAceptar3.BorderColor = System.Drawing.Color.Black;
+            this.btnAceptar3.BorderRadius = 17;
+            this.btnAceptar3.BorderSize = 2;
+            this.btnAceptar3.FlatAppearance.BorderSize = 0;
+            this.btnAceptar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar3.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptar3.Location = new System.Drawing.Point(1108, 56);
+            this.btnAceptar3.Name = "btnAceptar3";
+            this.btnAceptar3.Size = new System.Drawing.Size(89, 34);
+            this.btnAceptar3.TabIndex = 21;
+            this.btnAceptar3.Text = "Aceptar";
+            this.btnAceptar3.UseVisualStyleBackColor = false;
+            this.btnAceptar3.Click += new System.EventHandler(this.btnAceptar3_Click);
+            // 
+            // btnNegar2
+            // 
+            this.btnNegar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNegar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNegar2.BorderColor = System.Drawing.Color.Black;
+            this.btnNegar2.BorderRadius = 17;
+            this.btnNegar2.BorderSize = 2;
+            this.btnNegar2.FlatAppearance.BorderSize = 0;
+            this.btnNegar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegar2.ForeColor = System.Drawing.Color.Black;
+            this.btnNegar2.Location = new System.Drawing.Point(1108, 115);
+            this.btnNegar2.Name = "btnNegar2";
+            this.btnNegar2.Size = new System.Drawing.Size(89, 34);
+            this.btnNegar2.TabIndex = 20;
+            this.btnNegar2.Text = "Negar";
+            this.btnNegar2.UseVisualStyleBackColor = false;
+            this.btnNegar2.Click += new System.EventHandler(this.btnNegar2_Click);
+            // 
+            // btnAceptar2
+            // 
+            this.btnAceptar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAceptar2.BorderColor = System.Drawing.Color.Black;
+            this.btnAceptar2.BorderRadius = 17;
+            this.btnAceptar2.BorderSize = 2;
+            this.btnAceptar2.FlatAppearance.BorderSize = 0;
+            this.btnAceptar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar2.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptar2.Location = new System.Drawing.Point(1108, 65);
+            this.btnAceptar2.Name = "btnAceptar2";
+            this.btnAceptar2.Size = new System.Drawing.Size(89, 34);
+            this.btnAceptar2.TabIndex = 19;
+            this.btnAceptar2.Text = "Aceptar";
+            this.btnAceptar2.UseVisualStyleBackColor = false;
+            this.btnAceptar2.Click += new System.EventHandler(this.btnAceptar2_Click);
+            // 
+            // btnNegar
+            // 
+            this.btnNegar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNegar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnNegar.BorderColor = System.Drawing.Color.Black;
+            this.btnNegar.BorderRadius = 17;
+            this.btnNegar.BorderSize = 2;
+            this.btnNegar.FlatAppearance.BorderSize = 0;
+            this.btnNegar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNegar.ForeColor = System.Drawing.Color.Black;
+            this.btnNegar.Location = new System.Drawing.Point(1108, 115);
+            this.btnNegar.Name = "btnNegar";
+            this.btnNegar.Size = new System.Drawing.Size(89, 34);
+            this.btnNegar.TabIndex = 18;
+            this.btnNegar.Text = "Negar";
+            this.btnNegar.UseVisualStyleBackColor = false;
+            this.btnNegar.Click += new System.EventHandler(this.btnNegar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAceptar.BorderColor = System.Drawing.Color.Black;
+            this.btnAceptar.BorderRadius = 17;
+            this.btnAceptar.BorderSize = 2;
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.ForeColor = System.Drawing.Color.Black;
+            this.btnAceptar.Location = new System.Drawing.Point(1108, 65);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(89, 34);
+            this.btnAceptar.TabIndex = 17;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnSolicitudesAnteriores
+            // 
+            this.btnSolicitudesAnteriores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSolicitudesAnteriores.BackColor = System.Drawing.Color.Black;
+            this.btnSolicitudesAnteriores.BorderColor = System.Drawing.Color.White;
+            this.btnSolicitudesAnteriores.BorderRadius = 18;
+            this.btnSolicitudesAnteriores.BorderSize = 2;
+            this.btnSolicitudesAnteriores.FlatAppearance.BorderSize = 0;
+            this.btnSolicitudesAnteriores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitudesAnteriores.ForeColor = System.Drawing.Color.White;
+            this.btnSolicitudesAnteriores.Location = new System.Drawing.Point(1249, 24);
+            this.btnSolicitudesAnteriores.Name = "btnSolicitudesAnteriores";
+            this.btnSolicitudesAnteriores.Size = new System.Drawing.Size(125, 50);
+            this.btnSolicitudesAnteriores.TabIndex = 19;
+            this.btnSolicitudesAnteriores.Text = "Solicitudes anteriores";
+            this.btnSolicitudesAnteriores.UseVisualStyleBackColor = false;
+            this.btnSolicitudesAnteriores.Click += new System.EventHandler(this.btnSolicitudesAnteriores_Click);
             // 
             // frmSolJefatura
             // 
@@ -924,5 +962,6 @@
         private System.Windows.Forms.Label lblEstado3;
         private System.Windows.Forms.Label lblEstado2;
         private System.Windows.Forms.Label lblEstado;
+        private controles.ButtonRedondeado btnSolicitudesAnteriores;
     }
 }

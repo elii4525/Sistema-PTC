@@ -39,7 +39,7 @@ namespace Vistas.Formularios
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
-            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.BackgroundColor = Color.White;
 
             dgv.EnableHeadersVisualStyles = false;
@@ -72,5 +72,6 @@ namespace Vistas.Formularios
             txtBuscar.Clear();
             MostrarMateriales();
         }
+
     }
 }

@@ -185,6 +185,7 @@
             // dtpFechaIng
             // 
             this.dtpFechaIng.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dtpFechaIng.Enabled = false;
             this.dtpFechaIng.Location = new System.Drawing.Point(235, 375);
             this.dtpFechaIng.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaIng.Name = "dtpFechaIng";
@@ -196,15 +197,19 @@
             this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtCantidad.Location = new System.Drawing.Point(235, 427);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantidad.MaxLength = 5;
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(247, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(289, 22);
             this.txtCantidad.TabIndex = 41;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // txtModelo
             // 
             this.txtModelo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtModelo.Location = new System.Drawing.Point(235, 219);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtModelo.MaxLength = 100;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(247, 22);
             this.txtModelo.TabIndex = 40;
@@ -214,18 +219,22 @@
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtDescripcion.Location = new System.Drawing.Point(235, 321);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion.MaxLength = 500;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(433, 22);
             this.txtDescripcion.TabIndex = 39;
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtNombre.Location = new System.Drawing.Point(235, 114);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(247, 22);
             this.txtNombre.TabIndex = 38;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label11
             // 

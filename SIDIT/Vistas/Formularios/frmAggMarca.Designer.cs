@@ -135,6 +135,7 @@
             this.txtMarca.ForeColor = System.Drawing.Color.Black;
             this.txtMarca.Location = new System.Drawing.Point(49, 209);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMarca.MaxLength = 70;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(269, 36);
             this.txtMarca.TabIndex = 0;
