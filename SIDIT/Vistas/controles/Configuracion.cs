@@ -50,5 +50,8 @@ namespace Vistas.Controles
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowDialog(); 
         }
+
+        
+
     }
 }

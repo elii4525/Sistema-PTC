@@ -241,11 +241,11 @@
     <Compile Include="controles\frmEliminarUsuario.Designer.cs">
       <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="controles\frmEnviarSolicitud.cs">
+    <Compile Include="controles\EnviarSolicitud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="controles\frmEnviarSolicitud.Designer.cs">
-      <DependentUpon>frmEnviarSolicitud.cs</DependentUpon>
+    <Compile Include="controles\EnviarSolicitud.Designer.cs">
+      <DependentUpon>EnviarSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="controles\frmVerUsuarios.cs">
       <SubType>UserControl</SubType>
@@ -435,8 +435,8 @@
     <EmbeddedResource Include="controles\frmEliminarUsuario.resx">
       <DependentUpon>frmEliminarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controles\frmEnviarSolicitud.resx">
-      <DependentUpon>frmEnviarSolicitud.cs</DependentUpon>
+    <EmbeddedResource Include="controles\EnviarSolicitud.resx">
+      <DependentUpon>EnviarSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controles\frmVerUsuarios.resx">
       <DependentUpon>frmVerUsuarios.cs</DependentUpon>

@@ -20,6 +20,10 @@ namespace Vistas.Formularios
         public frmConsumo()
         {
             InitializeComponent();
+            label1.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(10);
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(10);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace Vistas.Formularios
         public frmSolicitudDIT()
         {
             InitializeComponent();
-            label2.Font = Helper.FuenteHelper.ObtenerFuente(12);
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(15);
             lblNombre.Font = Helper.FuenteHelper.ObtenerFuente(8);
             lblNombre2.Font = Helper.FuenteHelper.ObtenerFuente(8);
             lblNombre3.Font = Helper.FuenteHelper.ObtenerFuente(8);
@@ -309,7 +309,7 @@ namespace Vistas.Formularios
         {
             int idUsuario = Usuario.SesionActual.IdUsuario;
 
-            frmEnviarSolicitud uc = new frmEnviarSolicitud(idUsuario);
+            EnviarSolicitud uc = new EnviarSolicitud(idUsuario);
             FrmContenedorUC ven = new FrmContenedorUC(uc);
 
             if (ven.ShowDialog() == DialogResult.OK)

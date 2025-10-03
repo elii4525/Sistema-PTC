@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,24 +38,24 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblVerUsuarios = new System.Windows.Forms.Label();
-            this.icbtnUsuarios = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblVer = new System.Windows.Forms.Label();
-            this.icbtnInventario = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblVerSoli = new System.Windows.Forms.Label();
-            this.icbtnSol = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblVerConsumo = new System.Windows.Forms.Label();
+            this.icbtnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.icbtnInventario = new FontAwesome.Sharp.IconButton();
+            this.icbtnSol = new FontAwesome.Sharp.IconButton();
             this.icbtnConsumo = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -64,6 +63,7 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,31 +77,21 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.71698F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.28302F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1627, 310);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1627, 321);
             this.tableLayoutPanel1.TabIndex = 16;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_4;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 225);
+            this.panel1.Location = new System.Drawing.Point(3, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1621, 82);
+            this.panel1.Size = new System.Drawing.Size(1621, 111);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -109,7 +99,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(451, -3);
+            this.label2.Location = new System.Drawing.Point(431, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(685, 69);
             this.label2.TabIndex = 0;
@@ -119,9 +109,9 @@
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 125);
+            this.panel2.Location = new System.Drawing.Point(3, 105);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1621, 94);
+            this.panel2.Size = new System.Drawing.Size(1621, 96);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.Resize += new System.EventHandler(this.panel2_Resize);
@@ -129,14 +119,14 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(631, 19);
+            this.label1.Location = new System.Drawing.Point(593, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(391, 65);
+            this.label1.Size = new System.Drawing.Size(370, 69);
             this.label1.TabIndex = 1;
             this.label1.Text = "¡Bienvenido!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -150,11 +140,11 @@
             this.tableLayoutPanel2.Controls.Add(this.panel4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel5, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 310);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 321);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1627, 493);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1627, 482);
             this.tableLayoutPanel2.TabIndex = 17;
             // 
             // panel6
@@ -165,9 +155,9 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.lblVerUsuarios);
             this.panel6.Controls.Add(this.icbtnUsuarios);
-            this.panel6.Location = new System.Drawing.Point(1255, 41);
+            this.panel6.Location = new System.Drawing.Point(1247, 26);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(335, 410);
+            this.panel6.Size = new System.Drawing.Size(350, 430);
             this.panel6.TabIndex = 3;
             // 
             // label9
@@ -187,9 +177,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(68, 315);
+            this.label3.Location = new System.Drawing.Point(32, 315);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 58);
+            this.label3.Size = new System.Drawing.Size(267, 58);
             this.label3.TabIndex = 5;
             this.label3.Text = "Gestión de Usuarios: agregar, eliminar y ver. ";
             // 
@@ -208,19 +198,6 @@
             this.lblVerUsuarios.MouseLeave += new System.EventHandler(this.lblVerUsuarios_MouseLeave);
             this.lblVerUsuarios.MouseHover += new System.EventHandler(this.lblVerUsuarios_MouseHover);
             // 
-            // icbtnUsuarios
-            // 
-            this.icbtnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UsersGear;
-            this.icbtnUsuarios.IconColor = System.Drawing.Color.Black;
-            this.icbtnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnUsuarios.IconSize = 125;
-            this.icbtnUsuarios.Location = new System.Drawing.Point(81, 80);
-            this.icbtnUsuarios.Name = "icbtnUsuarios";
-            this.icbtnUsuarios.Size = new System.Drawing.Size(182, 164);
-            this.icbtnUsuarios.TabIndex = 0;
-            this.icbtnUsuarios.UseVisualStyleBackColor = true;
-            this.icbtnUsuarios.Click += new System.EventHandler(this.icbtnUsuarios_Click);
-            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -229,9 +206,9 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.lblVer);
             this.panel3.Controls.Add(this.icbtnInventario);
-            this.panel3.Location = new System.Drawing.Point(35, 41);
+            this.panel3.Location = new System.Drawing.Point(28, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(335, 410);
+            this.panel3.Size = new System.Drawing.Size(350, 430);
             this.panel3.TabIndex = 0;
             // 
             // label4
@@ -240,7 +217,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(110, 262);
+            this.label4.Location = new System.Drawing.Point(108, 262);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 28);
             this.label4.TabIndex = 3;
@@ -272,19 +249,6 @@
             this.lblVer.MouseLeave += new System.EventHandler(this.lblVer_MouseLeave);
             this.lblVer.MouseHover += new System.EventHandler(this.lblVer_MouseHover);
             // 
-            // icbtnInventario
-            // 
-            this.icbtnInventario.IconChar = FontAwesome.Sharp.IconChar.BoxesStacked;
-            this.icbtnInventario.IconColor = System.Drawing.Color.Black;
-            this.icbtnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnInventario.IconSize = 125;
-            this.icbtnInventario.Location = new System.Drawing.Point(78, 78);
-            this.icbtnInventario.Name = "icbtnInventario";
-            this.icbtnInventario.Size = new System.Drawing.Size(182, 164);
-            this.icbtnInventario.TabIndex = 0;
-            this.icbtnInventario.UseVisualStyleBackColor = true;
-            this.icbtnInventario.Click += new System.EventHandler(this.icbtnInventario_Click);
-            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -293,9 +257,9 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.lblVerSoli);
             this.panel4.Controls.Add(this.icbtnSol);
-            this.panel4.Location = new System.Drawing.Point(441, 41);
+            this.panel4.Location = new System.Drawing.Point(434, 26);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(335, 410);
+            this.panel4.Size = new System.Drawing.Size(350, 430);
             this.panel4.TabIndex = 1;
             // 
             // label7
@@ -304,7 +268,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(104, 262);
+            this.label7.Location = new System.Drawing.Point(105, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 28);
             this.label7.TabIndex = 4;
@@ -315,9 +279,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(49, 315);
+            this.label5.Location = new System.Drawing.Point(22, 315);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(269, 73);
+            this.label5.Size = new System.Drawing.Size(304, 73);
             this.label5.TabIndex = 3;
             this.label5.Text = "Solicitudes del departamento IT por necesidad de materiales.";
             // 
@@ -336,19 +300,6 @@
             this.lblVerSoli.MouseLeave += new System.EventHandler(this.lblVerSoli_MouseLeave);
             this.lblVerSoli.MouseHover += new System.EventHandler(this.lblVerSoli_MouseHover);
             // 
-            // icbtnSol
-            // 
-            this.icbtnSol.IconChar = FontAwesome.Sharp.IconChar.Envelope;
-            this.icbtnSol.IconColor = System.Drawing.Color.Black;
-            this.icbtnSol.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnSol.IconSize = 125;
-            this.icbtnSol.Location = new System.Drawing.Point(79, 80);
-            this.icbtnSol.Name = "icbtnSol";
-            this.icbtnSol.Size = new System.Drawing.Size(182, 164);
-            this.icbtnSol.TabIndex = 0;
-            this.icbtnSol.UseVisualStyleBackColor = true;
-            this.icbtnSol.Click += new System.EventHandler(this.icbtnSol_Click);
-            // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -357,9 +308,9 @@
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.lblVerConsumo);
             this.panel5.Controls.Add(this.icbtnConsumo);
-            this.panel5.Location = new System.Drawing.Point(847, 41);
+            this.panel5.Location = new System.Drawing.Point(840, 26);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(335, 410);
+            this.panel5.Size = new System.Drawing.Size(350, 430);
             this.panel5.TabIndex = 2;
             // 
             // label8
@@ -400,6 +351,45 @@
             this.lblVerConsumo.MouseLeave += new System.EventHandler(this.lblVerConsumo_MouseLeave);
             this.lblVerConsumo.MouseHover += new System.EventHandler(this.lblVerConsumo_MouseHover);
             // 
+            // icbtnUsuarios
+            // 
+            this.icbtnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UsersGear;
+            this.icbtnUsuarios.IconColor = System.Drawing.Color.Black;
+            this.icbtnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnUsuarios.IconSize = 125;
+            this.icbtnUsuarios.Location = new System.Drawing.Point(81, 80);
+            this.icbtnUsuarios.Name = "icbtnUsuarios";
+            this.icbtnUsuarios.Size = new System.Drawing.Size(182, 164);
+            this.icbtnUsuarios.TabIndex = 0;
+            this.icbtnUsuarios.UseVisualStyleBackColor = true;
+            this.icbtnUsuarios.Click += new System.EventHandler(this.icbtnUsuarios_Click);
+            // 
+            // icbtnInventario
+            // 
+            this.icbtnInventario.IconChar = FontAwesome.Sharp.IconChar.BoxesStacked;
+            this.icbtnInventario.IconColor = System.Drawing.Color.Black;
+            this.icbtnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnInventario.IconSize = 125;
+            this.icbtnInventario.Location = new System.Drawing.Point(78, 78);
+            this.icbtnInventario.Name = "icbtnInventario";
+            this.icbtnInventario.Size = new System.Drawing.Size(182, 164);
+            this.icbtnInventario.TabIndex = 0;
+            this.icbtnInventario.UseVisualStyleBackColor = true;
+            this.icbtnInventario.Click += new System.EventHandler(this.icbtnInventario_Click);
+            // 
+            // icbtnSol
+            // 
+            this.icbtnSol.IconChar = FontAwesome.Sharp.IconChar.Envelope;
+            this.icbtnSol.IconColor = System.Drawing.Color.Black;
+            this.icbtnSol.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbtnSol.IconSize = 125;
+            this.icbtnSol.Location = new System.Drawing.Point(79, 80);
+            this.icbtnSol.Name = "icbtnSol";
+            this.icbtnSol.Size = new System.Drawing.Size(182, 164);
+            this.icbtnSol.TabIndex = 0;
+            this.icbtnSol.UseVisualStyleBackColor = true;
+            this.icbtnSol.Click += new System.EventHandler(this.icbtnSol_Click);
+            // 
             // icbtnConsumo
             // 
             this.icbtnConsumo.IconChar = FontAwesome.Sharp.IconChar.ClockFour;
@@ -413,10 +403,20 @@
             this.icbtnConsumo.UseVisualStyleBackColor = true;
             this.icbtnConsumo.Click += new System.EventHandler(this.icbtnConsumo_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Vistas.Properties.Resources.Group_4;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmBienvenidaJefatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1627, 803);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -426,10 +426,10 @@
             this.Name = "frmBienvenidaJefatura";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -439,6 +439,7 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

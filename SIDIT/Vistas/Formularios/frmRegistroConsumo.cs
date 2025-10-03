@@ -21,6 +21,11 @@ namespace Vistas.Formularios
         public frmRegistroConsumo()
         {
             InitializeComponent();
+           
+            label2.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label3.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label4.Font = Helper.FuenteHelper.ObtenerFuente(8);
+            label5.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
 
         private void frmRegistroConsumo_Load(object sender, EventArgs e)

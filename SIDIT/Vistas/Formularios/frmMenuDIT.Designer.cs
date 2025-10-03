@@ -203,7 +203,7 @@
             this.lblTituloSolicitudD.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloSolicitudD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloSolicitudD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloSolicitudD.Location = new System.Drawing.Point(696, 21);
+            this.lblTituloSolicitudD.Location = new System.Drawing.Point(656, 11);
             this.lblTituloSolicitudD.Name = "lblTituloSolicitudD";
             this.lblTituloSolicitudD.Size = new System.Drawing.Size(210, 44);
             this.lblTituloSolicitudD.TabIndex = 2;
@@ -216,7 +216,7 @@
             this.lblTituloConsumoD.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloConsumoD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloConsumoD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloConsumoD.Location = new System.Drawing.Point(708, 21);
+            this.lblTituloConsumoD.Location = new System.Drawing.Point(668, 11);
             this.lblTituloConsumoD.Name = "lblTituloConsumoD";
             this.lblTituloConsumoD.Size = new System.Drawing.Size(191, 44);
             this.lblTituloConsumoD.TabIndex = 1;
@@ -229,7 +229,7 @@
             this.lblTituloInventarioD.BackColor = System.Drawing.Color.Transparent;
             this.lblTituloInventarioD.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloInventarioD.ForeColor = System.Drawing.Color.White;
-            this.lblTituloInventarioD.Location = new System.Drawing.Point(708, 21);
+            this.lblTituloInventarioD.Location = new System.Drawing.Point(668, 11);
             this.lblTituloInventarioD.Name = "lblTituloInventarioD";
             this.lblTituloInventarioD.Size = new System.Drawing.Size(198, 44);
             this.lblTituloInventarioD.TabIndex = 0;
@@ -263,8 +263,7 @@
             // 
             // frmMenuDIT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1749, 759);
             this.Controls.Add(this.tlpMenuDIT);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

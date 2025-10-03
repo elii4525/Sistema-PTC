@@ -81,14 +81,14 @@
             this.icbtnGraficas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.icbtnGraficas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.icbtnGraficas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtnGraficas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnGraficas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.icbtnGraficas.ForeColor = System.Drawing.Color.White;
             this.icbtnGraficas.IconChar = FontAwesome.Sharp.IconChar.None;
             this.icbtnGraficas.IconColor = System.Drawing.Color.Black;
             this.icbtnGraficas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtnGraficas.Location = new System.Drawing.Point(178, 11);
+            this.icbtnGraficas.Location = new System.Drawing.Point(226, 6);
             this.icbtnGraficas.Name = "icbtnGraficas";
-            this.icbtnGraficas.Size = new System.Drawing.Size(167, 43);
+            this.icbtnGraficas.Size = new System.Drawing.Size(187, 56);
             this.icbtnGraficas.TabIndex = 1;
             this.icbtnGraficas.Text = "Gráficas";
             this.icbtnGraficas.UseVisualStyleBackColor = false;
@@ -105,14 +105,14 @@
             this.icbtnRegistro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.icbtnRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.icbtnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtnRegistro.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtnRegistro.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.icbtnRegistro.ForeColor = System.Drawing.Color.White;
             this.icbtnRegistro.IconChar = FontAwesome.Sharp.IconChar.None;
             this.icbtnRegistro.IconColor = System.Drawing.Color.Black;
             this.icbtnRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtnRegistro.Location = new System.Drawing.Point(5, 6);
             this.icbtnRegistro.Name = "icbtnRegistro";
-            this.icbtnRegistro.Size = new System.Drawing.Size(167, 48);
+            this.icbtnRegistro.Size = new System.Drawing.Size(215, 56);
             this.icbtnRegistro.TabIndex = 0;
             this.icbtnRegistro.Text = "Registrar Consumo";
             this.icbtnRegistro.UseVisualStyleBackColor = false;
@@ -122,8 +122,7 @@
             // 
             // frmConsumoAmbos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1122, 632);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmConsumoAmbos";

@@ -16,6 +16,10 @@ namespace Vistas.Formularios
         public frmMenuJefatura()
         {
             InitializeComponent();
+            lblTituloConsumoJ.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloInventarioJ.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloSolicitudJ.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloUsuarios.Font = Helper.FuenteHelper.ObtenerFuente(30);
         }
 
         //Mostrar formularios
@@ -247,24 +251,25 @@ namespace Vistas.Formularios
             MostrarFormUsuariosEnPanel();
         }
 
+        //private void icpbConfiguracion_Click(object sender, EventArgs e)
+        //{
+        //    Configuracion c = new Configuracion();
+        //    c.Dock = DockStyle.Fill;
+        //    pnlContenedorJ.Controls.Clear();
+        //    pnlContenedorJ.Controls.Add(c);
+
+        //    pnlContenedorJ.Controls.Clear(); 
+        //    frmInventarioJefatura inventarioJ = new frmInventarioJefatura();
+        //    inventarioJ.TopLevel = false;
+        //    inventarioJ.FormBorderStyle = FormBorderStyle.None;
+        //    inventarioJ.Dock = DockStyle.Fill;
+        //    pnlContenedorJ.Controls.Add(inventarioJ);
+        //    inventarioJ.Show(); 
+        //}
+
         private void icpbConfiguracion_Click(object sender, EventArgs e)
         {
-            Configuracion c = new Configuracion();
-            c.Dock = DockStyle.Fill;
-            pnlContenedorJ.Controls.Clear();
-            pnlContenedorJ.Controls.Add(c);
 
-            pnlContenedorJ.Controls.Clear(); 
-            frmInventarioJefatura inventarioJ = new frmInventarioJefatura();
-            inventarioJ.TopLevel = false;
-            inventarioJ.FormBorderStyle = FormBorderStyle.None;
-            inventarioJ.Dock = DockStyle.Fill;
-            pnlContenedorJ.Controls.Add(inventarioJ);
-            inventarioJ.Show(); 
-        }
-
-        private void icpbConfiguracion_Click(object sender, EventArgs e)
-        {
             Configuracion uc = new Configuracion();
             FrmContenedorUC ven = new FrmContenedorUC(uc);
 

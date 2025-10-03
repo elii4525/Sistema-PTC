@@ -6,11 +6,11 @@ using Modelos.Entidades;
 
 namespace Vistas.controles
 {
-    public partial class frmEnviarSolicitud : UserControl
+    public partial class EnviarSolicitud : UserControl
     {
         private Solicitudd solicitud;
 
-        public frmEnviarSolicitud(int idUsuario)
+        public EnviarSolicitud(int idUsuario)
         {
             InitializeComponent();
             solicitud = new Solicitudd(idUsuario);

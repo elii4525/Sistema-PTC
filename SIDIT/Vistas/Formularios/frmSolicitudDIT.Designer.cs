@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSolicitudesAnteriores = new Vistas.controles.ButtonRedondeado();
             this.buttonRedondeado1 = new Vistas.controles.ButtonRedondeado();
@@ -96,7 +95,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlSolicitud3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -121,24 +119,15 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1369, 950);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1343, 950);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1363, 944);
-            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -151,9 +140,10 @@
             this.panel1.Controls.Add(this.pnlSolicitud2);
             this.panel1.Controls.Add(this.pnlSolicitud1);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1363, 1033);
+            this.panel1.Size = new System.Drawing.Size(1337, 944);
             this.panel1.TabIndex = 0;
             // 
             // btnSolicitudesAnteriores
@@ -166,7 +156,7 @@
             this.btnSolicitudesAnteriores.FlatAppearance.BorderSize = 0;
             this.btnSolicitudesAnteriores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSolicitudesAnteriores.ForeColor = System.Drawing.Color.White;
-            this.btnSolicitudesAnteriores.Location = new System.Drawing.Point(1101, 33);
+            this.btnSolicitudesAnteriores.Location = new System.Drawing.Point(1075, 33);
             this.btnSolicitudesAnteriores.Name = "btnSolicitudesAnteriores";
             this.btnSolicitudesAnteriores.Size = new System.Drawing.Size(125, 50);
             this.btnSolicitudesAnteriores.TabIndex = 18;
@@ -184,7 +174,7 @@
             this.buttonRedondeado1.FlatAppearance.BorderSize = 0;
             this.buttonRedondeado1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRedondeado1.ForeColor = System.Drawing.Color.White;
-            this.buttonRedondeado1.Location = new System.Drawing.Point(1232, 33);
+            this.buttonRedondeado1.Location = new System.Drawing.Point(1206, 33);
             this.buttonRedondeado1.Name = "buttonRedondeado1";
             this.buttonRedondeado1.Size = new System.Drawing.Size(125, 50);
             this.buttonRedondeado1.TabIndex = 17;
@@ -216,8 +206,10 @@
             this.pnlSolicitud3.Controls.Add(this.lblRol3);
             this.pnlSolicitud3.Controls.Add(this.lblNombre3);
             this.pnlSolicitud3.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud3.Location = new System.Drawing.Point(144, 664);
+            this.pnlSolicitud3.Location = new System.Drawing.Point(65, 667);
+            this.pnlSolicitud3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.pnlSolicitud3.Name = "pnlSolicitud3";
+            this.pnlSolicitud3.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud3.Size = new System.Drawing.Size(1252, 256);
             this.pnlSolicitud3.TabIndex = 17;
             // 
@@ -425,8 +417,9 @@
             this.pnlSolicitud2.Controls.Add(this.lblRol2);
             this.pnlSolicitud2.Controls.Add(this.lblNombre2);
             this.pnlSolicitud2.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud2.Location = new System.Drawing.Point(144, 380);
+            this.pnlSolicitud2.Location = new System.Drawing.Point(65, 383);
             this.pnlSolicitud2.Name = "pnlSolicitud2";
+            this.pnlSolicitud2.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud2.Size = new System.Drawing.Size(1252, 255);
             this.pnlSolicitud2.TabIndex = 2;
             // 
@@ -634,8 +627,9 @@
             this.pnlSolicitud1.Controls.Add(this.lblRol);
             this.pnlSolicitud1.Controls.Add(this.lblNombre);
             this.pnlSolicitud1.ForeColor = System.Drawing.Color.Black;
-            this.pnlSolicitud1.Location = new System.Drawing.Point(144, 97);
+            this.pnlSolicitud1.Location = new System.Drawing.Point(65, 100);
             this.pnlSolicitud1.Name = "pnlSolicitud1";
+            this.pnlSolicitud1.Padding = new System.Windows.Forms.Padding(0, 0, 140, 0);
             this.pnlSolicitud1.Size = new System.Drawing.Size(1252, 255);
             this.pnlSolicitud1.TabIndex = 1;
             // 
@@ -830,17 +824,16 @@
             // 
             // frmSolicitudDIT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1369, 950);
+            this.ClientSize = new System.Drawing.Size(1343, 950);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "frmSolicitudDIT";
             this.Text = "frmSolicitudDIT";
             this.Load += new System.EventHandler(this.frmSolicitudDIT_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlSolicitud3.ResumeLayout(false);
@@ -861,9 +854,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
+        private controles.ButtonRedondeado btnSolicitudesAnteriores;
+        private controles.ButtonRedondeado buttonRedondeado1;
         private System.Windows.Forms.Panel pnlSolicitud3;
+        private controles.ButtonRedondeado btnGenerarPdf3;
+        private System.Windows.Forms.Label lblEstado3;
         private System.Windows.Forms.Label lblFecha3;
         private System.Windows.Forms.Label lblMarca9;
         private System.Windows.Forms.Label lblMarca8;
@@ -882,6 +878,8 @@
         private System.Windows.Forms.Label lblRol3;
         private System.Windows.Forms.Label lblNombre3;
         private System.Windows.Forms.Panel pnlSolicitud2;
+        private controles.ButtonRedondeado btnGenerarPdf2;
+        private System.Windows.Forms.Label lblEstado2;
         private System.Windows.Forms.Label lblFecha2;
         private System.Windows.Forms.Label lblMarca6;
         private System.Windows.Forms.Label lblMarca5;
@@ -900,6 +898,8 @@
         private System.Windows.Forms.Label lblRol2;
         private System.Windows.Forms.Label lblNombre2;
         private System.Windows.Forms.Panel pnlSolicitud1;
+        private controles.ButtonRedondeado btnGenerarPdf1;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblmarca3;
         private System.Windows.Forms.Label lblMarca2;
@@ -918,13 +918,5 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label2;
-        private controles.ButtonRedondeado buttonRedondeado1;
-        private System.Windows.Forms.Label lblEstado;
-        private controles.ButtonRedondeado btnSolicitudesAnteriores;
-        private System.Windows.Forms.Label lblEstado3;
-        private System.Windows.Forms.Label lblEstado2;
-        private controles.ButtonRedondeado btnGenerarPdf1;
-        private controles.ButtonRedondeado btnGenerarPdf3;
-        private controles.ButtonRedondeado btnGenerarPdf2;
     }
 }

@@ -113,7 +113,7 @@ namespace Vistas.Formularios
 
                     // Abrir el formulario correspondiente según el rol
                     if (rol == "Jefatura")
-                        new frmBienvenidaJefatura().Show();
+                    new frmBienvenidaJefatura().Show();
                     else
                         new frmBienvenidoDIT().Show();
 

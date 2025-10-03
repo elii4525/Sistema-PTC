@@ -18,7 +18,7 @@ namespace Vistas.Controles
         public frmEliminarUsuario()
         {
             InitializeComponent(); 
-            label1.Font = Helper.FuenteHelper.ObtenerFuente(13);
+            
             label2.Font = Helper.FuenteHelper.ObtenerFuente(9);
         }
 
@@ -28,7 +28,7 @@ namespace Vistas.Controles
             txtCodigoUsuario.ReadOnly = true;
             txtCodigoUsuario.Clear();
             EstilizarDataGrid(dgvUsuarios);
-            label1.Font = Helper.FuenteHelper.ObtenerFuente(19);
+            
             label2.Font = Helper.FuenteHelper.ObtenerFuente(12);
             btnEliminarUsuario.Font = Helper.FuenteHelper.ObtenerFuente(8);
         }
@@ -71,7 +71,7 @@ namespace Vistas.Controles
             dgv.BorderStyle = BorderStyle.None;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
             dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
             dgv.BackgroundColor = Color.White;
 

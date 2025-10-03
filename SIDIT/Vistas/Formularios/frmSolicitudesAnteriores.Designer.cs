@@ -47,6 +47,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(93, 107);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 3, 100, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -72,10 +73,9 @@
             // 
             // frmSolicitudesAnteriores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1317, 801);
+            this.ClientSize = new System.Drawing.Size(1335, 848);
             this.Controls.Add(this.buttonRedondeado2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
