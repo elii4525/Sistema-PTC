@@ -18,6 +18,9 @@ namespace Vistas.Formularios
         public frmMenuDIT()
         {
             InitializeComponent();
+            lblTituloInventarioD.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloConsumoD.Font = Helper.FuenteHelper.ObtenerFuente(30);
+            lblTituloSolicitudD.Font = Helper.FuenteHelper.ObtenerFuente(30);
         }
 
         private void frmMenuDIT_Load(object sender, EventArgs e)

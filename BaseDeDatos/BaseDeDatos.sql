@@ -1,6 +1,6 @@
-create database BasePTC2
+create database BasePTCC
 go
-use BasePTC2;
+use BasePTCC;
 go
 
 -- Tables 
@@ -171,13 +171,6 @@ values ('Laptop HP', 10, '2023-01-15', 'Laptop de oficina', 'HP-12345', 10, 6),
 ('Libro SQL Server', 25, '2023-11-15', 'Manual de SQL Server', 'BOOK-SQL', 12, 15);
 go
 
-insert into SolicitudMaterial
-values (1, 1, 1),(2, 4, 1),(3, 6, 10),(4, 3, 2),(5, 9, 5),
-(6, 5, 10),(7, 7, 5),(8, 8, 2),(9, 20, 10),(10, 14, 1),
-(11, 10, 3),(12, 19, 2),(13, 11, 20),(14, 13, 1),(15, 17, 1),
-(16, 18, 1),(17, 15, 3),(18, 12, 10),(19, 9, 15),(20, 16, 5);
-go
-
 
 -- Select
 Select *from Usuario
@@ -243,7 +236,7 @@ Inner Join
 Categoria c on c.idCategoria = m.id_Categoria
 Inner Join 
 Marca mar on mar.idMarca = m.id_Marca
-Order by m.idMaterial desc;
+Order by m.idMaterial   desc;
 
 select *from registrosUlt;
 

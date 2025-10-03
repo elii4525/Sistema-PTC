@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl1 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,24 +41,19 @@
             this.txtCorreo = new Vistas.Controles.TextBox();
             this.txtNumero = new Vistas.Controles.TextBox();
             this.txtNombre = new Vistas.Controles.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUltimosUsuarios)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.ForeColor = System.Drawing.Color.White;
-            this.lbl1.Location = new System.Drawing.Point(31, 22);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(110, 16);
-            this.lbl1.TabIndex = 0;
-            this.lbl1.Text = "Agregar usuarios";
             // 
             // lbl2
             // 
+            this.lbl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl2.AutoSize = true;
             this.lbl2.ForeColor = System.Drawing.Color.White;
-            this.lbl2.Location = new System.Drawing.Point(219, 111);
+            this.lbl2.Location = new System.Drawing.Point(126, 61);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(59, 16);
             this.lbl2.TabIndex = 1;
@@ -68,29 +61,21 @@
             // 
             // lbl5
             // 
+            this.lbl5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl5.AutoSize = true;
             this.lbl5.ForeColor = System.Drawing.Color.White;
-            this.lbl5.Location = new System.Drawing.Point(219, 283);
+            this.lbl5.Location = new System.Drawing.Point(126, 233);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(31, 16);
             this.lbl5.TabIndex = 2;
             this.lbl5.Text = "Rol:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(219, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Agregar usuarios:";
-            // 
             // lbl4
             // 
+            this.lbl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl4.AutoSize = true;
             this.lbl4.ForeColor = System.Drawing.Color.White;
-            this.lbl4.Location = new System.Drawing.Point(219, 228);
+            this.lbl4.Location = new System.Drawing.Point(126, 178);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(128, 16);
             this.lbl4.TabIndex = 2;
@@ -98,9 +83,10 @@
             // 
             // lbl3
             // 
+            this.lbl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl3.AutoSize = true;
             this.lbl3.ForeColor = System.Drawing.Color.White;
-            this.lbl3.Location = new System.Drawing.Point(219, 170);
+            this.lbl3.Location = new System.Drawing.Point(126, 120);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(135, 16);
             this.lbl3.TabIndex = 2;
@@ -109,17 +95,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 411);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(60, 326);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 16);
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.label7.Size = new System.Drawing.Size(176, 36);
             this.label7.TabIndex = 3;
             this.label7.Text = "Ultimos usuarios agregados";
             // 
             // lbl6
             // 
+            this.lbl6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl6.AutoSize = true;
             this.lbl6.ForeColor = System.Drawing.Color.White;
-            this.lbl6.Location = new System.Drawing.Point(219, 334);
+            this.lbl6.Location = new System.Drawing.Point(126, 284);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(120, 16);
             this.lbl6.TabIndex = 4;
@@ -127,21 +116,26 @@
             // 
             // dgvUltimosUsuarios
             // 
+            this.dgvUltimosUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUltimosUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUltimosUsuarios.Location = new System.Drawing.Point(114, 440);
+            this.dgvUltimosUsuarios.Location = new System.Drawing.Point(93, 375);
+            this.dgvUltimosUsuarios.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.dgvUltimosUsuarios.Name = "dgvUltimosUsuarios";
             this.dgvUltimosUsuarios.RowHeadersWidth = 51;
             this.dgvUltimosUsuarios.RowTemplate.Height = 24;
-            this.dgvUltimosUsuarios.Size = new System.Drawing.Size(1050, 150);
+            this.dgvUltimosUsuarios.Size = new System.Drawing.Size(1053, 305);
             this.dgvUltimosUsuarios.TabIndex = 10;
             // 
             // btnAgregarUsuario
             // 
+            this.btnAgregarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregarUsuario.BackColor = System.Drawing.Color.DarkGreen;
             this.btnAgregarUsuario.FlatAppearance.BorderSize = 0;
             this.btnAgregarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(987, 228);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(991, 154);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(155, 68);
             this.btnAgregarUsuario.TabIndex = 11;
@@ -151,28 +145,31 @@
             // 
             // cbRol
             // 
+            this.cbRol.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRol.FormattingEnabled = true;
-            this.cbRol.Location = new System.Drawing.Point(484, 294);
+            this.cbRol.Location = new System.Drawing.Point(450, 230);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(423, 24);
             this.cbRol.TabIndex = 12;
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(484, 177);
+            this.dtpFechaNacimiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(450, 113);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(423, 22);
             this.dtpFechaNacimiento.TabIndex = 13;
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCorreo.BackColor = System.Drawing.Color.Black;
             this.txtCorreo.BorderColor = System.Drawing.Color.White;
             this.txtCorreo.BorderSize = 2;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCorreo.Location = new System.Drawing.Point(484, 334);
+            this.txtCorreo.Location = new System.Drawing.Point(450, 270);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.MaxLength = 75;
             this.txtCorreo.multiline = true;
@@ -190,12 +187,13 @@
             // 
             // txtNumero
             // 
+            this.txtNumero.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNumero.BackColor = System.Drawing.Color.Black;
             this.txtNumero.BorderColor = System.Drawing.Color.White;
             this.txtNumero.BorderSize = 2;
             this.txtNumero.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNumero.Location = new System.Drawing.Point(484, 228);
+            this.txtNumero.Location = new System.Drawing.Point(450, 164);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.MaxLength = 8;
             this.txtNumero.multiline = true;
@@ -213,12 +211,13 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombre.BackColor = System.Drawing.Color.Black;
             this.txtNombre.BorderColor = System.Drawing.Color.White;
             this.txtNombre.BorderSize = 2;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombre.Location = new System.Drawing.Point(484, 111);
+            this.txtNombre.Location = new System.Drawing.Point(450, 47);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.multiline = true;
@@ -234,42 +233,61 @@
             this.txtNombre.Texts = "";
             this.txtNombre.UnderlinedStyle = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.dtpFechaNacimiento);
+            this.panel1.Controls.Add(this.lbl2);
+            this.panel1.Controls.Add(this.cbRol);
+            this.panel1.Controls.Add(this.lbl5);
+            this.panel1.Controls.Add(this.btnAgregarUsuario);
+            this.panel1.Controls.Add(this.dgvUltimosUsuarios);
+            this.panel1.Controls.Add(this.lbl4);
+            this.panel1.Controls.Add(this.txtCorreo);
+            this.panel1.Controls.Add(this.lbl3);
+            this.panel1.Controls.Add(this.txtNumero);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.lbl6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1254, 713);
+            this.panel1.TabIndex = 14;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1260, 719);
+            this.tableLayoutPanel1.TabIndex = 15;
+            // 
             // frmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.dtpFechaNacimiento);
-            this.Controls.Add(this.cbRol);
-            this.Controls.Add(this.btnAgregarUsuario);
-            this.Controls.Add(this.dgvUltimosUsuarios);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lbl6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lbl3);
-            this.Controls.Add(this.lbl4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lbl5);
-            this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmAgregarUsuario";
-            this.Size = new System.Drawing.Size(1257, 639);
+            this.Size = new System.Drawing.Size(1260, 719);
             this.Load += new System.EventHandler(this.frmAgregarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUltimosUsuarios)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label label7;
@@ -281,5 +299,7 @@
         private System.Windows.Forms.Button btnAgregarUsuario;
         private System.Windows.Forms.ComboBox cbRol;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

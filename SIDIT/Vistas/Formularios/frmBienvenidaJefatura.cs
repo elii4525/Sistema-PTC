@@ -19,6 +19,7 @@ namespace Vistas.Formularios
             InitializeComponent();
             label1.Font = FuenteHelper.ObtenerFuente(30);
             label2.Font = FuenteHelper.ObtenerFuente(35);
+
         }
 
         private void lblVer_Click(object sender, EventArgs e)
@@ -144,7 +145,7 @@ namespace Vistas.Formularios
             lblVerUsuarios.ForeColor = Color.White;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

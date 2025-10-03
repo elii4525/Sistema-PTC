@@ -54,6 +54,13 @@ namespace Vistas.Formularios
                     
 
                     MessageBox.Show("El registro fue exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtCantidad.Clear();
+                    txtNombre.Clear();
+                    txtModelo.Clear();
+                    cbCategoria.SelectedIndex = -1;
+                    txtDescripcion.Clear();
+                    cbMarcas.SelectedIndex = -1;
                 }
 
 
@@ -81,15 +88,7 @@ namespace Vistas.Formularios
             cbMarcas.SelectedIndex = -1;
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            txtCantidad.Clear();
-            txtNombre.Clear();
-            txtModelo.Clear();
-            cbCategoria.SelectedIndex = -1;
-            txtDescripcion.Clear();
-            cbMarcas.SelectedIndex = -1;
-        }
+
 
         private void frmAgregarMaterial_Load(object sender, EventArgs e)
         {

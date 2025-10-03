@@ -15,26 +15,26 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSolicitudDIT());
-            //// Esto es para validar si existen usuarios en la base de datos
-            //if (!Usuario.ExistenUsuarios())
-            //{
-            //    frmPrimerUsuario frm = new frmPrimerUsuario();
+            //Application.Run(new frmMenuJefatura());
+            // Esto es para validar si existen usuarios en la base de datos
+            if (!Usuario.ExistenUsuarios())
+            {
+                frmPrimerUsuario frm = new frmPrimerUsuario();
 
-            //    if (frm.ShowDialog() == DialogResult.OK)
-            //    {
-            //        Application.Run(new frmLogin());
-            //    }
-            //    else
-            //    {
-            //        Application.Exit();
-            //    }
-            //}
-            //else
-            //{
-            //    // Si ya existen usuarios en la bd, ir directo al login
-            //    Application.Run(new frmLogin());
-            //}
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmLogin());
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            else
+            {
+                // Si ya existen usuarios en la bd, ir directo al login
+                Application.Run(new frmLogin());
+            }
 
         }
     }

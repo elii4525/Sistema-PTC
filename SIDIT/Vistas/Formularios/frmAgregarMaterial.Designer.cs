@@ -32,7 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.icbtnSalir = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAggRegistro = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.icbtnSalir);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnLimpiar);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnAggRegistro);
             this.panel2.Controls.Add(this.label10);
@@ -121,22 +119,6 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Agregar Material";
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(216)))), ((int)(((byte)(112)))));
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(569, 122);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(119, 39);
-            this.btnLimpiar.TabIndex = 46;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -157,7 +139,7 @@
             this.btnAggRegistro.FlatAppearance.BorderSize = 0;
             this.btnAggRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAggRegistro.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAggRegistro.Location = new System.Drawing.Point(569, 188);
+            this.btnAggRegistro.Location = new System.Drawing.Point(588, 114);
             this.btnAggRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAggRegistro.Name = "btnAggRegistro";
             this.btnAggRegistro.Size = new System.Drawing.Size(119, 39);
@@ -330,7 +312,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAggRegistro;
         private System.Windows.Forms.Label label10;

@@ -35,7 +35,7 @@ namespace Vistas.Controles
             CargarUsuarios();
             EstilizarDataGrid(dgvUltimosUsuarios);
             
-            lbl1.Font = Helper.FuenteHelper.ObtenerFuente(17);
+            label7.Font = Helper.FuenteHelper.ObtenerFuente(10);
             lbl2.Font = Helper.FuenteHelper.ObtenerFuente(10);
             btnAgregarUsuario.Font = Helper.FuenteHelper.ObtenerFuente(9);
             lbl3.Font = Helper.FuenteHelper.ObtenerFuente(10);
@@ -130,26 +130,7 @@ namespace Vistas.Controles
             dtpEdad.Value = dtpEdad.MaxDate;
         }
 
-        private void EstilizarDataGrid(DataGridView dgv)
-        {
-            dgv.BorderStyle = BorderStyle.None;
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
-            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            dgv.BackgroundColor = Color.White;
 
-            dgv.EnableHeadersVisualStyles = false;
-            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
-            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgv.RowTemplate.Height = 30;
-            dgv.AllowUserToResizeColumns = true;
-            dgv.AllowUserToResizeRows = false;
-        }
 
         private void CargarRoles()
         {
@@ -173,6 +154,26 @@ namespace Vistas.Controles
         private void CargarUsuarios()
         {
             dgvUltimosUsuarios.DataSource = Usuario.cargarUltimosUsuarios();
+        }
+        private void EstilizarDataGrid(DataGridView dgv)
+        {
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 216, 112);
+            dgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgv.BackgroundColor = Color.White;
+
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.RowTemplate.Height = 30;
+            dgv.AllowUserToResizeColumns = true;
+            dgv.AllowUserToResizeRows = false;
         }
     }
 }

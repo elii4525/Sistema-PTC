@@ -32,25 +32,25 @@ namespace Vistas.Formularios
         {
             this.tlpMenuDIT = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBarraLateral = new System.Windows.Forms.Panel();
-            this.icbtnUsuario = new FontAwesome.Sharp.IconButton();
-            this.icbtnConsumoJ = new FontAwesome.Sharp.IconButton();
-            this.icbtnSolicitudesJ = new FontAwesome.Sharp.IconButton();
-            this.icbtnInventarioJ = new FontAwesome.Sharp.IconButton();
             this.pnlContenedorJ = new System.Windows.Forms.Panel();
             this.pnlBarraSuperior = new System.Windows.Forms.Panel();
-            this.icpbConfiguracion = new FontAwesome.Sharp.IconPictureBox();
             this.lblTituloUsuarios = new System.Windows.Forms.Label();
             this.lblTituloInventarioJ = new System.Windows.Forms.Label();
             this.lblTituloSolicitudJ = new System.Windows.Forms.Label();
             this.lblTituloConsumoJ = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.icbtnUsuario = new FontAwesome.Sharp.IconButton();
+            this.icbtnConsumoJ = new FontAwesome.Sharp.IconButton();
+            this.icbtnSolicitudesJ = new FontAwesome.Sharp.IconButton();
+            this.icbtnInventarioJ = new FontAwesome.Sharp.IconButton();
+            this.icpbConfiguracion = new FontAwesome.Sharp.IconPictureBox();
             this.pbLogoITEC = new System.Windows.Forms.PictureBox();
             this.pbAjustes = new System.Windows.Forms.PictureBox();
             this.tlpMenuDIT.SuspendLayout();
             this.pnlBarraLateral.SuspendLayout();
             this.pnlBarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).BeginInit();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +89,100 @@ namespace Vistas.Formularios
             this.pnlBarraLateral.TabIndex = 0;
             this.pnlBarraLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraLateral_Paint);
             this.pnlBarraLateral.Resize += new System.EventHandler(this.pnlBarraLateral_Resize);
+            // 
+            // pnlContenedorJ
+            // 
+            this.pnlContenedorJ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContenedorJ.Location = new System.Drawing.Point(182, 89);
+            this.pnlContenedorJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlContenedorJ.Name = "pnlContenedorJ";
+            this.pnlContenedorJ.Size = new System.Drawing.Size(1564, 660);
+            this.pnlContenedorJ.TabIndex = 2;
+            // 
+            // pnlBarraSuperior
+            // 
+            this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlBarraSuperior.Controls.Add(this.icpbConfiguracion);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudJ);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoJ);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloUsuarios);
+            this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioJ);
+            this.pnlBarraSuperior.Location = new System.Drawing.Point(182, 2);
+            this.pnlBarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlBarraSuperior.Name = "pnlBarraSuperior";
+            this.pnlBarraSuperior.Size = new System.Drawing.Size(1564, 83);
+            this.pnlBarraSuperior.TabIndex = 3;
+            this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
+            this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
+            // 
+            // lblTituloUsuarios
+            // 
+            this.lblTituloUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTituloUsuarios.AutoSize = true;
+            this.lblTituloUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloUsuarios.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloUsuarios.ForeColor = System.Drawing.Color.White;
+            this.lblTituloUsuarios.Location = new System.Drawing.Point(678, 11);
+            this.lblTituloUsuarios.Name = "lblTituloUsuarios";
+            this.lblTituloUsuarios.Size = new System.Drawing.Size(181, 47);
+            this.lblTituloUsuarios.TabIndex = 3;
+            this.lblTituloUsuarios.Text = "Usuarios";
+            this.lblTituloUsuarios.Visible = false;
+            // 
+            // lblTituloInventarioJ
+            // 
+            this.lblTituloInventarioJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloInventarioJ.AutoSize = true;
+            this.lblTituloInventarioJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloInventarioJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloInventarioJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloInventarioJ.Location = new System.Drawing.Point(666, 10);
+            this.lblTituloInventarioJ.Name = "lblTituloInventarioJ";
+            this.lblTituloInventarioJ.Size = new System.Drawing.Size(214, 47);
+            this.lblTituloInventarioJ.TabIndex = 0;
+            this.lblTituloInventarioJ.Text = "Inventario";
+            this.lblTituloInventarioJ.Visible = false;
+            // 
+            // lblTituloSolicitudJ
+            // 
+            this.lblTituloSolicitudJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloSolicitudJ.AutoSize = true;
+            this.lblTituloSolicitudJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloSolicitudJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloSolicitudJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloSolicitudJ.Location = new System.Drawing.Point(641, 10);
+            this.lblTituloSolicitudJ.Name = "lblTituloSolicitudJ";
+            this.lblTituloSolicitudJ.Size = new System.Drawing.Size(229, 47);
+            this.lblTituloSolicitudJ.TabIndex = 2;
+            this.lblTituloSolicitudJ.Text = "Solicitudes";
+            this.lblTituloSolicitudJ.Visible = false;
+            // 
+            // lblTituloConsumoJ
+            // 
+            this.lblTituloConsumoJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTituloConsumoJ.AutoSize = true;
+            this.lblTituloConsumoJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloConsumoJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloConsumoJ.ForeColor = System.Drawing.Color.White;
+            this.lblTituloConsumoJ.Location = new System.Drawing.Point(678, 10);
+            this.lblTituloConsumoJ.Name = "lblTituloConsumoJ";
+            this.lblTituloConsumoJ.Size = new System.Drawing.Size(207, 47);
+            this.lblTituloConsumoJ.TabIndex = 1;
+            this.lblTituloConsumoJ.Text = "Consumo";
+            this.lblTituloConsumoJ.Visible = false;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.pbLogoITEC);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogo.Location = new System.Drawing.Point(3, 3);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(173, 81);
+            this.pnlLogo.TabIndex = 4;
             // 
             // icbtnUsuario
             // 
@@ -185,35 +279,6 @@ namespace Vistas.Formularios
             this.icbtnInventarioJ.UseVisualStyleBackColor = false;
             this.icbtnInventarioJ.Click += new System.EventHandler(this.icbtnInventarioJ_Click);
             // 
-            // pnlContenedorJ
-            // 
-            this.pnlContenedorJ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlContenedorJ.Location = new System.Drawing.Point(182, 89);
-            this.pnlContenedorJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlContenedorJ.Name = "pnlContenedorJ";
-            this.pnlContenedorJ.Size = new System.Drawing.Size(1564, 660);
-            this.pnlContenedorJ.TabIndex = 2;
-            // 
-            // pnlBarraSuperior
-            // 
-            this.pnlBarraSuperior.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBarraSuperior.Controls.Add(this.icpbConfiguracion);
-            this.pnlBarraSuperior.Controls.Add(this.lblTituloUsuarios);
-            this.pnlBarraSuperior.Controls.Add(this.lblTituloInventarioJ);
-            this.pnlBarraSuperior.Controls.Add(this.lblTituloSolicitudJ);
-            this.pnlBarraSuperior.Controls.Add(this.lblTituloConsumoJ);
-            this.pnlBarraSuperior.Location = new System.Drawing.Point(182, 2);
-            this.pnlBarraSuperior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlBarraSuperior.Name = "pnlBarraSuperior";
-            this.pnlBarraSuperior.Size = new System.Drawing.Size(1564, 83);
-            this.pnlBarraSuperior.TabIndex = 3;
-            this.pnlBarraSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraSuperior_Paint);
-            this.pnlBarraSuperior.Resize += new System.EventHandler(this.pnlBarraSuperior_Resize);
-            // 
             // icpbConfiguracion
             // 
             this.icpbConfiguracion.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -227,71 +292,6 @@ namespace Vistas.Formularios
             this.icpbConfiguracion.TabIndex = 5;
             this.icpbConfiguracion.TabStop = false;
             this.icpbConfiguracion.Click += new System.EventHandler(this.icpbConfiguracion_Click);
-            // 
-            // lblTituloUsuarios
-            // 
-            this.lblTituloUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTituloUsuarios.AutoSize = true;
-            this.lblTituloUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloUsuarios.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloUsuarios.ForeColor = System.Drawing.Color.White;
-            this.lblTituloUsuarios.Location = new System.Drawing.Point(707, 33);
-            this.lblTituloUsuarios.Name = "lblTituloUsuarios";
-            this.lblTituloUsuarios.Size = new System.Drawing.Size(181, 47);
-            this.lblTituloUsuarios.TabIndex = 3;
-            this.lblTituloUsuarios.Text = "Usuarios";
-            this.lblTituloUsuarios.Visible = false;
-            // 
-            // lblTituloInventarioJ
-            // 
-            this.lblTituloInventarioJ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTituloInventarioJ.AutoSize = true;
-            this.lblTituloInventarioJ.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloInventarioJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloInventarioJ.ForeColor = System.Drawing.Color.White;
-            this.lblTituloInventarioJ.Location = new System.Drawing.Point(707, 20);
-            this.lblTituloInventarioJ.Name = "lblTituloInventarioJ";
-            this.lblTituloInventarioJ.Size = new System.Drawing.Size(214, 47);
-            this.lblTituloInventarioJ.TabIndex = 0;
-            this.lblTituloInventarioJ.Text = "Inventario";
-            this.lblTituloInventarioJ.Visible = false;
-            // 
-            // lblTituloSolicitudJ
-            // 
-            this.lblTituloSolicitudJ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTituloSolicitudJ.AutoSize = true;
-            this.lblTituloSolicitudJ.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloSolicitudJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloSolicitudJ.ForeColor = System.Drawing.Color.White;
-            this.lblTituloSolicitudJ.Location = new System.Drawing.Point(695, 20);
-            this.lblTituloSolicitudJ.Name = "lblTituloSolicitudJ";
-            this.lblTituloSolicitudJ.Size = new System.Drawing.Size(229, 47);
-            this.lblTituloSolicitudJ.TabIndex = 2;
-            this.lblTituloSolicitudJ.Text = "Solicitudes";
-            this.lblTituloSolicitudJ.Visible = false;
-            // 
-            // lblTituloConsumoJ
-            // 
-            this.lblTituloConsumoJ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTituloConsumoJ.AutoSize = true;
-            this.lblTituloConsumoJ.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloConsumoJ.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloConsumoJ.ForeColor = System.Drawing.Color.White;
-            this.lblTituloConsumoJ.Location = new System.Drawing.Point(707, 20);
-            this.lblTituloConsumoJ.Name = "lblTituloConsumoJ";
-            this.lblTituloConsumoJ.Size = new System.Drawing.Size(207, 47);
-            this.lblTituloConsumoJ.TabIndex = 1;
-            this.lblTituloConsumoJ.Text = "Consumo";
-            this.lblTituloConsumoJ.Visible = false;
-            // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.pbLogoITEC);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLogo.Location = new System.Drawing.Point(3, 3);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(173, 81);
-            this.pnlLogo.TabIndex = 4;
             // 
             // pbLogoITEC
             // 
@@ -319,8 +319,7 @@ namespace Vistas.Formularios
             // 
             // frmMenuJefatura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1749, 751);
             this.Controls.Add(this.tlpMenuDIT);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -333,8 +332,8 @@ namespace Vistas.Formularios
             this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraSuperior.ResumeLayout(false);
             this.pnlBarraSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).EndInit();
             this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.icpbConfiguracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoITEC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
             this.ResumeLayout(false);
